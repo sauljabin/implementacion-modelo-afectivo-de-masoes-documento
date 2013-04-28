@@ -1,0 +1,63 @@
+Miguel León <melf.ever.after@gmail.com>
+uclamsc 2.0, 2013/04/01
+---------------------------------------
+
+- Agregada opción para imprimir en doble cara (ahorra hojas en ejemplares para revisión).
+- Cambiado margen interno de 3cm a 4cm (Manual UCLA).
+- Incluido paquete lmodern.
+- Incluido paquete listings.
+- Nuevo comando \mesencaratula.
+- Nuevo comando \monthdefensa{}.
+- Eliminado comando \preambulo.
+- Removida la necesidad del uso externo del comando \configurar.
+- Removida la necesidad del uso externo del comando \haceranexos.
+- Nuevo ambiente <viñetas>.
+- Agregados parámetros opcionales al ambiente <ilustracion> para mantener compatibilidad.
+	Prescinde del uso del comando \tituloilustracion{}{} y mejora la posición del marcador para el documento digital.
+- Agregados parámetros opcionales al ambiente <grafico> para mantener compatibilidad.
+	Prescinde del uso del comando \titulografico{}, permite incluir una etiqueta y mejora la posición del marcador para el documento digital.
+- Definición del ambiente <cuadro> modificada (INCOMPATIBLE).
+	Ahora 4 argumentos más 1 opcional. Se reordenaron los parámetros intuitivamente.
+	Parámetro adicional permite indicar un título diferente para el índice. Parámetro opcional permite escoger el tamaño de la fuente.
+- Definición del ambiente <citatextual> modificada.
+	Ya no es necesario iniciar en la misma línea. Sangrías cambiadas según manual de la UCLA.
+- Eliminado ambiente <citatextuallarga>.
+	Innecesario y no acorde al manual de la UCLA. El ambiente <citatextual> funciona para citas de varios párrafos.
+- Cambiado formato de los títulos de las secciones, subsecciones y subsubsecciones según el manual de la UPEL (manual de la UCLA sin definición explícita).
+- Renombrado comando \hacerindice a \hacerindices. Para evitar confusión.
+- Nuevo "Índice de Listados". Para indexar códigos o algoritmos.
+- Nuevo comando \letralistados.
+- Nuevo comando \definirliterales{}.
+- Nuevo comando \hacerglosarioconacronimos.
+- Nuevo comando \pagenblanco.
+- Nuevo comando \fechaenresumen.
+- Eliminado comando \citar{}.
+
+- (INTERNO) Nuevo comando \definir@temporales[2].
+- (INTERNO) Nuevos comandos \labelilustracion{} y \captionilustracion{}.
+- (INTERNO) Definición del comando \tituloilustracion{}{} modificada. No se cambió su funcionalidad.
+- (INTERNO) Nuevos comandos \labelgrafico{} y \captiongrafico{}.
+- (INTERNO) Definición del comando \titulografico{} modificada. No se cambió su funcionalidad.
+- (INTERNO) Definición del comando \titulocuadro{} modificada (INCOMPATIBLE).
+	Ahora requiere dos parámetros, título en el índice y título en el cuadro.
+- (INTERNO) Definición del comando \configurarestructura modificada. Eliminada sangría adicional en las subsecciones (reducido en subsubsecciones).
+	Mejor aprovechamiento del espacio (los manuales no sugieren que se corra progresivamente la sangría).
+- (INTERNO) Definición del comando \continuarsubseccion modificada.
+- (INTERNO) Definición del comando \continuarsubsubseccion modificada.
+- (INTERNO) Definición del comando \configurarindice modificada.
+	Ahora los índices de ilustraciones, gráficos, cuadros, sólo se generan si existe el archivo .loi, .loc, .loq y .lol respectivamente, i.e., si se han usado estos elementos en el trabajo.
+- (INTERNO) Nuevo comando \titulolistado.
+- (INTERNO) Definición del comando \indexarpreliminar{} modificada. Desaparecer el warning por el uso de \uppercase dentro de \addcontentsline al generarse el bookmark.
+- (INTERNO) Definición del comando \indexarparte{} modificada. Desaparecer el warning por el uso de \uppercase dentro de \addcontentsline al generarse el bookmark.
+- (INTERNO) Definición del comando \hacerpresentacion modificada. Desaparecer warnings.
+- (INTERNO) Definición del comando \hacerresumen modificada. No se cambió su funcionalidad.
+- (INTERNO) Definición del comando \hacerabstract modificada. No se cambió su funcionalidad.
+- (INTERNO) Definición del comando \haceranexos modificada. Corrección en número de página.
+- (INTERNO) Definición del comando \hacerbibliografia modificada. Cambiado interlineado.
+- (INTERNO) Definición del comando \capitulo modificada. Desaparecer warnings.
+- (INTERNO) Definición del comando \capitulosinnumeracion modificada. Desaparecer warnings.
+- (INTERNO) Definición del comando \seccion modificada. Corrección de marcador y número de página.
+- (INTERNO) Definición del comando \subseccion modificada. Corrección de marcador y número de página.
+- (INTERNO) Definición del comando \subsubseccion modificada. Corrección de marcador y número de página.
+
+

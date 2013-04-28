@@ -1,0 +1,43 @@
+\introduccion
+
+%Manual de comandos del documentclass uclamsc, para los trabajos de grado de la Universidad Centroccidental Lisandro Alvarado (UCLA), Venezuela.
+
+\noindent
+Página del proyecto: \url{https://code.google.com/r/melfeverafter-uclamsc/}. Esta versión es derivada de: \url{https://code.google.com/p/latex-uclamsc/}
+
+El código fuente para la creación de este documento (\texttt{manual.pdf}), se encuentra en el directorio del proyecto \texttt{ejemplos/manual}.
+
+En el directorio \texttt{ejemplos/msctesis} se encuentra un cascarón vacío para el trabajo de grado, que se puede usar como punto de partida.
+
+
+El cuerpo básico para el documento tiene la siguiente forma:
+
+\lstset{commentstyle=\color[gray]{0.3}\itshape, escapeinside={(*}{*)}}
+
+\begin{listadoindexado}{Cuerpo del Documento}{lst:body}{[LaTeX]TeX}
+\documentclass{uclamsc}
+	
+\includeonly{
+	% Capítulos a incluir en la compilación
+}
+% \habilitarpendientes	
+% \habilitarnotas
+	
+\begin{document}
+	% Comandos de indentificación
+	
+	\begin{preliminares}
+		% Comandos de preliminares
+	\end{preliminares}
+	
+	\begin{contenido}
+		% Comandos de contenido
+	\end{contenido}
+	
+	\hacerbibliografia{(*\textit{nombre del archivo principal}*)}
+	
+	\begin{anexos}
+		% Comandos de anexos
+	\end{anexos}
+\end{document}
+\end{listadoindexado}

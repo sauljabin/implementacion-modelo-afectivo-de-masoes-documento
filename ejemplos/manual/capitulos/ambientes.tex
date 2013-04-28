@@ -1,0 +1,101 @@
+\capitulo{Ambientes Indexados y Especiales}
+
+Se puede hacer referencia a los ambientes con etiquetas mediante el uso del comando \co{ref}\pa[etiqueta].
+
+\espaciodoble
+
+\am{ilustracion}{ para mostrar una ilustración. Los parámetros opcionales la agregan al índice de ilustraciones}{[\pa[título]\pa[etiqueta]]}{\co{includegraphics}\pa[ilustraciones/art.jpg]}
+
+\espaciodoble
+
+\am{grafico}{ para mostrar un gráfico. Los parámetros opcionales lo agregan al índice de gráficos}{[\pa[título]\pa[etiqueta]]}{\co{includegraphics}\pa[graficos/fitness.pdf]}
+
+\espaciodoble
+
+\am{cuadro}{ para mostrar una tabla y agregarla al índice de cuadros}
+{[tamáño de letra]\\\pa[título en el índice]\pa[título en el cuadro]\pa[etiqueta]\pa[columnas]}{\ldots}
+
+Utilizar el comando \co{fuentecuadro}\pa[\# columnas en el cuadro]\pa[fuente]\ dentro del ambiente para agregar la fuente de donde se tomó el cuadro.
+
+Véase el uso del ambiente \texttt{\textbf{tabular}} o del paquete \textbf{ctable}; o véase el código fuente del siguiente ejemplo.
+
+Referencia rápida en \url{http://en.wikibooks.org/wiki/LaTeX/Tables}.
+
+
+\begin{cuadro}
+{Ejemplo de Cuadro}
+{Piedra, Papel ó Tijeras – Forma Normal}
+{tab:ejemplo}
+{lccc}
+	\toprule
+	Jugares I/II & Piedra & Papel & Tijeras\\
+	\midrule
+	Piedra   & (0,0) & (-1,1) & (1,-1)\\
+	Papel   & (1,-1) & (0,0) & (-1,1)\\
+	Tijeras   & (-1,1) & (1,-1) & (0,0)\\
+	\bottomrule
+	\fuentecuadro{4}{Juan Rada (2005)}
+\end{cuadro}
+
+\FloatBarrier
+
+\espaciodoble
+
+\am{citatextual}{ Prepara el contexto para una cita textual de más de 40 palabras}
+{}{...Esto es una cita textual... (p. 199)}
+
+
+\espaciodoble
+
+\am{ecuacion}{ para insertar una ecuación con etiqueta para hacerle referencia}
+{\pa[etiqueta]}{y = x + 1}
+
+\espaciodoble
+
+\am{ecuaciones}{ para insertar una lista de ecuaciones numeradas}
+{}{y = x + 1 \textbackslash\textbackslash\\ z = x + 2}
+
+
+\newpage
+
+\am{listado}{ para insertar un listado, usado principalmente para códigos y algoritmos, en el parámetro puede indicarse un lenguaje ya soportado, uno definido por el usuario o nada}
+{\pa[lenguaje]}{\ldots}
+
+\am{listadoindexado}{ funciona igual que \texttt{\textbf{listado}}, incluyendo un título y agregándolo al índice de listados}
+{\pa[título]\pa[etiqueta]\pa[lenguaje]}{\ldots}
+
+\sloppy
+Utiliza el paquete \textbf{listings}, véase su documentación en \url{ftp://ftp.tex.ac.uk/tex-archive/macros/latex/contrib/listings/listings.pdf}
+o \url{http://www.ctan.org/tex-archive/macros/latex/contrib/listings/}.
+
+Más información en \url{http://en.wikibooks.org/wiki/LaTeX/Source_Code_Listings}.
+
+Utilizar el comando \co{letralistados} para restablecer la letra por defecto, utilizar con un parámetro opcional (entre \texttt{[]}) para cambiar el estilo de la letra.
+
+Utilizar el comando \co{lstdefinelanguage}\pa\pa\ y la clave \texttt{morekeywords} del paquete \textbf{listings} para definir un lenguaje personalizado. Véase la documentación.
+
+Utilizar el comando \co{definirliterales}\pa\ para definir literales de reemplazo. Los parámetros tienen la forma \texttt{\pa[match]\pa[\pa[reemplazo]]largo} y van separados sólo por espacios. Véase la documentación. Ejemplo:
+
+\definirliterales{{~}{{}}0}
+
+\begin{listado}{[LaTeX]TeX}
+\definirliterales{
+	{:=}{{$\leftarrow$}}2
+	{<<}{{$\langle$}}1 {>>}{{$\rangle$}}1
+}
+\begin{listado~}{}
+ x := <<valor>>
+\end{listado~}
+\end{listado}
+
+\vspace{-16pt}\noindent
+resulta en:
+\vspace{-12pt}
+
+\definirliterales{{:=}{{$\leftarrow$}}2 {<<}{{$\langle$}}1 {>>}{{$\rangle$}}1}
+
+\begin{listado}{}
+ x := <<valor>>
+\end{listado}
+
+
