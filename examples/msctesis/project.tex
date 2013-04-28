@@ -1,0 +1,57 @@
+%!TEX root = ./main.tex
+\includeonly{
+chapters/cv-tutor, 
+chapters/introduccion, 
+chapters/el-problema, 
+chapters/marco-teorico, 
+chapters/marco-metodologico, 
+chapters/aspectos-administrativos, 
+chapters/anexos
+}
+
+\preambulo
+
+\begin{document}
+		% \titulo{}
+		% \autor{}
+		% \decanato{Ciencias y Tecnología}
+		% \postgrado{Ciencias de la Computación}
+		% \ciudad{Barquisimeto}
+		% \diadefensa{20}
+		% \mesdefensa{Marzo}
+		% \annodefensa{2009}
+		% \tutor{}
+		% \primerjurado{}
+		% \segundojurado{}
+		% \resumen{}
+		% \palabrasclave{}
+
+	\habilitarpendientes	
+	\habilitarnotas	
+	
+	\configurar
+\begin{preliminares}
+	\hacercaratula
+	\hacerpresentacion
+	\hacerindice
+	\include{chapters/cv-tutor}
+	\hacerresumen
+\end{preliminares}
+
+\begin{contenido}
+	\include{chapters/introduccion}
+	\include{chapters/el-problema}
+	\include{chapters/marco-teorico}
+	\include{chapters/marco-metodologico}
+	\include{chapters/aspectos-administrativos}
+\end{contenido}
+
+\hacerbibliografia{main}
+
+\begin{anexos}
+	\haceranexos
+	\include{chapters/anexos}
+\end{anexos}
+	
+	
+\end{document}	

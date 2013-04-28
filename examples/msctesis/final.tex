@@ -1,0 +1,72 @@
+%!TEX root = ./main.tex
+\includeonly{
+chapters/dedicatoria, 
+chapters/agradecimientos, 
+chapters/introduccion, 
+chapters/el-problema, 
+chapters/marco-teorico, 
+chapters/marco-metodologico, 
+chapters/resultados,
+chapters/conclusiones,
+chapters/recomendaciones,
+chapters/anexos
+}
+
+\final{false} % En caso de ser final, quita el color de los hipervínculos
+\preambulo
+\loadglsentries{chapters/glosario.tex}
+
+\begin{document}
+		% \titulo{}
+		% \autor{}
+		% \citarcomo{}  
+		% \decanato{Ciencias y Tecnología}
+		% \postgrado{Ciencias de la Computación}
+		% \ciudad{Barquisimeto}
+		% \diadefensa{20}
+		% \mesdefensa{Marzo}
+		% \annodefensa{2009}
+		% \tutor{}
+		% \primerjurado{}
+		% \segundojurado{}
+		% \resumen{}
+		% \palabrasclave{}
+
+		% \title{}
+		% \abstract{}
+		% \keywords{}
+		
+	\habilitarpendientes	
+	\habilitarnotas
+	
+	\configurar
+\begin{preliminares}
+	\hacercaratula
+	\hacerpresentacion
+	\haceraprobacion
+	\include{chapters/dedicatoria}
+	\include{chapters/agradecimientos}
+	\hacerindice
+	\hacerresumen
+	\hacerabstract
+\end{preliminares}
+
+\begin{contenido}
+	\include{chapters/introduccion}
+	\include{chapters/el-problema}
+	\include{chapters/marco-teorico}
+	\include{chapters/marco-metodologico}
+	\include{chapters/resultados}
+	\include{chapters/conclusiones}
+	\include{chapters/recomendaciones}
+\end{contenido}
+
+\hacerbibliografia{main}
+
+\begin{anexos}
+	\haceranexos
+	\include{chapters/anexos}
+\end{anexos}
+	
+	
+\end{document}	

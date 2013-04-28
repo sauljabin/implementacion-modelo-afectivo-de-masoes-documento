@@ -1,0 +1,7 @@
+Copiar o crear acceso directo (unix) de los archivos uclamsc.bst y uclamsc.cls en el directorio del trabajo. Los accesos se harían (desde la raíz del proyecto) con los siguientes comandos
+
+ln -s /ruta/uclamsc.cls .
+ln -s /ruta/uclamsc.bst .
+
+
+Ver ejemplos para integración de la clase en documento.
