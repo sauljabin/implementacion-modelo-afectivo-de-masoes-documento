@@ -1,0 +1,54 @@
+\documentclass{uclamsc}
+
+\includeonly{
+capitulos/cv-tutor, 
+capitulos/introduccion, 
+capitulos/el-problema, 
+capitulos/marco-teorico, 
+capitulos/marco-metodologico, 
+capitulos/aspectos-administrativos, 
+capitulos/anexos
+}
+
+% \habilitarpendientes	
+% \habilitarnotas	
+
+\begin{document}
+	%\titulo{}
+	%\autor{}
+	%\decanato{}
+	%\postgrado{}
+	%\ciudad{}
+	%\diadefensa{}
+	%\mesdefensa{}
+	%\annodefensa{}
+	
+	%\tutor{}
+	
+	%\resumen{\input{resumen}}
+	%\palabrasclave{}
+	
+\begin{preliminares}
+	\hacercaratula
+	\hacerpresentacion
+	\hacerindices
+	\include{capitulos/cv-tutor}
+	\hacerresumen
+\end{preliminares}
+
+\begin{contenido}
+	\include{capitulos/introduccion}
+	\include{capitulos/el-problema}
+	\include{capitulos/marco-teorico}
+	\include{capitulos/marco-metodologico}
+	\include{capitulos/aspectos-administrativos}
+\end{contenido}
+
+\hacerbibliografia{main}
+
+\begin{anexos}
+	\include{capitulos/anexos}
+\end{anexos}
+	
+	
+\end{document}	
