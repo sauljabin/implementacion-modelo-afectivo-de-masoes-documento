@@ -1,0 +1,7 @@
+*.log
+*.aux
+*.glo
+*.out
+*.gz
+*.ist
+*.toc
