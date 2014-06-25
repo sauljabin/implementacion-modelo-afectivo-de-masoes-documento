@@ -5,3 +5,7 @@
 *.gz
 *.ist
 *.toc
+*.pdf
+*.bbl
+*.blg
+*.dvi
