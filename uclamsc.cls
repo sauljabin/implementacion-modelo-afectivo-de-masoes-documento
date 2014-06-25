@@ -496,7 +496,11 @@
 	
 	
 	% Configuración del glosario.
-	\glossarystyle{list}
+	
+	% Saúl Piña - sauljabin@gmail.com
+	% Comando descontinuado
+	% \glossarystyle{list}
+	
 	\renewcommand*{\glossarysection}[2][\@gls@title]{
 		\def\@gls@title{##2}% 
 		\seccion{##1}
@@ -1312,6 +1316,8 @@
 % description={Entidad capaz de ...}, 
 % plural={Robots}
 % }
+% Saúl Piña - sauljabin@gmail.com
+% Luego hacer referencia \gls{robot}
 \newcommand{\agregartermino}[2]{
 	\newglossaryentry{#1}{#2}
 }

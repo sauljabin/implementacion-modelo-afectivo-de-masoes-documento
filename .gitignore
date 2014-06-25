@@ -9,3 +9,6 @@
 *.bbl
 *.blg
 *.dvi
+*.glg
+*.gls
+*.glsdefs
