@@ -11,7 +11,10 @@ capitulos/resultados,
 capitulos/discusion,
 capitulos/conclusiones,
 capitulos/recomendaciones,
-capitulos/anexos
+capitulos/anexos,
+capitulos/resumen,
+capitulos/abstract,
+capitulos/glosario
 }
 
 % \habilitarpendientes	
@@ -31,16 +34,15 @@ capitulos/anexos
 	%\primerjurado{}
 	%\segundojurado{}
 	
-	%Saúl Piña - sauljabin@gmail.com
 	%Si se va a usar el glosario
-	%\input{capitulos/glosario}
+	%\include{capitulos/glosario}
 	
-	\resumen{\input{capitulos/resumen}}
+	\resumen{\include{capitulos/resumen}}
 	%\palabrasclave{}
 	
 	%\title{}
 	%\monthdefensa{}
-	\abstract{\input{capitulos/abstract}}
+	\abstract{\include{capitulos/abstract}}
 	%\keywords{}
 
 \begin{preliminares}

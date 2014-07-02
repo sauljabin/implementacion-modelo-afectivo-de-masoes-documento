@@ -1,13 +1,15 @@
 % Universidad Centroccidental Lisandro Alvarado
-% Tesis de Maestría
-% Actualizado por Miguel León <melf.ever.after@gmail.com>. Versión anterior por Juan Rada Vilela <jcrada@gmail.com> y Rubén Parma <parmaia@gmail.com>
-% bajo Licencia GNU General Public License. 
+% Trabajo de Grado
+% Actualizado por Saúl Piña <sauljabin@gmail.com>
+% Versión anterior por Miguel León <melf.ever.after@gmail.com>
+% Versión anterior por Juan Rada Vilela <jcrada@gmail.com> y Rubén Parma <parmaia@gmail.com>
+% Licencia GNU General Public License. 
 
 \NeedsTeXFormat{LaTeX2e}
-\newcommand{\uclamscversion}{2.0}
-\newcommand{\uclamscdate}{2013/04/01}
+\newcommand{\uclamscversion}{2.1}
+\newcommand{\uclamscdate}{2014/06/01}
 \ProvidesClass{uclamsc}[\uclamscdate, \uclamscversion]
-\typeout{Reportar dudas y errores a <melf.ever.after@gmail.com>.}
+\typeout{Reportar dudas y errores a <sauljabin@gmail.com>, <melf.ever.after@gmail.com>.}
 
 \newif\if@doblecara\@doblecarafalse
 \DeclareOption{doblecara}{
@@ -44,9 +46,8 @@
 \RequirePackage{calc} %Para poder realizar operaciones con las variables
 \RequirePackage{ifthen} %Para condiciones, usado en pendientes
 \RequirePackage[toc,section=section]{glossaries} %Para la definición de términos básicos
-
 \RequirePackage{listings} % Para formatear código fuente o algoritmos
-
+\RequirePackage[spanish,onelanguage]{algorithm2e} % [boxed,spanish,onelanguage] % Para escribir algoritmos en pseudo-codigo
 
 %Comando: pendientes
 %Descripción: Llamado en \configurar para listar los pendientes de uclamsc.cls
@@ -98,8 +99,6 @@
 \def\@keywords{\variablefaltante{keywords}}
 \newcommand{\keywords}[1]{\def\@keywords{#1}} % Palabras clave del trabajo en inglés.
 
-
-
 \def\@pendientes{false} % Determina si se usan o no los pendientes. Por defecto, desactivado. Para activar usar \habilitarpendientes
 \def\@notas{false} % Determina si se usan o no las notas. Por defecto, desactivado. Para activar usar \habilitarnotas
 
@@ -119,10 +118,7 @@
 % \configurar
 \newcommand{\habilitarnotas}{\def\@notas{true}}
 
-
-
 \AtBeginDocument{\listfiles\makeglossaries\configurar}
-
 
 % Comando: espaciotriple
 % Descripción: Agrega un espacio triple.
@@ -152,9 +148,6 @@
 % Uso: $\tab$ \begin{ecuaciones} \tabm \tabm \end{ecuaciones}
 \newcommand{\tabm}{\;\;\;\;\;\;}
 
-
-
-
 % Ambiente: lista
 % Descripción: Para enumerar items bien sea enumerados o sin enumerar.
 % Parámetros: [1] Prefijo de cada item, [2] comandos adicionales (e.g. \usecounter{enumi}).
@@ -183,7 +176,6 @@
 	}
 	{\end{list}}
 
-
 % Ambiente: enumeracion
 % Descripción: Para enumerar una lista de items.
 % Uso:
@@ -200,7 +192,6 @@
 	{\begin{lista}{\arabic{enumi}. }{\usecounter{enumi}}}
 	{\end{lista}}
 
-
 % Ambiente: viñetas
 % Descripción: Para funcionar como itemize, manteniendo el formato correcto.
 % Uso:
@@ -212,8 +203,6 @@
 \newenvironment{viñetas}
 	{\begin{lista}{$\bullet$ }{}}
 	{\end{lista}}
-
-
 
 % Ambiente: enumeracionenparrafo 
 % Descripción: Para enumerar una lista de items dentro de un párrafo
@@ -228,12 +217,6 @@
 \newenvironment{enumeracionenparrafo}
 	{\begin{inparaenum}[(a)]}
 	{\end{inparaenum}}
-
-
-	
-	
-	
-
 
 % Ambiente: preliminares 
 % Descripción: Para usar en las páginas preliminares, determina numeración de páginas.
@@ -266,8 +249,6 @@
 %
 \newenvironment{anexos}{\haceranexos}{}
 
-
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Comandos de listados
 
@@ -293,6 +274,12 @@
 	\espaciodoble
 	\titulolistado{#1}{#2}
 	\lstset{style=letra, style=literales, language=#3}
+}{\espaciodoble}
+
+\lstnewenvironment{listadoindexadoconfuente}[4]{
+	\espaciodoble
+	\tituloyfuentelistado{#1}{#2}{#3}
+	\lstset{style=letra, style=literales, language=#4}
 }{\espaciodoble}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -371,8 +358,7 @@
 	\end{spacing}
 	\end{table}
 }
-	
-	
+
 % Ambiente: citatextual
 % Descripción: Prepara el contexto para una cita textual de más de 40 palabras.
 % Párrafos subsiguientes al primero, tienen sangría adicional según el manual de la UPEL.
@@ -394,7 +380,6 @@
 		\espaciodoble
 	}
 	
-
 % Ambiente: ecuacion
 % Descripción: Prepara el contexto para insertar una ecuación
 % Parámetros: [1] etiqueta para luego referirse como \ref{etiqueta}
@@ -426,9 +411,6 @@
 		\begin{eqnarray}
 	}
 	{\end{eqnarray}}
-
-	
-	
 
 %%%%%%%%%%%%%%%%%%%%%%%%% INTERNO %%%%%%%%%%%%%%%%%%%%%%%%%
 % Comando: configurar
@@ -494,10 +476,7 @@
 	\renewcommand{\subsection}{\@startsection{subsection}{2}{\z@}{22pt}{22pt}{\normalfont\normalsize\bfseries\itshape}}
 	\renewcommand{\subsubsection}{\@startsection{subsubsection}{3}{\parindent}{22pt}{22pt}{\normalfont\normalsize\bfseries\itshape}} 
 	
-	
 	% Configuración del glosario.
-	
-	% Saúl Piña - sauljabin@gmail.com
 	% Comando descontinuado
 	% \glossarystyle{list}
 	
@@ -528,9 +507,7 @@
 		\@starttoc{toc}
 	}
 	\setcounter{tocdepth}{5} % Para mostrar hasta los párrafos (caso de preliminares).
-	
-	
-	
+
 	%%%%%%%%%%%%%%%%%%%%%%%%%%
 	% Índice de listados (algoritmos y códigos)
 	\renewcommand{\lstlistlistingname}{{Índice de Listados}}
@@ -554,12 +531,17 @@
 	\newcommand{\titulolistado}[2]{
 		\refstepcounter{lstlisting}
 		\label{##2}
-		\par\centering\normalfont\normalsize{{\bfseries \lstlistingname~\thelstlisting.} ##1}
-		\addcontentsline{lol}{lstlisting}{\hspace{-1.5em}\protect{\thelstlisting. }##1}
+		\par\centering\normalfont\normalsize{{\bfseries \lstlistingname~\thelstlisting:} ##1}
+		\addcontentsline{lol}{lstlisting}{\hspace{-1.5em}\protect{\thelstlisting.} ##1}
 	}
-
 	
-	
+	\newcommand{\tituloyfuentelistado}[3]{
+		\refstepcounter{lstlisting}
+		\label{##3}
+		\par\centering\normalfont\normalsize{{\bfseries \lstlistingname~\thelstlisting:} ##1 \ifthenelse{\equal{##2}{}}{}{\\ {\bfseries Fuente:} ##2}}
+		\addcontentsline{lol}{lstlisting}{\hspace{-1.5em}\protect{\thelstlisting.} ##1}
+	}
+		
 %	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 	% Índice de gráficos
 	\newcommand{\listofchartsname}{{Índice de Gráficos}} 
@@ -587,17 +569,28 @@
 		\label{##1}
 	}
 	\newcommand\captiongrafico[1]{
-		\par\normalfont\normalsize\noindent{{\bfseries Gráfico~\thecharts.} ##1}
-		\addcontentsline{loc}{charts}{\protect{\thecharts. }##1}\par
+		\par\normalfont\normalsize\noindent{{\bfseries Gráfico~\thecharts:} ##1}
+		\addcontentsline{loc}{charts}{\protect{\thecharts.} ##1}\par
 	}
+	\newcommand\captionandsourcegrafico[2]{
+		\par\normalfont\normalsize\noindent{{\bfseries Gráfico~\thecharts:} ##1 \ifthenelse{\equal{##2}{}}{}{\\ {\bfseries Fuente:} ##2}}
+		\addcontentsline{loc}{charts}{\protect{\thecharts.} ##1}\par
+        }
 	%Comando: titulografico
 	%Descripción: Agrega un título al gráfico y lo coloca en el índice de gráficos.
-	%Parámetros: [1] Título del gráfico
-	\newcommand{\titulografico}[1]{
-		\refstepcounter{charts}
+	%Parámetros: [1] Título del gráfico [2] Fuente 
+	\newcommand{\titulografico}[2]{
+		\labelgrafico{##2}
 		\captiongrafico{##1}
 	}
-
+	
+	% Comando: tituloilustracion
+	% Descripción: Agrega un título al grafico y la coloca en el índice de graficos.
+	% Parámetros: [1] Título del grafico [2] Fuente [3] Etiqueta
+	\newcommand{\tituloyfuentegrafico}[3]{
+		\labelgrafico{##3}
+		\captionandsourcegrafico{##1}{##2}
+	}
 	
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %	%Índice de Ilustraciones
@@ -626,9 +619,15 @@
 		\label{##1}
 	}
 	\newcommand\captionilustracion[1]{
-		\par\normalfont\normalsize\noindent{{\bfseries Ilustración~\theilustrations.} ##1}
-		\addcontentsline{loi}{ilustrations}{\protect{\theilustrations. }##1}\par
+		\par\normalfont\normalsize\noindent{{\bfseries Ilustración~\theilustrations:} ##1}
+		\addcontentsline{loi}{ilustrations}{\protect{\theilustrations.} ##1}\par
 	}
+	
+	\newcommand\captionandsourceilustracion[2]{
+			\par\normalfont\normalsize\noindent{{\bfseries Ilustración~\theilustrations:} ##1 \ifthenelse{\equal{##2}{}}{}{\\ {\bfseries Fuente:} ##2}}
+			\addcontentsline{loi}{ilustrations}{\protect{\theilustrations.} ##1}\par
+	}
+		
 %	%Comando: tituloilustracion
 %	%Descripción: Agrega un título a la ilustracion y la coloca en el índice de ilustraciones.
 %	%Parámetros: [1] Título de la ilustración
@@ -637,7 +636,14 @@
 		\captionilustracion{##1}
 	}
 	
-	
+	% Comando: tituloilustracion
+	% Descripción: Agrega un título a la ilustracion y la coloca en el índice de ilustraciones.
+	% Parámetros: [1] Título de la ilustración [2] Fuente [3] Etiqueta
+	\newcommand{\tituloyfuenteilustracion}[3]{
+		\labelilustracion{##3}
+		\captionandsourceilustracion{##1}{##2}
+	}
+		
 %	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 	% Índice de cuadros		
 	\newcommand{\listoftabulationsname}{{Índice de Cuadros}} 
@@ -665,15 +671,14 @@
 	%Parámetros: [1] Título en el índice, [2] Título en el cuadro
 	\newcommand{\titulocuadro}[2]{
 		\refstepcounter{tabulations}
-		\espaciodoble\normalfont\normalsize\noindent{\bfseries{Cuadro~\thetabulations.}\\\espaciotriple ##2\espaciodoble}
-		\addcontentsline{loq}{tabulations}{\protect{\thetabulations. }##1}\par
+		\espaciodoble\normalfont\normalsize\noindent{\bfseries{Cuadro~\thetabulations:}\\\espaciodoble ##2\espaciodoble}
+		\addcontentsline{loq}{tabulations}{\protect{\thetabulations.} ##1}\par
 	}
 
 	%Comando: fuentecuadro
 	%Descripción: Agrega la fuente del cuadro
 	%Parámetros: [1] Columnas del cuadro, [2] Fuente (e.g. Juan Rada (2005))
 	\newcommand{\fuentecuadro}[2]{\multicolumn{##1}{l}{\bfseries Fuente:} ##2. \hfill\espaciodoble}
-	
 	
 %	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 	%Índice de Pendientes
@@ -698,13 +703,12 @@
 		\ifthenelse{\equal{\@pendientes}{true}}{
 			\refstepcounter{todos}
 			% \begin{spacing}{0.75}
-			\noindent{\color{red}\normalfont\scriptsize{\bfseries{\thetodos. }##1}}
+			\noindent{\color{red}\normalfont\scriptsize{\bfseries{\thetodos:} ##1}}
 			% \end{spacing}
-			\addcontentsline{lod}{todos}{\protect{\thetodos. }##1}
+			\addcontentsline{lod}{todos}{\protect{\thetodos.} ##1}
 		}{}
 	}
 
-	
 %	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 	%Índice de Notas
 	\newcommand{\listofnotesnames}{{Índice de Notas}} 
@@ -726,15 +730,85 @@
 	\newcommand{\nota}[1]{
 		\ifthenelse{\equal{\@notas}{true}}{
 			\refstepcounter{notes} 
-			\noindent{\color{blue}\normalfont\scriptsize{\bfseries{\thenotes. }##1}}
-			\addcontentsline{lon}{notes}{\protect{\thenotes. }##1}\par
+			\noindent{\color{blue}\normalfont\scriptsize{\bfseries{\thenotes:} ##1}}
+			\addcontentsline{lon}{notes}{\protect{\thenotes.} ##1}\par
 		}{}
 	}
 	
 	
+%	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	%Índice de Algoritmos
+
+	% Ambiente: algoritmo
+	% Descripción: Permite insertar un algoritmo con formato pseudocodigo
+	% Uso: 
+	% \begin{algoritmo}
+	% 	...
+	% \end{algoritmo}
+	% uso con parámetros opcionales:
+	% \begin{algoritmo}[{titulo}{label}]
+	% 	...
+	% \end{algoritmo}
+
+	\newenvironment{algoritmo}[1][]{
+		\begin{algorithm}[htcb]
+		\ifthenelse{\equal{##1}{}}{}{\definir@temporales ##1 \labelalgoritmo{\tmp@label}}
+	}{
+		\ifthenelse{\isundefined\tmp@caption}{}{\captionalgoritmo{\tmp@caption}}
+		\end{algorithm}
+	}
+
+	\newcommand{\listofalgorithmsname}{{Índice de Algoritmos}} 
+
+	% Comando: listofalgorithms
+	% Descripción: Crea el índice de algoritmos.
+	\renewcommand{\listofalgorithms}{
+		\IfFileExists{\jobname.loal}{
+			\indexarpreliminar{\listofalgorithmsname}
+			\capitulosinnumeracion{{\listofalgorithmsname}}
+			\flushright{\bfseries PÁG.}
+			\@starttoc{loal}
+		}{
+			\AtEndDocument{
+				\ifthenelse{\value{algocf}>0}{\@starttoc{loal}}{}
+			}
+		}
+	}
+		
+	\newcommand\labelalgoritmo[1]{
+		\refstepcounter{algocf}
+		\label{##1}
+	}
+
+	\newcommand\captionalgoritmo[1]{
+		\centering\par\normalfont\normalsize\noindent{{\bfseries Algoritmo~\thealgocf:} ##1}
+		\addcontentsline{loal}{algocf}{\protect{\thealgocf.} ##1}\par
+	}
+
+	\newcommand\captionandsourcealgoritmo[2]{
+		\centering\par\normalfont\normalsize\noindent{{\bfseries Algoritmo~\thealgocf:} ##1 \ifthenelse{\equal{##2}{}}{}{\\ {\bfseries Fuente:} ##2}}
+		\addcontentsline{loal}{algocf}{\protect{\thealgocf.} ##1}\par
+	}
+
+	% Comando: tituloalgoritmo
+	% Descripción: Agrega un título al algoritmo y la coloca en el índice de algoritmos
+	% Parámetros: [1] Título del algoritmo [2] Etiqueta
+	\newcommand{\tituloalgoritmo}[2]{
+		\labelalgoritmo{##2}
+		\captionalgoritmo{##1}
+	}
+
+	% Comando: tituloalgoritmo
+	% Descripción: Agrega un título al algoritmo y la coloca en el índice de algoritmos
+	% Parámetros: [1] Título del algoritmo [2] Fuente [3] Etiqueta
+	\newcommand{\tituloyfuentealgoritmo}[3]{
+		\labelalgoritmo{##3}
+		\captionandsourcealgoritmo{##1}{##2}
+	}
+		
+%	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 	\formatearindice
 }
-
 
 %Comando: formatearindice
 %Descripción: Le da formato a los índices, fuentes, tamaños, identaciones, entre otras. Llamado desde \configurarindice.
@@ -781,7 +855,6 @@
 	\setlength{\cftsubsubsecindent}{7\parindent}
 	
 }
-
 
 %Comando: hacerindicegeneral
 %Descripción: Crea el índice general.
@@ -832,6 +905,13 @@
 	\newpage
 }
 
+%Comando: hacerindicealgoritmos
+%Descripción: Crea el índice de algoritmos.
+\newcommand{\hacerindicealgoritmos}{
+	\listofalgorithms
+	\newpage
+}	
+
 %Comando: hacerindices
 %Descripción: Crea todos los índices en el orden adecuado. En caso de que los pendientes estén habilitados, mostrará el índice de pendientes también.
 \newcommand{\hacerindices}{
@@ -840,6 +920,7 @@
 	\hacerindiceilustraciones
 	\hacerindicegraficos
 	\hacerindicecuadros
+	\hacerindicealgoritmos
 	\hacerindicelistados
 	
 	\ifthenelse{\equal{\@pendientes}{true}}{
@@ -925,7 +1006,6 @@
 	\printglossary[title={Glosario de Acrónimos y Términos}, toctitle={Glosario de Acrónimos y Términos}]
 	\continuarsubsubseccion
 }
-
 
 %Comando: hacercaratula
 %Descripción: Crea la carátula de la tesis, la que va por fuera.
@@ -1161,6 +1241,7 @@
 % Uso: 
 % \capitulo{El Problema}
 \newcommand{\capitulo}[1]{
+\refstepcounter{capitulonum}
 	\setlength{\leftskip}{0cm}
 	\uppercase{\chapter{#1}} % Invertido el orden para evitar el warning con el uppercase al generarse el bookmark. No sé cómo de todas maneras se genera en mayúsculas.
 	\continuarcapitulo
@@ -1265,7 +1346,6 @@
 	\chapter{#1}
 }
 
-
 % Agrega página en blanco.
 \newcommand{\pagenblanco}{
 	\newpage
@@ -1273,12 +1353,6 @@
 	\mbox{}
 	\newpage
 }
-
-
-
-
-
-
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Comandos no internos de la versión anterior, no documentados por mi.
@@ -1299,12 +1373,12 @@
 % \sum{M_{x} = 0}
 % \end{ecuaciones*}
 %
-\newenvironment{ecuaciones*}
-	{	
+\newenvironment{ecuaciones*}{	
 		\espaciosimple
 		\begin{eqnarray*}
 	}
-	{\end{eqnarray*}}
+	{\end{eqnarray*}
+}
 		
 % Comando: agregartermino
 % Descripción: Agrega un término al glosario.
@@ -1316,41 +1390,52 @@
 % description={Entidad capaz de ...}, 
 % plural={Robots}
 % }
-% Saúl Piña - sauljabin@gmail.com
 % Luego hacer referencia \gls{robot}
 \newcommand{\agregartermino}[2]{
 	\newglossaryentry{#1}{#2}
 }
 
-% Saúl Piña - sauljabin@gmail.com
-% Para escribir algoritmos
-\RequirePackage{algorithm}
-\RequirePackage{algorithmic}
+% Comando: refilustracion
+% Descripción: Hace referencia a una ilustración
+% Parametros: [1] Etiqueta
+% Uso: \refilustracion{etiqueta}
+\newcommand{\refilustracion}[1]{
+	\textbf{Ilustración \ref{#1}}
+}
 
-\floatname{algorithm}{Algoritmo}
+% Comando: refcuadro
+% Descripción: Hace referencia a un cuadro
+% Parametros: [1] Etiqueta
+% Uso: \refcuadro{etiqueta}
+\newcommand{\refcuadro}[1]{
+	\textbf{Cuadro \ref{#1}}
+}
 
-\renewcommand{\listalgorithmname}{Lista de algoritmos}
-\renewcommand{\algorithmicrequire}{\textbf{Entrada:}}
-\renewcommand{\algorithmicensure}{\textbf{Salida:}}
-\renewcommand{\algorithmicend}{\textbf{Fin}}
-\renewcommand{\algorithmicif}{\textbf{Si}}
-\renewcommand{\algorithmicthen}{\textbf{entonces}}
-\renewcommand{\algorithmicelse}{\textbf{Sino}}
-\renewcommand{\algorithmicelsif}{\algorithmicelse,\ \algorithmicif}
-\renewcommand{\algorithmicendif}{\algorithmicend\ \algorithmicif}
-\renewcommand{\algorithmicfor}{\textbf{Para}}
-\renewcommand{\algorithmicforall}{\textbf{para todo}}
-\renewcommand{\algorithmicdo}{\textbf{hacer}}
-\renewcommand{\algorithmicendfor}{\algorithmicend\ \algorithmicfor}
-\renewcommand{\algorithmicwhile}{\textbf{mientras}}
-\renewcommand{\algorithmicendwhile}{\algorithmicend\ \algorithmicwhile}
-\renewcommand{\algorithmicloop}{\textbf{repetir}}
-\renewcommand{\algorithmicendloop}{\algorithmicend\ \algorithmicloop}
-\renewcommand{\algorithmicrepeat}{\textbf{repetir}}
-\renewcommand{\algorithmicuntil}{\textbf{hasta que}}
-\renewcommand{\algorithmicprint}{\textbf{imprimir}} 
-\renewcommand{\algorithmicreturn}{\textbf{devolver}} 
-\renewcommand{\algorithmictrue}{\textbf{cierto }} 
-\renewcommand{\algorithmicfalse}{\textbf{falso }} 
-\renewcommand{\algorithmicand}{\textbf{ y }} 
-\renewcommand{\algorithmicto}{\textbf{ hasta }} 
+% Comando: refalgoritmo
+% Descripción: Hace referencia a un algoritmo
+% Parametros: [1] Etiqueta
+% Uso: \refalgoritmo{etiqueta}
+\newcommand{\refalgoritmo}[1]{
+	\textbf{Algoritmo \ref{#1}}
+}
+
+% Comando: refgrafico
+% Descripción: Hace referencia a un grafico
+% Parametros: [1] Etiqueta
+% Uso: \refgrafico{etiqueta}
+\newcommand{\refgrafico}[1]{
+	\textbf{Gráfico \ref{#1}}
+}
+
+% Comando: reflistado
+% Descripción: Hace referencia a un listado
+% Parametros: [1] Etiqueta
+% Uso: \reflistado{etiqueta}
+\newcommand{\reflistado}[1]{
+	\textbf{Listado \ref{#1}}
+}
+
+% Para ir contando los capitulos
+\newcounter{capitulonum}
+\setcounter{capitulonum}{0} 
+\newcommand{\capitulonum}{\@arabic\c@capitulonum}
