@@ -2,15 +2,34 @@
 
 Se puede hacer referencia a los ambientes con etiquetas mediante el uso del comando \co{ref}\pa[etiqueta].
 
-\espaciodoble
+\seccion{Ilustración}
 
 \am{ilustracion}{ para mostrar una ilustración. Los parámetros opcionales la agregan al índice de ilustraciones}{[\pa[título]\pa[etiqueta]]}{\co{includegraphics}\pa[ilustraciones/art.jpg]}
+Se puede hacer referencia a una ilustracion usando el comando \co{refilustracion}.
+Si se desea agregar una fuente a una ilustracion se puede usar el comando: \\ \co{tituloyfuenteilustracion}, ejemplo:
 
-\espaciodoble
+\begin{listado}{[LaTeX]TeX}
+  \begin{ilustracion}
+      \includegraphics{ruta_archivo}
+      \tituloyfuenteilustracion{título}{fuente}{etiqueta}
+  \end{ilustracion}
+\end{listado}
+
+\seccion{Gráfico}
 
 \am{grafico}{ para mostrar un gráfico. Los parámetros opcionales lo agregan al índice de gráficos}{[\pa[título]\pa[etiqueta]]}{\co{includegraphics}\pa[graficos/fitness.pdf]}
 
-\espaciodoble
+Se puede hacer referencia a un grafico usando el comando \co{refgrafico}.
+Si se desea agregar una fuente se puede usar el comando: \\ \co{tituloyfuentegrafico}, ejemplo:
+
+\begin{listado}{[LaTeX]TeX}
+  \begin{grafico}
+      \includegraphics{ruta_archivo}
+      \tituloyfuentegrafico{título}{fuente}{etiqueta}
+  \end{grafico}
+\end{listado}
+
+\seccion{Cuadro}
 
 \am{cuadro}{ para mostrar una tabla y agregarla al índice de cuadros}
 {[tamáño de letra]\\\pa[título en el índice]\pa[título en el cuadro]\pa[etiqueta]\pa[columnas]}{\ldots}
@@ -18,6 +37,8 @@ Se puede hacer referencia a los ambientes con etiquetas mediante el uso del coma
 Utilizar el comando \co{fuentecuadro}\pa[\# columnas en el cuadro]\pa[fuente]\ dentro del ambiente para agregar la fuente de donde se tomó el cuadro.
 
 Véase el uso del ambiente \texttt{\textbf{tabular}} o del paquete \textbf{ctable}; o véase el código fuente del siguiente ejemplo.
+
+Se puede hacer referencia a un cuadro usando el comando \co{refcuadro}.
 
 Referencia rápida en \url{http://en.wikibooks.org/wiki/LaTeX/Tables}.
 
@@ -37,15 +58,15 @@ Referencia rápida en \url{http://en.wikibooks.org/wiki/LaTeX/Tables}.
 	\fuentecuadro{4}{Juan Rada (2005)}
 \end{cuadro}
 
-\FloatBarrier
+\pagebreak
 
-\espaciodoble
+\seccion{Cita textual}
 
 \am{citatextual}{ Prepara el contexto para una cita textual de más de 40 palabras}
 {}{...Esto es una cita textual... (p. 199)}
 
 
-\espaciodoble
+\seccion{Ecuación}
 
 \am{ecuacion}{ para insertar una ecuación con etiqueta para hacerle referencia}
 {\pa[etiqueta]}{y = x + 1}
@@ -55,8 +76,7 @@ Referencia rápida en \url{http://en.wikibooks.org/wiki/LaTeX/Tables}.
 \am{ecuaciones}{ para insertar una lista de ecuaciones numeradas}
 {}{y = x + 1 \textbackslash\textbackslash\\ z = x + 2}
 
-
-\newpage
+\seccion{Listado}
 
 \am{listado}{ para insertar un listado, usado principalmente para códigos y algoritmos, en el parámetro puede indicarse un lenguaje ya soportado, uno definido por el usuario o nada}
 {\pa[lenguaje]}{\ldots}
@@ -64,9 +84,10 @@ Referencia rápida en \url{http://en.wikibooks.org/wiki/LaTeX/Tables}.
 \am{listadoindexado}{ funciona igual que \texttt{\textbf{listado}}, incluyendo un título y agregándolo al índice de listados}
 {\pa[título]\pa[etiqueta]\pa[lenguaje]}{\ldots}
 
-\sloppy
-Utiliza el paquete \textbf{listings}, véase su documentación en \url{ftp://ftp.tex.ac.uk/tex-archive/macros/latex/contrib/listings/listings.pdf}
-o \url{http://www.ctan.org/tex-archive/macros/latex/contrib/listings/}.
+\am{listadoindexadoconfuente}{ funciona igual que \texttt{\textbf{listadoindexado}}, incluyendo un título, fuente y agregándolo al índice de listados}
+{\pa[título]\pa[fuente]\pa[etiqueta]\pa[lenguaje]}{\ldots}
+
+Se puede hacer referencia a un grafico usando el comando \co{reflistado}.
 
 Más información en \url{http://en.wikibooks.org/wiki/LaTeX/Source_Code_Listings}.
 
@@ -98,4 +119,35 @@ resulta en:
  x := <<valor>>
 \end{listado}
 
+\seccion{Algoritmo}
 
+\am{algoritmo}{ para escribir algoritmos en pseudocodigo. Los parámetros opcionales lo agregan al índice de algoritmos}{[\pa[título]\pa[etiqueta]]}{\dots}
+
+Se puede hacer referencia a un algoritmo usando el comando \co{refalgoritmo}.
+
+Este ambiente usa el paquete \textbf{algorithm2e} \url{http://en.wikibooks.org/wiki/LaTeX/Algorithms#Typesetting_using_the_algorithm2e_package}.
+
+Si se desea agregar una fuente a un algoritmo se puede usar el comando: \\ \co{tituloyfuentealgoritmo}, ejemplo:
+
+\begin{listado}{[LaTeX]TeX}
+  \begin{algoritmo}
+      ...
+      \tituloyfuentealgoritmo{título}{fuente}{etiqueta}
+  \end{algoritmo}
+\end{listado}
+
+\begin{algoritmo}
+ \KwData{this text}
+ \KwResult{how to write algorithm with \LaTeX2e }
+ initialization\;
+ \While{not at end of this document}{
+  read current\;
+  \eIf{understand}{
+   go to next section\;
+   current section becomes this one\;
+   }{
+   go back to the beginning of current section\;
+  }
+ }
+ \tituloyfuentealgoritmo{Ejemple de algoritmo con fuente}{\cite{wikialg}}{algoritmo-ejemplo}
+\end{algoritmo}

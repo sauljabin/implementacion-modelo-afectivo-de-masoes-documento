@@ -1,49 +1,47 @@
 \documentclass{uclamsc}
 
 \includeonly{
-capitulos/dedicatoria, 
-capitulos/agradecimientos, 
-capitulos/introduccion, 
-capitulos/el-problema, 
-capitulos/marco-teorico, 
-capitulos/marco-metodologico, 
-capitulos/resultados,
-capitulos/discusion,
-capitulos/conclusiones,
-capitulos/recomendaciones,
-capitulos/anexos,
-capitulos/resumen,
-capitulos/abstract,
-capitulos/glosario
+      capitulos/dedicatoria, 
+      capitulos/agradecimientos, 
+      capitulos/introduccion, 
+      capitulos/el-problema, 
+      capitulos/marco-teorico, 
+      capitulos/marco-metodologico, 
+      capitulos/resultados,
+      capitulos/discusion,
+      capitulos/conclusiones,
+      capitulos/recomendaciones,
+      capitulos/anexos
 }
 
 % \habilitarpendientes	
 % \habilitarnotas
 
+% \titulo{}
+% \autor{}
+% \palabrasclave{}
+
+% \decanato{}
+% \postgrado{}
+% \ciudad{}
+% \diadefensa{}
+% \mesdefensa{}
+% \annodefensa{}
+
+% \tutor{}
+% \primerjurado{}
+% \segundojurado{}	
+
+% Para resumen en ingles
+% \title{}
+% \monthdefensa{}
+% \keywords{}
+
 \begin{document}
-	%\titulo{}
-	%\autor{}
-	%\decanato{}
-	%\postgrado{}
-	%\ciudad{}
-	%\diadefensa{}
-	%\mesdefensa{}
-	%\annodefensa{}
-	
-	%\tutor{}
-	%\primerjurado{}
-	%\segundojurado{}
-	
-	%Si se va a usar el glosario
-	%\include{capitulos/glosario}
-	
-	\resumen{\include{capitulos/resumen}}
-	%\palabrasclave{}
-	
-	%\title{}
-	%\monthdefensa{}
-	\abstract{\include{capitulos/abstract}}
-	%\keywords{}
+	% Si se va a usar el glosario
+	% \input{capitulos/glosario}	
+	\resumen{\input{capitulos/resumen}}	
+	\abstract{\input{capitulos/abstract}}	
 
 \begin{preliminares}
 	\hacercaratula
@@ -72,6 +70,5 @@ capitulos/glosario
 \begin{anexos}
 	\include{capitulos/anexos}
 \end{anexos}
-	
 	
 \end{document}	

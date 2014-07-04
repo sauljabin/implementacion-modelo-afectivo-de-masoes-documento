@@ -6,6 +6,7 @@
 !*.mbs
 !*.pdf
 !*.txt
+!*.sty
 !.gitignore
 !README
 !INSTALL
