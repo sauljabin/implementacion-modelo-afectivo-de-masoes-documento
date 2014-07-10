@@ -1010,7 +1010,8 @@
 %Comando: hacercaratula
 %Descripción: Crea la carátula de la tesis, la que va por fuera.
 \newcommand{\hacercaratula}{
-	\setcounter{page}{-1}
+	%\setcounter{page}{-1}
+	\setcounter{page}{1}
 	\thispagestyle{empty}
 		\begin{center}
 			{\MakeUppercase{Universidad Centroccidental}}\\ 
@@ -1034,7 +1035,7 @@
 %Descripción: Crea la hoja de presentación de la tesis.
 \newcommand{\hacerpresentacion}{
 	\thispagestyle{empty}
-	\setcounter{page}{1}
+	%\setcounter{page}{1}
 	\begin{center}
 		{\MakeUppercase{Universidad Centroccidental}}
 		\textquotedblleft {\MakeUppercase{Lisandro Alvarado}}\textquotedblright\\
