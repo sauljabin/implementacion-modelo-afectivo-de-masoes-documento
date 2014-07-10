@@ -1443,10 +1443,12 @@
 \setcounter{capitulonum}{0} 
 \newcommand{\capitulonum}{\@arabic\c@capitulonum}
 
+%\renewcommand\defcitealias[2]{\@ifundefined{al@#1\@extra@b@citeb}{}{\PackageWarning{natbib}{Overwriting existing alias for citation #1}}\@namedef{al@#1\@extra@b@citeb}{#2}}
+
+\renewcommand\defcitealias[2]{\@namedef{al@#1\@extra@b@citeb}{#2}}
+
 % Para citar titulo
-\newcommand{\citetitle}[1]{
-	``\usebibentry{#1}{title}''
-}
+\newcommand{\citetitle}[1]{\defcitealias{#1}{\usebibentry{#1}{title}}``\citetalias{#1}''}
 
 % Variable bibliografia
 \def\@bibliografia{bibliografia}
