@@ -8,6 +8,7 @@ uclamsc 2.1, 2014/06/01
 - Agregado comando \capitulonum muestra el numero del capitulo en numeros arabigos
 - Agregado nuevo ambient \listadoindexadoconfuente
 - En ejemplo trabajo de grado se movió la metadata para el buen funcionamiento del \hypersetup 
+- Agregado comando \citetitle
 
 ---------------------------------------
 Miguel León <melf.ever.after@gmail.com>

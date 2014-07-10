@@ -48,6 +48,7 @@
 \RequirePackage[toc,section=section]{glossaries} %Para la definición de términos básicos
 \RequirePackage{listings} % Para formatear código fuente o algoritmos
 \RequirePackage[spanish,onelanguage]{algorithm2e} % [boxed,spanish,onelanguage] % Para escribir algoritmos en pseudo-codigo
+\RequirePackage{usebib}
 
 %Comando: pendientes
 %Descripción: Llamado en \configurar para listar los pendientes de uclamsc.cls
@@ -437,6 +438,7 @@
 		pdftitle = {\@titulo},
 		pdfauthor = {\@autor},
 		pdfkeywords = {\@palabrasclave},
+		pdfsubject={\@postgrado},
 		pdfborder={0 0 0},
 	    linkcolor = red,
 	    anchorcolor = red,
@@ -1010,7 +1012,7 @@
 %Comando: hacercaratula
 %Descripción: Crea la carátula de la tesis, la que va por fuera.
 \newcommand{\hacercaratula}{
-	%\setcounter{page}{-1}
+%\setcounter{page}{-1}
 	\setcounter{page}{1}
 	\thispagestyle{empty}
 		\begin{center}
@@ -1193,13 +1195,13 @@
 % Comando: hacerbibliografia
 % Descripción: Crea la bibliografía y la agrega al índice general.
 % Parámetros: [1] Nombre del archivo .bib que contiene los registros bibliográficos.
-\newcommand{\hacerbibliografia}[1]{
+\newcommand{\hacerbibliografia}{
 	\begin{spacing}{1.0} % Manual de la UCLA. No se si el espacio se debe aplicar aquí o en el .bst
 	\indexarparte{Referencias Bibliográficas} % Movida esta línea a acá para que el bookmark se genere antes del titulo.
 	%Si existen ítems bibtex de tipo @misc, es necesario borrar el comando \url de la propiedad URL. Causa problemas.
 	\renewcommand\bibsection{\capitulosinnumeracion{Referencias Bibliográficas}}
 	\bibliographystyle{uclamsc}
-	\bibliography{#1}
+	\bibliography{\@bibliografia}	
 	\end{spacing}
 }
 
@@ -1440,3 +1442,15 @@
 \newcounter{capitulonum}
 \setcounter{capitulonum}{0} 
 \newcommand{\capitulonum}{\@arabic\c@capitulonum}
+
+% Para citar titulo
+\newcommand{\citetitle}[1]{
+	``\usebibentry{#1}{title}''
+}
+
+% Variable bibliografia
+\def\@bibliografia{bibliografia}
+\newcommand{\bibliografia}[1]{
+	\def\@bibliografia{#1}
+	\bibinput{#1}
+}
