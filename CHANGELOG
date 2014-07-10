@@ -3,7 +3,8 @@ uclamsc 2.1, 2014/06/01
 ---------------------------------------
 
 - Agregado manejo de algoritmos con libreria algorithm2e, entorno algoritmo
-- Agregados comandos \reflistado, \refgrafico, \refalgoritmo, \refcuadro, \refilustracion
+- Agregados comandos \reflistado, \refgrafico, \refalgoritmo, \refcuadro, \refilustracion para hacer referencias, 
+	tambien se agregaron comandos para referencias pasivas \refplistado, \refpgrafico, \refpalgoritmo, \refpcuadro, \refpilustracion
 - Agregado comando \tituloyfuentealgoritmo, \tituloyfuentelistado, \tituloyfuentegrafico, \tituloyfuenteilustracion
 - Agregado comando \capitulonum muestra el numero del capitulo en numeros arabigos
 - Agregado nuevo ambient \listadoindexadoconfuente
