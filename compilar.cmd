@@ -36,6 +36,7 @@ del %nombre%.synctex.gz
 del %nombre%.dvi
 del %nombre%.brf
 del %nombre%.pdf
+del capitulos\*.aux
 echo Iniciando compilacion archivo: %nombre%.tex
 pdflatex -synctex=1 -interaction=nonstopmode %nombre%.tex
 bibtex %nombre%
@@ -65,5 +66,6 @@ del %nombre%.log
 del %nombre%.synctex.gz
 del %nombre%.dvi
 del %nombre%.brf
+del capitulos\*.aux
 pause
 exit
