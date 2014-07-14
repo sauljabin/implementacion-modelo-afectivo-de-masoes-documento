@@ -1,14 +1,13 @@
 @echo off
-set nombre=trabajo
-if not exist %nombre%.tex (
-	set nombre=proyecto
-)
-if not exist %nombre%.tex (
-	set nombre=manual
-)
 if not "%1"=="" (
 	set nombre=%1
-)
+) else if exist trabajo.tex (
+	set nombre=trabajo
+) else if exist proyecto.tex (
+	set nombre=proyecto
+) else if exist manual.tex (
+	set nombre=manual
+) 
 if not exist %nombre%.tex (
 	echo Archivo %nombre%.tex no existe
 	pause
@@ -37,14 +36,14 @@ del %nombre%.dvi
 del %nombre%.brf
 del %nombre%.pdf
 del capitulos\*.aux
-echo Iniciando compilacion archivo: %nombre%.tex
-pdflatex -synctex=1 -interaction=nonstopmode %nombre%.tex
+echo Compilando archivo: %nombre%.tex
+pdflatex -synctex=1 -interaction=nonstopmode %nombre%
 bibtex %nombre%
 makeglossaries %nombre%
 makeindex %nombre%.glo -s %nombre%.ist -t %nombre%.glg -o %nombre%.gls
-pdflatex -synctex=1 -interaction=nonstopmode %nombre%.tex
-pdflatex -synctex=1 -interaction=nonstopmode %nombre%.tex
-echo Compilacion finalizada archivo: %nombre%.tex
+pdflatex -synctex=1 -interaction=nonstopmode %nombre%
+pdflatex -synctex=1 -interaction=nonstopmode %nombre%
+echo Archivo generado: %nombre%.pdf
 echo Eliminando archivos temporales
 del %nombre%.aux
 del %nombre%.bbl
