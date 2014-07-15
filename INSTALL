@@ -1,7 +1,19 @@
-Copiar o crear acceso directo (unix) de los archivos uclamsc.bst y uclamsc.cls en el directorio del trabajo. Los accesos se harían (desde la raíz del proyecto) con los siguientes comandos
+Copiar o crear acceso directo (unix) de los archivos uclamsc.bst, uclamsc.cls y algorithm2e.sty
+en el directorio del trabajo. 
 
+Los accesos se harían (desde la raíz del proyecto) con los siguientes comandos (linux):
 ln -s /ruta/uclamsc.cls .
 ln -s /ruta/uclamsc.bst .
+ln -s /ruta/algorithm2e.sty .
 
+El código fuente de la plantilla se encuentra en la ruta fuentes/mcstesis
 
-Ver ejemplos para integración de la clase en documento.
+Eliminar trabajo.tex y trabajo.bib si se va a realizar un proyecto, o eliminar
+proyecto.tex y proyecto.bib si se va a realizar un trabajo de grado.
+
+Para compilar correctamente el documento se recomienda copiar el archivo compilar.cmd en caso de windows 
+o compilar.sh en caso de linux en el directorio del trabajo. Estos scripts se pueden ejecutar desde una consola
+(o haciendo doble clic sobre él, en caso de windows). El script busca el archivo proyecto.tex o trabajo.tex 
+automáticamente.
+
+La documentación de la plantilla se encuentra en el archivo manual.pdf.
