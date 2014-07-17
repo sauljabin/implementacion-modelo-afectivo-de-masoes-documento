@@ -1449,3 +1449,6 @@
 	\def\@bibliografia{#1}
 	\bibinput{#1}
 }
+
+% Comando comillas
+\newcommand{\comillas}[1]{``#1''}
