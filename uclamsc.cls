@@ -1110,9 +1110,9 @@
 		\MakeUppercase{Universidad Centroccidental} 
 		\textquotedblleft \MakeUppercase{Lisandro Alvarado}\textquotedblright\\
 		\MakeUppercase{Decanato de \@decanato}\\
-		{\@postgrado}\\
+		\MakeUppercase{\@postgrado}\\
 		\espaciotriple
-		\MakeUppercase{\@titulo}\\
+		\MakeUppercase{\textbf{\@titulo}}\\
 	\espaciotriple
 	\raggedleft{
 		\textbf{Autor:} \@autor\\
@@ -1141,9 +1141,9 @@
 		\MakeUppercase{Universidad Centroccidental} 
 		\textquotedblleft \MakeUppercase{Lisandro Alvarado}\textquotedblright\\
 		\MakeUppercase{Decanato de \@decanato}\\
-		{\@postgrado}\\
+		\MakeUppercase{\@postgrado}\\
 		\espaciotriple
-		\MakeUppercase{\@title}\\
+		\MakeUppercase{\textbf{\@title}}\\
 	\espaciotriple
 	\raggedleft{
 		\textbf{Author:} \@autor\\
