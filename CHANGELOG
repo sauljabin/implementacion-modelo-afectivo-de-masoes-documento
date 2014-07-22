@@ -1,4 +1,16 @@
-Sa˙l PiÒa <sauljabin@gmail.com>
+---------------------------------------
+Sa√∫l Pi√±a <sauljabin@gmail.com>
+uclamsc 2.2, 2014/07/22
+---------------------------------------
+
+- Agregado comando \comillas
+- Agregada traducciones de algoritmo en clase uclamsc
+- Eliminada librer√≠a algorithm2e del repositorio
+- Agregado ambiente \cuadroconindice para personalizar el √≠ndice
+- Actualizado el ambiente \cuadro para que el t√≠tulo sea el mismo que en el √≠ndice
+
+---------------------------------------
+Sa√∫l Pi√±a <sauljabin@gmail.com>
 uclamsc 2.1, 2014/06/01
 ---------------------------------------
 
@@ -7,16 +19,16 @@ uclamsc 2.1, 2014/06/01
 	tambien se agregaron comandos para referencias pasivas \refplistado, \refpgrafico, \refpalgoritmo, \refpcuadro, \refpilustracion
 - Agregado comando \tituloyfuentealgoritmo, \tituloyfuentelistado, \tituloyfuentegrafico, \tituloyfuenteilustracion
 - Agregado comando \capitulonum muestra el numero del capitulo en numeros arabigos
-- Agregado nuevo ambient \listadoindexadoconfuente
-- En ejemplo trabajo de grado se moviÛ la metadata para el buen funcionamiento del \hypersetup 
+- Agregado nuevo ambiento \listadoindexadoconfuente
+- En la plantilla se movi√≥ la metadata para el buen funcionamiento del \hypersetup 
 - Agregado comando \citetitle
 
 ---------------------------------------
-Miguel LeÛn <melf.ever.after@gmail.com>
+Miguel Le√≥n <melf.ever.after@gmail.com>
 uclamsc 2.0, 2013/04/01
 ---------------------------------------
 
-- Agregada opciÛn para imprimir en doble cara (ahorra hojas en ejemplares para revisiÛn).
+- Agregada opci√≥n para imprimir en doble cara (ahorra hojas en ejemplares para revisi√≥n).
 - Cambiado margen interno de 3cm a 4cm (Manual UCLA).
 - Incluido paquete lmodern.
 - Incluido paquete listings.
@@ -25,21 +37,21 @@ uclamsc 2.0, 2013/04/01
 - Eliminado comando \preambulo.
 - Removida la necesidad del uso externo del comando \configurar.
 - Removida la necesidad del uso externo del comando \haceranexos.
-- Nuevo ambiente <viÒetas>.
-- Agregados par·metros opcionales al ambiente <ilustracion> para mantener compatibilidad.
-	Prescinde del uso del comando \tituloilustracion{}{} y mejora la posiciÛn del marcador para el documento digital.
-- Agregados par·metros opcionales al ambiente <grafico> para mantener compatibilidad.
-	Prescinde del uso del comando \titulografico{}, permite incluir una etiqueta y mejora la posiciÛn del marcador para el documento digital.
-- DefiniciÛn del ambiente <cuadro> modificada (INCOMPATIBLE).
-	Ahora 4 argumentos m·s 1 opcional. Se reordenaron los par·metros intuitivamente.
-	Par·metro adicional permite indicar un tÌtulo diferente para el Ìndice. Par·metro opcional permite escoger el tamaÒo de la fuente.
-- DefiniciÛn del ambiente <citatextual> modificada.
-	Ya no es necesario iniciar en la misma lÌnea. SangrÌas cambiadas seg˙n manual de la UCLA.
+- Nuevo ambiente <vi√±etas>.
+- Agregados par√°metros opcionales al ambiente <ilustracion> para mantener compatibilidad.
+	Prescinde del uso del comando \tituloilustracion{}{} y mejora la posici√≥n del marcador para el documento digital.
+- Agregados par√°metros opcionales al ambiente <grafico> para mantener compatibilidad.
+	Prescinde del uso del comando \titulografico{}, permite incluir una etiqueta y mejora la posici√≥n del marcador para el documento digital.
+- Definici√≥n del ambiente <cuadro> modificada (INCOMPATIBLE).
+	Ahora 4 argumentos m√°s 1 opcional. Se reordenaron los par√°metros intuitivamente.
+	Par√°metro adicional permite indicar un t√≠tulo diferente para el √≠ndice. Par√°metro opcional permite escoger el tama√±o de la fuente.
+- Definici√≥n del ambiente <citatextual> modificada.
+	Ya no es necesario iniciar en la misma l√≠nea. Sangr√≠as cambiadas seg√∫n manual de la UCLA.
 - Eliminado ambiente <citatextuallarga>.
-	Innecesario y no acorde al manual de la UCLA. El ambiente <citatextual> funciona para citas de varios p·rrafos.
-- Cambiado formato de los tÌtulos de las secciones, subsecciones y subsubsecciones seg˙n el manual de la UPEL (manual de la UCLA sin definiciÛn explÌcita).
-- Renombrado comando \hacerindice a \hacerindices. Para evitar confusiÛn.
-- Nuevo "Õndice de Listados". Para indexar cÛdigos o algoritmos.
+	Innecesario y no acorde al manual de la UCLA. El ambiente <citatextual> funciona para citas de varios p√°rrafos.
+- Cambiado formato de los t√≠tulos de las secciones, subsecciones y subsubsecciones seg√∫n el manual de la UPEL (manual de la UCLA sin definici√≥n expl√≠cita).
+- Renombrado comando \hacerindice a \hacerindices. Para evitar confusi√≥n.
+- Nuevo "√çndice de Listados". Para indexar c√≥digos o algoritmos.
 - Nuevo comando \letralistados.
 - Nuevo comando \definirliterales{}.
 - Nuevo comando \hacerglosarioconacronimos.
@@ -49,27 +61,27 @@ uclamsc 2.0, 2013/04/01
 
 - (INTERNO) Nuevo comando \definir@temporales[2].
 - (INTERNO) Nuevos comandos \labelilustracion{} y \captionilustracion{}.
-- (INTERNO) DefiniciÛn del comando \tituloilustracion{}{} modificada. No se cambiÛ su funcionalidad.
+- (INTERNO) Definici√≥n del comando \tituloilustracion{}{} modificada. No se cambi√≥ su funcionalidad.
 - (INTERNO) Nuevos comandos \labelgrafico{} y \captiongrafico{}.
-- (INTERNO) DefiniciÛn del comando \titulografico{} modificada. No se cambiÛ su funcionalidad.
-- (INTERNO) DefiniciÛn del comando \titulocuadro{} modificada (INCOMPATIBLE).
-	Ahora requiere dos par·metros, tÌtulo en el Ìndice y tÌtulo en el cuadro.
-- (INTERNO) DefiniciÛn del comando \configurarestructura modificada. Eliminada sangrÌa adicional en las subsecciones (reducido en subsubsecciones).
-	Mejor aprovechamiento del espacio (los manuales no sugieren que se corra progresivamente la sangrÌa).
-- (INTERNO) DefiniciÛn del comando \continuarsubseccion modificada.
-- (INTERNO) DefiniciÛn del comando \continuarsubsubseccion modificada.
-- (INTERNO) DefiniciÛn del comando \configurarindice modificada.
-	Ahora los Ìndices de ilustraciones, gr·ficos, cuadros, sÛlo se generan si existe el archivo .loi, .loc, .loq y .lol respectivamente, i.e., si se han usado estos elementos en el trabajo.
+- (INTERNO) Definici√≥n del comando \titulografico{} modificada. No se cambi√≥ su funcionalidad.
+- (INTERNO) Definici√≥n del comando \titulocuadro{} modificada (INCOMPATIBLE).
+	Ahora requiere dos par√°metros, t√≠tulo en el √≠ndice y t√≠tulo en el cuadro.
+- (INTERNO) Definici√≥n del comando \configurarestructura modificada. Eliminada sangr√≠a adicional en las subsecciones (reducido en subsubsecciones).
+	Mejor aprovechamiento del espacio (los manuales no sugieren que se corra progresivamente la sangr√≠a).
+- (INTERNO) Definici√≥n del comando \continuarsubseccion modificada.
+- (INTERNO) Definici√≥n del comando \continuarsubsubseccion modificada.
+- (INTERNO) Definici√≥n del comando \configurarindice modificada.
+	Ahora los √≠ndices de ilustraciones, gr√°ficos, cuadros, s√≥lo se generan si existe el archivo .loi, .loc, .loq y .lol respectivamente, i.e., si se han usado estos elementos en el trabajo.
 - (INTERNO) Nuevo comando \titulolistado.
-- (INTERNO) DefiniciÛn del comando \indexarpreliminar{} modificada. Desaparecer el warning por el uso de \uppercase dentro de \addcontentsline al generarse el bookmark.
-- (INTERNO) DefiniciÛn del comando \indexarparte{} modificada. Desaparecer el warning por el uso de \uppercase dentro de \addcontentsline al generarse el bookmark.
-- (INTERNO) DefiniciÛn del comando \hacerpresentacion modificada. Desaparecer warnings.
-- (INTERNO) DefiniciÛn del comando \hacerresumen modificada. No se cambiÛ su funcionalidad.
-- (INTERNO) DefiniciÛn del comando \hacerabstract modificada. No se cambiÛ su funcionalidad.
-- (INTERNO) DefiniciÛn del comando \haceranexos modificada. CorrecciÛn en n˙mero de p·gina.
-- (INTERNO) DefiniciÛn del comando \hacerbibliografia modificada. Cambiado interlineado.
-- (INTERNO) DefiniciÛn del comando \capitulo modificada. Desaparecer warnings.
-- (INTERNO) DefiniciÛn del comando \capitulosinnumeracion modificada. Desaparecer warnings.
-- (INTERNO) DefiniciÛn del comando \seccion modificada. CorrecciÛn de marcador y n˙mero de p·gina.
-- (INTERNO) DefiniciÛn del comando \subseccion modificada. CorrecciÛn de marcador y n˙mero de p·gina.
-- (INTERNO) DefiniciÛn del comando \subsubseccion modificada. CorrecciÛn de marcador y n˙mero de p·gina.
+- (INTERNO) Definici√≥n del comando \indexarpreliminar{} modificada. Desaparecer el warning por el uso de \uppercase dentro de \addcontentsline al generarse el bookmark.
+- (INTERNO) Definici√≥n del comando \indexarparte{} modificada. Desaparecer el warning por el uso de \uppercase dentro de \addcontentsline al generarse el bookmark.
+- (INTERNO) Definici√≥n del comando \hacerpresentacion modificada. Desaparecer warnings.
+- (INTERNO) Definici√≥n del comando \hacerresumen modificada. No se cambi√≥ su funcionalidad.
+- (INTERNO) Definici√≥n del comando \hacerabstract modificada. No se cambi√≥ su funcionalidad.
+- (INTERNO) Definici√≥n del comando \haceranexos modificada. Correcci√≥n en n√∫mero de p√°gina.
+- (INTERNO) Definici√≥n del comando \hacerbibliografia modificada. Cambiado interlineado.
+- (INTERNO) Definici√≥n del comando \capitulo modificada. Desaparecer warnings.
+- (INTERNO) Definici√≥n del comando \capitulosinnumeracion modificada. Desaparecer warnings.
+- (INTERNO) Definici√≥n del comando \seccion modificada. Correcci√≥n de marcador y n√∫mero de p√°gina.
+- (INTERNO) Definici√≥n del comando \subseccion modificada. Correcci√≥n de marcador y n√∫mero de p√°gina.
+- (INTERNO) Definici√≥n del comando \subsubseccion modificada. Correcci√≥n de marcador y n√∫mero de p√°gina.

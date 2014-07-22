@@ -6,8 +6,8 @@
 % Licencia GNU General Public License. 
 
 \NeedsTeXFormat{LaTeX2e}
-\newcommand{\uclamscversion}{2.1}
-\newcommand{\uclamscdate}{2014/06/01}
+\newcommand{\uclamscversion}{2.2}
+\newcommand{\uclamscdate}{2014/07/22}
 \ProvidesClass{uclamsc}[\uclamscdate, \uclamscversion]
 \typeout{Reportar dudas y errores a <sauljabin@gmail.com>, <melf.ever.after@gmail.com>.}
 
@@ -1278,7 +1278,7 @@
 % Uso: 
 % \capitulo{El Problema}
 \newcommand{\capitulo}[1]{
-\refstepcounter{capitulonum}
+	\refstepcounter{capitulonum}
 	\setlength{\leftskip}{0cm}
 	\uppercase{\chapter{#1}} % Invertido el orden para evitar el warning con el uppercase al generarse el bookmark. No sé cómo de todas maneras se genera en mayúsculas.
 	\continuarcapitulo
@@ -1486,3 +1486,23 @@
 
 % Comando comillas
 \newcommand{\comillas}[1]{``#1''}
+
+% Mejorada la traduccion de paquete algorithm2e
+\ifthenelse{\boolean{algocf@optonelanguage}\AND\equal{\algocf@languagechoosen}{spanish}}{
+\SetKwInput{KwIn}{Entrada}
+\SetKwInput{KwOut}{Salida}
+\SetKwInput{KwData}{Datos}
+\SetKwInput{KwResult}{Resultado}
+\SetKw{KwTo}{a}
+\SetKw{KwRet}{devolver}
+\SetKw{Return}{devolver}
+\SetKwBlock{Begin}{inicio}{fin}
+\SetKwRepeat{Repeat}{repetir}{hasta que}
+\SetKwIF{If}{ElseIf}{Else}{si}{entonces}{sin\'o, si}{sino}{fin si}
+\SetKwSwitch{Switch}{Case}{Other}{seleccionar}{hacer}{caso}{sin\'o}{fin caso}{fin seleccionar}
+\SetKwFor{For}{para}{hacer}{fin para}
+\SetKwFor{ForPar}{par}{hacer en paralelo}{fin para}
+\SetKwFor{ForEach}{para cada}{hacer}{fin para cada}
+\SetKwFor{ForAll}{para todo}{hacer}{fin para todo}
+\SetKwFor{While}{mientras}{hacer}{fin mientras}
+}{}

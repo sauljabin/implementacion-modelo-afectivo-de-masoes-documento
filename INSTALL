@@ -1,10 +1,9 @@
-Copiar o crear acceso directo (unix) de los archivos uclamsc.bst, uclamsc.cls y algorithm2e.sty
+Copiar o crear acceso directo (unix) de los archivos uclamsc.bst y uclamsc.cls
 en el directorio del trabajo. 
 
 Los accesos se harían (desde la raíz del proyecto) con los siguientes comandos (linux):
 ln -s /ruta/uclamsc.cls .
 ln -s /ruta/uclamsc.bst .
-ln -s /ruta/algorithm2e.sty .
 
 El código fuente de la plantilla se encuentra en la ruta fuentes/mcstesis
 
