@@ -329,6 +329,40 @@
 
 % Ambiente: cuadro
 % Descripción: Prepara el contexto para insertar un cuadro o tabla.
+% Parámetros: [Opcional] tamaño fuente, [2] título del cuadro, [3] etiqueta, [4] columnas y formato.
+% Uso: 
+% \begin{cuadro}[\footnotesize]
+% {Piedra, Papel ó Tijeras – Forma Normal}{tab:ejemplo}{lccc}
+% 	\toprule
+% 	Jugares I/II & Piedra & Papel & Tijeras\\
+% 	\midrule
+% 	Piedra   & (0,0) & (-1,1) & (1,-1)\\
+% 	Papel   & (1,-1) & (0,0) & (-1,1)\\
+% 	Tijeras   & (-1,1) & (1,-1) & (0,0)\\
+% 	\bottomrule
+% 	\fuentecuadro{4}{Juan Rada (2005)}
+% \end{cuadro}
+%
+\newenvironment{cuadro}[4][\normalsize]
+{
+	\begin{table}[htb]
+	\centering
+	\espaciodoble
+	\titulocuadro{#2}{#2}
+	\label{#3}
+	#1
+	\begin{spacing}{1.3}
+	\begin{tabular}{#4}
+}
+{
+	\end{tabular}
+	\end{spacing}
+	\end{table}
+}
+
+
+% Ambiente: cuadroconindice
+% Descripción: Prepara el contexto para insertar un cuadro o tabla.
 % Parámetros: [Opcional] tamaño fuente, [1] texto del índice, [2] título del cuadro, [3] etiqueta, [4] columnas y formato.
 % Uso: 
 % \begin{cuadro}[\normalsize]
@@ -343,7 +377,7 @@
 % 	\fuentecuadro{4}{Juan Rada (2005)}
 % \end{cuadro}
 %
-\newenvironment{cuadro}[5][\footnotesize]
+\newenvironment{cuadroconindice}[5][\normalsize]
 {
 	\begin{table}[htb]
 	\centering

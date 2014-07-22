@@ -32,6 +32,9 @@ Si se desea agregar una fuente se puede usar el comando: \\ \co{tituloyfuentegra
 \seccion{Cuadro}
 
 \am{cuadro}{ para mostrar una tabla y agregarla al índice de cuadros}
+{[tamáño de letra]\\\pa[título en el cuadro]\pa[etiqueta]\pa[columnas]}{\ldots}
+
+\am{cuadroconindice}{ para mostrar una tabla y agregarla al índice de cuadros, con un índice personalizado}
 {[tamáño de letra]\\\pa[título en el índice]\pa[título en el cuadro]\pa[etiqueta]\pa[columnas]}{\ldots}
 
 Utilizar el comando \co{fuentecuadro}\pa[\# columnas en el cuadro]\pa[fuente]\ dentro del ambiente para agregar la fuente de donde se tomó el cuadro.
@@ -44,7 +47,21 @@ Referencia rápida en \url{http://en.wikibooks.org/wiki/LaTeX/Tables}.
 
 
 \begin{cuadro}
-{Ejemplo de Cuadro}
+{Ejemplo de Cuadro: Piedra, Papel ó Tijeras – Forma Normal}
+{tab:ejemplo}
+{lccc}
+	\toprule
+	Jugares I/II & Piedra & Papel & Tijeras\\
+	\midrule
+	Piedra   & (0,0) & (-1,1) & (1,-1)\\
+	Papel   & (1,-1) & (0,0) & (-1,1)\\
+	Tijeras   & (-1,1) & (1,-1) & (0,0)\\
+	\bottomrule
+	\fuentecuadro{4}{Juan Rada (2005)}
+\end{cuadro}
+
+\begin{cuadroconindice}
+{Ejemplo de Cuadro Con Índice}
 {Piedra, Papel ó Tijeras – Forma Normal}
 {tab:ejemplo}
 {lccc}
