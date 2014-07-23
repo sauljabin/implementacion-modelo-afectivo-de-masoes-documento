@@ -1434,35 +1434,35 @@
 % Descripción: Hace referencia a una ilustración
 % Parametros: [1] Etiqueta
 % Uso: \refilustracion{etiqueta}
-\newcommand{\refilustracion}[1]{Ilustración \ref{#1}}
+\newcommand{\refilustracion}[1]{\hyperref[#1]{Ilustración \ref{#1}}}
 \newcommand{\refpilustracion}[1]{(\refilustracion{#1})}
 
 % Comando: refcuadro
 % Descripción: Hace referencia a un cuadro
 % Parametros: [1] Etiqueta
 % Uso: \refcuadro{etiqueta}
-\newcommand{\refcuadro}[1]{Cuadro \ref{#1}}
+\newcommand{\refcuadro}[1]{\hyperref[#1]{Cuadro \ref{#1}}}
 \newcommand{\refpcuadro}[1]{(\refcuadro{#1})}
 
 % Comando: refalgoritmo
 % Descripción: Hace referencia a un algoritmo
 % Parametros: [1] Etiqueta
 % Uso: \refalgoritmo{etiqueta}
-\newcommand{\refalgoritmo}[1]{Algoritmo \ref{#1}}
+\newcommand{\refalgoritmo}[1]{\hyperref[#1]{Algoritmo \ref{#1}}}
 \newcommand{\refpalgoritmo}[1]{(\refalgoritmo{#1})}
 
 % Comando: refgrafico
 % Descripción: Hace referencia a un grafico
 % Parametros: [1] Etiqueta
 % Uso: \refgrafico{etiqueta}
-\newcommand{\refgrafico}[1]{Gráfico \ref{#1}}
+\newcommand{\refgrafico}[1]{\hyperref[#1]{Gráfico \ref{#1}}}
 \newcommand{\refpgrafico}[1]{(\refgrafico{#1})}
 
 % Comando: reflistado
 % Descripción: Hace referencia a un listado
 % Parametros: [1] Etiqueta
 % Uso: \reflistado{etiqueta}
-\newcommand{\reflistado}[1]{Listado \ref{#1}}
+\newcommand{\reflistado}[1]{\hyperref[#1]{Listado \ref{#1}}}
 \newcommand{\refplistado}[1]{(\reflistado{#1})}
 
 % Para ir contando los capitulos
