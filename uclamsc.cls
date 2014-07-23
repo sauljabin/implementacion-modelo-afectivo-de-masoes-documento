@@ -331,7 +331,7 @@
 % Descripción: Prepara el contexto para insertar un cuadro o tabla.
 % Parámetros: [Opcional] tamaño fuente, [2] título del cuadro, [3] etiqueta, [4] columnas y formato.
 % Uso: 
-% \begin{cuadro}[\footnotesize]
+% \begin{cuadro}[\normalsize]
 % {Piedra, Papel ó Tijeras – Forma Normal}{tab:ejemplo}{lccc}
 % 	\toprule
 % 	Jugares I/II & Piedra & Papel & Tijeras\\
@@ -343,7 +343,7 @@
 % 	\fuentecuadro{4}{Juan Rada (2005)}
 % \end{cuadro}
 %
-\newenvironment{cuadro}[4][\normalsize]
+\newenvironment{cuadro}[4][\footnotesize]
 {
 	\begin{table}[htb]
 	\centering
@@ -377,7 +377,7 @@
 % 	\fuentecuadro{4}{Juan Rada (2005)}
 % \end{cuadro}
 %
-\newenvironment{cuadroconindice}[5][\normalsize]
+\newenvironment{cuadroconindice}[5][\footnotesize]
 {
 	\begin{table}[htb]
 	\centering
