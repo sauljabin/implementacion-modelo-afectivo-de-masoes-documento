@@ -44,6 +44,7 @@ makeglossaries %nombre%
 makeindex %nombre%.glo -s %nombre%.ist -t %nombre%.glg -o %nombre%.gls
 pdflatex -synctex=1 -interaction=nonstopmode %nombre%
 pdflatex -synctex=1 -interaction=nonstopmode %nombre%
+pdflatex -synctex=1 -interaction=nonstopmode %nombre%
 echo Archivo generado: %nombre%.pdf
 echo Eliminando archivos temporales
 del 2>nul %nombre%.aux

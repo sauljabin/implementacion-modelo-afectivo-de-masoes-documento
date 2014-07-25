@@ -6,8 +6,8 @@
 % Licencia GNU General Public License. 
 
 \NeedsTeXFormat{LaTeX2e}
-\newcommand{\uclamscversion}{2.2}
-\newcommand{\uclamscdate}{2014/07/22}
+\newcommand{\uclamscversion}{2.3}
+\newcommand{\uclamscdate}{2014/07/25}
 \ProvidesClass{uclamsc}[\uclamscdate, \uclamscversion]
 \typeout{Reportar dudas y errores a <sauljabin@gmail.com>, <melf.ever.after@gmail.com>.}
 
@@ -513,8 +513,7 @@
 	\renewcommand{\subsubsection}{\@startsection{subsubsection}{3}{\parindent}{22pt}{22pt}{\normalfont\normalsize\bfseries\itshape}} 
 	
 	% Configuración del glosario.
-	% Comando descontinuado
-	% \glossarystyle{list}
+	\glossarystyle{list}
 	
 	\renewcommand*{\glossarysection}[2][\@gls@title]{
 		\def\@gls@title{##2}% 
@@ -1046,8 +1045,7 @@
 %Comando: hacercaratula
 %Descripción: Crea la carátula de la tesis, la que va por fuera.
 \newcommand{\hacercaratula}{
-%\setcounter{page}{-1}
-	\setcounter{page}{1}
+	\setcounter{page}{-1}
 	\thispagestyle{empty}
 		\begin{center}
 			{\MakeUppercase{Universidad Centroccidental}}\\ 
@@ -1071,7 +1069,7 @@
 %Descripción: Crea la hoja de presentación de la tesis.
 \newcommand{\hacerpresentacion}{
 	\thispagestyle{empty}
-	%\setcounter{page}{1}
+	\setcounter{page}{1}
 	\begin{center}
 		{\MakeUppercase{Universidad Centroccidental}}
 		\textquotedblleft {\MakeUppercase{Lisandro Alvarado}}\textquotedblright\\
