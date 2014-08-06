@@ -6,7 +6,7 @@
 % Licencia GNU General Public License. 
 
 \NeedsTeXFormat{LaTeX2e}
-\newcommand{\uclamscversion}{2.4}
+\newcommand{\uclamscversion}{3.0}
 \newcommand{\uclamscdate}{2014/08/01}
 \ProvidesClass{uclamsc}[\uclamscdate, \uclamscversion]
 \typeout{Reportar dudas y errores a <sauljabin@gmail.com>.}
