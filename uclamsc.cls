@@ -6,10 +6,10 @@
 % Licencia GNU General Public License. 
 
 \NeedsTeXFormat{LaTeX2e}
-\newcommand{\uclamscversion}{2.3}
-\newcommand{\uclamscdate}{2014/07/25}
+\newcommand{\uclamscversion}{2.4}
+\newcommand{\uclamscdate}{2014/08/01}
 \ProvidesClass{uclamsc}[\uclamscdate, \uclamscversion]
-\typeout{Reportar dudas y errores a <sauljabin@gmail.com>, <melf.ever.after@gmail.com>.}
+\typeout{Reportar dudas y errores a <sauljabin@gmail.com>.}
 
 \newif\if@doblecara\@doblecarafalse
 \DeclareOption{doblecara}{
@@ -62,6 +62,8 @@
 
 \def\@titulo{\variablefaltante{titulo}} % Título del trabajo de grado
 \newcommand{\titulo}[1]{\def\@titulo{#1}}
+\def\@grado{\variablefaltante{grado}} % Grado a optar
+\newcommand{\grado}[1]{\def\@grado{#1}}
 \def\@autor{\variablefaltante{autor}} % Nombre del autor.
 \newcommand{\autor}[1]{\def\@autor{#1}}
 \def\@decanato{\variablefaltante{decanato}} % Nombre del Decanato. (e.g. Ciencias y Tecnología)
@@ -486,7 +488,7 @@
 % Descripción: Determina el formato de capítulos, secciones, subsecciones y subsubsecciones
 \newcommand{\configurarestructura}{
 	\def\@makechapterhead##1{ %Para los capítulos numerados
-		\vspace*{0cm}	%Espacio de 1cm antes de cada capítulo
+		\vspace*{1cm}	%Espacio de 1cm antes de cada capítulo
 		\centering{\normalfont \normalsize \bfseries \MakeUppercase{\@chapapp} \thechapter}
 		\\
 		\espaciotriple
@@ -1045,7 +1047,7 @@
 %Comando: hacercaratula
 %Descripción: Crea la carátula de la tesis, la que va por fuera.
 \newcommand{\hacercaratula}{
-	\setcounter{page}{-1}
+	%\setcounter{page}{-1}
 	\thispagestyle{empty}
 		\begin{center}
 			{\MakeUppercase{Universidad Centroccidental}}\\ 
@@ -1079,7 +1081,7 @@
 		{\textbf{\MakeUppercase{\@titulo}}}\\
 		\vfill
 		{Trabajo presentado para optar al grado de\\
-		Magister Scientiarum}
+		\@grado}
 		\vfill
 		\begin{flushright}
 			Por: \MakeUppercase{\@autor}
