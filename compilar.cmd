@@ -7,6 +7,8 @@ if not "%1"=="" (
 	set nombre=proyecto
 ) else if exist manual.tex (
 	set nombre=manual
+) else if exist test.tex (
+	set nombre=test
 ) 
 if not exist %nombre%.tex (
 	echo Archivo %nombre%.tex no existe
@@ -23,7 +25,6 @@ del 2>nul %nombre%.gls
 del 2>nul %nombre%.glsdefs
 del 2>nul %nombre%.ist
 del 2>nul %nombre%.loa
-del 2>nul %nombre%.loal
 del 2>nul %nombre%.lol
 del 2>nul %nombre%.loi
 del 2>nul %nombre%.lod
@@ -63,7 +64,6 @@ del 2>nul %nombre%.gls
 del 2>nul %nombre%.glsdefs
 del 2>nul %nombre%.ist
 del 2>nul %nombre%.loa
-del 2>nul %nombre%.loal
 del 2>nul %nombre%.lol
 del 2>nul %nombre%.loi
 del 2>nul %nombre%.lod

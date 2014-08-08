@@ -49,6 +49,7 @@
 \RequirePackage{listings} % Para formatear código fuente o algoritmos
 \RequirePackage[spanish,onelanguage]{algorithm2e} % [boxed,spanish,onelanguage] % Para escribir algoritmos en pseudo-codigo
 \RequirePackage{usebib}
+\RequirePackage{keyval}
 
 %Comando: pendientes
 %Descripción: Llamado en \configurar para listar los pendientes de uclamsc.cls
@@ -448,6 +449,25 @@
 		\begin{eqnarray}
 	}
 	{\end{eqnarray}}
+	
+% Ambiente: algoritmo
+% Descripción: Permite insertar un algoritmo con formato pseudocodigo
+% Uso: 
+% \begin{algoritmo}
+% 	...
+% \end{algoritmo}
+% uso con parámetros opcionales:
+% \begin{algoritmo}[{titulo}{label}]
+% 	...
+% \end{algoritmo}
+	
+\newenvironment{algoritmo}[1][]{
+	\begin{algorithm}[htcb]
+	\ifthenelse{\equal{#1}{}}{}{\definir@temporales #1 \labelalgoritmo{\tmp@label}}
+}{
+	\ifthenelse{\isundefined\tmp@caption}{}{\captionalgoritmo{\tmp@caption}}
+	\end{algorithm}
+}
 
 %%%%%%%%%%%%%%%%%%%%%%%%% INTERNO %%%%%%%%%%%%%%%%%%%%%%%%%
 % Comando: configurar
@@ -775,56 +795,39 @@
 	
 %	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 	%Índice de Algoritmos
-
-	% Ambiente: algoritmo
-	% Descripción: Permite insertar un algoritmo con formato pseudocodigo
-	% Uso: 
-	% \begin{algoritmo}
-	% 	...
-	% \end{algoritmo}
-	% uso con parámetros opcionales:
-	% \begin{algoritmo}[{titulo}{label}]
-	% 	...
-	% \end{algoritmo}
-
-	\newenvironment{algoritmo}[1][]{
-		\begin{algorithm}[htcb]
-		\ifthenelse{\equal{##1}{}}{}{\definir@temporales ##1 \labelalgoritmo{\tmp@label}}
-	}{
-		\ifthenelse{\isundefined\tmp@caption}{}{\captionalgoritmo{\tmp@caption}}
-		\end{algorithm}
-	}
-
 	\newcommand{\listofalgorithmsname}{{Índice de Algoritmos}} 
-
+	\newlistof[part]{algs}{loa}{\listofalgorithmsname}
+	
 	% Comando: listofalgorithms
 	% Descripción: Crea el índice de algoritmos.
 	\renewcommand{\listofalgorithms}{
-		\IfFileExists{\jobname.loal}{
+		\IfFileExists{\jobname.loa}{
 			\indexarpreliminar{\listofalgorithmsname}
 			\capitulosinnumeracion{{\listofalgorithmsname}}
 			\flushright{\bfseries PÁG.}
-			\@starttoc{loal}
+			\@starttoc{loa}
 		}{
 			\AtEndDocument{
-				\ifthenelse{\value{algocf}>0}{\@starttoc{loal}}{}
+				\ifthenelse{\value{algs}>0}{\@starttoc{loa}}{}
 			}
 		}
 	}
+	
+	\renewcommand{\thealgs}{\@arabic\c@algs}
 		
 	\newcommand\labelalgoritmo[1]{
-		\refstepcounter{algocf}
+		\refstepcounter{algs}
 		\label{##1}
 	}
 
 	\newcommand\captionalgoritmo[1]{
-		\centering\par\normalfont\normalsize\noindent{{\bfseries Algoritmo~\thealgocf:} ##1}
-		\addcontentsline{loal}{algocf}{\protect{\thealgocf.} ##1}\par
+		\centering\par\normalfont\normalsize\noindent{{\bfseries Algoritmo~\thealgs:} ##1}
+		\addcontentsline{loa}{algs}{\protect{\thealgs.} ##1}\par
 	}
 
 	\newcommand\captionandsourcealgoritmo[2]{
-		\centering\par\normalfont\normalsize\noindent{{\bfseries Algoritmo~\thealgocf:} ##1 \ifthenelse{\equal{##2}{}}{}{\\ {\bfseries Fuente:} ##2}}
-		\addcontentsline{loal}{algocf}{\protect{\thealgocf.} ##1}\par
+		\centering\par\normalfont\normalsize\noindent{{\bfseries Algoritmo~\thealgs:} ##1 \ifthenelse{\equal{##2}{}}{}{\\ {\bfseries Fuente:} ##2}}
+		\addcontentsline{loa}{algs}{\protect{\thealgs.} ##1}\par
 	}
 
 	% Comando: tituloalgoritmo
@@ -1278,7 +1281,6 @@
 % Uso: 
 % \capitulo{El Problema}
 \newcommand{\capitulo}[1]{
-	\refstepcounter{capitulonum}
 	\setlength{\leftskip}{0cm}
 	\uppercase{\chapter{#1}} % Invertido el orden para evitar el warning con el uppercase al generarse el bookmark. No sé cómo de todas maneras se genera en mayúsculas.
 	\continuarcapitulo
@@ -1410,12 +1412,12 @@
 % \sum{M_{x} = 0}
 % \end{ecuaciones*}
 %
-\newenvironment{ecuaciones*}{	
+\newenvironment{ecuaciones*}
+	{	
 		\espaciosimple
 		\begin{eqnarray*}
 	}
-	{\end{eqnarray*}
-}
+	{\end{eqnarray*}}
 		
 % Comando: agregartermino
 % Descripción: Agrega un término al glosario.
@@ -1465,16 +1467,10 @@
 \newcommand{\reflistado}[1]{\hyperref[#1]{Listado \ref{#1}}}
 \newcommand{\refplistado}[1]{(\reflistado{#1})}
 
-% Para ir contando los capitulos
-\newcounter{capitulonum}
-\setcounter{capitulonum}{0} 
-\newcommand{\capitulonum}{\@arabic\c@capitulonum}
-
 %\renewcommand\defcitealias[2]{\@ifundefined{al@#1\@extra@b@citeb}{}{\PackageWarning{natbib}{Overwriting existing alias for citation #1}}\@namedef{al@#1\@extra@b@citeb}{#2}}
 
-\renewcommand\defcitealias[2]{\@namedef{al@#1\@extra@b@citeb}{#2}}
-
 % Para citar titulo
+\renewcommand\defcitealias[2]{\@namedef{al@#1\@extra@b@citeb}{#2}}
 \newcommand{\citetitle}[1]{\defcitealias{#1}{\usebibentry{#1}{title}}``\citetalias{#1}''}
 
 % Variable bibliografia

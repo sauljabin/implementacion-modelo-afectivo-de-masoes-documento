@@ -7,6 +7,8 @@ elif [ -f proyecto.tex ]; then
   nombre=proyecto
 elif [ -f manual.tex ]; then
   nombre=manual
+elif [ -f test.tex ]; then
+  nombre=test
 fi
 if [ ! -f $nombre.tex ]; then
   echo "Archivo $nombre.tex no existe"
@@ -23,7 +25,6 @@ rm -f $nombre.gls
 rm -f $nombre.glsdefs
 rm -f $nombre.ist
 rm -f $nombre.loa
-rm -f $nombre.loal
 rm -f $nombre.lol
 rm -f $nombre.loi
 rm -f $nombre.lod
@@ -63,7 +64,6 @@ rm -f $nombre.gls
 rm -f $nombre.glsdefs
 rm -f $nombre.ist
 rm -f $nombre.loa
-rm -f $nombre.loal
 rm -f $nombre.lol
 rm -f $nombre.loi
 rm -f $nombre.lod

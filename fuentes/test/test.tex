@@ -1,0 +1,72 @@
+\documentclass{../../uclamsc}
+
+% Archivo para pruebas
+
+\begin{document}
+
+\begin{preliminares}	
+	\hacerindices
+\end{preliminares}
+
+\begin{contenido}
+
+Este documento se generó para probar la clase \comillas{uclamsc}
+
+\refalgoritmo{alg:construccion-de-nido-de-avispas}
+
+\begin{algoritmo}
+\footnotesize
+Inicialización\;
+Construir la tabla de consulta, igual para todos los agentes\;
+Colocar el primer bloque en un sitio predefinido\;
+\For{$k \leftarrow 1$ \KwTo $m$}{
+    Asignar agente $k$ aleatoriamente en sitio desocupado\;
+}
+\For{$t \leftarrow 1$ \KwTo $t\_maximo$}{
+    \For{$k \leftarrow 1$ \KwTo $m$}{
+	Evaluar la configuración local del agente $k$\;
+	\eIf{La configuración local está en la tabla de consulta}{
+	    Depositar el bloque especificado en la tabla de consulta\;
+	}{
+	    No depositar el bloque\;
+	}
+		Moverse agente $k$ hasta seleccionar aleatoriamente un sitio vecino y desocupado\;
+    }
+}
+\tituloyfuentealgoritmo{Algoritmo de construcción de nido de avispas.}{Esta es la fuente}{alg:construccion-de-nido-de-avispas}
+\end{algoritmo}
+
+\refalgoritmo{alg:construccion-de-nido-de-avispas2}
+
+\begin{algoritmo}
+\footnotesize
+Inicialización\;
+Construir la tabla de consulta, igual para todos los agentes\;
+Colocar el primer bloque en un sitio predefinido\;
+\For{$k \leftarrow 1$ \KwTo $m$}{
+    Asignar agente $k$ aleatoriamente en sitio desocupado\;
+}
+\tituloyfuentealgoritmo{Algoritmo de construcción de nido de avispas.}{Esta es la fuente}{alg:construccion-de-nido-de-avispas2}
+\end{algoritmo}
+
+\begin{listado}{[LaTeX]TeX}
+  \begin{ilustracion}
+      \includegraphics{ruta_archivo}
+      \tituloyfuenteilustracion{título}{fuente}{etiqueta}
+  \end{ilustracion}
+\end{listado}
+
+\end{contenido}
+
+%\define@key{test}{ppp}{\def\test@ppp{#1}}
+%\define@key{test}{ppa}{\def\test@ppa{#1}}
+%% \setkeys{test}{ppp=yyy}
+%  
+%\newcommand{\test}[2][]{
+%  \setkeys{test}{#1}
+%  ppp: \ifthenelse{\isundefined{\test@ppp}}{ppp vacio}{\test@ppp}; \par
+%  ppa: \ifthenelse{\isundefined{\test@ppa}}{ppa vacio}{\test@ppa}; \par
+%  input: #2;  
+%}
+
+\end{document}	
