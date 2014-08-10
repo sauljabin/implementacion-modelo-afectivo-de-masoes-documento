@@ -796,19 +796,19 @@
 %	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 	%Índice de Algoritmos
 	\newcommand{\listofalgorithmsname}{{Índice de Algoritmos}} 
-	\newlistof[part]{algs}{loa}{\listofalgorithmsname}
+	\newlistof[part]{algs}{lal}{\listofalgorithmsname}
 	
 	% Comando: listofalgorithms
 	% Descripción: Crea el índice de algoritmos.
 	\renewcommand{\listofalgorithms}{
-		\IfFileExists{\jobname.loa}{
+		\IfFileExists{\jobname.lal}{
 			\indexarpreliminar{\listofalgorithmsname}
 			\capitulosinnumeracion{{\listofalgorithmsname}}
 			\flushright{\bfseries PÁG.}
-			\@starttoc{loa}
+			\@starttoc{lal}
 		}{
 			\AtEndDocument{
-				\ifthenelse{\value{algs}>0}{\@starttoc{loa}}{}
+				\ifthenelse{\value{algs}>0}{\@starttoc{lal}}{}
 			}
 		}
 	}
@@ -822,12 +822,12 @@
 
 	\newcommand\captionalgoritmo[1]{
 		\centering\par\normalfont\normalsize\noindent{{\bfseries Algoritmo~\thealgs:} ##1}
-		\addcontentsline{loa}{algs}{\protect{\thealgs.} ##1}\par
+		\addcontentsline{lal}{algs}{\protect{\thealgs.} ##1}\par
 	}
 
 	\newcommand\captionandsourcealgoritmo[2]{
 		\centering\par\normalfont\normalsize\noindent{{\bfseries Algoritmo~\thealgs:} ##1 \ifthenelse{\equal{##2}{}}{}{\\ {\bfseries Fuente:} ##2}}
-		\addcontentsline{loa}{algs}{\protect{\thealgs.} ##1}\par
+		\addcontentsline{lal}{algs}{\protect{\thealgs.} ##1}\par
 	}
 
 	% Comando: tituloalgoritmo

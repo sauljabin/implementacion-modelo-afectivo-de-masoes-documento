@@ -1,14 +1,12 @@
 #!/bin/bash
 if  [ "$1" != "" ]; then
   nombre=$1
-elif [ -f trabajo.tex ]; then
-  nombre=trabajo
-elif [ -f proyecto.tex ]; then
-  nombre=proyecto
 elif [ -f manual.tex ]; then
   nombre=manual
 elif [ -f test.tex ]; then
   nombre=test
+elif [ -f trabajo.tex ]; then
+  nombre=trabajo
 fi
 if [ ! -f $nombre.tex ]; then
   echo "Archivo $nombre.tex no existe"
@@ -24,7 +22,7 @@ rm -f $nombre.glo
 rm -f $nombre.gls
 rm -f $nombre.glsdefs
 rm -f $nombre.ist
-rm -f $nombre.loa
+rm -f $nombre.lal
 rm -f $nombre.lol
 rm -f $nombre.loi
 rm -f $nombre.lod
@@ -63,7 +61,7 @@ rm -f $nombre.glo
 rm -f $nombre.gls
 rm -f $nombre.glsdefs
 rm -f $nombre.ist
-rm -f $nombre.loa
+rm -f $nombre.lal
 rm -f $nombre.lol
 rm -f $nombre.loi
 rm -f $nombre.lod
