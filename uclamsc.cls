@@ -59,7 +59,7 @@
 	% doblecara no funciona cuando salta a la introducción
 }
 
-\newcommand{\variablefaltante}[1]{{\tt \bfseries DEFINE \textbackslash {#1}\{\} }}
+\newcommand{\variablefaltante}[1]{{\tt \bfseries DEFINIR \textbackslash {#1}\{\} }}
 
 \def\@titulo{\variablefaltante{titulo}} % Título del trabajo de grado
 \newcommand{\titulo}[1]{\def\@titulo{#1}}
@@ -267,46 +267,37 @@
 
 \definirliterales{}
 
-\newcommand\letralistados[1][\ttfamily \fontsize{12pt}{10pt}\selectfont]
+\newcommand\letralistados[1][\ttfamily \fontsize{10pt}{8pt}\selectfont]
 {\lstdefinestyle{letra}{basicstyle=#1}}
 
 \letralistados
 
-\lstnewenvironment{listado}[1]{\espaciodoble\lstset{style=letra, style=literales, language=#1}}{\espaciodoble}
-
-\lstnewenvironment{listadoindexado}[3]{
-	\espaciodoble
-	\titulolistado{#1}{#2}
-	\lstset{style=letra, style=literales, language=#3}
-}{\espaciodoble}
-
-\lstnewenvironment{listadoindexadoconfuente}[4]{
-	\espaciodoble
-	\tituloyfuentelistado{#1}{#2}{#3}
-	\lstset{style=letra, style=literales, language=#4}
-}{\espaciodoble}
+% Ambiente listado
+% \begin{listado}[<parametros>]{lenguaje}
+% ...
+% \end{listado}
+\lstnewenvironment{listado}[2][]{\espaciodoble\setkeys{titulolistado}{#1}\titulolistado\lstset{style=letra, style=literales, language=#2}}{\espaciodoble}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\newcommand\definir@temporales[2]{\def\tmp@caption{#1}\def\tmp@label{#2}}
+\newcommand\definir@parametrosleyenda[1]{\def\tmp@parametrosleyenda{#1}}
 
 % Ambiente: ilustracion
 % Descripción: Prepara el contexto para insertar una ilustración o imagen.
 % Uso: 
 % \begin{ilustracion}
 % 	\includegraphics[height=2cm,width=2cm]{figures/cuadrado.png}
-%	\tituloilustracion{Cuadrado}{etiqueta}
 % \end{ilustracion}
 % uso con parámetros opcionales:
-% \begin{ilustracion}[{Cuadrado}{etiqueta}]
+% \begin{ilustracion}[<parametros>]
 % 	\includegraphics[height=2cm,width=2cm]{figures/cuadrado.png}
 % \end{ilustracion}
 %
 \newenvironment{ilustracion}[1][]{
 	\begin{figure}[htcb] \espaciotriple\centering
-	\ifthenelse{\equal{#1}{}}{}{\definir@temporales #1 \labelilustracion{\tmp@label}}
+	\setkeys{tituloilustracion}{#1}
 }{
-	\ifthenelse{\isundefined\tmp@caption}{}{\captionilustracion{\tmp@caption}}
+	\tituloilustracion
 	\end{figure}
 }
 
@@ -315,20 +306,24 @@
 % Uso: 
 % \begin{grafico}
 % 	\includegraphics[height=2cm,width=2cm]{figures/fitness.png}
-%	\titulografico{Fitness vs. Épocas}
 % \end{grafico}
 % uso con parámetros opcionales:
-% \begin{ilustracion}[{Fitness vs. Épocas}{etiqueta}]
+% \begin{ilustracion}[<parametros>]
 % 	\includegraphics[height=2cm,width=2cm]{figures/fitness.png}
 % \end{ilustracion}
 %
 \newenvironment{grafico}[1][]{
 	\begin{figure}[htcb] \espaciotriple\centering
-	\ifthenelse{\equal{#1}{}}{}{\definir@temporales #1 \labelgrafico{\tmp@label}}
+	\setkeys{titulografico}{#1}
 }{
-	\ifthenelse{\isundefined\tmp@caption}{}{\captiongrafico{\tmp@caption}}
+	\titulografico
 	\end{figure}
 }
+
+%Comando: fuentecuadro
+%Descripción: Agrega la fuente del cuadro
+%Parámetros: [1] Columnas del cuadro, [2] Fuente (e.g. Juan Rada (2005))
+\newcommand{\fuentecuadro}[2]{\multicolumn{#1}{l}{\bfseries Fuente:} #2. \hfill\espaciodoble}
 
 % Ambiente: cuadro
 % Descripción: Prepara el contexto para insertar un cuadro o tabla.
@@ -346,14 +341,14 @@
 % 	\fuentecuadro{4}{Juan Rada (2005)}
 % \end{cuadro}
 %
-\newenvironment{cuadro}[4][\footnotesize]
+\newenvironment{cuadro}[4][]
 {
 	\begin{table}[htb]
 	\centering
 	\espaciodoble
 	\titulocuadro{#2}{#2}
 	\label{#3}
-	#1
+	\footnotesize
 	\begin{spacing}{1.3}
 	\begin{tabular}{#4}
 }
@@ -362,7 +357,6 @@
 	\end{spacing}
 	\end{table}
 }
-
 
 % Ambiente: cuadroconindice
 % Descripción: Prepara el contexto para insertar un cuadro o tabla.
@@ -457,16 +451,17 @@
 % 	...
 % \end{algoritmo}
 % uso con parámetros opcionales:
-% \begin{algoritmo}[{titulo}{label}]
+% \begin{algoritmo}[<parametros>]
 % 	...
 % \end{algoritmo}
-	
+
 \newenvironment{algoritmo}[1][]{
-	\begin{algorithm}[htcb]
-	\ifthenelse{\equal{#1}{}}{}{\definir@temporales #1 \labelalgoritmo{\tmp@label}}
-}{
-	\ifthenelse{\isundefined\tmp@caption}{}{\captionalgoritmo{\tmp@caption}}
-	\end{algorithm}
+	\begin{algorithm}[htcb]	
+	\setkeys{tituloalgoritmo}{#1}
+	\footnotesize	
+}{	
+	\tituloalgoritmo
+	\end{algorithm}	
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%% INTERNO %%%%%%%%%%%%%%%%%%%%%%%%%
@@ -584,22 +579,16 @@
 
 	\renewcommand{\lstlistingname}{Listado}
 	\renewcommand{\thelstlisting}{\@arabic\c@lstlisting}
-
-	\newcommand{\titulolistado}[2]{
-		\refstepcounter{lstlisting}
-		\label{##2}
-		\par\centering\normalfont\normalsize{{\bfseries \lstlistingname~\thelstlisting:} ##1}
-		\addcontentsline{lol}{lstlisting}{\hspace{-1.5em}\protect{\thelstlisting.} ##1}
-	}
 	
-	\newcommand{\tituloyfuentelistado}[3]{
-		\refstepcounter{lstlisting}
-		\label{##3}
-		\par\centering\normalfont\normalsize{{\bfseries \lstlistingname~\thelstlisting:} ##1 \ifthenelse{\equal{##2}{}}{}{\\ {\bfseries Fuente:} ##2}}
-		\addcontentsline{lol}{lstlisting}{\hspace{-1.5em}\protect{\thelstlisting.} ##1}
-	}
-		
-%	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\define@key{titulolistado}{titulo}{\def\titulolistado@titulo{##1}}
+	\define@key{titulolistado}{etiqueta}{\def\titulolistado@etiqueta{##1}}
+	\define@key{titulolistado}{indice}{\def\titulolistado@indice{##1}}
+	\define@key{titulolistado}{fuente}{\def\titulolistado@fuente{##1}}
+	\define@key{titulolistado}{leyenda}{\def\titulolistado@leyenda{##1}}
+
+	\newcommand{\titulolistado}{\refstepcounter{lstlisting}\ifthenelse{\isundefined{\titulolistado@etiqueta}}{}{\label{\titulolistado@etiqueta}}\ifthenelse{\isundefined{\titulolistado@indice}}{\ifthenelse{\isundefined{\titulolistado@titulo}}{\addcontentsline{lol}{lstlisting}{\hspace{-1.5em}\protect{\thelstlisting.} \lstlistingname~\thelstlisting}}{\addcontentsline{lol}{lstlisting}{\hspace{-1.5em}\protect{\thelstlisting.} \titulolistado@titulo}}}{\addcontentsline{lol}{lstlisting}{\hspace{-1.5em}\protect{\thelstlisting.} \titulolistado@indice}}\ifthenelse{\equal{\titulolistado@leyenda}{false}}{}{\ifthenelse{\isundefined{\titulolistado@titulo}}{\par\centering\normalfont\normalsize\noindent{{\bfseries \lstlistingname~\thelstlisting} \ifthenelse{\isundefined{\titulolistado@fuente}}{}{\\ {\bfseries Fuente:} \titulolistado@fuente}}}{\par\centering\normalfont\normalsize\noindent{{\bfseries \lstlistingname~\thelstlisting:} \titulolistado@titulo \ifthenelse{\isundefined{\titulolistado@fuente}}{}{\\ {\bfseries Fuente:} \titulolistado@fuente}}}}}
+
+	%	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 	% Índice de gráficos
 	\newcommand{\listofchartsname}{{Índice de Gráficos}} 
 	\newlistof[part]{charts}{loc}{\listofchartsname} 
@@ -620,34 +609,15 @@
 		}
 	}
 	\renewcommand{\thecharts}{\@arabic\c@charts}
-	%	
-	\newcommand\labelgrafico[1]{
-		\refstepcounter{charts}
-		\label{##1}
-	}
-	\newcommand\captiongrafico[1]{
-		\par\normalfont\normalsize\noindent{{\bfseries Gráfico~\thecharts:} ##1}
-		\addcontentsline{loc}{charts}{\protect{\thecharts.} ##1}\par
-	}
-	\newcommand\captionandsourcegrafico[2]{
-		\par\normalfont\normalsize\noindent{{\bfseries Gráfico~\thecharts:} ##1 \ifthenelse{\equal{##2}{}}{}{\\ {\bfseries Fuente:} ##2}}
-		\addcontentsline{loc}{charts}{\protect{\thecharts.} ##1}\par
-        }
-	%Comando: titulografico
-	%Descripción: Agrega un título al gráfico y lo coloca en el índice de gráficos.
-	%Parámetros: [1] Título del gráfico [2] Fuente 
-	\newcommand{\titulografico}[2]{
-		\labelgrafico{##2}
-		\captiongrafico{##1}
-	}
+	\newcommand{\chartname}{Gráfico}
 	
-	% Comando: tituloilustracion
-	% Descripción: Agrega un título al grafico y la coloca en el índice de graficos.
-	% Parámetros: [1] Título del grafico [2] Fuente [3] Etiqueta
-	\newcommand{\tituloyfuentegrafico}[3]{
-		\labelgrafico{##3}
-		\captionandsourcegrafico{##1}{##2}
-	}
+	\define@key{titulografico}{titulo}{\def\titulografico@titulo{##1}}
+	\define@key{titulografico}{etiqueta}{\def\titulografico@etiqueta{##1}}
+	\define@key{titulografico}{indice}{\def\titulografico@indice{##1}}
+	\define@key{titulografico}{fuente}{\def\titulografico@fuente{##1}}
+	\define@key{titulografico}{leyenda}{\def\titulografico@leyenda{##1}}
+	
+	\newcommand{\titulografico}{\refstepcounter{charts}\ifthenelse{\isundefined{\titulografico@etiqueta}}{}{\label{\titulografico@etiqueta}}\ifthenelse{\isundefined{\titulografico@indice}}{\ifthenelse{\isundefined{\titulografico@titulo}}{\addcontentsline{loc}{charts}{\protect{\thecharts.} \chartname~\thecharts}\par}{\addcontentsline{loc}{charts}{\protect{\thecharts.} \titulografico@titulo}\par}}{\addcontentsline{loc}{charts}{\protect{\thecharts.} \titulografico@indice}\par}\ifthenelse{\equal{\titulografico@leyenda}{false}}{}{\ifthenelse{\isundefined{\titulografico@titulo}}{\par\normalfont\normalsize\noindent{{\bfseries \chartname~\thecharts} \ifthenelse{\isundefined{\titulografico@fuente}}{}{\\ {\bfseries Fuente:} \titulografico@fuente}}}{\par\normalfont\normalsize\noindent{{\bfseries \chartname~\thecharts:} \titulografico@titulo \ifthenelse{\isundefined{\titulografico@fuente}}{}{\\ {\bfseries Fuente:} \titulografico@fuente}}}}}
 	
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %	%Índice de Ilustraciones
@@ -670,37 +640,16 @@
 		}
 	}
 	\renewcommand{\theilustrations}{\@arabic\c@ilustrations}
-%	
-	\newcommand\labelilustracion[1]{
-		\refstepcounter{ilustrations} 
-		\label{##1}
-	}
-	\newcommand\captionilustracion[1]{
-		\par\normalfont\normalsize\noindent{{\bfseries Ilustración~\theilustrations:} ##1}
-		\addcontentsline{loi}{ilustrations}{\protect{\theilustrations.} ##1}\par
-	}
+	\newcommand{\ilustrationname}{Ilustración}
 	
-	\newcommand\captionandsourceilustracion[2]{
-			\par\normalfont\normalsize\noindent{{\bfseries Ilustración~\theilustrations:} ##1 \ifthenelse{\equal{##2}{}}{}{\\ {\bfseries Fuente:} ##2}}
-			\addcontentsline{loi}{ilustrations}{\protect{\theilustrations.} ##1}\par
-	}
-		
-%	%Comando: tituloilustracion
-%	%Descripción: Agrega un título a la ilustracion y la coloca en el índice de ilustraciones.
-%	%Parámetros: [1] Título de la ilustración
-	\newcommand{\tituloilustracion}[2]{
-		\labelilustracion{##2}
-		\captionilustracion{##1}
-	}
+	\define@key{tituloilustracion}{titulo}{\def\tituloilustracion@titulo{##1}}
+	\define@key{tituloilustracion}{etiqueta}{\def\tituloilustracion@etiqueta{##1}}
+	\define@key{tituloilustracion}{indice}{\def\tituloilustracion@indice{##1}}
+	\define@key{tituloilustracion}{fuente}{\def\tituloilustracion@fuente{##1}}
+	\define@key{tituloilustracion}{leyenda}{\def\tituloilustracion@leyenda{##1}}
 	
-	% Comando: tituloilustracion
-	% Descripción: Agrega un título a la ilustracion y la coloca en el índice de ilustraciones.
-	% Parámetros: [1] Título de la ilustración [2] Fuente [3] Etiqueta
-	\newcommand{\tituloyfuenteilustracion}[3]{
-		\labelilustracion{##3}
-		\captionandsourceilustracion{##1}{##2}
-	}
-		
+	\newcommand{\tituloilustracion}{\refstepcounter{ilustrations}\ifthenelse{\isundefined{\tituloilustracion@etiqueta}}{}{\label{\tituloilustracion@etiqueta}}\ifthenelse{\isundefined{\tituloilustracion@indice}}{\ifthenelse{\isundefined{\tituloilustracion@titulo}}{\addcontentsline{loi}{ilustrations}{\protect{\theilustrations.} \ilustrationname~\theilustrations}\par}{\addcontentsline{loi}{ilustrations}{\protect{\theilustrations.} \tituloilustracion@titulo}\par}}{\addcontentsline{loi}{ilustrations}{\protect{\theilustrations.} \tituloilustracion@indice}\par}\ifthenelse{\equal{\tituloilustracion@leyenda}{false}}{}{\ifthenelse{\isundefined{\tituloilustracion@titulo}}{\par\normalfont\normalsize\noindent{{\bfseries \ilustrationname~\theilustrations} \ifthenelse{\isundefined{\tituloilustracion@fuente}}{}{\\ {\bfseries Fuente:} \tituloilustracion@fuente}}}{\par\normalfont\normalsize\noindent{{\bfseries \ilustrationname~\theilustrations:} \tituloilustracion@titulo \ifthenelse{\isundefined{\tituloilustracion@fuente}}{}{\\ {\bfseries Fuente:} \tituloilustracion@fuente}}}}}
+
 %	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 	% Índice de cuadros		
 	\newcommand{\listoftabulationsname}{{Índice de Cuadros}} 
@@ -730,12 +679,7 @@
 		\refstepcounter{tabulations}
 		\espaciodoble\normalfont\normalsize\noindent{\bfseries{Cuadro~\thetabulations:}\\\espaciodoble ##2\espaciodoble}
 		\addcontentsline{loq}{tabulations}{\protect{\thetabulations.} ##1}\par
-	}
-
-	%Comando: fuentecuadro
-	%Descripción: Agrega la fuente del cuadro
-	%Parámetros: [1] Columnas del cuadro, [2] Fuente (e.g. Juan Rada (2005))
-	\newcommand{\fuentecuadro}[2]{\multicolumn{##1}{l}{\bfseries Fuente:} ##2. \hfill\espaciodoble}
+	}	
 	
 %	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 	%Índice de Pendientes
@@ -813,39 +757,17 @@
 		}
 	}
 	
-	\renewcommand{\thealgs}{\@arabic\c@algs}
-		
-	\newcommand\labelalgoritmo[1]{
-		\refstepcounter{algs}
-		\label{##1}
-	}
+	\renewcommand{\thealgs}{\@arabic\c@algs}	
+	\newcommand{\algorithmname}{Algoritmo}
+	
+	\define@key{tituloalgoritmo}{titulo}{\def\tituloalgoritmo@titulo{##1}}
+	\define@key{tituloalgoritmo}{etiqueta}{\def\tituloalgoritmo@etiqueta{##1}}
+	\define@key{tituloalgoritmo}{indice}{\def\tituloalgoritmo@indice{##1}}
+	\define@key{tituloalgoritmo}{fuente}{\def\tituloalgoritmo@fuente{##1}}
+	\define@key{tituloalgoritmo}{leyenda}{\def\tituloalgoritmo@leyenda{##1}}
+	
+	\newcommand{\tituloalgoritmo}{\refstepcounter{algs}\ifthenelse{\isundefined{\tituloalgoritmo@etiqueta}}{}{\label{\tituloalgoritmo@etiqueta}}\ifthenelse{\isundefined{\tituloalgoritmo@indice}}{\ifthenelse{\isundefined{\tituloalgoritmo@titulo}}{\addcontentsline{lal}{algs}{\protect{\thealgs.} \algorithmname~\thealgs}\par}{\addcontentsline{lal}{algs}{\protect{\thealgs.} \tituloalgoritmo@titulo}\par}}{\addcontentsline{lal}{algs}{\protect{\thealgs.} \tituloalgoritmo@indice}\par}\ifthenelse{\equal{\tituloalgoritmo@leyenda}{false}}{}{\ifthenelse{\isundefined{\tituloalgoritmo@titulo}}{\centering\par\normalfont\normalsize\noindent{{\bfseries \algorithmname~\thealgs} \ifthenelse{\isundefined{\tituloalgoritmo@fuente}}{}{\\ {\bfseries Fuente:} \tituloalgoritmo@fuente}}}{\centering\par\normalfont\normalsize\noindent{{\bfseries \algorithmname~\thealgs:} \tituloalgoritmo@titulo \ifthenelse{\isundefined{\tituloalgoritmo@fuente}}{}{\\ {\bfseries Fuente:} \tituloalgoritmo@fuente}}}}}
 
-	\newcommand\captionalgoritmo[1]{
-		\centering\par\normalfont\normalsize\noindent{{\bfseries Algoritmo~\thealgs:} ##1}
-		\addcontentsline{lal}{algs}{\protect{\thealgs.} ##1}\par
-	}
-
-	\newcommand\captionandsourcealgoritmo[2]{
-		\centering\par\normalfont\normalsize\noindent{{\bfseries Algoritmo~\thealgs:} ##1 \ifthenelse{\equal{##2}{}}{}{\\ {\bfseries Fuente:} ##2}}
-		\addcontentsline{lal}{algs}{\protect{\thealgs.} ##1}\par
-	}
-
-	% Comando: tituloalgoritmo
-	% Descripción: Agrega un título al algoritmo y la coloca en el índice de algoritmos
-	% Parámetros: [1] Título del algoritmo [2] Etiqueta
-	\newcommand{\tituloalgoritmo}[2]{
-		\labelalgoritmo{##2}
-		\captionalgoritmo{##1}
-	}
-
-	% Comando: tituloalgoritmo
-	% Descripción: Agrega un título al algoritmo y la coloca en el índice de algoritmos
-	% Parámetros: [1] Título del algoritmo [2] Fuente [3] Etiqueta
-	\newcommand{\tituloyfuentealgoritmo}[3]{
-		\labelalgoritmo{##3}
-		\captionandsourcealgoritmo{##1}{##2}
-	}
-		
 %	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 	\formatearindice
 }

@@ -2,6 +2,8 @@
 
 % Archivo para pruebas
 
+\bibliografia{test}
+
 \begin{document}
 
 \begin{preliminares}	
@@ -12,61 +14,46 @@
 
 Este documento se generó para probar la clase \comillas{uclamsc}
 
-\refalgoritmo{alg:construccion-de-nido-de-avispas}
+Prueba de \refalgoritmo{alg}
 
-\begin{algoritmo}
-\footnotesize
+\begin{algoritmo}[titulo=Algoritmo, fuente=Esta es una fuente, etiqueta=alg, indice=Indice del algoritmo]
 Inicialización\;
-Construir la tabla de consulta, igual para todos los agentes\;
-Colocar el primer bloque en un sitio predefinido\;
 \For{$k \leftarrow 1$ \KwTo $m$}{
-    Asignar agente $k$ aleatoriamente en sitio desocupado\;
+    Mostrar $k$
 }
-\For{$t \leftarrow 1$ \KwTo $t\_maximo$}{
-    \For{$k \leftarrow 1$ \KwTo $m$}{
-	Evaluar la configuración local del agente $k$\;
-	\eIf{La configuración local está en la tabla de consulta}{
-	    Depositar el bloque especificado en la tabla de consulta\;
-	}{
-	    No depositar el bloque\;
-	}
-		Moverse agente $k$ hasta seleccionar aleatoriamente un sitio vecino y desocupado\;
-    }
-}
-\tituloyfuentealgoritmo{Algoritmo de construcción de nido de avispas.}{Esta es la fuente}{alg:construccion-de-nido-de-avispas}
 \end{algoritmo}
 
-\refalgoritmo{alg:construccion-de-nido-de-avispas2}
+Prueba de \refilustracion{ilustracion}
 
-\begin{algoritmo}
-\footnotesize
-Inicialización\;
-Construir la tabla de consulta, igual para todos los agentes\;
-Colocar el primer bloque en un sitio predefinido\;
-\For{$k \leftarrow 1$ \KwTo $m$}{
-    Asignar agente $k$ aleatoriamente en sitio desocupado\;
-}
-\tituloyfuentealgoritmo{Algoritmo de construcción de nido de avispas.}{Esta es la fuente}{alg:construccion-de-nido-de-avispas2}
-\end{algoritmo}
+\begin{ilustracion}[fuente=\cite{wikibib}, etiqueta=ilustracion, titulo=Prueba de ilustracion, indice=Indice de prueba para ilustración]
+  \includegraphics[width=5cm]{debian.png}
+\end{ilustracion}
 
-\begin{listado}{[LaTeX]TeX}
-  \begin{ilustracion}
-      \includegraphics{ruta_archivo}
-      \tituloyfuenteilustracion{título}{fuente}{etiqueta}
-  \end{ilustracion}
+Prueba de \refgrafico{grafico}
+
+\begin{grafico}[fuente=\cite{wikibib}, etiqueta=grafico, titulo=Prueba de grafico, indice=Indice de prueba para gŕafico]
+  \includegraphics[width=5cm]{debian.png}
+\end{grafico}
+
+\begin{figure}
+\centering
+ \includegraphics[width=5cm]{debian.png}
+ \caption{Prueba de grafico}
+\end{figure}
+
+
+Prueba de \reflistado{listado}
+
+\begin{listado}[titulo=Listado prueba, indice= Indice de listado prueba, etiqueta=listado]{[LaTeX]TeX}
+\begin{ilustracion}
+  \includegraphics{ruta_archivo}
+\end{ilustracion}
 \end{listado}
+
+
 
 \end{contenido}
 
-%\define@key{test}{ppp}{\def\test@ppp{#1}}
-%\define@key{test}{ppa}{\def\test@ppa{#1}}
-%% \setkeys{test}{ppp=yyy}
-%  
-%\newcommand{\test}[2][]{
-%  \setkeys{test}{#1}
-%  ppp: \ifthenelse{\isundefined{\test@ppp}}{ppp vacio}{\test@ppp}; \par
-%  ppa: \ifthenelse{\isundefined{\test@ppa}}{ppa vacio}{\test@ppa}; \par
-%  input: #2;  
-%}
+\hacerbibliografia
 
 \end{document}	
