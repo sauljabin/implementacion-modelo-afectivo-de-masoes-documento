@@ -24,6 +24,7 @@ del 2>nul %nombre%.glsdefs
 del 2>nul %nombre%.ist
 del 2>nul %nombre%.lal
 del 2>nul %nombre%.lol
+del 2>nul %nombre%.loc
 del 2>nul %nombre%.loi
 del 2>nul %nombre%.lod
 del 2>nul %nombre%.loq
@@ -63,6 +64,7 @@ del 2>nul %nombre%.glsdefs
 del 2>nul %nombre%.ist
 del 2>nul %nombre%.lal
 del 2>nul %nombre%.lol
+del 2>nul %nombre%.loc
 del 2>nul %nombre%.loi
 del 2>nul %nombre%.lod
 del 2>nul %nombre%.loq

@@ -24,6 +24,7 @@ rm -f $nombre.glsdefs
 rm -f $nombre.ist
 rm -f $nombre.lal
 rm -f $nombre.lol
+rm -f $nombre.loc
 rm -f $nombre.loi
 rm -f $nombre.lod
 rm -f $nombre.loq
@@ -63,6 +64,7 @@ rm -f $nombre.glsdefs
 rm -f $nombre.ist
 rm -f $nombre.lal
 rm -f $nombre.lol
+rm -f $nombre.loc
 rm -f $nombre.loi
 rm -f $nombre.lod
 rm -f $nombre.loq

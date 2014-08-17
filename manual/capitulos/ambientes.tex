@@ -4,78 +4,66 @@ Se puede hacer referencia a los ambientes con etiquetas mediante el uso del coma
 
 \seccion{Ilustración}
 
-\am{ilustracion}{ para mostrar una ilustración. Los parámetros opcionales la agregan al índice de ilustraciones}{[\pa[título]\pa[etiqueta]]}{\co{includegraphics}\pa[ilustraciones/art.jpg]}
-Se puede hacer referencia a una ilustracion usando el comando \co{refilustracion}.
-Si se desea agregar una fuente a una ilustracion se puede usar el comando: \\ \co{tituloyfuenteilustracion}, ejemplo:
+\am{ilustracion}{ permite mostrar una ilustración}{[parametros]}{\co{includegraphics}\pa[ruta\_archivo]}
+Se puede hacer referencia a una ilustracion usando el comando \co{refilustracion}\pa.
 
-\begin{listado}{[LaTeX]TeX}
-  \begin{ilustracion}
-      \includegraphics{ruta_archivo}
-      \tituloyfuenteilustracion{título}{fuente}{etiqueta}
-  \end{ilustracion}
-\end{listado}
+\begin{cuadro}[titulo=Lista de parametros para el ambiente \comillas{ilustración}]{lll}
+	\toprule
+	Parametro & Descripción & Ejemplo\\
+	\midrule
+	titulo   & Asigna un título a la ilustración & titulo={Este es el título} \\
+	etiqueta & Valor que pemite hacer referencia a la ilustración & etiqueta=ilustracion1 \\
+	fuente & Permite agregar la fuente & fuente=\co{cite}\pa[bib] \\
+	indice & Permite personalizar el índice & indice={Índice personalizado}\\
+	sinleyenda & Evita que se muestre el título & sinleyenda\\
+	sinindice & Evita que se muestre en el índice & sinindice\\
+	\bottomrule
+\end{cuadro}
 
 \seccion{Gráfico}
 
-\am{grafico}{ para mostrar un gráfico. Los parámetros opcionales lo agregan al índice de gráficos}{[\pa[título]\pa[etiqueta]]}{\co{includegraphics}\pa[graficos/fitness.pdf]}
+\am{grafico}{ para mostrar un gráfico}{[parametros]}{\co{includegraphics}\pa[ruta\_archivo]}
 
 Se puede hacer referencia a un grafico usando el comando \co{refgrafico}.
-Si se desea agregar una fuente se puede usar el comando: \\ \co{tituloyfuentegrafico}, ejemplo:
 
-\begin{listado}{[LaTeX]TeX}
-  \begin{grafico}
-      \includegraphics{ruta_archivo}
-      \tituloyfuentegrafico{título}{fuente}{etiqueta}
-  \end{grafico}
-\end{listado}
+\begin{cuadro}[titulo=Lista de parametros para el ambiente \comillas{grafico}]{lll}
+	\toprule
+	Parametro & Descripción & Ejemplo\\
+	\midrule
+	titulo   & Asigna un título al gráfico & titulo={Este es el título} \\
+	etiqueta   & Valor que pemite hacer referencia al gráfico & etiqueta=grafico1 \\
+	fuente & Permite agregar la fuente & fuente=\co{cite}\pa[bib] \\
+	indice & Permite personalizar el índice & indice={Índice personalizado}\\
+	sinleyenda & Evita que se muestre el título & sinleyenda\\
+	sinindice & Evita que se muestre en el índice & sinindice\\
+	\bottomrule
+\end{cuadro}
 
 \seccion{Cuadro}
 
-\am{cuadro}{ para mostrar una tabla y agregarla al índice de cuadros}
-{[tamáño de letra]\\\pa[título en el cuadro]\pa[etiqueta]\pa[columnas]}{\ldots}
-
-\am{cuadroconindice}{ para mostrar una tabla y agregarla al índice de cuadros, con un índice personalizado}
-{[tamáño de letra]\\\pa[título en el índice]\pa[título en el cuadro]\pa[etiqueta]\pa[columnas]}{\ldots}
+\am{cuadro}{ para mostrar una tabla y agregarla al índice de cuadros}{[parametros]\pa[columnas]}{\ldots}
 
 Utilizar el comando \co{fuentecuadro}\pa[\# columnas en el cuadro]\pa[fuente]\ dentro del ambiente para agregar la fuente de donde se tomó el cuadro.
 
-Véase el uso del ambiente \texttt{\textbf{tabular}} o del paquete \textbf{ctable}; o véase el código fuente del siguiente ejemplo.
+Véase el uso del ambiente \texttt{\textbf{tabular}} o del paquete \textbf{ctable}.
 
 Se puede hacer referencia a un cuadro usando el comando \co{refcuadro}.
 
 Referencia rápida en \url{http://en.wikibooks.org/wiki/LaTeX/Tables}.
 
-
-\begin{cuadro}
-{Ejemplo de Cuadro: Piedra, Papel ó Tijeras – Forma Normal}
-{tab:ejemplo}
-{lccc}
+\begin{cuadro}[titulo=Lista de parametros para el ambiente \comillas{cuadro}]{lll}
 	\toprule
-	Jugares I/II & Piedra & Papel & Tijeras\\
+	Parametro & Descripción & Ejemplo\\
 	\midrule
-	Piedra   & (0,0) & (-1,1) & (1,-1)\\
-	Papel   & (1,-1) & (0,0) & (-1,1)\\
-	Tijeras   & (-1,1) & (1,-1) & (0,0)\\
+	titulo   & Asigna un título al cuadre & titulo={Este es el título} \\
+	etiqueta   & Valor que pemite hacer referencia al cuadro & etiqueta=cuadro1 \\
+	indice & Permite personalizar el índice & indice={Índice personalizado}\\
+	sinleyenda & Evita que se muestre el título  & sinleyenda\\
+	sinindice & Evita que se muestre en el índice & sinindice\\
+	columnas & Parametro \textbf{obligatorio}, configura las columnas & lcc\\
 	\bottomrule
-	\fuentecuadro{4}{Juan Rada (2005)}
 \end{cuadro}
 
-\begin{cuadroconindice}
-{Ejemplo de Cuadro Con Índice}
-{Piedra, Papel ó Tijeras – Forma Normal}
-{tab:ejemplo2}
-{lccc}
-	\toprule
-	Jugares I/II & Piedra & Papel & Tijeras\\
-	\midrule
-	Piedra   & (0,0) & (-1,1) & (1,-1)\\
-	Papel   & (1,-1) & (0,0) & (-1,1)\\
-	Tijeras   & (-1,1) & (1,-1) & (0,0)\\
-	\bottomrule
-	\fuentecuadro{4}{Juan Rada (2005)}
-\end{cuadro}
-
-\pagebreak
 
 \seccion{Cita textual}
 
@@ -96,13 +84,7 @@ Referencia rápida en \url{http://en.wikibooks.org/wiki/LaTeX/Tables}.
 \seccion{Listado}
 
 \am{listado}{ para insertar un listado, usado principalmente para códigos y algoritmos, en el parámetro puede indicarse un lenguaje ya soportado, uno definido por el usuario o nada}
-{\pa[lenguaje]}{\ldots}
-
-\am{listadoindexado}{ funciona igual que \texttt{\textbf{listado}}, incluyendo un título y agregándolo al índice de listados}
-{\pa[título]\pa[etiqueta]\pa[lenguaje]}{\ldots}
-
-\am{listadoindexadoconfuente}{ funciona igual que \texttt{\textbf{listadoindexado}}, incluyendo un título, fuente y agregándolo al índice de listados}
-{\pa[título]\pa[fuente]\pa[etiqueta]\pa[lenguaje]}{\ldots}
+{[parametros]\pa[lenguaje]}{\ldots}
 
 Se puede hacer referencia a un grafico usando el comando \co{reflistado}.
 
@@ -116,12 +98,12 @@ Utilizar el comando \co{definirliterales}\pa\ para definir literales de reemplaz
 
 \definirliterales{{~}{{}}0}
 
-\begin{listado}{[LaTeX]TeX}
+\begin{listado}[sinleyenda, sinindice]{[LaTeX]TeX}
 \definirliterales{
 	{:=}{{$\leftarrow$}}2
 	{<<}{{$\langle$}}1 {>>}{{$\rangle$}}1
 }
-\begin{listado~}{}
+\begin{listado~}[sinleyenda, sinindice]{}
  x := <<valor>>
 \end{listado~}
 \end{listado}
@@ -132,28 +114,36 @@ resulta en:
 
 \definirliterales{{:=}{{$\leftarrow$}}2 {<<}{{$\langle$}}1 {>>}{{$\rangle$}}1}
 
-\begin{listado}{}
+\begin{listado}[sinleyenda, sinindice]{}
  x := <<valor>>
 \end{listado}
 
+\begin{cuadro}[titulo=Lista de parametros para el ambiente \comillas{listado}]{lll}
+	\toprule
+	Parametro & Descripción & Ejemplo\\
+	\midrule
+	titulo   & Asigna un título al listado & titulo={Este es el título} \\
+	etiqueta   & Valor que pemite hacer referencia al listado & etiqueta=listado1 \\
+	fuente & Permite agregar la fuente & fuente=\co{cite}\pa[bib] \\
+	indice & Permite personalizar el índice & indice={Índice personalizado}\\
+	sinleyenda & Evita que se muestre el título  & sinleyenda\\
+	sinindice & Evita que se muestre en el índice & sinindice\\
+	lenguaje & Parametro \textbf{obligatorio}, configura lel lenguaje & [LaTeX]TeX\\
+	\bottomrule
+\end{cuadro}
+
+
 \seccion{Algoritmo}
 
-\am{algoritmo}{ para escribir algoritmos en pseudocodigo. Los parámetros opcionales lo agregan al índice de algoritmos}{[\pa[título]\pa[etiqueta]]}{\dots}
+\am{algoritmo}{ para escribir algoritmos en pseudocodigo. Los parámetros opcionales lo agregan al índice de algoritmos}{[parametros]}{\dots}
 
 Se puede hacer referencia a un algoritmo usando el comando \co{refalgoritmo}.
 
 Este ambiente usa el paquete \textbf{algorithm2e} \url{http://en.wikibooks.org/wiki/LaTeX/Algorithms#Typesetting_using_the_algorithm2e_package}.
 
-Si se desea agregar una fuente a un algoritmo se puede usar el comando: \\ \co{tituloyfuentealgoritmo}, ejemplo:
+Se puede ver el codigo fuente del \refalgoritmo{alg:ejemplo}
 
-\begin{listado}{[LaTeX]TeX}
-  \begin{algoritmo}
-      ...
-      \tituloyfuentealgoritmo{título}{fuente}{etiqueta}
-  \end{algoritmo}
-\end{listado}
-
-\begin{algoritmo}
+\begin{algoritmo}[etiqueta=alg:ejemplo, titulo=Ejemple de algoritmo con fuente, fuente=\cite{wikialg}]
  \KwData{this text}
  \KwResult{how to write algorithm with \LaTeX2e }
  initialization\;
@@ -166,5 +156,17 @@ Si se desea agregar una fuente a un algoritmo se puede usar el comando: \\ \co{t
    go back to the beginning of current section\;
   }
  }
- \tituloyfuentealgoritmo{Ejemple de algoritmo con fuente}{\cite{wikialg}}{algoritmo-ejemplo}
 \end{algoritmo}
+
+\begin{cuadro}[titulo=Lista de parametros para el ambiente \comillas{algoritmo}]{lll}
+	\toprule
+	Parametro & Descripción & Ejemplo\\
+	\midrule
+	titulo   & Asigna un título al algoritmo & titulo={Este es el título} \\
+	etiqueta   & Valor que pemite hacer referencia al algoritmo & etiqueta=algoritmo1 \\
+	fuente & Permite agregar la fuente & fuente=\co{cite}\pa[bib] \\
+	indice & Permite personalizar el índice & indice={Índice personalizado}\\
+	sinleyenda & Evita que se muestre el título  & sinleyenda\\
+	sinindice & Evita que se muestre en el índice & sinindice\\
+	\bottomrule
+\end{cuadro}

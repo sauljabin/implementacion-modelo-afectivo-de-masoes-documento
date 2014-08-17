@@ -1,12 +1,14 @@
 ---------------------------------------
 Saúl Piña <sauljabin@gmail.com>
-uclamsc 3.0, 2014/09/01
+uclamsc 3.0, 2014/08/17
 ---------------------------------------
 
 - Actualizados archivos para compilar
-- Eliminados comando \capitulonum
+- Eliminado comando \capitulonum
+- Eliminado comando \cuadroconindice
 - Actualizada estructura de archivos
 - Actualizado manual
+- Actualizados ambientes: \listado, \cuadro, \algoritmo, \ilustracion, \grafico
 
 ---------------------------------------
 Saúl Piña <sauljabin@gmail.com>
