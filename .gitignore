@@ -6,9 +6,9 @@
 *.gls
 *.glsdefs
 *.ist
-*.loa
-*.loal
+*.lal
 *.lol
+*.loc
 *.loi
 *.lod
 *.loq
