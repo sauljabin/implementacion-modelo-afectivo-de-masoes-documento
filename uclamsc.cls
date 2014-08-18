@@ -49,7 +49,7 @@
 \RequirePackage{listings} % Para formatear código fuente o algoritmos
 \RequirePackage[spanish,onelanguage]{algorithm2e} % [boxed,spanish,onelanguage] % Para escribir algoritmos en pseudo-codigo
 \RequirePackage{usebib} % Para el comando citetitle
-\RequirePackage{keyval} % Para las opciones de los amientes
+\RequirePackage{keyval} % Para los parametros de los ambientes
 
 %Comando: pendientes
 %Descripción: Llamado en \configurar para listar los pendientes de uclamsc.cls
