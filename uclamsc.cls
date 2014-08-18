@@ -1,8 +1,8 @@
 % Universidad Centroccidental Lisandro Alvarado
 % Trabajo de Grado
-% Actualizado por Saúl Piña <sauljabin@gmail.com>
-% Versión anterior por Miguel León <melf.ever.after@gmail.com>
-% Versión anterior por Juan Rada Vilela <jcrada@gmail.com> y Rubén Parma <parmaia@gmail.com>
+% Actualizado por Saúl Piña <sauljabin@gmail.com>, página del proyecto https://bitbucket.org/sauljabin/plantilla-latex-trabajo-de-grado-ucla/
+% Versión anterior (2.0) por Miguel León <melf.ever.after@gmail.com>, página del proyecto https://code.google.com/p/uclamsc/
+% Versión anterior (1.1) por Juan Rada Vilela <jcrada@gmail.com> y Rubén Parma <parmaia@gmail.com>, página del proyecto https://code.google.com/p/latex-uclamsc/
 % Licencia GNU General Public License. 
 
 \NeedsTeXFormat{LaTeX2e}
@@ -286,8 +286,6 @@
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\newcommand\definir@parametrosleyenda[1]{\def\tmp@parametrosleyenda{#1}}
 
 % Ambiente: ilustracion
 % Descripción: Prepara el contexto para insertar una ilustración o imagen.

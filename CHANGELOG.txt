@@ -9,6 +9,9 @@ uclamsc 3.0, 2014/08/17
 - Actualizada estructura de archivos
 - Actualizado manual
 - Actualizados ambientes: \listado, \cuadro, \algoritmo, \ilustracion, \grafico
+- Eliminados ambientes: \listadoindexadoconfuente, \listadoindexado, \tituloyfuentelistado,
+  \tituloyfuentealgoritmo, \tituloyfuentegrafico, \tituloyfuenteilustracion
+- Eliminado \definir@temporales
 
 ---------------------------------------
 Saúl Piña <sauljabin@gmail.com>
