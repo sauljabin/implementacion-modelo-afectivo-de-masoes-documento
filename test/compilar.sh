@@ -1,4 +1,4 @@
 #!/bin/bash
 export BSTINPUTS=".:../:"
 export TEXINPUTS=".:../:"
-.././compilar.sh
+.././compilar.sh test

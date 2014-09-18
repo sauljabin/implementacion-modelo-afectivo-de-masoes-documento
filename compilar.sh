@@ -1,80 +1,55 @@
 #!/bin/bash
 if  [ "$1" != "" ]; then
-  nombre=$1
-elif [ -f manual.tex ]; then
-  nombre=manual
-elif [ -f test.tex ]; then
-  nombre=test
-elif [ -f trabajo.tex ]; then
-  nombre=trabajo
-fi
-if [ ! -f $nombre.tex ]; then
-  echo "Archivo $nombre.tex no existe"
-  read -p "Presione una tecla para continuar..."
+  archivo=$1
+else
+  echo "Debe ingresar el nombre del archivo a compilar, ejemplo: ./compilar.sh trabajo"
   exit
 fi
-echo Eliminando archivos temporales
-rm -f $nombre.aux
-rm -f $nombre.bbl
-rm -f $nombre.blg
-rm -f $nombre.glg
-rm -f $nombre.glo
-rm -f $nombre.gls
-rm -f $nombre.glsdefs
-rm -f $nombre.ist
-rm -f $nombre.lal
-rm -f $nombre.lol
-rm -f $nombre.loc
-rm -f $nombre.loi
-rm -f $nombre.lod
-rm -f $nombre.loq
-rm -f $nombre.out
-rm -f $nombre.toc
-rm -f $nombre.log
-rm -f $nombre.synctex.gz
-rm -f $nombre.dvi
-rm -f $nombre.brf
-rm -f $nombre.lon
-rm -f $nombre.pdf
-rm -f capitulos/*.aux
-echo "Compilando archivo: $nombre.tex"
-pdflatex -synctex=1 -interaction=nonstopmode $nombre
-makeglossaries $nombre
-makeindex $nombre.glo -s $nombre.ist -t $nombre.glg -o $nombre.gls
-pdflatex -synctex=1 -interaction=nonstopmode $nombre
-makeglossaries $nombre
-makeindex $nombre.glo -s $nombre.ist -t $nombre.glg -o $nombre.gls
-pdflatex -synctex=1 -interaction=nonstopmode $nombre
-bibtex $nombre
-pdflatex -synctex=1 -interaction=nonstopmode $nombre
-pdflatex -synctex=1 -interaction=nonstopmode $nombre
-pdflatex -synctex=1 -interaction=nonstopmode $nombre
-makeglossaries $nombre
-makeindex $nombre.glo -s $nombre.ist -t $nombre.glg -o $nombre.gls
-pdflatex -synctex=1 -interaction=nonstopmode $nombre
-echo "Archivo generado: $nombre.pdf"
-echo "Eliminando archivos temporales"
-rm -f $nombre.aux
-rm -f $nombre.bbl
-rm -f $nombre.blg
-rm -f $nombre.glg
-rm -f $nombre.glo
-rm -f $nombre.gls
-rm -f $nombre.glsdefs
-rm -f $nombre.ist
-rm -f $nombre.lal
-rm -f $nombre.lol
-rm -f $nombre.loc
-rm -f $nombre.loi
-rm -f $nombre.lod
-rm -f $nombre.loq
-rm -f $nombre.out
-rm -f $nombre.toc
-rm -f $nombre.log
-rm -f $nombre.synctex.gz
-rm -f $nombre.dvi
-rm -f $nombre.brf
-rm -f $nombre.lon
-rm -f capitulos/*.aux
-read -p "Presione una tecla para continuar..."
+if [ ! -f $archivo.tex ]; then
+  echo "Archivo $archivo.tex no existe"
+  exit
+fi
+borrartemporales(){
+  echo "Eliminando archivos temporales"
+  rm -f $archivo.aux
+  rm -f $archivo.bbl
+  rm -f $archivo.blg
+  rm -f $archivo.glg
+  rm -f $archivo.glo
+  rm -f $archivo.gls
+  rm -f $archivo.glsdefs
+  rm -f $archivo.ist
+  rm -f $archivo.lal
+  rm -f $archivo.lol
+  rm -f $archivo.loc
+  rm -f $archivo.loi
+  rm -f $archivo.lod
+  rm -f $archivo.loq
+  rm -f $archivo.out
+  rm -f $archivo.toc
+  rm -f $archivo.log
+  rm -f $archivo.synctex.gz
+  rm -f $archivo.dvi
+  rm -f $archivo.brf
+  rm -f $archivo.lon
+  rm -f capitulos/*.aux
+}
+borrartemporales
+echo "Compilando archivo: $archivo.tex"
+pdflatex -synctex=1 -interaction=nonstopmode $archivo
+makeglossaries $archivo
+makeindex $archivo.glo -s $archivo.ist -t $archivo.glg -o $archivo.gls
+pdflatex -synctex=1 -interaction=nonstopmode $archivo
+makeglossaries $archivo
+makeindex $archivo.glo -s $archivo.ist -t $archivo.glg -o $archivo.gls
+pdflatex -synctex=1 -interaction=nonstopmode $archivo
+bibtex $archivo
+pdflatex -synctex=1 -interaction=nonstopmode $archivo
+pdflatex -synctex=1 -interaction=nonstopmode $archivo
+pdflatex -synctex=1 -interaction=nonstopmode $archivo
+makeglossaries $archivo
+makeindex $archivo.glo -s $archivo.ist -t $archivo.glg -o $archivo.gls
+pdflatex -synctex=1 -interaction=nonstopmode $archivo
+echo "Archivo generado: $archivo.pdf"
+borrartemporales
 exit
