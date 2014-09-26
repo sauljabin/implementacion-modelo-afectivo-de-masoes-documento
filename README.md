@@ -4,8 +4,10 @@
 Plantilla en LaTeX para elaborar trabajos de grado de la 
 Universidad Centroccidental Lisandro Alvarado (UCLA). Barquisimeto, Venezuela.
 
-* Derivado de Miguel León https://code.google.com/p/uclamsc/ (Año 2013).
-* Año 2014.
+* Versión actual: Saúl Piña v3.0 https://bitbucket.org/sauljabin/plantilla-latex-trabajo-de-grado-ucla/ (Año 2014) 
+* Derivado de:
+: Miguel León v2.2 https://code.google.com/p/uclamsc/ (Año 2013)
+: Juan Rada y Rubén Parma v1.1 https://code.google.com/p/latex-uclamsc/ (Año 2009) 
 * Licencia GPL.
 
 ### Normas:
