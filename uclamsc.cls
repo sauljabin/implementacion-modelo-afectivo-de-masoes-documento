@@ -1493,6 +1493,9 @@
 % Comando comillas
 \newcommand{\comillas}[1]{``#1''}
 
+% Alternativa a listing
+\newcommand{\codigofuente}[2][\footnotesize]{{\ttfamily #1 #2}}
+
 % Mejorada la traduccion del paquete algorithm2e
 \ifthenelse{\boolean{algocf@optonelanguage}\AND\equal{\algocf@languagechoosen}{spanish}}{
 \SetKwInput{KwIn}{Entrada}
