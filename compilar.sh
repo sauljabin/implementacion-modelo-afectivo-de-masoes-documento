@@ -3,10 +3,12 @@ if  [ "$1" != "" ]; then
   archivo=$1
 else
   echo "Debe ingresar el nombre del archivo a compilar, ejemplo: ./compilar.sh trabajo"
+  pause
   exit
 fi
 if [ ! -f $archivo.tex ]; then
   echo "Archivo $archivo.tex no existe"
+  pause
   exit
 fi
 borrartemporales(){
@@ -34,6 +36,9 @@ borrartemporales(){
   rm -f $archivo.lon
   rm -f capitulos/*.aux
 }
+pause(){
+  read -p "Presione una tecla para continuar..."
+}
 borrartemporales
 echo "Compilando archivo: $archivo.tex"
 pdflatex -synctex=1 -interaction=nonstopmode $archivo
@@ -52,4 +57,5 @@ makeindex $archivo.glo -s $archivo.ist -t $archivo.glg -o $archivo.gls
 pdflatex -synctex=1 -interaction=nonstopmode $archivo
 echo "Archivo generado: $archivo.pdf"
 borrartemporales
+pause
 exit
