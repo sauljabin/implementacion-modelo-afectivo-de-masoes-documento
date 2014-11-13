@@ -1,16 +1,4 @@
 #!/bin/bash
-if  [ "$1" != "" ]; then
-  archivo=$1
-else
-  echo "Debe ingresar el nombre del archivo a compilar, ejemplo: ./compilar.sh trabajo"
-  pause
-  exit
-fi
-if [ ! -f $archivo.tex ]; then
-  echo "Archivo $archivo.tex no existe"
-  pause
-  exit
-fi
 borrartemporales(){
   echo "Eliminando archivos temporales"
   rm -f $archivo.aux
@@ -39,6 +27,18 @@ borrartemporales(){
 pause(){
   read -p "Presione una tecla para continuar..."
 }
+if  [ "$1" != "" ]; then
+  archivo=$1
+else
+  echo "Debe ingresar el nombre del archivo a compilar, ejemplo: ./compilar.sh trabajo"
+  pause
+  exit
+fi
+if [ ! -f $archivo.tex ]; then
+  echo "Archivo $archivo.tex no existe"
+  pause
+  exit
+fi
 borrartemporales
 echo "Compilando archivo: $archivo.tex"
 pdflatex -synctex=1 -interaction=nonstopmode $archivo

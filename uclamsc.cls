@@ -1,8 +1,8 @@
 % Universidad Centroccidental Lisandro Alvarado
 % Trabajo de Grado
-% Actualizado por Saúl Piña <sauljabin@gmail.com>, página del proyecto https://bitbucket.org/sauljabin/plantilla-latex-trabajo-de-grado-ucla/
-% Versión anterior (2.0) por Miguel León <melf.ever.after@gmail.com>, página del proyecto https://code.google.com/p/uclamsc/
-% Versión anterior (1.1) por Juan Rada Vilela <jcrada@gmail.com> y Rubén Parma <parmaia@gmail.com>, página del proyecto https://code.google.com/p/latex-uclamsc/
+% Actualizado por Saúl Piña <sauljabin@gmail.com>, versión 3.0, página del proyecto https://bitbucket.org/sauljabin/trabajo-de-grado-ucla-plantilla-latex
+% Versión anterior (2.0) por Miguel León <melf.ever.after@gmail.com>, página del proyecto https://code.google.com/p/uclamsc
+% Versión anterior (1.1) por Juan Rada Vilela <jcrada@gmail.com> y Rubén Parma <parmaia@gmail.com>, página del proyecto https://code.google.com/p/latex-uclamsc
 % Licencia GNU General Public License. 
 
 \NeedsTeXFormat{LaTeX2e}
