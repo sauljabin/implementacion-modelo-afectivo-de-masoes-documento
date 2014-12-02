@@ -12,7 +12,7 @@ Universidad Centroccidental Lisandro Alvarado (UCLA). Barquisimeto, Venezuela.
 * Licencia GPL.
 
 ### Normas:
-http://www.ucla.edu.ve/secretaria/Gacetas/GACETAS/GACETA%20126/Manual%20para%20la%20Elaboraci%C3%B3n%20y%20Presentaci%C3%B3n%20del%20Trabajo%20Especial%20de%20Grado.pdf
+http://www.ucla.edu.ve/dac/practica/NUEVO-MANUAL-TRABAJO-GRADO-1.pdf
 
 ### Instrucciones:
 * El código fuente de la plantilla de trabajo de grado se encuentra en el directorio **trabajo**.
