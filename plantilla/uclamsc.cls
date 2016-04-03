@@ -1,12 +1,27 @@
-% Universidad Centroccidental Lisandro Alvarado
-% Trabajo de Grado
-% Actualizado por Saúl Piña <sauljabin@gmail.com>, versión 3.0, página del proyecto https://bitbucket.org/sauljabin/plantilla-latex-trabajo-de-grado-ucla
-% Versión anterior (2.0) por Miguel León <melf.ever.after@gmail.com>, página del proyecto https://code.google.com/p/uclamsc
-% Versión anterior (1.1) por Juan Rada Vilela <jcrada@gmail.com> y Rubén Parma <parmaia@gmail.com>, página del proyecto https://code.google.com/p/latex-uclamsc
-% Licencia GNU General Public License. 
+%%
+% Copyright (c):
+% 	2014-2016 Saúl Piña <sauljabin@gmail.com> (https://github.com/sauljabin/plantilla-latex-trabajo-de-grado-ucla).
+% 	2013 Miguel León <melf.ever.after@gmail.com> (https://code.google.com/p/uclamsc).
+% 	2009 Juan Rada Vilela <jcrada@gmail.com> y Rubén Parma <parmaia@gmail.com> (https://github.com/jcrada/latex-uclamsc).
+% 
+% This file is part of Plantilla LaTeX Trabajo de Grado UCLA.
+% 
+% Plantilla LaTeX Trabajo de Grado UCLA is free software: you can redistribute it and/or modify
+% it under the terms of the GNU General Public License as published by
+% the Free Software Foundation, either version 3 of the License, or
+% (at your option) any later version.
+% 
+% Plantilla LaTeX Trabajo de Grado UCLA is distributed in the hope that it will be useful,
+% but WITHOUT ANY WARRANTY; without even the implied warranty of
+% MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+% GNU General Public License for more details.
+% 
+% You should have received a copy of the GNU General Public License
+% along with Plantilla LaTeX Trabajo de Grado UCLA.  If not, see <http://www.gnu.org/licenses/>.
+%%
 
 \NeedsTeXFormat{LaTeX2e}
-\newcommand{\uclamscversion}{3.0}
+\newcommand{\uclamscversion}{3.1}
 \newcommand{\uclamscdate}{2014/08/17}
 \ProvidesClass{uclamsc}[\uclamscdate, \uclamscversion]
 \typeout{Reportar dudas y errores a <sauljabin@gmail.com>.}

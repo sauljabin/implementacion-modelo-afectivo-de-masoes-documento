@@ -1,58 +1,24 @@
 %%
-%% This is file `uclamsc.bst',
-%% generated with the docstrip utility.
+% Copyright (c):
+% 	2014-2016 Saúl Piña <sauljabin@gmail.com> (https://github.com/sauljabin/plantilla-latex-trabajo-de-grado-ucla).
+% 	2013 Miguel León <melf.ever.after@gmail.com> (https://code.google.com/p/uclamsc).
+% 	2009 Juan Rada Vilela <jcrada@gmail.com> y Rubén Parma <parmaia@gmail.com> (https://github.com/jcrada/latex-uclamsc).
+% 
+% This file is part of Plantilla LaTeX Trabajo de Grado UCLA.
+% 
+% Plantilla LaTeX Trabajo de Grado UCLA is free software: you can redistribute it and/or modify
+% it under the terms of the GNU General Public License as published by
+% the Free Software Foundation, either version 3 of the License, or
+% (at your option) any later version.
+% 
+% Plantilla LaTeX Trabajo de Grado UCLA is distributed in the hope that it will be useful,
+% but WITHOUT ANY WARRANTY; without even the implied warranty of
+% MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+% GNU General Public License for more details.
+% 
+% You should have received a copy of the GNU General Public License
+% along with Plantilla LaTeX Trabajo de Grado UCLA.  If not, see <http://www.gnu.org/licenses/>.
 %%
-%% The original source files were:
-%%
-%% merlin.mbs  (with options: `head,exlang,ay,nat,lang,nm-rev,jnrlst,keyxyr,dt-beg,yr-per,note-yr,atit-u,jttl-rm,thtit-a,vnum-nr,volp-blk,pp-last,jwdvol,num-xser,ser-vol,ser-ed,btit-rm,bt-rm,pre-edn,isbn,edparxc,edby,in-x,spanish,pp,ed,xedn,varand,xand,etal-xc,url,url-blk,em-x,nfss,,{}')
-%% spanish.mbs  (with options: `exlang,ay,nat,lang,nm-rev,jnrlst,keyxyr,dt-beg,yr-per,note-yr,atit-u,jttl-rm,thtit-a,vnum-nr,volp-blk,pp-last,jwdvol,num-xser,ser-vol,ser-ed,btit-rm,bt-rm,pre-edn,isbn,edparxc,edby,in-x,spanish,pp,ed,xedn,varand,xand,etal-xc,url,url-blk,em-x,nfss,,{}')
-%% merlin.mbs  (with options: `tail,exlang,ay,nat,lang,nm-rev,jnrlst,keyxyr,dt-beg,yr-per,note-yr,atit-u,jttl-rm,thtit-a,vnum-nr,volp-blk,pp-last,jwdvol,num-xser,ser-vol,ser-ed,btit-rm,bt-rm,pre-edn,isbn,edparxc,edby,in-x,spanish,pp,ed,xedn,varand,xand,etal-xc,url,url-blk,em-x,nfss,,{}')
-%% ----------------------------------------
-%% *** Tesis de Maestria - UCLA, Venezuela. ***
-%% 
-%% Copyright 1994-2007 Patrick W Daly
- % ===============================================================
- % IMPORTANT NOTICE:
- % This bibliographic style (bst) file has been generated from one or
- % more master bibliographic style (mbs) files, listed above.
- %
- % This generated file can be redistributed and/or modified under the terms
- % of the LaTeX Project Public License Distributed from CTAN
- % archives in directory macros/latex/base/lppl.txt; either
- % version 1 of the License, or any later version.
- % ===============================================================
- % Name and version information of the main mbs file:
- % \ProvidesFile{merlin.mbs}[2007/04/24 4.20 (PWD, AO, DPC)]
- %   For use with BibTeX version 0.99a or later
- %-------------------------------------------------------------------
- % This bibliography style file is intended for texts in
- %   SPANISH
- % This is an author-year citation style bibliography. As such, it is
- % non-standard LaTeX, and requires a special package file to function properly.
- % Such a package is    natbib.sty   by Patrick W. Daly
- % The form of the \bibitem entries is
- %   \bibitem[Jones et al.(1990)]{key}...
- %   \bibitem[Jones et al.(1990)Jones, Baker, and Smith]{key}...
- % The essential feature is that the label (the part in brackets) consists
- % of the author names, as they should appear in the citation, with the year
- % in parentheses following. There must be no space before the opening
- % parenthesis!
- % With natbib v5.3, a full list of authors may also follow the year.
- % In natbib.sty, it is possible to define the type of enclosures that is
- % really wanted (brackets or parentheses), but in either case, there must
- % be parentheses in the label.
- % The \cite command functions as follows:
- %   \citet{key} ==>>                Jones et al. (1990)
- %   \citet*{key} ==>>               Jones, Baker, and Smith (1990)
- %   \citep{key} ==>>                (Jones et al., 1990)
- %   \citep*{key} ==>>               (Jones, Baker, and Smith, 1990)
- %   \citep[chap. 2]{key} ==>>       (Jones et al., 1990, chap. 2)
- %   \citep[e.g.][]{key} ==>>        (e.g. Jones et al., 1990)
- %   \citep[e.g.][p. 32]{key} ==>>   (e.g. Jones et al., p. 32)
- %   \citeauthor{key} ==>>           Jones et al.
- %   \citeauthor*{key} ==>>          Jones, Baker, and Smith
- %   \citeyear{key} ==>>             1990
- %---------------------------------------------------------------------
 
 ENTRY
   { address
