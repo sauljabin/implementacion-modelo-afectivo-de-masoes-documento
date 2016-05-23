@@ -20,3 +20,15 @@
 *.dvi
 *.brf
 *.lon
+*.bit
+*.lof
+*.lot
+*.glx
+*.gxg
+*.gxs
+*.idx
+*.ilg
+*.ind
+*.url
+*.svn
+.DS_Store
