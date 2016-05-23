@@ -1,6 +1,11 @@
 #!/usr/bin/env bash
 
-VERSION="v4"
+if [[ "$BASH_VERSION" =~ ^[0-3] ]];then
+    echo "Version de bash '$BASH_VERSION' demasiado viejo.  Necesitas al menos '4.x.x'"
+    exit 1
+fi
+
+VERSION="v4.0"
 NAME="Plantilla LaTeX Trabajo de Grado"
 UNI="Universidad Centoccidental Lisandro Alvarado"
 
@@ -69,7 +74,7 @@ clean_files() {
 validate_file() {
     if [ ! -f $1.tex ]; then
       echo "${MSG[FILE_NOT_FOUND]} $1.tex"
-      exit
+      exit 1
     fi
 }
 
@@ -140,7 +145,7 @@ run() {
                 ;;
         esac
   fi
-  exit
+  exit 0
 }
 
 run $*
