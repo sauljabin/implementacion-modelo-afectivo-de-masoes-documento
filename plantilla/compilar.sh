@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
-if [[ "$BASH_VERSION" =~ ^[0-3] ]];then
+if [[ "$BASH_VERSION" =~ ^[0-3] ]]
+  then
     echo "Version de bash '$BASH_VERSION' demasiado viejo.  Necesitas al menos '4.x.x'"
     exit 1
 fi
@@ -56,15 +57,15 @@ declare -A MSG=(
   [FILE_NOT_FOUND]="El archivo no existe"
 )
 
-FILE_NAME_PROJ=project
-FILE_NAME_FIN=final
+FILE_NAME_PROJ=proyecto
+FILE_NAME_FIN=trabajo
 
-pause(){
-  read -p "${MSG[PRESS_KEY]}"
+pause() {
+  read -p "---> ${MSG[PRESS_KEY]}"
 }
 
 clean_files() {
-  echo "${MSG[DEL_ALL_FILE]}"
+  echo "---> ${MSG[DEL_ALL_FILE]}"
   for ext in ${TEMP_EXT[@]}
   do
     find . -type f -name "*.$ext" -delete
@@ -72,10 +73,10 @@ clean_files() {
 }
 
 validate_file() {
-    if [ ! -f $1.tex ]; then
-      echo "${MSG[FILE_NOT_FOUND]} $1.tex"
-      exit 1
-    fi
+  if [ ! -f $1.tex ]; then
+    echo "---> ${MSG[FILE_NOT_FOUND]} $1.tex"
+    exit 1
+  fi
 }
 
 generate_document() {
@@ -93,23 +94,32 @@ generate_document() {
   makeglossaries $1
   makeindex $1.glo -s $1.ist -t $1.glg -o $1.gls
   pdflatex -synctex=1 -interaction=nonstopmode $1
-  echo "${MSG[END_PROCESS]} $1.pdf"
+  echo "---> ${MSG[END_PROCESS]} $1.pdf"
 }
 
 usage() {
   echo "$UNI"
   echo "$NAME"
   echo "${MSG[VERSION]} $VERSION"
-  echo "   -c, clean ${MSG[HELP_CLEAN]}"
-  echo "   -b, build ${MSG[HELP_BUILD]}"
-  echo "   -h, help ${MSG[HELP_HELP]}"
+  echo "   -c, clean - ${MSG[HELP_CLEAN]}"
+  echo "   -b, build - ${MSG[HELP_BUILD]}"
+  echo "   -h, help - ${MSG[HELP_HELP]}"
 }
 
-all(){
+all() {
   validate_file $1
   clean_files
   generate_document $1
   clean_files
+}
+
+set_file_name() {
+  if  [ "$1" == "" ]
+    then
+      file=$FILE_NAME_FIN
+    else
+      file=$1
+  fi
 }
 
 run() {
@@ -117,33 +127,23 @@ run() {
     then
       all $FILE_NAME_FIN
     else
-        case "$1" in
-            -c | [Cc]lean | CLEAN )
-                clean_files
-                ;;
-            -b | [Bb]uild | BUILD )
-                if  [ "$2" == "" ]
-                  then
-                    file=$FILE_NAME_FIN
-                  else
-                    file=$2
-                fi
-                validate_file $file
-                generate_document $file
-                ;;
-            -h | [Hh]elp | HELP )
-                usage
-                ;;
-            *)
-                if  [ "$1" == "" ]
-                  then
-                    file=$FILE_NAME_FIN
-                  else
-                    file=$1
-                fi
-                all $file
-                ;;
-        esac
+      case "$1" in
+          -c | [Cc]lean | CLEAN )
+              clean_files
+              ;;
+          -b | [Bb]uild | BUILD )
+              set_file_name $2
+              validate_file $file
+              generate_document $file
+              ;;
+          -h | [Hh]elp | HELP )
+              usage
+              ;;
+          *)
+              set_file_name $1
+              all $file
+              ;;
+      esac
   fi
   exit 0
 }

@@ -3,19 +3,19 @@
 % 	2014-2016 Saúl Piña <sauljabin@gmail.com> (https://github.com/sauljabin/plantilla-latex-trabajo-de-grado-ucla).
 % 	2013 Miguel León <melf.ever.after@gmail.com> (https://code.google.com/p/uclamsc).
 % 	2009 Juan Rada Vilela <jcrada@gmail.com> y Rubén Parma <parmaia@gmail.com> (https://github.com/jcrada/latex-uclamsc).
-% 
+%
 % This file is part of Plantilla LaTeX Trabajo de Grado UCLA.
-% 
+%
 % Plantilla LaTeX Trabajo de Grado UCLA is free software: you can redistribute it and/or modify
 % it under the terms of the GNU General Public License as published by
 % the Free Software Foundation, either version 3 of the License, or
 % (at your option) any later version.
-% 
+%
 % Plantilla LaTeX Trabajo de Grado UCLA is distributed in the hope that it will be useful,
 % but WITHOUT ANY WARRANTY; without even the implied warranty of
 % MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 % GNU General Public License for more details.
-% 
+%
 % You should have received a copy of the GNU General Public License
 % along with Plantilla LaTeX Trabajo de Grado UCLA.  If not, see <http://www.gnu.org/licenses/>.
 %%
@@ -90,8 +90,8 @@
 \def\@mesdefensa{\variablefaltante{mesdefensa}} % Mes de la defensa (e.g. Marzo)
 \newcommand{\mesdefensa}[1]{\def\@mesdefensa{#1}}
 \newcommand{\mesencaratula}{\def\@mesencaratula{}} % Incluir mes en la carátula
-\def\@annodefensa{\variablefaltante{annodefensa}} % Año de la defensa (e.g. 2009)
-\newcommand{\annodefensa}[1]{\def\@annodefensa{#1}}
+\def\@anodefensa{\variablefaltante{anodefensa}} % Año de la defensa (e.g. 2009)
+\newcommand{\anodefensa}[1]{\def\@anodefensa{#1}}
 
 \def\@tutor{\variablefaltante{tutor}}	% Nombre del tutor
 \newcommand{\tutor}[1]{\def\@tutor{#1}}
@@ -119,7 +119,7 @@
 
 % Comando: habilitarpendientes
 % Descripción: Muestra los pendientes agregados al trabajo (\pendiente{Revisar X}) y el índice de pendientes. Debe usarse antes de \configurar
-% Uso: 
+% Uso:
 % \habilitarpendientes
 % ....
 % \configurar
@@ -127,7 +127,7 @@
 
 % Comando: habilitarnotas
 % Descripción: Muestra las notas hechas al trabajo (\nota{Esto debería ser de otra forma}) y el índice de notas. Debe usarse antes de \configurar
-% Uso: 
+% Uso:
 % \habilitarnotas
 % ....
 % \configurar
@@ -166,7 +166,7 @@
 % Ambiente: lista
 % Descripción: Para enumerar items bien sea enumerados o sin enumerar.
 % Parámetros: [1] Prefijo de cada item, [2] comandos adicionales (e.g. \usecounter{enumi}).
-% Uso: 
+% Uso:
 % \begin{lista}{\arabic{enumi}. }{\usecounter{enumi}}
 %	\item item 1
 %	...
@@ -210,19 +210,19 @@
 % Ambiente: viñetas
 % Descripción: Para funcionar como itemize, manteniendo el formato correcto.
 % Uso:
-% \begin{viñetas}
+% \begin{vinetas}
 % 	\item foo
 % 	\item bar
 % 	\item foobar
-% \end{viñetas}
-\newenvironment{viñetas}
+% \end{vinetas}
+\newenvironment{vinetas}
 	{\begin{lista}{$\bullet$ }{}}
 	{\end{lista}}
 
-% Ambiente: enumeracionenparrafo 
+% Ambiente: enumeracionenparrafo
 % Descripción: Para enumerar una lista de items dentro de un párrafo
 % Uso:
-% ... Sólo hay 2 razones para eso: 
+% ... Sólo hay 2 razones para eso:
 % \begin{enumeracionenparrafo}
 % 	\item Razón 1,
 % 	\item Razón 2
@@ -233,7 +233,7 @@
 	{\begin{inparaenum}[(a)]}
 	{\end{inparaenum}}
 
-% Ambiente: preliminares 
+% Ambiente: preliminares
 % Descripción: Para usar en las páginas preliminares, determina numeración de páginas.
 % Uso:
 % \begin{preliminares}
@@ -243,10 +243,10 @@
 \newenvironment{preliminares}
 	{\pagenumbering{roman}}
 	{\pagenumbering{arabic}}
-	
+
 % Ambiente: contenido
 % Descripción: Determina el comienzo del contenido. Por los momentos hace nada, pero en el futuro quizás tenga función.
-% Uso: 
+% Uso:
 % \begin{contenido}
 % 	\include{chapters/introduccion}
 % 	\include{chapters/el-problema}
@@ -256,7 +256,7 @@
 
 % Ambiente: anexos
 % Descripción: Determina el comienzo de los anexos. Por los momentos hace nada, pero en el futuro quizás tenga función.
-% Uso: 
+% Uso:
 % \begin{anexos}
 % 	\include{chapters/anexo-1}
 % 	\include{chapters/anexo-2}
@@ -285,9 +285,9 @@
 
 % Ambiente listado
 % Descripción: Ambiente utilizado para insertar codigo fuente o algoritmos.
-% Parametros opcionales: titulo, etiqueta, indice, fuente, sinleyenda. 
+% Parametros opcionales: titulo, etiqueta, indice, fuente, sinleyenda.
 % Parametro obligatorio: lenguaje
-% Ejemplos: 
+% Ejemplos:
 % \begin{listado}[titulo=Titulo, indice=Indice Personalizado, etiqueta=etiquetapararef, fuente=Fuente personalizada]{[LaTeX]TeX}
 % ...
 % \end{listado}
@@ -304,8 +304,8 @@
 
 % Ambiente: ilustracion
 % Descripción: Prepara el contexto para insertar una ilustración o imagen.
-% Parametros opcionales: titulo, etiqueta, indice, fuente, sinleyenda. 
-% Uso: 
+% Parametros opcionales: titulo, etiqueta, indice, fuente, sinleyenda.
+% Uso:
 % \begin{ilustracion}
 % 	\includegraphics[height=2cm,width=2cm]{figures/cuadrado.png}
 % \end{ilustracion}
@@ -315,7 +315,7 @@
 % \end{ilustracion}
 %
 \newenvironment{ilustracion}[1][]{
-	\begin{figure}[htcb] 
+	\begin{figure}[htcb]
 	\espaciotriple
 	\centering
 	\setkeys{tituloilustracion}{#1}
@@ -327,8 +327,8 @@
 
 % Ambiente: grafico
 % Descripción: Prepara el contexto para insertar un gráfico (e.g. gráfico de barras, líneas, torta, etc.).
-% Parametros opcionales: titulo, etiqueta, indice, fuente, sinleyenda. 
-% Uso: 
+% Parametros opcionales: titulo, etiqueta, indice, fuente, sinleyenda.
+% Uso:
 % \begin{grafico}
 % 	\includegraphics[height=2cm,width=2cm]{figures/fitness.png}
 % \end{grafico}
@@ -350,8 +350,8 @@
 
 % Ambiente: algoritmo
 % Descripción: Permite insertar un algoritmo con formato pseudocodigo
-% Parametros opcionales: titulo, etiqueta, indice, fuente, sinleyenda. 
-% Uso: 
+% Parametros opcionales: titulo, etiqueta, indice, fuente, sinleyenda.
+% Uso:
 % \begin{algoritmo}
 % 	...
 % \end{algoritmo}
@@ -364,8 +364,8 @@
 	\begin{algorithm}[htcb]
 	\espaciodoble
 	\setkeys{tituloalgoritmo}{#1}
-	\footnotesize	
-}{	
+	\footnotesize
+}{
 	\tituloalgoritmo
 	\end{algorithm}
 	\espaciodoble
@@ -378,9 +378,9 @@
 
 % Ambiente: cuadro
 % Descripción: Prepara el contexto para insertar un cuadro o tabla.
-% Parametros opcionales: titulo, etiqueta, indice, fuente, sinleyenda. 
+% Parametros opcionales: titulo, etiqueta, indice, fuente, sinleyenda.
 % Parametro obligatorio: columnas
-% Uso: 
+% Uso:
 % \begin{cuadro}[titulo=Titulo, indice=Indice Personalizado, etiqueta=etiquetapararef]{lccc}
 % 	\toprule
 % 	Jugares I/II & Piedra & Papel & Tijeras\\
@@ -412,7 +412,7 @@
 % Ambiente: citatextual
 % Descripción: Prepara el contexto para una cita textual de más de 40 palabras.
 % Párrafos subsiguientes al primero, tienen sangría adicional según el manual de la UPEL.
-% Uso: 
+% Uso:
 % \begin{citatextual}
 %...Esto es una cita textual... (40 palabras)...
 % \end{citatextual}
@@ -425,22 +425,22 @@
 		\setlength{\rightskip}{\rightskip+\parindent}
 		\noindent\ignorespaces
 	}
-	{	
+	{
 		\end{spacing}
 		\espaciodoble
 	}
-	
+
 % Ambiente: ecuacion
 % Descripción: Prepara el contexto para insertar una ecuación
 % Parámetros: [1] etiqueta para luego referirse como \ref{etiqueta}
 % Nota: Si aparece la ecuación sin el primer caracter, es que se olvidó agregar el parámetro.
-% Uso: 
+% Uso:
 % \begin{ecuacion}{etiqueta}
 % \sum{F_{x}} = 0
 % \end{ecuacion}
 %
 \newenvironment{ecuacion}[1]
-	{	
+	{
 		\espaciosimple
 		\begin{equation}
 		\label{#1}
@@ -449,19 +449,19 @@
 
 % Ambiente: ecuaciones
 % Descripción: Prepara el contexto para insertar varias ecuaciones
-% Uso: 
+% Uso:
 % \begin{ecuaciones}
 % \sum{F_{x}} = 0\\
 % \sum{M_{x} = 0}
 % \end{ecuaciones}
 %
 \newenvironment{ecuaciones}
-	{	
+	{
 		\espaciosimple
 		\begin{eqnarray}
 	}
 	{\end{eqnarray}}
-	
+
 %%%%%%%%%%%%%%%%%%%%%%%%% INTERNO %%%%%%%%%%%%%%%%%%%%%%%%%
 % Comando: configurar
 % Descripción: Configura todo el documento. Es el primer comando a ejecutarse antes de los preliminares.
@@ -491,8 +491,8 @@
 		pdfborder={0 0 0},
 	    linkcolor = red,
 	    anchorcolor = red,
-	    citecolor = blue, 
-	    filecolor = red, 
+	    citecolor = blue,
+	    filecolor = red,
 	    urlcolor = red
 	}
 }
@@ -510,31 +510,31 @@
 		\espaciotriple
 		\justifying
 		}
-	
+
 	\def\@makeschapterhead##1{ %Para los capítulos no numerados
 		\centering{\normalfont \normalsize \bfseries \MakeUppercase{##1}}\\
 		\espaciotriple
 		\justifying
 		}
-		
+
 	\renewcommand{\thechapter}{\Roman{chapter}} %Definir capítulos con números romanos
 	\renewcommand{\chaptermark}[1]{\markboth{}{}} %Eliminar encabezados de páginas
-	
-	%Formato de secciones, subsecciones y subsubsecciones. (28pt es triple espaciado para fuentes de 12pt) 
+
+	%Formato de secciones, subsecciones y subsubsecciones. (28pt es triple espaciado para fuentes de 12pt)
 	%(23pt es la medida conseguida comparando resultados con documento original de reglas)
 	% Fomatos según manual de la UPEL.
 	\renewcommand{\section}{\@startsection{section}{1}{\z@}{22pt}{22pt}{\centering\normalfont\normalsize\bfseries}}
 	\renewcommand{\subsection}{\@startsection{subsection}{2}{\z@}{22pt}{22pt}{\normalfont\normalsize\bfseries\itshape}}
-	\renewcommand{\subsubsection}{\@startsection{subsubsection}{3}{\parindent}{22pt}{22pt}{\normalfont\normalsize\bfseries\itshape}} 
-	
+	\renewcommand{\subsubsection}{\@startsection{subsubsection}{3}{\parindent}{22pt}{22pt}{\normalfont\normalsize\bfseries\itshape}}
+
 	% Configuración del glosario.
 	\glossarystyle{list}
-	
+
 	\renewcommand*{\glossarysection}[2][\@gls@title]{
-		\def\@gls@title{##2}% 
+		\def\@gls@title{##2}%
 		\seccion{##1}
-		\@mkboth{}{}% 
-	} 
+		\@mkboth{}{}%
+	}
 	\renewenvironment{theglossary}
 	{
 		\begin{description}
@@ -577,7 +577,7 @@
 
 	\renewcommand{\lstlistingname}{Listado}
 	\renewcommand{\thelstlisting}{\@arabic\c@lstlisting}
-	
+
 	\define@key{titulolistado}{titulo}{\def\titulolistado@titulo{##1}}
 	\define@key{titulolistado}{etiqueta}{\def\titulolistado@etiqueta{##1}}
 	\define@key{titulolistado}{indice}{\def\titulolistado@indice{##1}}
@@ -609,8 +609,8 @@
 
 	%	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 	% Índice de gráficos
-	\newcommand{\listofchartsname}{{Índice de Gráficos}} 
-	\newlistof[part]{charts}{loc}{\listofchartsname} 
+	\newcommand{\listofchartsname}{{Índice de Gráficos}}
+	\newlistof[part]{charts}{loc}{\listofchartsname}
 
 	%Comando: listofcharts
 	%Descripción: Crea el índice de gráficos.
@@ -629,14 +629,14 @@
 	}
 	\renewcommand{\thecharts}{\@arabic\c@charts}
 	\newcommand{\chartname}{Gráfico}
-	
+
 	\define@key{titulografico}{titulo}{\def\titulografico@titulo{##1}}
 	\define@key{titulografico}{etiqueta}{\def\titulografico@etiqueta{##1}}
 	\define@key{titulografico}{indice}{\def\titulografico@indice{##1}}
 	\define@key{titulografico}{fuente}{\def\titulografico@fuente{##1}}
 	\define@key{titulografico}{sinleyenda}[true]{\def\titulografico@sinleyenda{##1}}
 	\define@key{titulografico}{sinindice}[true]{\def\titulografico@sinindice{##1}}
-	
+
 	\newcommand{\titulografico}{
 		\ifthenelse{\isundefined{\titulografico@sinindice}}{
 			\refstepcounter{charts}
@@ -659,11 +659,11 @@
 			}
 		}{}
 	}
-	
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %	%Índice de Ilustraciones
-	\newcommand{\listofilustrationsname}{{Índice de Ilustraciones}} 
-	\newlistof[part]{ilustrations}{loi}{\listofilustrationsname} 
+	\newcommand{\listofilustrationsname}{{Índice de Ilustraciones}}
+	\newlistof[part]{ilustrations}{loi}{\listofilustrationsname}
 %
 %	%Comando: listofilustrations
 %	%Descripción: Crea el índice de ilustraciones.
@@ -682,14 +682,14 @@
 	}
 	\renewcommand{\theilustrations}{\@arabic\c@ilustrations}
 	\newcommand{\ilustrationname}{Ilustración}
-	
+
 	\define@key{tituloilustracion}{titulo}{\def\tituloilustracion@titulo{##1}}
 	\define@key{tituloilustracion}{etiqueta}{\def\tituloilustracion@etiqueta{##1}}
 	\define@key{tituloilustracion}{indice}{\def\tituloilustracion@indice{##1}}
 	\define@key{tituloilustracion}{fuente}{\def\tituloilustracion@fuente{##1}}
 	\define@key{tituloilustracion}{sinleyenda}[true]{\def\tituloilustracion@sinleyenda{##1}}
 	\define@key{tituloilustracion}{sinindice}[true]{\def\tituloilustracion@sinindice{##1}}
-	
+
 	\newcommand{\tituloilustracion}{
 		\ifthenelse{\isundefined{\tituloilustracion@sinindice}}{
 			\refstepcounter{ilustrations}
@@ -713,9 +713,9 @@
 	}
 
 %	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-	% Índice de cuadros		
-	\newcommand{\listoftabulationsname}{{Índice de Cuadros}} 
-	\newlistof[part]{tabulations}{loq}{\listoftabulationsname} 
+	% Índice de cuadros
+	\newcommand{\listoftabulationsname}{{Índice de Cuadros}}
+	\newlistof[part]{tabulations}{loq}{\listoftabulationsname}
 
 	%Descripción: Crea el índice de cuadros.
 	\renewcommand{\listoftabulations}{
@@ -733,13 +733,13 @@
 	}
 	\renewcommand{\thetabulations}{\@arabic\c@tabulations}
 	\newcommand{\tabulationmname}{Cuadro}
-	
+
 	\define@key{titulocuadro}{titulo}{\def\titulocuadro@titulo{##1}}
 	\define@key{titulocuadro}{etiqueta}{\def\titulocuadro@etiqueta{##1}}
 	\define@key{titulocuadro}{indice}{\def\titulocuadro@indice{##1}}
 	\define@key{titulocuadro}{sinleyenda}[true]{\def\titulocuadro@sinleyenda{##1}}
 	\define@key{titulocuadro}{sinindice}[true]{\def\titulocuadro@sinindice{##1}}
-	
+
 	\newcommand{\titulocuadro}{
 		\ifthenelse{\isundefined{\titulocuadro@sinindice}}{
 			\refstepcounter{tabulations}
@@ -762,10 +762,10 @@
 			}
 		}{}
 	}
-	
+
 %	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 	%Índice de Pendientes
-	\newcommand{\listoftodosname}{{Índice de Pendientes}} 
+	\newcommand{\listoftodosname}{{Índice de Pendientes}}
 	\newlistof[part]{todos}{lod}{\listoftodosname}
 
 	%Comando: listoftodos
@@ -778,7 +778,7 @@
 		\@starttoc{lod}}
 	}
 	\renewcommand{\thetodos}{\@arabic\c@todos}
-	
+
 	%Comando: pendiente
 	%Descripción: Agrega una anotación al índice de pendientes y la muestra en el lugar donde fue agregada. Para mostrar los pendientes, ejecutar antes de \configurar \habilitarpendientes
 	%Parámetros: [1] Texto del pendiente (e.g. Mejorar redacción)
@@ -794,8 +794,8 @@
 
 %	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 	%Índice de Notas
-	\newcommand{\listofnotesnames}{{Índice de Notas}} 
-	\newlistof[part]{notes}{lon}{\listofnotesnames} 
+	\newcommand{\listofnotesnames}{{Índice de Notas}}
+	\newlistof[part]{notes}{lon}{\listofnotesnames}
 
 	%Comando: listofnotes
 	%Descripción: Crea el índice de notas.
@@ -812,18 +812,18 @@
 	%Parámetros: [1] Texto de la nota (e.g. \nota{Esto es una nota})
 	\newcommand{\nota}[1]{
 		\ifthenelse{\equal{\@notas}{true}}{
-			\refstepcounter{notes} 
+			\refstepcounter{notes}
 			\noindent{\color{blue}\normalfont\scriptsize{\bfseries{\thenotes:} ##1}}
 			\addcontentsline{lon}{notes}{\protect{\thenotes.} ##1}\par
 		}{}
 	}
-	
-	
+
+
 %	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 	%Índice de Algoritmos
-	\newcommand{\listofalgorithmsname}{{Índice de Algoritmos}} 
+	\newcommand{\listofalgorithmsname}{{Índice de Algoritmos}}
 	\newlistof[part]{algs}{lal}{\listofalgorithmsname}
-	
+
 	% Comando: listofalgorithms
 	% Descripción: Crea el índice de algoritmos.
 	\renewcommand{\listofalgorithms}{
@@ -838,17 +838,17 @@
 			}
 		}
 	}
-	
-	\renewcommand{\thealgs}{\@arabic\c@algs}	
+
+	\renewcommand{\thealgs}{\@arabic\c@algs}
 	\newcommand{\algorithmname}{Algoritmo}
-	
+
 	\define@key{tituloalgoritmo}{titulo}{\def\tituloalgoritmo@titulo{##1}}
 	\define@key{tituloalgoritmo}{etiqueta}{\def\tituloalgoritmo@etiqueta{##1}}
 	\define@key{tituloalgoritmo}{indice}{\def\tituloalgoritmo@indice{##1}}
 	\define@key{tituloalgoritmo}{fuente}{\def\tituloalgoritmo@fuente{##1}}
 	\define@key{tituloalgoritmo}{sinleyenda}[true]{\def\tituloalgoritmo@sinleyenda{##1}}
 	\define@key{tituloalgoritmo}{sinindice}[true]{\def\tituloalgoritmo@sinindice{##1}}
-	
+
 	\newcommand{\tituloalgoritmo}{
 		\ifthenelse{\isundefined{\tituloalgoritmo@sinindice}}{
 			\refstepcounter{algs}
@@ -879,7 +879,7 @@
 %Comando: formatearindice
 %Descripción: Le da formato a los índices, fuentes, tamaños, identaciones, entre otras. Llamado desde \configurarindice.
 \newcommand{\formatearindice}{
-	
+
 	%Índice general
 	%Para las partes. Usado en Anexos para que los anexos salgan dentro de una carpeta en el outline
 	\renewcommand{\cftpartfont}{\normalfont\normalsize}
@@ -888,7 +888,7 @@
 	\renewcommand{\cftpartdotsep}{\cftdotsep}
 	\renewcommand{\cftpartindent}{0cm}
 	\setlength{\cftbeforepartskip}{0cm}
-	
+
 	%Para capítulos sin numeración se usará paragraph para que salgan en el índice correctamente
 	%Principalmente hecho para las páginas preliminares
 	\renewcommand{\cftparafont}{\normalfont\normalsize}
@@ -897,7 +897,7 @@
 	\renewcommand{\cftparadotsep}{\cftdotsep}
 	\renewcommand{\cftparaindent}{0cm}
 	\setlength{\cftbeforeparaskip}{0cm}
-	
+
 	%Capítulos con numeración
 	\renewcommand{\cftchapfont}{\normalfont\normalsize}
 	\renewcommand{\cftchappagefont}{\normalfont\normalsize}
@@ -910,16 +910,16 @@
 	\renewcommand{\cftsecfont}{\normalfont\normalsize}
 	\setlength{\cftbeforesecskip}{0cm}
 	\setlength{\cftsecindent}{5\parindent}
-	
+
 	%Subsecciones
 	\renewcommand{\cftsubsecfont}{\normalfont\normalsize}
 	\setlength{\cftbeforesubsecskip}{0cm}
 	\setlength{\cftsubsecindent}{6\parindent}
 	%Subsubsecciones
-	\renewcommand{\cftsubsubsecfont}{\normalfont\normalsize}	
+	\renewcommand{\cftsubsubsecfont}{\normalfont\normalsize}
 	\setlength{\cftbeforesubsubsecskip}{0cm}
 	\setlength{\cftsubsubsecindent}{7\parindent}
-	
+
 }
 
 %Comando: hacerindicegeneral
@@ -976,7 +976,7 @@
 \newcommand{\hacerindicealgoritmos}{
 	\listofalgorithms
 	\newpage
-}	
+}
 
 %Comando: hacerindices
 %Descripción: Crea todos los índices en el orden adecuado. En caso de que los pendientes estén habilitados, mostrará el índice de pendientes también.
@@ -988,7 +988,7 @@
 	\hacerindicecuadros
 	\hacerindicealgoritmos
 	\hacerindicelistados
-	
+
 	\ifthenelse{\equal{\@pendientes}{true}}{
 	\hacerindicependientes
 	}{}
@@ -1001,7 +1001,7 @@
 %Descripción: Agrega el preliminar al índice general. Se usa paragraph para evitar que se incluyan siguientes secciones en el outline.
 %Parámetros: [1] Nombre a mostrar en el índice
 \newcommand{\indexarpreliminar}[1]{
-	\phantomsection % Recomendado antes de addcontentsline para evitar problemas con hyperref. 	
+	\phantomsection % Recomendado antes de addcontentsline para evitar problemas con hyperref.
 	\MakeUppercase{\gdef\noexpand\aux{#1}}
 	\addcontentsline{toc}{paragraph}{\aux} %Única forma que encontré para expandir las mayúsculas y evitar el warning con el \uppercase al generarse el bookmark.
 	%\addcontentsline{toc}{paragraph}{\uppercase{#1}} %También puede resolverse quitando el \uppercase y asegurandose de colocar manualmente en mayúscula todos los títulos en el documento.
@@ -1017,10 +1017,10 @@
 }
 
 %Comando: indexarparte
-%Descripción: Agrega la parte al índice general. Caso Anexos. 
+%Descripción: Agrega la parte al índice general. Caso Anexos.
 %Parámetros: [1] Nombre a mostrar en el índice
 \newcommand{\indexarparte}[1]{
-	\phantomsection % Recomendado antes de addcontentsline para evitar problemas con hyperref. 	
+	\phantomsection % Recomendado antes de addcontentsline para evitar problemas con hyperref.
 	\MakeUppercase{\gdef\noexpand\aux{#1}}
 	\addcontentsline{toc}{part}{\aux} %Única forma que encontré para expandir las mayúsculas y evitar el warning con el \uppercase al generarse el bookmark.
 	%\addcontentsline{toc}{part}{\uppercase{#1}} %También puede resolverse quitando el \uppercase y asegurandose de colocar manualmente en mayúscula todos los títulos en el documento
@@ -1030,31 +1030,31 @@
 %Descripción: Agrega el capítulo al índice general. No sé en qué caso, pero por si acaso.
 %Parámetros: [1] Nombre a mostrar en el índice
 \newcommand{\indexarcapitulo}[1]{
-	\phantomsection % Recomendado antes de addcontentsline para evitar problemas con hyperref. 	
+	\phantomsection % Recomendado antes de addcontentsline para evitar problemas con hyperref.
 	\addcontentsline{toc}{chapter}{#1}
 }
 
 %Comando: indexarseccion
-%Descripción: Agrega la sección al índice general. 
+%Descripción: Agrega la sección al índice general.
 %Parámetros: [1] Nombre a mostrar en el índice
 \newcommand{\indexarseccion}[1]{
-	%\phantomsection % Recomendado antes de addcontentsline para evitar problemas con hyperref. 	
+	%\phantomsection % Recomendado antes de addcontentsline para evitar problemas con hyperref.
 	\addcontentsline{toc}{section}{#1}
 }
 
 %Comando: indexarsubseccion
-%Descripción: Agrega la subsección al índice general. 
+%Descripción: Agrega la subsección al índice general.
 %Parámetros: [1] Nombre a mostrar en el índice
 \newcommand{\indexarsubseccion}[1]{
-	%\phantomsection % Recomendado antes de addcontentsline para evitar problemas con hyperref. 	
+	%\phantomsection % Recomendado antes de addcontentsline para evitar problemas con hyperref.
 	\addcontentsline{toc}{subsection}{#1}
 }
 
 %Comando: indexarsubsubseccion
-%Descripción: Agrega la subsubsección al índice general. 
+%Descripción: Agrega la subsubsección al índice general.
 %Parámetros: [1] Nombre a mostrar en el índice
 \newcommand{\indexarsubsubseccion}[1]{
-	%\phantomsection % Recomendado antes de addcontentsline para evitar problemas con hyperref. 	
+	%\phantomsection % Recomendado antes de addcontentsline para evitar problemas con hyperref.
 	\addcontentsline{toc}{subsubsection}{#1}
 }
 
@@ -1079,10 +1079,10 @@
 	%\setcounter{page}{-1}
 	\thispagestyle{empty}
 		\begin{center}
-			{\MakeUppercase{Universidad Centroccidental}}\\ 
+			{\MakeUppercase{Universidad Centroccidental}}\\
 
 			\textquotedblleft {\MakeUppercase{Lisandro Alvarado}}\textquotedblright\\
-			\vfill 
+			\vfill
 			\vfill
 			{\textbf{\MakeUppercase{\@titulo}}}\\
 			\vfill
@@ -1090,7 +1090,7 @@
 				{\MakeUppercase{\@autor}}
 			\end{flushright}
 			\vfill
-			{\@ciudad, \ifthenelse{\isundefined{\@mesencaratula}}{}{\@mesdefensa\ de }\@annodefensa.}
+			{\@ciudad, \ifthenelse{\isundefined{\@mesencaratula}}{}{\@mesdefensa\ de }\@anodefensa.}
 		\end{center}
 
 	\newpage
@@ -1106,7 +1106,7 @@
 		\textquotedblleft {\MakeUppercase{Lisandro Alvarado}}\textquotedblright\\
 		\MakeUppercase{Decanato de \@decanato}\\
 		\MakeUppercase{\@postgrado}
-		\vfill 
+		\vfill
 		{\textbf{\MakeUppercase{\@titulo}}}\\
 		\vfill
 		{Trabajo presentado para optar al grado de\\
@@ -1116,7 +1116,7 @@
 			Por: \MakeUppercase{\@autor}
 		\end{flushright}
 		\vfill
-		{\@ciudad, \ifthenelse{\isundefined{\@mesencaratula}}{}{\@mesdefensa\ de }\@annodefensa.}
+		{\@ciudad, \ifthenelse{\isundefined{\@mesencaratula}}{}{\@mesdefensa\ de }\@anodefensa.}
 	\end{center}
 	\newpage
 }
@@ -1159,7 +1159,7 @@
 			\end{center}
 		\end{minipage}
 		\vfill
-		{\@ciudad, \@diadefensa~ de \@mesdefensa~ de \@annodefensa.}
+		{\@ciudad, \@diadefensa~ de \@mesdefensa~ de \@anodefensa.}
 	\end{center}
 	\newpage
 }
@@ -1170,7 +1170,7 @@
 	\begin{center}
 		\indexarpreliminar{Resumen}
 	%\begin{singlespace}
-		\MakeUppercase{Universidad Centroccidental} 
+		\MakeUppercase{Universidad Centroccidental}
 		\textquotedblleft \MakeUppercase{Lisandro Alvarado}\textquotedblright\\
 		\MakeUppercase{Decanato de \@decanato}\\
 		\MakeUppercase{\@postgrado}\\
@@ -1181,7 +1181,7 @@
 		\textbf{Autor:} \@autor\\
 		\textbf{Tutor:} \@tutor\\
 		\ifthenelse{\isundefined{\@fechaenresumen}}{}{
-			\textbf{Fecha:} \@mesdefensa\ \@annodefensa\\
+			\textbf{Fecha:} \@mesdefensa\ \@anodefensa\\
 		}
 	}
 	\espaciotriple
@@ -1201,7 +1201,7 @@
 	\selectlanguage{english}
 	\begin{center}
 		\indexarpreliminar{Abstract}
-		\MakeUppercase{Universidad Centroccidental} 
+		\MakeUppercase{Universidad Centroccidental}
 		\textquotedblleft \MakeUppercase{Lisandro Alvarado}\textquotedblright\\
 		\MakeUppercase{Decanato de \@decanato}\\
 		\MakeUppercase{\@postgrado}\\
@@ -1212,7 +1212,7 @@
 		\textbf{Author:} \@autor\\
 		\textbf{Supervisor:} \@tutor\\
 		\ifthenelse{\isundefined{\@fechaenresumen}}{}{
-			\textbf{Date:} \@monthdefensa\ \@annodefensa\\
+			\textbf{Date:} \@monthdefensa\ \@anodefensa\\
 		}
 	}
 	\espaciotriple
@@ -1234,15 +1234,15 @@
 	%Para hacer que aparezca la palabra ANEXOS en el centro de la página
 	\def\@makeschapterhead##1{ %Para los capítulos no numerados
 		\indexarparte{Anexos} % línea movida por mal número de página.
-		\ 
+		\
 		\vfill
 		\centering{\normalfont \normalsize \bfseries \MakeUppercase{##1}}\\
 		\vfill
-		\ 
+		\
 		\justifying
 		}
 	\capitulosinnumeracion{Anexos}
-	
+
 	\renewcommand{\@chapapp}{Anexo}
 	\def\@makechapterhead##1{ %Para los capítulos numerados
 		\centering{\normalfont \normalsize \bfseries \MakeUppercase{\@chapapp} \thechapter}
@@ -1264,14 +1264,14 @@
 	%Si existen ítems bibtex de tipo @misc, es necesario borrar el comando \url de la propiedad URL. Causa problemas.
 	\renewcommand\bibsection{\capitulosinnumeracion{Referencias Bibliográficas}}
 	\bibliographystyle{uclamsc}
-	\bibliography{\@bibliografia}	
+	\bibliography{\@bibliografia}
 	\end{spacing}
 }
 
 % Comando: citar
 % Descripción: Introduce una referencia bibliográfica de la forma Autor (año).
 % Parámetros: [1] Identificador del registro bibliográfico.
-% Uso: 
+% Uso:
 % ... de acuerdo con \citar{parma:aco}, el algoritmo de ...
 % Resultado:
 % ... de acuerdo con Parma et al. (2007), el algoritmo de ...
@@ -1281,7 +1281,7 @@
 % Comando: preliminar
 % Descripción: Crea una página preliminar.
 % Parámetros: [1] Nombre del preliminar
-% Uso: 
+% Uso:
 % \preliminar{Agradecimientos}
 \newcommand{\preliminar}[1]{
 	\setlength{\leftskip}{0cm}
@@ -1292,7 +1292,7 @@
 
 % Comando: introduccion
 % Descripción: Crea la introducción. No recibe parámetros, se distingue por la forma en que se indexa la introducción
-% Uso: 
+% Uso:
 % \introduccion
 % Desde los años 500 AC, la comunidad bla bla bla bla bla bla bla bla bla bla bla bla .
 \newcommand{\introduccion}{
@@ -1304,7 +1304,7 @@
 
 % Comando: capitulo
 % Descripción: Crea un capitulo.
-% Uso: 
+% Uso:
 % \capitulo{El Problema}
 \newcommand{\capitulo}[1]{
 	\setlength{\leftskip}{0cm}
@@ -1314,7 +1314,7 @@
 
 % Comando: capitulosinnumeracion
 % Descripción: Crea un capitulo sin numeración.
-% Uso: 
+% Uso:
 % \capitulo*{Anexos}
 \newcommand{\capitulosinnumeracion}[1]{
 	\setlength{\leftskip}{0cm}
@@ -1323,8 +1323,8 @@
 }
 
 % Comando: continuarcapitulo
-% Descripción: Este comando disminuye la identación del margen para continuar el capítulo. 
-% Uso: 
+% Descripción: Este comando disminuye la identación del margen para continuar el capítulo.
+% Uso:
 % \capitulo{El problema}
 % Se habla del problema, se divide en secciones, pero al final, se retorna para cerrar la idea del capítulo. El margen vuelve al comienzo.
 % \continuarcapitulo
@@ -1335,7 +1335,7 @@
 
 % Comando: seccion
 % Descripción: Crea una sección.
-% Uso: 
+% Uso:
 % \seccion{Inteligencia Artificial}
 \newcommand{\seccion}[1]{
 	\setlength{\leftskip}{0cm}
@@ -1346,8 +1346,8 @@
 }
 
 % Comando: continuarseccion
-% Descripción: Este comando disminuye la identación del margen para continuar el sección. 
-% Uso: 
+% Descripción: Este comando disminuye la identación del margen para continuar el sección.
+% Uso:
 % \seccion{Computación Evolutiva}
 % Se habla de la CE, se divide en subsecciones, pero al final, se retorna para cerrar la idea de la seccion.
 % \continuarseccion
@@ -1358,7 +1358,7 @@
 
 % Comando: subseccion
 % Descripción: Crea una subsección.
-% Uso: 
+% Uso:
 % \subseccion{Computación Natural}
 \newcommand{\subseccion}[1]{
 	\setlength{\leftskip}{0cm}
@@ -1369,8 +1369,8 @@
 }
 
 % Comando: continuarsubseccion
-% Descripción: Este comando disminuye la identación del margen para continuar la subsección. 
-% Uso: 
+% Descripción: Este comando disminuye la identación del margen para continuar la subsección.
+% Uso:
 % \subseccion{Algoritmos Genéticos}
 % Se habla de los AG, se divide en subsubsecciones, pero al final, se retorna para cerrar la idea de la subseccion.
 % \continuarsubseccion
@@ -1381,7 +1381,7 @@
 
 % Comando: subsubseccion
 % Descripción: Crea una subsubsección.
-% Uso: 
+% Uso:
 % \subsubseccion{Particle Swarm Optimization}
 \newcommand{\subsubseccion}[1]{
 	\setlength{\leftskip}{0cm}
@@ -1393,7 +1393,7 @@
 
 % Comando: continuarsubsubseccion
 % Descripción: Este comando disminuye la identación del margen para continuar el subsubseccion. Quizás no se utilice, pero ahí está por si acaso.
-% Uso: 
+% Uso:
 % \subsubseccion{Algoritmos Genéticos Multi-Objetivos}
 % Se habla de los MOGA, no creo que se pueda dividir más porque no hay subsubsubsecciones. Quizás en un futuro.
 % \continuarsubsubseccion
@@ -1405,7 +1405,7 @@
 % Comando: anexo
 % Descripción: Prepara el documento para un anexo/
 % Parámetros: [1] Título del anexo.
-% Uso: 
+% Uso:
 % \anexo{Curriculum Vitae}
 \newcommand{\anexo}[1]{
 	\chapter{#1}
@@ -1428,31 +1428,31 @@
 % Comando: yo
 % Descripción: Introduce el apellido del autor y el año de este trabajo (e.g. Bar (2009)).
 % Uso: \yo
-\newcommand{\yo}{\@citarcomo\ (\@annodefensa)} 
+\newcommand{\yo}{\@citarcomo\ (\@anodefensa)}
 
 % Ambiente: ecuaciones*
 % Descripción: Prepara el contexto para insertar varias ecuaciones sin enumerarlas
-% Uso: 
+% Uso:
 % \begin{ecuaciones*}
 % \sum{F_{x}} = 0\\
 % \sum{M_{x} = 0}
 % \end{ecuaciones*}
 %
 \newenvironment{ecuaciones*}
-	{	
+	{
 		\espaciosimple
 		\begin{eqnarray*}
 	}
 	{\end{eqnarray*}}
-		
+
 % Comando: agregartermino
 % Descripción: Agrega un término al glosario.
 % Parámetros: [1] etiqueta, [2] propiedades de la forma: name={nombre}, text={texto}, description={descripción}, plural={nombre plural}
 % Uso:
 % \agregartermino{robot}{
-% name={Robot}, 
+% name={Robot},
 % text={robot},
-% description={Entidad capaz de ...}, 
+% description={Entidad capaz de ...},
 % plural={Robots}
 % }
 % Luego hacer referencia \gls{robot}
