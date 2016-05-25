@@ -2,11 +2,11 @@
 
 if [[ "$BASH_VERSION" =~ ^[0-3] ]]
   then
-    echo "Version de bash '$BASH_VERSION' demasiado viejo.  Necesitas al menos '4.x.x'"
+    echo "Versión 4 recomendada de bash, versión actual $BASH_VERSION"
     exit 1
 fi
 
-VERSION="v4.0"
+VERSION="v3.1"
 NAME="Plantilla LaTeX Trabajo de Grado"
 UNI="Universidad Centoccidental Lisandro Alvarado"
 

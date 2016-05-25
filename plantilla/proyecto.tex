@@ -23,16 +23,12 @@
 \documentclass{uclamsc}
 
 \includeonly{
-  capitulos/dedicatoria,
-  capitulos/agradecimientos,
+  capitulos/cv-tutor,
   capitulos/introduccion,
   capitulos/el-problema,
   capitulos/marco-teorico,
   capitulos/marco-metodologico,
-  capitulos/resultados,
-  capitulos/discusion,
-  capitulos/conclusiones,
-  capitulos/recomendaciones,
+  capitulos/aspectos-administrativos,
   capitulos/anexos
 }
 
@@ -73,20 +69,16 @@
 % \fechaenresumen
 
 \begin{document}
-	% Si se va a usar el glosario
+  
 	% \input{capitulos/glosario}
 	\resumen{\input{capitulos/resumen}}
-	\abstract{\input{capitulos/abstract}}
 
 \begin{preliminares}
 	\hacercaratula
 	\hacerpresentacion
-	\haceraprobacion
-	\include{capitulos/dedicatoria}
-	\include{capitulos/agradecimientos}
 	\hacerindices
+	\include{capitulos/cv-tutor}
 	\hacerresumen
-	\hacerabstract
 \end{preliminares}
 
 \begin{contenido}
@@ -94,10 +86,7 @@
 	\include{capitulos/el-problema}
 	\include{capitulos/marco-teorico}
 	\include{capitulos/marco-metodologico}
-	\include{capitulos/resultados}
-	\include{capitulos/discusion}
-	\include{capitulos/conclusiones}
-	\include{capitulos/recomendaciones}
+	\include{capitulos/aspectos-administrativos}
 \end{contenido}
 
 \hacerbibliografia
