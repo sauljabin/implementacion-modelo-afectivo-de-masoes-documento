@@ -31,4 +31,5 @@
 *.ind
 *.url
 *.svn
+*.pdf
 .DS_Store

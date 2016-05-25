@@ -1,5 +1,22 @@
 #!/usr/bin/env bash
 
+##
+# Copyright (c) 2016 Saúl Piña <sauljabin@gmail.com>.
+#
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program.  If not, see <http://www.gnu.org/licenses/>.
+##
+
 if [[ "$BASH_VERSION" =~ ^[0-3] ]]
   then
     echo "Versión 4 recomendada de bash, versión actual $BASH_VERSION"
@@ -10,40 +27,7 @@ VERSION="v3.1"
 NAME="Plantilla LaTeX Trabajo de Grado"
 UNI="Universidad Centoccidental Lisandro Alvarado"
 
-TEMP_EXT=(
-  aux
-  bbl
-  blg
-  glg
-  glo
-  gls
-  glsdefs
-  ist
-  lal
-  lol
-  loc
-  loi
-  lod
-  loq
-  out
-  toc
-  log
-  synctex.gz
-  dvi
-  brf
-  lon
-  bit
-  lof
-  lot
-  glx
-  gxg
-  gxs
-  idx
-  ilg
-  ind
-  url
-  svn
-)
+TEMP_EXT=(aux bbl blg glg glo gls glsdefs ist lal lol loc loi lod loq out toc log synctex.gz dvi brf lon bit lof lot glx gxg gxs idx ilg ind url svn)
 
 declare -A MSG=(
   [PRESS_KEY]="Presione una tecla para continuar..."
