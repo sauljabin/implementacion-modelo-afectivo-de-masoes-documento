@@ -36,9 +36,13 @@ declare -A MSG=(
   [END_PROCESS]="Archivo generado"
   [VERSION]="Versión"
   [HELP_CLEAN]="Limpiar archivos temporales"
-  [HELP_BUILD]="Generar archivo pdf"
-  [HELP_HELP]="Ayuda"
+  [HELP_BUILD]="Generar archivo pdf, no elimina temporales"
+  [HELP_HELP]="Muestra la información sobre el uso"
   [FILE_NOT_FOUND]="El archivo no existe"
+  [EXAMPLE]="Ejemplo"
+  [MAKE_PDF]="Crea el archivo pdf"
+  [USE]="USO"
+  [OPTIONS]="OPCIONES"
 )
 
 FILE_NAME_PROJ=proyecto
@@ -78,16 +82,27 @@ generate_document() {
   makeglossaries $1
   makeindex $1.glo -s $1.ist -t $1.glg -o $1.gls
   pdflatex -synctex=1 -interaction=nonstopmode $1
+  move_file $1
   echo "---> ${MSG[END_PROCESS]} $1.pdf"
 }
 
 usage() {
+  echo ""
   echo "$UNI"
   echo "$NAME"
   echo "${MSG[VERSION]} $VERSION"
-  echo "   -c, clean - ${MSG[HELP_CLEAN]}"
-  echo "   -b, build - ${MSG[HELP_BUILD]}"
-  echo "   -h, help - ${MSG[HELP_HELP]}"
+  echo ""
+  echo "${MSG[USE]}:"
+  echo "   ./compilar.sh [arg] - ${MSG[MAKE_PDF]}, ${MSG[EXAMPLE]}: ./compilar.sh $FILE_NAME_PROJ"
+  echo ""
+  echo "${MSG[OPTIONS]}:"
+  echo "   -c, --clean - ${MSG[HELP_CLEAN]}"
+  echo "               ${MSG[EXAMPLE]}: ./compilar.sh -c"
+  echo "   -b, --build - ${MSG[HELP_BUILD]}"
+  echo "               ${MSG[EXAMPLE]}: ./compilar -b $FILE_NAME_PROJ"
+  echo "   -h, --help  - ${MSG[HELP_HELP]}"
+  echo "               ${MSG[EXAMPLE]}: ./compilar.sh -h"
+  echo ""
 }
 
 all() {
@@ -106,21 +121,26 @@ set_file_name() {
   fi
 }
 
+move_file() {
+  mkdir pdf
+  mv $1.pdf pdf/$1.pdf
+}
+
 run() {
   if [ "$#" == 0 ];
     then
       all $FILE_NAME_FIN
     else
       case "$1" in
-          -c | [Cc]lean | CLEAN )
+          -c | --clean )
               clean_files
               ;;
-          -b | [Bb]uild | BUILD )
+          -b | --build )
               set_file_name $2
               validate_file $file
               generate_document $file
               ;;
-          -h | [Hh]elp | HELP )
+          -h | --help )
               usage
               ;;
           *)

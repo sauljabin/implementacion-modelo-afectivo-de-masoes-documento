@@ -33,3 +33,7 @@
 *.svn
 *.pdf
 .DS_Store
+.directory
+Thumbs.db
+Desktop.ini
+/pdf

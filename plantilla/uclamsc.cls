@@ -20,7 +20,7 @@
 
 \NeedsTeXFormat{LaTeX2e}
 \newcommand{\uclamscversion}{3.1}
-\newcommand{\uclamscdate}{2014/08/17}
+\newcommand{\uclamscdate}{2016/05/01}
 \ProvidesClass{uclamsc}[\uclamscdate, \uclamscversion]
 \typeout{Reportar dudas y errores a <sauljabin@gmail.com>.}
 
