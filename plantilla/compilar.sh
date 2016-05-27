@@ -97,11 +97,11 @@ usage() {
   echo ""
   echo "${MSG[OPTIONS]}:"
   echo "   -c, --clean - ${MSG[HELP_CLEAN]}"
-  echo "               ${MSG[EXAMPLE]}: ./compilar.sh -c"
+  echo "                 ${MSG[EXAMPLE]}: ./compilar.sh -c"
   echo "   -b, --build - ${MSG[HELP_BUILD]}"
-  echo "               ${MSG[EXAMPLE]}: ./compilar -b $FILE_NAME_PROJ"
+  echo "                 ${MSG[EXAMPLE]}: ./compilar -b $FILE_NAME_PROJ"
   echo "   -h, --help  - ${MSG[HELP_HELP]}"
-  echo "               ${MSG[EXAMPLE]}: ./compilar.sh -h"
+  echo "                 ${MSG[EXAMPLE]}: ./compilar.sh -h"
   echo ""
 }
 
