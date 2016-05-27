@@ -1,0 +1,63 @@
+\documentclass{uclamsc}
+
+% Archivo para pruebas
+
+\bibliografia{test}
+
+\begin{document}
+
+\begin{preliminares}
+	\hacerindices
+\end{preliminares}
+
+\begin{contenido}
+
+Este documento se generó para probar la clase \comillas{uclamsc} v\uclamscversion.
+
+Prueba de \refalgoritmo{alg}
+
+\begin{algoritmo}[titulo=Algoritmo, indice=Indice del algoritmo, etiqueta=alg]
+Inicialización\;
+\For{$k \leftarrow 1$ \KwTo $m$}{
+    Mostrar $k$
+}
+\end{algoritmo}
+
+Prueba de \refilustracion{ilustracion}
+
+\begin{ilustracion}[fuente=Prueba de fuente\cite{wikibib}, etiqueta=ilustracion, titulo=Prueba de ilustracion, indice=Indice de prueba para ilustración]
+	\includegraphics[width=5cm]{escudo-ucla.jpg}
+\end{ilustracion}
+
+Prueba de \refgrafico{grafico}
+
+\begin{grafico}[fuente=Una fuente, etiqueta=grafico, titulo=Prueba de grafico, indice=Indice de prueba para gŕafico]
+	\includegraphics[width=5cm]{escudo-ucla.jpg}
+\end{grafico}
+
+Prueba de \reflistado{listado}
+
+\begin{listado}[titulo=Listado prueba, indice= Indice de listado prueba, etiqueta=listado, fuente=prueba]{[LaTeX]TeX}
+\begin{ilustracion}
+  \includegraphics{ruta_archivo}
+\end{ilustracion}
+\end{listado}
+
+Prueba de \refcuadro{ejemplocua}
+
+\begin{cuadro}[titulo={Piedra, Papel ó Tijeras – Forma Normal}, indice=Este es el indice personalizado,etiqueta=ejemplocua]{lccc}
+	\toprule
+	Jugares I/II & Piedra & Papel & Tijeras\\
+	\midrule
+	Piedra   & (0,0) & (-1,1) & (1,-1)\\
+	Papel   & (1,-1) & (0,0) & (-1,1)\\
+	Tijeras   & (-1,1) & (1,-1) & (0,0)\\
+	\bottomrule
+	\fuentecuadro{4}{Esta es la fuente}
+\end{cuadro}
+
+\end{contenido}
+
+\hacerbibliografia
+
+\end{document}
