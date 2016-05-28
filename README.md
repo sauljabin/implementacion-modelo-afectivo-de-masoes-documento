@@ -134,6 +134,7 @@ Ambiente ```enumeracionenparrafo```, para enumerar dentro de un párrafo, uso:
 * Referencia a un cuadro usando el comando ```\refcuadro{etiqueta}```.
 * Referencia a un grafico usando el comando ```\reflistado{etiqueta}```.
 * Referencia a un algoritmo usando el comando ```\refalgoritmo{etiqueta}```.
+* Referencia a una ecuación usando el comando ```\refecuacion{etiqueta}```.
 
 #### Ilustración
 Ambiente ```ilustracion``` permite mostrar una ilustración, uso:
@@ -229,9 +230,9 @@ Ambiente ```listado``` para insertar un listado, usado principalmente para códi
 
 Más información en [LaTeX/Listings](http://en.wikibooks.org/wiki/LaTeX/Source_Code_Listings).
 
-Utilizar el comando ```\letralistados{}``` para restablecer la letra por defecto, utilizar con un parámetro opcional (entre []) para cambiar el estilo de la letra.
+Utilizar el comando ```\letralistados[]``` para restablecer la letra por defecto, utilizar con un parámetro opcional para cambiar el estilo de la letra.
 
-Utilizar el comando ```\lstdefinelanguage{}{}``` y la clave morekeywords del paquete listings para definir un lenguaje personalizado. Véase la documentación.
+Utilizar el comando ```\lstdefinelanguage{}{}``` ([listings](http://texdoc.net/texmf-dist/doc/latex/listings/listings.pdf)) y la clave morekeywords del paquete listings para definir un lenguaje personalizado. Véase la documentación.
 
 Utilizar el comando ```\definirliterales{}``` para definir literales de reemplazo. Los parámetros tienen la forma ```{match}{{reemplazo}}largo``` y van separados sólo por espacios. Véase la documentación. Ejemplo:
 ```TeX
@@ -240,7 +241,7 @@ Utilizar el comando ```\definirliterales{}``` para definir literales de reemplaz
 	{<<}{{$\langle$}}1 {>>}{{$\rangle$}}1
 }
 \begin{listado}[sinleyenda, sinindice]{}
- x := <<valor>>
+	x := <<valor>>
 \end{listado}
 ```
 
@@ -304,7 +305,7 @@ El comando ```\hacerglosario``` ajusta y titula **Definición de Términos Bási
 
 El comando ```\hacerglosarioconacronimos```, igual que ```\hacerglosario``` pero titulando la sección **Glosario de Acrónimos y Términos**, más apropiado para cuando se definen acrónimos en el glosario.
 
-Para agregar un término al glosario se debe usar el comando ```\agregartermino```, para referirse al término usar el comando ```\gls```. Los términos deben ser agregados en el archivo **capitulos/glosario**, y debe incluirse en el cuerpo del documento con el comando ```\input{capitulos/glosario}```.
+Para agregar un término al glosario se debe usar el comando ```\agregartermino```, para referirse al término usar el comando ```\gls{}``` o ```\glspl{}``` para plurales. Los términos deben ser agregados en el archivo **capitulos/glosario**, y debe incluirse en el cuerpo del documento con el comando ```\input{capitulos/glosario}```.
 
 ### Comandos Misceléneos
 
@@ -325,5 +326,5 @@ Para agregar un término al glosario se debe usar el comando ```\agregartermino`
 
 #### Otros
 * ```\yo```, muestra la referencia al autor del trabajo de grado. Para usar este comando previamente se debe se debe asignar el apellido del autor con el comando ```\citarcomo{}``` en la sección de identificación.
-* ```\comillas```, coloca un texto entre comillas dobles, ejemplo: "Ejemplo".
-* ```\codigofuente```, coloca un texto en formato de código fuente. Es una alternativa a los listados.
+* ```\comillas{}```, coloca un texto entre comillas dobles, ejemplo: "Ejemplo".
+* ```\codigofuente{}```, coloca un texto en formato de código fuente. Es una alternativa a los listados.

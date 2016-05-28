@@ -1496,6 +1496,13 @@
 \renewcommand\defcitealias[2]{\@namedef{al@#1\@extra@b@citeb}{#2}}
 \newcommand{\citetitle}[1]{\defcitealias{#1}{\usebibentry{#1}{title}}``\citetalias{#1}''}
 
+% Comando: refecuacion
+% Descripción: Hace referencia a un ecuacion
+% Parametros: [1] Etiqueta
+% Uso: \refecuacion{etiqueta}
+\newcommand{\refecuacion}[1]{\hyperref[#1]{Ecuación \ref{#1}}}
+\newcommand{\refpecuacion}[1]{(\refecuacion{#1})}
+
 % Variable bibliografia
 \def\@bibliografia{bibliografia}
 \newcommand{\bibliografia}[1]{

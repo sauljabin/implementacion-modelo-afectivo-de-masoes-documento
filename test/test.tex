@@ -6,6 +6,9 @@
 
 \begin{document}
 
+\citarcomo{Apellido}
+\anodefensa{2016}
+
 \begin{preliminares}
 	\hacerindices
 \end{preliminares}
@@ -14,7 +17,38 @@
 
 Este documento se generó para probar la clase \comillas{uclamsc} v\uclamscversion.
 
-Prueba de \refalgoritmo{alg}
+\espaciodoble\textbf{Prueba de auto cita:}
+
+\yo
+
+\espaciodoble\textbf{Prueba de enumeración:}
+
+\begin{enumeracion}
+	\item foo
+	\item bar
+	\item foobar
+\end{enumeracion}
+
+\espaciodoble\textbf{Prueba de viñetas:}
+
+\begin{vinetas}
+	\item foo
+	\item bar
+	\item foobar
+\end{vinetas}
+
+\espaciodoble\textbf{Prueba de enumeración en parrafo:}
+
+Este es un parrafo de ejemplo\begin{enumeracionenparrafo}
+\item primer enumerado \item segundo enumerado\end{enumeracionenparrafo}
+\end{enumeracionenparrafo}
+fin de parrafo.
+
+\break
+
+\espaciodoble\textbf{Prueba de algoritmo y referencia a algoritmo:}
+
+\refalgoritmo{alg}
 
 \begin{algoritmo}[titulo=Algoritmo, indice=Indice del algoritmo, etiqueta=alg]
 Inicialización\;
@@ -23,19 +57,33 @@ Inicialización\;
 }
 \end{algoritmo}
 
-Prueba de \refilustracion{ilustracion}
+\break
+
+\espaciodoble\textbf{Prueba de ilustación y referencia a ilustración:}
+
+\refilustracion{ilustracion}
 
 \begin{ilustracion}[fuente=Prueba de fuente\cite{wikibib}, etiqueta=ilustracion, titulo=Prueba de ilustracion, indice=Indice de prueba para ilustración]
 	\includegraphics[width=5cm]{escudo-ucla.jpg}
 \end{ilustracion}
 
-Prueba de \refgrafico{grafico}
+\break
+
+\espaciodoble\textbf{Prueba de gráfico y referencia a gráfico}
+
+\refgrafico{grafico}
 
 \begin{grafico}[fuente=Una fuente, etiqueta=grafico, titulo=Prueba de grafico, indice=Indice de prueba para gŕafico]
 	\includegraphics[width=5cm]{escudo-ucla.jpg}
 \end{grafico}
 
-Prueba de \reflistado{listado}
+\break
+
+\espaciodoble\textbf{Prueba de listado y referencia a listado:}
+
+\reflistado{listado}
+
+\letralistados[\ttfamily \fontsize{15pt}{13pt}\selectfont]
 
 \begin{listado}[titulo=Listado prueba, indice= Indice de listado prueba, etiqueta=listado, fuente=prueba]{[LaTeX]TeX}
 \begin{ilustracion}
@@ -43,7 +91,21 @@ Prueba de \reflistado{listado}
 \end{ilustracion}
 \end{listado}
 
-Prueba de \refcuadro{ejemplocua}
+\espaciodoble\textbf{Prueba literales:}
+
+\definirliterales{
+	{:=}{{$\leftarrow$}}2
+	{<<}{{$\langle$}}1 {>>}{{$\rangle$}}1
+}
+\begin{listado}[sinleyenda, sinindice]{}
+	x := <<valor>>
+\end{listado}
+
+\break
+
+\espaciodoble\textbf{Prueba de cuadro y referencia a cuadro:}
+
+\refcuadro{ejemplocua}
 
 \begin{cuadro}[titulo={Piedra, Papel ó Tijeras – Forma Normal}, indice=Este es el indice personalizado,etiqueta=ejemplocua]{lccc}
 	\toprule
@@ -55,6 +117,63 @@ Prueba de \refcuadro{ejemplocua}
 	\bottomrule
 	\fuentecuadro{4}{Esta es la fuente}
 \end{cuadro}
+
+\break
+
+\espaciodoble\textbf{Prueba de glosario:}
+
+\agregartermino{algoritmo-evolutivo}{
+	name={Algoritmos Evolutivos},
+	text={algoritmo evolutivo},
+	description={son algoritmos dentro de la Computación Evolutiva que se inspiran en los mecanismos biológicos de selección, cruce, reproducción, y mutación para conseguir soluciones óptimas o sub-óptimas a problemas de optimización. Están basados en la evolución de poblaciones donde cada individuo representa una solución y existe una \gls{funcion-aptitud} que determina la calidad de la solución y guía el proceso evolutivo},
+	plural={algoritmos evolutivos}
+}
+
+Los \glspl{algoritmo-evolutivo}
+
+El \gls{algoritmo-evolutivo}
+
+\hacerglosario
+
+\break
+
+\espaciodoble\textbf{Prueba de cita textual:}
+
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+\begin{citatextual}
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+(p. 10)
+\end{citatextual}
+
+\espaciodoble\textbf{Prueba de ecuación y referencia a ecuación:}
+
+\refecuacion{testecuacion}
+
+\begin{ecuacion}{testecuacion}
+	y = x + 1
+\end{ecuacion}
+
+\espaciodoble\textbf{Prueba de ecuaciones:}
+
+\begin{ecuaciones}
+	y = x + 1 \\
+	z = x + 2
+\end{ecuaciones}
+
+\espaciodoble\textbf{Prueba de comillas:}
+
+\comillas{Entre comillas}
+
+\espaciodoble\textbf{Prueba de código fuente:}
+
+La variable: \codigofuente{int valor = 4;}
+
+\espaciodoble\textbf{Prueba de espacio horizontal:}
+Espacios \tab{2} horizontales
+
+\espaciodoble\textbf{Prueba de página en blanco:}
+\pagenblanco
 
 \end{contenido}
 
