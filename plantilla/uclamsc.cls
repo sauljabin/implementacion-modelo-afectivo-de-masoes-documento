@@ -74,8 +74,12 @@
 \newcommand{\titulo}[1]{\def\@titulo{#1}}
 \def\@grado{\variablefaltante{grado}} % Grado a optar
 \newcommand{\grado}[1]{\def\@grado{#1}}
+\def\@mencion{\variablefaltante{mencion}} % Mencion a optar
+\newcommand{\mencion}[1]{\def\@mencion{#1}}
 \def\@autor{\variablefaltante{autor}} % Nombre del autor.
 \newcommand{\autor}[1]{\def\@autor{#1}}
+\def\@ciautor{\variablefaltante{ciautor}} % CI del autor.
+\newcommand{\ciautor}[1]{\def\@ciautor{#1}}
 \def\@decanato{\variablefaltante{decanato}} % Nombre del Decanato. (e.g. Ciencias y Tecnología)
 \newcommand{\decanato}[1]{\def\@decanato{#1}}
 \def\@postgrado{\variablefaltante{postgrado}} % Nombre del Postgrado. (e.g. Ciencias de la Computación)
@@ -93,6 +97,8 @@
 
 \def\@tutor{\variablefaltante{tutor}}	% Nombre del tutor
 \newcommand{\tutor}[1]{\def\@tutor{#1}}
+\def\@citutor{\variablefaltante{citutor}}	% CI del tutor
+\newcommand{\citutor}[1]{\def\@citutor{#1}}
 \def\@primerjurado{\variablefaltante{primerjurado}} % Nombre del primer jurado
 \newcommand{\primerjurado}[1]{\def\@primerjurado{#1}}
 \def\@segundojurado{\variablefaltante{segundojurado}} % Nombre del segundo jurado
@@ -1108,7 +1114,8 @@
 		{\textbf{\MakeUppercase{\@titulo}}}\\
 		\vfill
 		{Trabajo presentado para optar al grado de\\
-		\@grado}
+		\@grado\\
+    \@mencion}\\
 		\vfill
 		\begin{flushright}
 			Por: \MakeUppercase{\@autor}
@@ -1192,6 +1199,43 @@
 	\end{center}
 	\newpage
 }
+
+\newcommand{\haceraceptaciontutor}{
+	\begin{center}
+		\indexarpreliminar{Aceptación de Tutoría}
+		\MakeUppercase{Universidad Centroccidental}
+		\textquotedblleft \MakeUppercase{Lisandro Alvarado}\textquotedblright\\
+		\MakeUppercase{Decanato de \@decanato}\\
+		\MakeUppercase{\@postgrado}\\
+  	\espaciotriple
+  	\centering{{\textbf{\MakeUppercase{Aceptación  de Tutoría}}}}\\
+  	\espaciotriple
+
+  	\begin{doublespace}
+
+    \justifying{
+    Quien suscribe, \@tutor, C.I. \@citutor, hago constar que he aceptado la tutoría del
+    trabajo de grado titulado \MakeUppercase{\@titulo}, presentado por
+    \@autor, C.I. \@ciautor, para optar al título de \@grado, \@mencion.
+    }
+
+  	\end{doublespace}
+
+    \espaciotriple
+    \begin{minipage}[t]{0.4\textwidth}
+			\begin{flushleft}
+				\begin{center}
+					\makebox[2in]{\hrulefill}\hspace{.5in}
+					\textbf{\@tutor}\\
+					\textbf{C.I. \@citutor}
+				\end{center}
+			\end{flushleft}
+		\end{minipage}
+
+    \end{center}
+  	\newpage
+}
+
 
 %Comando: hacerabstact
 %Descripción: Crea el abstract de la tesis.
