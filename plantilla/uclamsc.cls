@@ -1495,6 +1495,9 @@
 %\renewcommand\defcitealias[2]{\@ifundefined{al@#1\@extra@b@citeb}{}{\PackageWarning{natbib}{Overwriting existing alias for citation #1}}\@namedef{al@#1\@extra@b@citeb}{#2}}
 \renewcommand\defcitealias[2]{\@namedef{al@#1\@extra@b@citeb}{#2}}
 \newcommand{\citetitle}[1]{\defcitealias{#1}{\usebibentry{#1}{title}}``\citetalias{#1}''}
+\newcommand{\citeptitle}[1]{(\citetitle{#1})}
+
+\newcommand{\citepyear}[1]{(\citeyear{#1})}
 
 % Comando: refecuacion
 % Descripción: Hace referencia a un ecuacion

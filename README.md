@@ -282,7 +282,7 @@ Para incluir las citas referenciales, agregue al archivo **.bib** las descripcio
 
 Para insertar referencias en el documento, utilice los comandos del paquete [natbib](http://www.ctan.org/pkg/natbib). Utilice ```\citet{}``` si el nombre del autor es parte de la narrativa, si no, utilice el comando ```\citep{}```.
 
-Para citar sólo el autor en párrafos cercanos a la primera cita, el comando ```\citeauthor{}```. Otros comandos son: ```\citet*{}```, ```\citep*{}```, ```\citep[][]```, ```\citeauthor*{}```,```\citeyear{}```. Referencia rápida en [LaTeX/Bibliography](https://en.wikibooks.org/wiki/LaTeX/Bibliography_Managementa), [BibTeX](https://verbosus.com/bibtex-style-examples.html).
+Para citar sólo el autor en párrafos cercanos a la primera cita, el comando ```\citeauthor{}```. Otros comandos son: ```\citet*{}```, ```\citep*{}```, ```\citep[][]```, ```\citeauthor*{}```,```\citeyear{}```. Referencia rápida en [LaTeX/Bibliography](https://en.wikibooks.org/wiki/LaTeX/Bibliography_Management), [BibTeX](https://verbosus.com/bibtex-style-examples.html).
 
 Ejemplos:
 ```TeX
