@@ -232,7 +232,7 @@ Más información en [LaTeX/Listings](http://en.wikibooks.org/wiki/LaTeX/Source_
 
 Utilizar el comando ```\letralistados[]``` para restablecer la letra por defecto, utilizar con un parámetro opcional para cambiar el estilo de la letra.
 
-Utilizar el comando ```\lstdefinelanguage{}{}``` ([listings](http://texdoc.net/texmf-dist/doc/latex/listings/listings.pdf)) y la clave morekeywords del paquete listings para definir un lenguaje personalizado. Véase la documentación.
+Utilizar el comando ```\lstdefinelanguage{}{}``` ([listings](http://texdoc.net/texmf-dist/doc/latex/listings/listings.pdf)) y la clave ```morekeywords``` del paquete listings para definir un lenguaje personalizado. Véase la documentación.
 
 Utilizar el comando ```\definirliterales{}``` para definir literales de reemplazo. Los parámetros tienen la forma ```{match}{{reemplazo}}largo``` y van separados sólo por espacios. Véase la documentación. Ejemplo:
 ```TeX
@@ -282,7 +282,7 @@ Para incluir las citas referenciales, agregue al archivo **.bib** las descripcio
 
 Para insertar referencias en el documento, utilice los comandos del paquete [natbib](http://www.ctan.org/pkg/natbib). Utilice ```\citet{}``` si el nombre del autor es parte de la narrativa, si no, utilice el comando ```\citep{}```.
 
-Para citar sólo el autor en párrafos cercanos a la primera cita, el comando ```\citeauthor{}```. Otros comandos son: ```\citet*{}```, ```\citep*{}```, ```\citep[][]```, ```\citeauthor*{}```,```\citeyear{}```. Referencia rápida en [LaTeX/Bibliography](http://en.wikibooks.org/wiki/LaTeX/Bibliography_Management).
+Para citar sólo el autor en párrafos cercanos a la primera cita, el comando ```\citeauthor{}```. Otros comandos son: ```\citet*{}```, ```\citep*{}```, ```\citep[][]```, ```\citeauthor*{}```,```\citeyear{}```. Referencia rápida en [LaTeX/Bibliography](https://en.wikibooks.org/wiki/LaTeX/Bibliography_Managementa), [BibTeX](https://verbosus.com/bibtex-style-examples.html).
 
 Ejemplos:
 ```TeX
