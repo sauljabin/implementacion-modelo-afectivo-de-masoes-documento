@@ -403,6 +403,14 @@
 % Comando comillas
 \newcommand{\comillas}[1]{``#1''}
 
+% Agrega página en blanco.
+\newcommand{\pagenblanco}{
+	\newpage
+	\thispagestyle{empty}
+	\mbox{}
+	\newpage
+}
+
 %%%%% FIN NUEVOS COMANDOS %%%%%
 
 
@@ -1584,14 +1592,6 @@
 % \anexo{Curriculum Vitae}
 \newcommand{\anexo}[1]{
 	\chapter{#1}
-}
-
-% Agrega página en blanco.
-\newcommand{\pagenblanco}{
-	\newpage
-	\thispagestyle{empty}
-	\mbox{}
-	\newpage
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%% FIN INTERNO %%%%%%%%%%%%%%%%%%%%%%%%%
