@@ -1228,11 +1228,9 @@
 % Comando: hacercaratula
 % Descripción: Crea la carátula de la tesis, la que va por fuera.
 \newcommand{\hacercaratula}{
-	%\setcounter{page}{-1}
 	\thispagestyle{empty}
 		\begin{center}
 			{\MakeUppercase{Universidad Centroccidental}}\\
-
 			\textquotedblleft {\MakeUppercase{Lisandro Alvarado}}\textquotedblright\\
 			\vfill
 			\vfill
@@ -1323,30 +1321,29 @@
 \newcommand{\hacerresumen}{
 	\begin{center}
 		\indexarpreliminar{Resumen}
-	%\begin{singlespace}
 		\MakeUppercase{Universidad Centroccidental}
 		\textquotedblleft \MakeUppercase{Lisandro Alvarado}\textquotedblright\\
 		\MakeUppercase{Decanato de \@decanato}\\
 		\MakeUppercase{\@postgrado}\\
 		\espaciotriple
 		\MakeUppercase{\textbf{\@titulo}}\\
-	\espaciotriple
-	\raggedleft{
-		\textbf{Autor:} \@autor\\
-		\textbf{Tutor:} \@tutor\\
-		\ifthenelse{\isundefined{\@fechaenresumen}}{}{
-			\textbf{Fecha:} \@mesdefensa\ \@anodefensa\\
-		}
-	}
-	\espaciotriple
-	\centering{{\textbf{\MakeUppercase{Resumen}}}}\\
-	\espaciotriple
-	\begin{singlespace}
-	\justifying{\@resumen}
-	\end{singlespace}
-	\noindent\justifying{\textbf{Palabras Clave:} \@palabrasclave}
-	\end{center}
-	\newpage
+  	\espaciotriple
+  	\raggedleft{
+  		\textbf{Autor:} \@autor\\
+  		\textbf{Tutor:} \@tutor\\
+  		\ifthenelse{\isundefined{\@fechaenresumen}}{}{
+  			\textbf{Fecha:} \@mesdefensa\ \@anodefensa\\
+  		}
+  	}
+  	\espaciotriple
+  	\centering{{\textbf{\MakeUppercase{Resumen}}}}\\
+  	\espaciotriple
+  	\begin{singlespace}
+  	\justifying{\@resumen}
+  	\end{singlespace}
+  	\noindent\justifying{\textbf{Palabras Clave:} \@palabrasclave}
+  	\end{center}
+  	\newpage
 }
 
 % Comando: heceraceptaciontutor
@@ -1361,17 +1358,13 @@
   	\espaciotriple
   	\centering{{\textbf{\MakeUppercase{Aceptación  de Tutoría}}}}\\
   	\espaciotriple
-
-  	\begin{doublespace}
-
+  	\begin{singlespace}
     \justifying{
     Quien suscribe, \@tutor, C.I. \@citutor, hago constar que he aceptado la tutoría del
     trabajo de grado titulado \MakeUppercase{\@titulo}, presentado por
     \@autor, C.I. \@ciautor, para optar al título de \@grado, \@mencion.
     }
-
-  	\end{doublespace}
-
+  	\end{singlespace}
     \espaciotriple
     \begin{minipage}[t]{0.4\textwidth}
 			\begin{flushleft}
