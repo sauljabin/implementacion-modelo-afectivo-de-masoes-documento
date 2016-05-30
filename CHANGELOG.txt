@@ -10,6 +10,12 @@ uclamsc 3.1, 2016/05
 - Actualizado script compilar.sh
 - Eliminado script compilar.cmd
 - Actualización del manual (README)
+- Agregado \haceraceptaciontutor
+- Agregado \tutorenpresentacion
+- Agregado \citutor{}
+- Agregado \ciautor{}
+- Agregado \citepyear{} y \citeptitle{}
+- Eliminado comando codigofuente
 
 ---------------------------------------
 Saúl Piña <sauljabin@gmail.com>

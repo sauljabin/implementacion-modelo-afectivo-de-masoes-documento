@@ -18,6 +18,8 @@
 % along with this program.  If not, see <http://www.gnu.org/licenses/>.
 %%
 
+%%%%% INICIO CONFIGURACION GENERAL %%%%%
+
 \NeedsTeXFormat{LaTeX2e}
 \newcommand{\uclamscversion}{3.1}
 \newcommand{\uclamscdate}{2016/05/01}
@@ -64,59 +66,109 @@
 \RequirePackage{usebib} % Para el comando citetitle
 \RequirePackage{keyval} % Para los parametros de los ambientes
 
+%%%%% FIN CONFIGURACION GENERAL %%%%%
+
+
+%%%%% INICIO NUEVOS COMANDOS %%%%%
+
 %Comando: pendientes
 %Descripción: Llamado en \configurar para listar los pendientes de uclamsc.cls
 \newcommand{\pendientes}{}
 
+% En caso que una variable sea obligatoria
 \newcommand{\variablefaltante}[1]{{\tt \bfseries DEFINIR \textbackslash {#1}\{\} }}
 
-\def\@titulo{\variablefaltante{titulo}} % Título del trabajo de grado
+% Título del trabajo de grado
+\def\@titulo{\variablefaltante{titulo}}
 \newcommand{\titulo}[1]{\def\@titulo{#1}}
-\def\@grado{\variablefaltante{grado}} % Grado a optar
+
+% Grado a optar
+\def\@grado{\variablefaltante{grado}}
 \newcommand{\grado}[1]{\def\@grado{#1}}
-\def\@mencion{\variablefaltante{mencion}} % Mencion a optar
+
+% Mencion a optar
+\def\@mencion{\variablefaltante{mencion}}
 \newcommand{\mencion}[1]{\def\@mencion{#1}}
-\def\@autor{\variablefaltante{autor}} % Nombre del autor.
+
+% Nombre del autor
+\def\@autor{\variablefaltante{autor}}
 \newcommand{\autor}[1]{\def\@autor{#1}}
-\def\@ciautor{\variablefaltante{ciautor}} % CI del autor.
+
+% CI del autor
+\def\@ciautor{\variablefaltante{ciautor}}
 \newcommand{\ciautor}[1]{\def\@ciautor{#1}}
-\def\@decanato{\variablefaltante{decanato}} % Nombre del Decanato. (e.g. Ciencias y Tecnología)
+
+% Nombre del Decanato. (e.g. Ciencias y Tecnología)
+\def\@decanato{\variablefaltante{decanato}}
 \newcommand{\decanato}[1]{\def\@decanato{#1}}
-\def\@postgrado{\variablefaltante{postgrado}} % Nombre del Postgrado. (e.g. Ciencias de la Computación)
+
+% Nombre del Postgrado. (e.g. Ciencias de la Computación)
+\def\@postgrado{\variablefaltante{postgrado}}
 \newcommand{\postgrado}[1]{\def\@postgrado{#1}}
-\def\@ciudad{\variablefaltante{ciudad}} % Ciudad. (e.g. Barquisimeto)
+
+% Ciudad. (e.g. Barquisimeto)
+\def\@ciudad{\variablefaltante{ciudad}}
 \newcommand{\ciudad}[1]{\def\@ciudad{#1}}
 
-\def\@diadefensa{\variablefaltante{diadefensa}} % Día de la defensa. (e.g. 20)
+% Día de la defensa. (e.g. 20)
+\def\@diadefensa{\variablefaltante{diadefensa}}
 \newcommand{\diadefensa}[1]{\def\@diadefensa{#1}}
-\def\@mesdefensa{\variablefaltante{mesdefensa}} % Mes de la defensa (e.g. Marzo)
+
+% Mes de la defensa (e.g. Marzo)
+\def\@mesdefensa{\variablefaltante{mesdefensa}}
 \newcommand{\mesdefensa}[1]{\def\@mesdefensa{#1}}
-\newcommand{\mesencaratula}{\def\@mesencaratula{}} % Incluir mes en la carátula
-\def\@anodefensa{\variablefaltante{anodefensa}} % Año de la defensa (e.g. 2009)
+
+% Incluir mes en la carátula
+\newcommand{\mesencaratula}{\def\@mesencaratula{}}
+
+% Incluir tutor en la presentacion
+\newcommand{\tutorenpresentacion}{\def\@tutorenpresentacion{}}
+
+% Año de la defensa (e.g. 2009)
+\def\@anodefensa{\variablefaltante{anodefensa}}
 \newcommand{\anodefensa}[1]{\def\@anodefensa{#1}}
 
-\def\@tutor{\variablefaltante{tutor}}	% Nombre del tutor
+% Nombre del tutor
+\def\@tutor{\variablefaltante{tutor}}
 \newcommand{\tutor}[1]{\def\@tutor{#1}}
-\def\@citutor{\variablefaltante{citutor}}	% CI del tutor
+
+% CI del tutor
+\def\@citutor{\variablefaltante{citutor}}
 \newcommand{\citutor}[1]{\def\@citutor{#1}}
-\def\@primerjurado{\variablefaltante{primerjurado}} % Nombre del primer jurado
+
+% Nombre del primer jurado
+\def\@primerjurado{\variablefaltante{primerjurado}}
 \newcommand{\primerjurado}[1]{\def\@primerjurado{#1}}
-\def\@segundojurado{\variablefaltante{segundojurado}} % Nombre del segundo jurado
+
+% Nombre del segundo jurado
+\def\@segundojurado{\variablefaltante{segundojurado}}
 \newcommand{\segundojurado}[1]{\def\@segundojurado{#1}}
 
-\newcommand{\fechaenresumen}{\def\@fechaenresumen{}} % Incluir fecha en el resumen
-\def\@resumen{\variablefaltante{resumen}} % Resumen del trabajo
+% Incluir fecha en el resumen
+\newcommand{\fechaenresumen}{\def\@fechaenresumen{}}
+
+% Resumen del trabajo
+\def\@resumen{\variablefaltante{resumen}}
 \newcommand{\resumen}[1]{\def\@resumen{#1}}
-\def\@palabrasclave{\variablefaltante{palabrasclave}} % Palabras clave separadas por coma. (e.g. IA, PSO, etc.)
+
+% Palabras clave separadas por coma. (e.g. IA, PSO, etc.)
+\def\@palabrasclave{\variablefaltante{palabrasclave}}
 \newcommand{\palabrasclave}[1]{\def\@palabrasclave{#1}}
 
-\title{\variablefaltante{title}} % Título del trabajo en inglés
+% Título del trabajo en inglés
+\title{\variablefaltante{title}}
+
+% Mes en inglés para el abstract
 \def\@monthdefensa{\variablefaltante{monthdefensa}}
-\newcommand{\monthdefensa}[1]{\def\@monthdefensa{#1}} % Mes en inglés para el abstract.
+\newcommand{\monthdefensa}[1]{\def\@monthdefensa{#1}}
+
+% Resumen del trabajo en inglés
 \def\@abstract{\variablefaltante{abstract}}
-\newcommand{\abstract}[1]{\def\@abstract{#1}} % Resumen del trabajo en inglés
+\newcommand{\abstract}[1]{\def\@abstract{#1}}
+
+% Palabras clave del trabajo en inglés.
 \def\@keywords{\variablefaltante{keywords}}
-\newcommand{\keywords}[1]{\def\@keywords{#1}} % Palabras clave del trabajo en inglés.
+\newcommand{\keywords}[1]{\def\@keywords{#1}}
 
 \def\@pendientes{false} % Determina si se usan o no los pendientes. Por defecto, desactivado. Para activar usar \habilitarpendientes
 \def\@notas{false} % Determina si se usan o no las notas. Por defecto, desactivado. Para activar usar \habilitarnotas
@@ -268,9 +320,95 @@
 %
 \newenvironment{anexos}{\haceranexos}{}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Comandos de listados
+% Para introducir una cita de la forma Autor (año), donde Autor es el apellido del autor del trabajo de grado
+\def\@citarcomo{\variablefaltante{citarcomo}}
+\newcommand{\citarcomo}[1]{\def\@citarcomo{#1}}
 
+% Comando: yo
+% Descripción: Introduce el apellido del autor y el año de este trabajo (e.g. Bar (2009)).
+% Uso: \yo
+\newcommand{\yo}{\@citarcomo\ (\@anodefensa)}
+
+% Comando: agregartermino
+% Descripción: Agrega un término al glosario.
+% Parámetros: [1] etiqueta, [2] propiedades de la forma: name={nombre}, text={texto}, description={descripción}, plural={nombre plural}
+% Uso:
+% \agregartermino{robot}{
+% name={Robot},
+% text={robot},
+% description={Entidad capaz de ...},
+% plural={Robots}
+% }
+% Luego hacer referencia \gls{robot}
+\newcommand{\agregartermino}[2]{\newglossaryentry{#1}{#2}}
+
+% Comando: refilustracion
+% Descripción: Hace referencia a una ilustración
+% Parametros: [1] Etiqueta
+% Uso: \refilustracion{etiqueta}
+\newcommand{\refilustracion}[1]{\hyperref[#1]{Ilustración \ref{#1}}}
+\newcommand{\refpilustracion}[1]{(\refilustracion{#1})}
+
+% Comando: refcuadro
+% Descripción: Hace referencia a un cuadro
+% Parametros: [1] Etiqueta
+% Uso: \refcuadro{etiqueta}
+\newcommand{\refcuadro}[1]{\hyperref[#1]{Cuadro \ref{#1}}}
+\newcommand{\refpcuadro}[1]{(\refcuadro{#1})}
+
+% Comando: refalgoritmo
+% Descripción: Hace referencia a un algoritmo
+% Parametros: [1] Etiqueta
+% Uso: \refalgoritmo{etiqueta}
+\newcommand{\refalgoritmo}[1]{\hyperref[#1]{Algoritmo \ref{#1}}}
+\newcommand{\refpalgoritmo}[1]{(\refalgoritmo{#1})}
+
+% Comando: refgrafico
+% Descripción: Hace referencia a un grafico
+% Parametros: [1] Etiqueta
+% Uso: \refgrafico{etiqueta}
+\newcommand{\refgrafico}[1]{\hyperref[#1]{Gráfico \ref{#1}}}
+\newcommand{\refpgrafico}[1]{(\refgrafico{#1})}
+
+% Comando: reflistado
+% Descripción: Hace referencia a un listado
+% Parametros: [1] Etiqueta
+% Uso: \reflistado{etiqueta}
+\newcommand{\reflistado}[1]{\hyperref[#1]{Listado \ref{#1}}}
+\newcommand{\refplistado}[1]{(\reflistado{#1})}
+
+% Para citar titulo
+%\renewcommand\defcitealias[2]{\@ifundefined{al@#1\@extra@b@citeb}{}{\PackageWarning{natbib}{Overwriting existing alias for citation #1}}\@namedef{al@#1\@extra@b@citeb}{#2}}
+\renewcommand\defcitealias[2]{\@namedef{al@#1\@extra@b@citeb}{#2}}
+\newcommand{\citetitle}[1]{\defcitealias{#1}{\usebibentry{#1}{title}}``\citetalias{#1}''}
+\newcommand{\citeptitle}[1]{(\citetitle{#1})}
+
+% COmando: citepyear
+\newcommand{\citepyear}[1]{(\citeyear{#1})}
+
+% Comando: refecuacion
+% Descripción: Hace referencia a un ecuacion
+% Parametros: [1] Etiqueta
+% Uso: \refecuacion{etiqueta}
+\newcommand{\refecuacion}[1]{\hyperref[#1]{Ecuación \ref{#1}}}
+\newcommand{\refpecuacion}[1]{(\refecuacion{#1})}
+
+% Variable bibliografia
+\def\@bibliografia{bibliografia}
+\newcommand{\bibliografia}[1]{
+	\def\@bibliografia{#1}
+	\bibinput{#1}
+}
+
+% Comando comillas
+\newcommand{\comillas}[1]{``#1''}
+
+%%%%% FIN NUEVOS COMANDOS %%%%%
+
+
+%%%%% INICIO AMBIENTES %%%%%
+
+% Comandos de listados
 \lstset{numberbychapter=false, tabsize=4}
 
 \newcommand\definirliterales[1]{
@@ -303,8 +441,6 @@
 }{
 	\espaciotriple
 }
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % Ambiente: ilustracion
 % Descripción: Prepara el contexto para insertar una ilustración o imagen.
@@ -466,7 +602,26 @@
 	}
 	{\end{eqnarray}}
 
+% Ambiente: ecuaciones*
+% Descripción: Prepara el contexto para insertar varias ecuaciones sin enumerarlas
+% Uso:
+% \begin{ecuaciones*}
+% \sum{F_{x}} = 0\\
+% \sum{M_{x} = 0}
+% \end{ecuaciones*}
+%
+\newenvironment{ecuaciones*}
+	{
+		\espaciosimple
+		\begin{eqnarray*}
+	}
+	{\end{eqnarray*}}
+
+%%%%% FIN AMBIENTES %%%%%
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%% INTERNO %%%%%%%%%%%%%%%%%%%%%%%%%
+
 % Comando: configurar
 % Descripción: Configura todo el documento. Es el primer comando a ejecutarse antes de los preliminares.
 \newcommand{\configurar}{
@@ -562,7 +717,6 @@
 	}
 	\setcounter{tocdepth}{5} % Para mostrar hasta los párrafos (caso de preliminares).
 
-	%%%%%%%%%%%%%%%%%%%%%%%%%%
 	% Índice de listados (algoritmos y códigos)
 	\renewcommand{\lstlistlistingname}{{Índice de Listados}}
 
@@ -611,13 +765,12 @@
 		}{}
 	}
 
-	%	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 	% Índice de gráficos
 	\newcommand{\listofchartsname}{{Índice de Gráficos}}
 	\newlistof[part]{charts}{loc}{\listofchartsname}
 
-	%Comando: listofcharts
-	%Descripción: Crea el índice de gráficos.
+	% Comando: listofcharts
+	% Descripción: Crea el índice de gráficos.
 	\renewcommand{\listofcharts}{
 		% Incluye el indice de gráficos solo si tiene contenido que mostrar. Como el mismo comando \@starttoc es el que genera el .loc y agrega el contenido al documento, esta fue la única forma que encontré.
 		\IfFileExists{\jobname.loc}{
@@ -664,13 +817,13 @@
 		}{}
 	}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%	%Índice de Ilustraciones
+
+  % Índice de Ilustraciones
 	\newcommand{\listofilustrationsname}{{Índice de Ilustraciones}}
 	\newlistof[part]{ilustrations}{loi}{\listofilustrationsname}
-%
-%	%Comando: listofilustrations
-%	%Descripción: Crea el índice de ilustraciones.
+
+  %	Comando: listofilustrations
+  %	Descripción: Crea el índice de ilustraciones.
 	\renewcommand{\listofilustrations}{
 		% Incluye el indice de ilustraciones solo si tiene contenido que mostrar. Como el mismo comando \@starttoc es el que genera el .loi y agrega el contenido al documento, esta fue la única forma que encontré.
 		\IfFileExists{\jobname.loi}{
@@ -716,7 +869,6 @@
 		}{}
 	}
 
-%	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 	% Índice de cuadros
 	\newcommand{\listoftabulationsname}{{Índice de Cuadros}}
 	\newlistof[part]{tabulations}{loq}{\listoftabulationsname}
@@ -767,13 +919,12 @@
 		}{}
 	}
 
-%	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-	%Índice de Pendientes
+	% Índice de Pendientes
 	\newcommand{\listoftodosname}{{Índice de Pendientes}}
 	\newlistof[part]{todos}{lod}{\listoftodosname}
 
-	%Comando: listoftodos
-	%Descripción: Crea el índice de pendientes.
+	% Comando: listoftodos
+	% Descripción: Crea el índice de pendientes.
 	\renewcommand{\listoftodos}{
 		{\color{red}
 		\indexarpreliminar{ÍNDICE DE PENDIENTES}
@@ -783,9 +934,9 @@
 	}
 	\renewcommand{\thetodos}{\@arabic\c@todos}
 
-	%Comando: pendiente
-	%Descripción: Agrega una anotación al índice de pendientes y la muestra en el lugar donde fue agregada. Para mostrar los pendientes, ejecutar antes de \configurar \habilitarpendientes
-	%Parámetros: [1] Texto del pendiente (e.g. Mejorar redacción)
+	% Comando: pendiente
+	% Descripción: Agrega una anotación al índice de pendientes y la muestra en el lugar donde fue agregada. Para mostrar los pendientes, ejecutar antes de \configurar \habilitarpendientes
+	% Parámetros: [1] Texto del pendiente (e.g. Mejorar redacción)
 	\newcommand{\pendiente}[1]{
 		\ifthenelse{\equal{\@pendientes}{true}}{
 			\refstepcounter{todos}
@@ -796,13 +947,12 @@
 		}{}
 	}
 
-%	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-	%Índice de Notas
+	% Índice de Notas
 	\newcommand{\listofnotesnames}{{Índice de Notas}}
 	\newlistof[part]{notes}{lon}{\listofnotesnames}
 
-	%Comando: listofnotes
-	%Descripción: Crea el índice de notas.
+	% Comando: listofnotes
+	% Descripción: Crea el índice de notas.
 	\renewcommand{\listofnotes}{
 		{\color{blue}
 		\indexarpreliminar{ÍNDICE DE NOTAS}
@@ -811,9 +961,10 @@
 		\@starttoc{lon}}
 	}
 	\renewcommand{\thenotes}{\@arabic\c@notes}
-	%Comando: nota
-	%Descripción: Agrega una nota al índice de notas y la muestra en el lugar donde fue agregada. Para mostrar las notas, ejecutar antes de \configurar \habilitarnotas
-	%Parámetros: [1] Texto de la nota (e.g. \nota{Esto es una nota})
+
+	% Comando: nota
+	% Descripción: Agrega una nota al índice de notas y la muestra en el lugar donde fue agregada. Para mostrar las notas, ejecutar antes de \configurar \habilitarnotas
+	% Parámetros: [1] Texto de la nota (e.g. \nota{Esto es una nota})
 	\newcommand{\nota}[1]{
 		\ifthenelse{\equal{\@notas}{true}}{
 			\refstepcounter{notes}
@@ -822,9 +973,7 @@
 		}{}
 	}
 
-
-%	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-	%Índice de Algoritmos
+	% Índice de Algoritmos
 	\newcommand{\listofalgorithmsname}{{Índice de Algoritmos}}
 	\newlistof[part]{algs}{lal}{\listofalgorithmsname}
 
@@ -876,16 +1025,15 @@
 		}{}
 	}
 
-%	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 	\formatearindice
 }
 
-%Comando: formatearindice
-%Descripción: Le da formato a los índices, fuentes, tamaños, identaciones, entre otras. Llamado desde \configurarindice.
+% Comando: formatearindice
+% Descripción: Le da formato a los índices, fuentes, tamaños, identaciones, entre otras. Llamado desde \configurarindice.
 \newcommand{\formatearindice}{
 
-	%Índice general
-	%Para las partes. Usado en Anexos para que los anexos salgan dentro de una carpeta en el outline
+	% Índice general
+	% Para las partes. Usado en Anexos para que los anexos salgan dentro de una carpeta en el outline
 	\renewcommand{\cftpartfont}{\normalfont\normalsize}
 	\renewcommand{\cftpartpagefont}{\normalfont\normalsize}
 	\renewcommand{\cftpartleader}{\normalfont\normalsize\cftdotfill{\cftpartdotsep}}
@@ -893,8 +1041,8 @@
 	\renewcommand{\cftpartindent}{0cm}
 	\setlength{\cftbeforepartskip}{0cm}
 
-	%Para capítulos sin numeración se usará paragraph para que salgan en el índice correctamente
-	%Principalmente hecho para las páginas preliminares
+	% Para capítulos sin numeración se usará paragraph para que salgan en el índice correctamente
+	% Principalmente hecho para las páginas preliminares
 	\renewcommand{\cftparafont}{\normalfont\normalsize}
 	\renewcommand{\cftparapagefont}{\normalfont\normalsize}
 	\renewcommand{\cftparaleader}{\normalfont\normalsize\cftdotfill{\cftparadotsep}}
@@ -902,7 +1050,7 @@
 	\renewcommand{\cftparaindent}{0cm}
 	\setlength{\cftbeforeparaskip}{0cm}
 
-	%Capítulos con numeración
+	% Capítulos con numeración
 	\renewcommand{\cftchapfont}{\normalfont\normalsize}
 	\renewcommand{\cftchappagefont}{\normalfont\normalsize}
 	\setlength{\cftbeforechapskip}{0cm}
@@ -910,80 +1058,80 @@
 	\setlength{\cftchapnumwidth}{2\parindent}
 	\renewcommand{\cftchapleader}{\normalfont\normalsize\cftdotfill{\cftchapdotsep}}
 	\renewcommand{\cftchapdotsep}{\cftdotsep}
-	%Secciones
+	% Secciones
 	\renewcommand{\cftsecfont}{\normalfont\normalsize}
 	\setlength{\cftbeforesecskip}{0cm}
 	\setlength{\cftsecindent}{5\parindent}
 
-	%Subsecciones
+	% Subsecciones
 	\renewcommand{\cftsubsecfont}{\normalfont\normalsize}
 	\setlength{\cftbeforesubsecskip}{0cm}
 	\setlength{\cftsubsecindent}{6\parindent}
-	%Subsubsecciones
+	% Subsubsecciones
 	\renewcommand{\cftsubsubsecfont}{\normalfont\normalsize}
 	\setlength{\cftbeforesubsubsecskip}{0cm}
 	\setlength{\cftsubsubsecindent}{7\parindent}
 
 }
 
-%Comando: hacerindicegeneral
-%Descripción: Crea el índice general.
+% Comando: hacerindicegeneral
+% Descripción: Crea el índice general.
 \newcommand{\hacerindicegeneral}{
 	\tableofcontents
 	\newpage
 }
 
-%Comando: hacerindiceilustracions
-%Descripción: Crea el índice de ilustraciones.
+ %Comando: hacerindiceilustracions
+% Descripción: Crea el índice de ilustraciones.
 \newcommand{\hacerindiceilustraciones}{
 	\listofilustrations
 	\newpage
 }
 
-%Comando: hacerindicegraficos
-%Descripción: Crea el índice de gráficos.
+% Comando: hacerindicegraficos
+% Descripción: Crea el índice de gráficos.
 \newcommand{\hacerindicegraficos}{
 	\listofcharts
 	\newpage
 }
 
-%Comando: hacerindicecuadros
-%Descripción: Crea el índice de cuadros
+% Comando: hacerindicecuadros
+% Descripción: Crea el índice de cuadros
 \newcommand{\hacerindicecuadros}{
 	\listoftabulations
 	\newpage
 }
 
-%Comando: hacerindicelistados
-%Descripción: Crea el índice de listados.
+% Comando: hacerindicelistados
+% Descripción: Crea el índice de listados.
 \newcommand{\hacerindicelistados}{
 	\lstlistoflistings
 	\newpage
 }
 
-%Comando: hacerindicependientes
-%Descripción: Crea el índice de pendientes.
+% Comando: hacerindicependientes
+% Descripción: Crea el índice de pendientes.
 \newcommand{\hacerindicependientes}{
 	\listoftodos
 	\newpage
 }
 
-%Comando: hacerindicenotas
-%Descripción: Crea el índice de notas.
+% Comando: hacerindicenotas
+% Descripción: Crea el índice de notas.
 \newcommand{\hacerindicenotas}{
 	\listofnotes
 	\newpage
 }
 
-%Comando: hacerindicealgoritmos
-%Descripción: Crea el índice de algoritmos.
+% Comando: hacerindicealgoritmos
+% Descripción: Crea el índice de algoritmos.
 \newcommand{\hacerindicealgoritmos}{
 	\listofalgorithms
 	\newpage
 }
 
-%Comando: hacerindices
-%Descripción: Crea todos los índices en el orden adecuado. En caso de que los pendientes estén habilitados, mostrará el índice de pendientes también.
+% Comando: hacerindices
+% Descripción: Crea todos los índices en el orden adecuado. En caso de que los pendientes estén habilitados, mostrará el índice de pendientes también.
 \newcommand{\hacerindices}{
 	\hacerindicegeneral
 
@@ -1001,9 +1149,9 @@
 	}{}
 }
 
-%Comando: indexarpreliminar
-%Descripción: Agrega el preliminar al índice general. Se usa paragraph para evitar que se incluyan siguientes secciones en el outline.
-%Parámetros: [1] Nombre a mostrar en el índice
+% Comando: indexarpreliminar
+% Descripción: Agrega el preliminar al índice general. Se usa paragraph para evitar que se incluyan siguientes secciones en el outline.
+% Parámetros: [1] Nombre a mostrar en el índice
 \newcommand{\indexarpreliminar}[1]{
 	\phantomsection % Recomendado antes de addcontentsline para evitar problemas con hyperref.
 	\MakeUppercase{\gdef\noexpand\aux{#1}}
@@ -1011,18 +1159,18 @@
 	%\addcontentsline{toc}{paragraph}{\uppercase{#1}} %También puede resolverse quitando el \uppercase y asegurandose de colocar manualmente en mayúscula todos los títulos en el documento.
 }
 
-%Comando: indexarintroduccion
-%Descripción: Agrega la introducción al índice general y agrega la palabra capítulo al índice.
-%Parámetros: [1] Nombre a mostrar en el índice
+% Comando: indexarintroduccion
+% Descripción: Agrega la introducción al índice general y agrega la palabra capítulo al índice.
+% Parámetros: [1] Nombre a mostrar en el índice
 \newcommand{\indexarintroduccion}[1]{
 	\indexarpreliminar{#1}
 	\addtocontents{toc}
 	{\protect\mbox{\normalfont\normalsize \bfseries CAPÍTULO}\protect\hfill\par}
 }
 
-%Comando: indexarparte
-%Descripción: Agrega la parte al índice general. Caso Anexos.
-%Parámetros: [1] Nombre a mostrar en el índice
+% Comando: indexarparte
+% Descripción: Agrega la parte al índice general. Caso Anexos.
+% Parámetros: [1] Nombre a mostrar en el índice
 \newcommand{\indexarparte}[1]{
 	\phantomsection % Recomendado antes de addcontentsline para evitar problemas con hyperref.
 	\MakeUppercase{\gdef\noexpand\aux{#1}}
@@ -1030,33 +1178,33 @@
 	%\addcontentsline{toc}{part}{\uppercase{#1}} %También puede resolverse quitando el \uppercase y asegurandose de colocar manualmente en mayúscula todos los títulos en el documento
 }
 
-%Comando: indexarcapitulo
-%Descripción: Agrega el capítulo al índice general. No sé en qué caso, pero por si acaso.
-%Parámetros: [1] Nombre a mostrar en el índice
+% Comando: indexarcapitulo
+% Descripción: Agrega el capítulo al índice general. No sé en qué caso, pero por si acaso.
+% Parámetros: [1] Nombre a mostrar en el índice
 \newcommand{\indexarcapitulo}[1]{
 	\phantomsection % Recomendado antes de addcontentsline para evitar problemas con hyperref.
 	\addcontentsline{toc}{chapter}{#1}
 }
 
-%Comando: indexarseccion
-%Descripción: Agrega la sección al índice general.
-%Parámetros: [1] Nombre a mostrar en el índice
+% Comando: indexarseccion
+% Descripción: Agrega la sección al índice general.
+% Parámetros: [1] Nombre a mostrar en el índice
 \newcommand{\indexarseccion}[1]{
 	%\phantomsection % Recomendado antes de addcontentsline para evitar problemas con hyperref.
 	\addcontentsline{toc}{section}{#1}
 }
 
-%Comando: indexarsubseccion
-%Descripción: Agrega la subsección al índice general.
-%Parámetros: [1] Nombre a mostrar en el índice
+% Comando: indexarsubseccion
+% Descripción: Agrega la subsección al índice general.
+% Parámetros: [1] Nombre a mostrar en el índice
 \newcommand{\indexarsubseccion}[1]{
 	%\phantomsection % Recomendado antes de addcontentsline para evitar problemas con hyperref.
 	\addcontentsline{toc}{subsection}{#1}
 }
 
-%Comando: indexarsubsubseccion
-%Descripción: Agrega la subsubsección al índice general.
-%Parámetros: [1] Nombre a mostrar en el índice
+% Comando: indexarsubsubseccion
+% Descripción: Agrega la subsubsección al índice general.
+% Parámetros: [1] Nombre a mostrar en el índice
 \newcommand{\indexarsubsubseccion}[1]{
 	%\phantomsection % Recomendado antes de addcontentsline para evitar problemas con hyperref.
 	\addcontentsline{toc}{subsubsection}{#1}
@@ -1070,15 +1218,15 @@
 	\continuarsubsubseccion
 }
 
-% título más apropiado cuando se incluyen acrónimos
+% Título más apropiado cuando se incluyen acrónimos
 \newcommand{\hacerglosarioconacronimos}{
 	\continuarsubsubseccion
 	\printglossary[title={Glosario de Acrónimos y Términos}, toctitle={Glosario de Acrónimos y Términos}]
 	\continuarsubsubseccion
 }
 
-%Comando: hacercaratula
-%Descripción: Crea la carátula de la tesis, la que va por fuera.
+% Comando: hacercaratula
+% Descripción: Crea la carátula de la tesis, la que va por fuera.
 \newcommand{\hacercaratula}{
 	%\setcounter{page}{-1}
 	\thispagestyle{empty}
@@ -1100,8 +1248,8 @@
 	\newpage
 }
 
-%Comando: hacerpresentacion
-%Descripción: Crea la hoja de presentación de la tesis.
+% Comando: hacerpresentacion
+% Descripción: Crea la hoja de presentación de la tesis.
 \newcommand{\hacerpresentacion}{
 	\thispagestyle{empty}
 	\setcounter{page}{1}
@@ -1119,6 +1267,7 @@
 		\vfill
 		\begin{flushright}
 			Por: \MakeUppercase{\@autor}
+      \ifthenelse{\isundefined{\@tutorenpresentacion}}{}{\\Tutor: \MakeUppercase{\@tutor}}
 		\end{flushright}
 		\vfill
 		{\@ciudad, \ifthenelse{\isundefined{\@mesencaratula}}{}{\@mesdefensa\ de }\@anodefensa.}
@@ -1126,8 +1275,8 @@
 	\newpage
 }
 
-%Comando: haceraprobacion
-%Descripción: Crea la hoja de aprobación
+% Comando: haceraprobacion
+% Descripción: Crea la hoja de aprobación
 \newcommand{\haceraprobacion}{
 	\thispagestyle{empty}
 	\begin{center}
@@ -1169,8 +1318,8 @@
 	\newpage
 }
 
-%Comando: hacerresumen
-%Descripción: Crea el resumen de la tesis.
+% Comando: hacerresumen
+% Descripción: Crea el resumen de la tesis.
 \newcommand{\hacerresumen}{
 	\begin{center}
 		\indexarpreliminar{Resumen}
@@ -1200,6 +1349,8 @@
 	\newpage
 }
 
+% Comando: heceraceptaciontutor
+% Descripción: crea carta de aceptación de tutoría
 \newcommand{\haceraceptaciontutor}{
 	\begin{center}
 		\indexarpreliminar{Aceptación de Tutoría}
@@ -1236,9 +1387,8 @@
   	\newpage
 }
 
-
-%Comando: hacerabstact
-%Descripción: Crea el abstract de la tesis.
+% Comando: hacerabstact
+% Descripción: Crea el abstract de la tesis.
 \newcommand{\hacerabstract}{
 	\selectlanguage{english}
 	\begin{center}
@@ -1269,8 +1419,8 @@
 	\newpage
 }
 
-%Comando: haceranexos
-%Descripción: Prepara el documento para agregar anexos.
+% Comando: haceranexos
+% Descripción: Prepara el documento para agregar anexos.
 \newcommand{\haceranexos}{
 	\appendix
 	%Para hacer que aparezca la palabra ANEXOS en el centro de la página
@@ -1309,16 +1459,6 @@
 	\bibliography{\@bibliografia}
 	\end{spacing}
 }
-
-% Comando: citar
-% Descripción: Introduce una referencia bibliográfica de la forma Autor (año).
-% Parámetros: [1] Identificador del registro bibliográfico.
-% Uso:
-% ... de acuerdo con \citar{parma:aco}, el algoritmo de ...
-% Resultado:
-% ... de acuerdo con Parma et al. (2007), el algoritmo de ...
-%\newcommand{\citar}[1]{\citet{#1}}
-% Según el Manual de Trabajos, esta cita solo debe usarse cuando el nombre del autor es parte de la narrativa. Cuando no, usar \citep. También puede citarse solo el autor en párrafos cercanos a la primera cita con \citeauthor. Otros comandos son: \citet*, \citep*, \citep[][], \citeauthor*, \citeyear.
 
 % Comando: preliminar
 % Descripción: Crea una página preliminar.
@@ -1461,107 +1601,10 @@
 	\newpage
 }
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Comandos no internos de la versión anterior
+%%%%%%%%%%%%%%%%%%%%%%%%% FIN INTERNO %%%%%%%%%%%%%%%%%%%%%%%%%
 
-\def\@citarcomo{\variablefaltante{citarcomo}} % Para introducir una cita de la forma Autor (año), donde Autor es el apellido del autor del trabajo de grado
-\newcommand{\citarcomo}[1]{\def\@citarcomo{#1}}
 
-% Comando: yo
-% Descripción: Introduce el apellido del autor y el año de este trabajo (e.g. Bar (2009)).
-% Uso: \yo
-\newcommand{\yo}{\@citarcomo\ (\@anodefensa)}
-
-% Ambiente: ecuaciones*
-% Descripción: Prepara el contexto para insertar varias ecuaciones sin enumerarlas
-% Uso:
-% \begin{ecuaciones*}
-% \sum{F_{x}} = 0\\
-% \sum{M_{x} = 0}
-% \end{ecuaciones*}
-%
-\newenvironment{ecuaciones*}
-	{
-		\espaciosimple
-		\begin{eqnarray*}
-	}
-	{\end{eqnarray*}}
-
-% Comando: agregartermino
-% Descripción: Agrega un término al glosario.
-% Parámetros: [1] etiqueta, [2] propiedades de la forma: name={nombre}, text={texto}, description={descripción}, plural={nombre plural}
-% Uso:
-% \agregartermino{robot}{
-% name={Robot},
-% text={robot},
-% description={Entidad capaz de ...},
-% plural={Robots}
-% }
-% Luego hacer referencia \gls{robot}
-\newcommand{\agregartermino}[2]{\newglossaryentry{#1}{#2}}
-
-% Comando: refilustracion
-% Descripción: Hace referencia a una ilustración
-% Parametros: [1] Etiqueta
-% Uso: \refilustracion{etiqueta}
-\newcommand{\refilustracion}[1]{\hyperref[#1]{Ilustración \ref{#1}}}
-\newcommand{\refpilustracion}[1]{(\refilustracion{#1})}
-
-% Comando: refcuadro
-% Descripción: Hace referencia a un cuadro
-% Parametros: [1] Etiqueta
-% Uso: \refcuadro{etiqueta}
-\newcommand{\refcuadro}[1]{\hyperref[#1]{Cuadro \ref{#1}}}
-\newcommand{\refpcuadro}[1]{(\refcuadro{#1})}
-
-% Comando: refalgoritmo
-% Descripción: Hace referencia a un algoritmo
-% Parametros: [1] Etiqueta
-% Uso: \refalgoritmo{etiqueta}
-\newcommand{\refalgoritmo}[1]{\hyperref[#1]{Algoritmo \ref{#1}}}
-\newcommand{\refpalgoritmo}[1]{(\refalgoritmo{#1})}
-
-% Comando: refgrafico
-% Descripción: Hace referencia a un grafico
-% Parametros: [1] Etiqueta
-% Uso: \refgrafico{etiqueta}
-\newcommand{\refgrafico}[1]{\hyperref[#1]{Gráfico \ref{#1}}}
-\newcommand{\refpgrafico}[1]{(\refgrafico{#1})}
-
-% Comando: reflistado
-% Descripción: Hace referencia a un listado
-% Parametros: [1] Etiqueta
-% Uso: \reflistado{etiqueta}
-\newcommand{\reflistado}[1]{\hyperref[#1]{Listado \ref{#1}}}
-\newcommand{\refplistado}[1]{(\reflistado{#1})}
-
-% Para citar titulo
-%\renewcommand\defcitealias[2]{\@ifundefined{al@#1\@extra@b@citeb}{}{\PackageWarning{natbib}{Overwriting existing alias for citation #1}}\@namedef{al@#1\@extra@b@citeb}{#2}}
-\renewcommand\defcitealias[2]{\@namedef{al@#1\@extra@b@citeb}{#2}}
-\newcommand{\citetitle}[1]{\defcitealias{#1}{\usebibentry{#1}{title}}``\citetalias{#1}''}
-\newcommand{\citeptitle}[1]{(\citetitle{#1})}
-
-\newcommand{\citepyear}[1]{(\citeyear{#1})}
-
-% Comando: refecuacion
-% Descripción: Hace referencia a un ecuacion
-% Parametros: [1] Etiqueta
-% Uso: \refecuacion{etiqueta}
-\newcommand{\refecuacion}[1]{\hyperref[#1]{Ecuación \ref{#1}}}
-\newcommand{\refpecuacion}[1]{(\refecuacion{#1})}
-
-% Variable bibliografia
-\def\@bibliografia{bibliografia}
-\newcommand{\bibliografia}[1]{
-	\def\@bibliografia{#1}
-	\bibinput{#1}
-}
-
-% Comando comillas
-\newcommand{\comillas}[1]{``#1''}
-
-% Alternativa a listing
-\newcommand{\codigofuente}[2][\footnotesize]{{\ttfamily#1#2}}
+%%%%% INICIO OTROS %%%%%
 
 % Mejorada la traduccion del paquete algorithm2e
 \ifthenelse{\boolean{algocf@optonelanguage}\AND\equal{\algocf@languagechoosen}{spanish}}{
@@ -1582,3 +1625,5 @@
 \SetKwFor{ForAll}{para todo}{hacer}{fin para todo}
 \SetKwFor{While}{mientras}{hacer}{fin mientras}
 }{}
+
+%%%%% FIN OTROS %%%%%

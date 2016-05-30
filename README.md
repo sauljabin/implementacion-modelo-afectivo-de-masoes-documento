@@ -68,6 +68,7 @@ Comandos de indentificación
 ### Comandos de Identificación
 #### Sobre el autor
 * ```\autor{}```, nombre del autor.
+* ```\ciautor{}```, cédula del autor.
 * ```\citarcomo{}```, apellido del autor.
 
 #### Sobre el trabajo:
@@ -76,6 +77,7 @@ Comandos de indentificación
 * ```\palabrasclave{}```, palabras claves asociadas al trabajo de investigación.
 * ```\keywords{}```, palabras claves en ingles.
 * ```\grado{}```, permite personalizar el grado al que se desea optar.
+* ```\mencion{}```, permite personalizar la mención.
 
 #### Sobre la universidad:
 * ```\decanato{}```, decanato de la UCLA.
@@ -83,6 +85,7 @@ Comandos de indentificación
 
 #### Sobre el tutor:
 * ```\tutor{}```, nombre del tutor.
+* ```\citutor{}```, cédula del tutor.
 
 #### Sobre la universidad:
 * ```\ciudad{}```, ciudad de la defensa.
@@ -95,6 +98,7 @@ Comandos de indentificación
 
 #### Opcionales:
 * ```\mesencaratula```, incluye el mes en las hojas de portada y presentación.
+* ```\tutorenpresentacion```, incluye el nombre del tutor en la presentación.
 * ```\fechaenresumen```, incluye la fecha en las hojas de resumen y abstract.
 
 ### Comandos para Listas
@@ -296,8 +300,9 @@ Ejemplos:
 \citeauthor{key}:           Jones et al.
 \citeauthor*{key}:          Jones, Baker, and Smith
 \citeyear{key}:             1990
+\citepyear{key}:            (1990)
 ```
-Para citar sólo el título su puede usar el comando ```\citetitle{}```.
+Para citar sólo el título su puede usar el comando ```\citetitle{}``` y ```\citeptitle{}```.
 
 ### Glosario
 
@@ -327,4 +332,4 @@ Para agregar un término al glosario se debe usar el comando ```\agregartermino`
 #### Otros
 * ```\yo```, muestra la referencia al autor del trabajo de grado. Para usar este comando previamente se debe se debe asignar el apellido del autor con el comando ```\citarcomo{}``` en la sección de identificación.
 * ```\comillas{}```, coloca un texto entre comillas dobles, ejemplo: "Ejemplo".
-* ```\codigofuente{}```, coloca un texto en formato de código fuente. Es una alternativa a los listados.
+* ```\verb| |```, coloca un texto en formato de código fuente. Es una alternativa a los listados.
