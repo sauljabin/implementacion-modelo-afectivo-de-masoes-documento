@@ -250,6 +250,7 @@ Utilizar el comando ```\definirliterales{}``` para definir literales de reemplaz
 ```
 
 Lista de parametros para el ambiente ```listado```:
+
 Parametro | Descripción | Ejemplo
 --- | --- | ---
 titulo | Asigna un título al listado | titulo=Este es el título
