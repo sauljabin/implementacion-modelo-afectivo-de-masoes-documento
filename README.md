@@ -15,7 +15,24 @@ Barquisimeto, Venezuela.
 
 ## Instrucciones:
 * El código fuente de la plantilla de trabajo de grado se encuentra en el directorio **plantilla**.
-* Para compilar correctamente el documento se recomienda usar el archivo **compilar.sh** (en caso de linux). Usar: ```./compilar.sh -h``` para ayuda.
+* Para compilar correctamente el documento se recomienda usar el archivo **compilar.sh** (en caso de linux). Usar: ```./compilar.sh -h``` para ayuda:
+
+```
+Universidad Centoccidental Lisandro Alvarado
+Plantilla LaTeX Trabajo de Grado
+Versión v3.1
+
+USO:
+   ./compilar.sh [arg] - Crea el archivo pdf, Ejemplo: ./compilar.sh proyecto
+
+OPCIONES:
+   -c, --clean - Limpiar archivos temporales
+                 Ejemplo: ./compilar.sh -c
+   -b, --build - Generar archivo pdf, no elimina temporales
+                 Ejemplo: ./compilar -b proyecto
+   -h, --help  - Muestra la información sobre el uso
+                 Ejemplo: ./compilar.sh -h
+```
 
 ## Manual:
 ### Cuerpo del documento principal:
