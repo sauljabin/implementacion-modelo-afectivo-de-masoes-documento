@@ -219,6 +219,105 @@
 % Uso: $\tab$ \begin{ecuaciones} \tabm \tabm \end{ecuaciones}
 \newcommand{\tabm}{\;\;\;\;\;\;}
 
+% Para introducir una cita de la forma Autor (año), donde Autor es el apellido del autor del trabajo de grado
+\def\@citarcomo{\variablefaltante{citarcomo}}
+\newcommand{\citarcomo}[1]{\def\@citarcomo{#1}}
+
+% Comando: yo
+% Descripción: Introduce el apellido del autor y el año de este trabajo (e.g. Bar (2009)).
+% Uso: \yo
+\newcommand{\yo}{\@citarcomo\ (\@anodefensa)}
+
+% Comando: agregartermino
+% Descripción: Agrega un término al glosario.
+% Parámetros: [1] etiqueta, [2] propiedades de la forma: name={nombre}, text={texto}, description={descripción}, plural={nombre plural}
+% Uso:
+% \agregartermino{robot}{
+% name={Robot},
+% text={robot},
+% description={Entidad capaz de ...},
+% plural={Robots}
+% }
+% Luego hacer referencia \gls{robot}
+\newcommand{\agregartermino}[2]{\newglossaryentry{#1}{#2}}
+
+% Comando: refilustracion
+% Descripción: Hace referencia a una ilustración
+% Parametros: [1] Etiqueta
+% Uso: \refilustracion{etiqueta}
+\newcommand{\refilustracion}[1]{\hyperref[#1]{Ilustración \ref{#1}}}
+\newcommand{\refpilustracion}[1]{(\refilustracion{#1})}
+
+% Comando: refcuadro
+% Descripción: Hace referencia a un cuadro
+% Parametros: [1] Etiqueta
+% Uso: \refcuadro{etiqueta}
+\newcommand{\refcuadro}[1]{\hyperref[#1]{Cuadro \ref{#1}}}
+\newcommand{\refpcuadro}[1]{(\refcuadro{#1})}
+
+% Comando: refalgoritmo
+% Descripción: Hace referencia a un algoritmo
+% Parametros: [1] Etiqueta
+% Uso: \refalgoritmo{etiqueta}
+\newcommand{\refalgoritmo}[1]{\hyperref[#1]{Algoritmo \ref{#1}}}
+\newcommand{\refpalgoritmo}[1]{(\refalgoritmo{#1})}
+
+% Comando: refgrafico
+% Descripción: Hace referencia a un grafico
+% Parametros: [1] Etiqueta
+% Uso: \refgrafico{etiqueta}
+\newcommand{\refgrafico}[1]{\hyperref[#1]{Gráfico \ref{#1}}}
+\newcommand{\refpgrafico}[1]{(\refgrafico{#1})}
+
+% Comando: reflistado
+% Descripción: Hace referencia a un listado
+% Parametros: [1] Etiqueta
+% Uso: \reflistado{etiqueta}
+\newcommand{\reflistado}[1]{\hyperref[#1]{Listado \ref{#1}}}
+\newcommand{\refplistado}[1]{(\reflistado{#1})}
+
+% Para citar titulo
+%\renewcommand\defcitealias[2]{\@ifundefined{al@#1\@extra@b@citeb}{}{\PackageWarning{natbib}{Overwriting existing alias for citation #1}}\@namedef{al@#1\@extra@b@citeb}{#2}}
+\renewcommand\defcitealias[2]{\@namedef{al@#1\@extra@b@citeb}{#2}}
+\newcommand{\citetitle}[1]{\defcitealias{#1}{\usebibentry{#1}{title}}``\citetalias{#1}''}
+\newcommand{\citeptitle}[1]{(\citetitle{#1})}
+
+% COmando: citepyear
+\newcommand{\citepyear}[1]{(\citeyear{#1})}
+
+% Comando: refecuacion
+% Descripción: Hace referencia a un ecuacion
+% Parametros: [1] Etiqueta
+% Uso: \refecuacion{etiqueta}
+\newcommand{\refecuacion}[1]{\hyperref[#1]{Ecuación \ref{#1}}}
+\newcommand{\refpecuacion}[1]{(\refecuacion{#1})}
+
+% Variable bibliografia
+\def\@bibliografia{bibliografia}
+\newcommand{\bibliografia}[1]{
+	\def\@bibliografia{#1}
+	\bibinput{#1}
+}
+
+% Comando comillas
+\newcommand{\comillas}[1]{``#1''}
+
+% Agrega página en blanco.
+\newcommand{\pagenblanco}{
+	\newpage
+	\thispagestyle{empty}
+	\mbox{}
+	\newpage
+}
+
+% Comando para colocar significados en ingles
+\newcommand{\eningles}[1]{(\textit{``#1''}, en inglés)}
+
+%%%%% FIN NUEVOS COMANDOS %%%%%
+
+
+%%%%% INICIO AMBIENTES %%%%%
+
 % Ambiente: lista
 % Descripción: Para enumerar items bien sea enumerados o sin enumerar.
 % Parámetros: [1] Prefijo de cada item, [2] comandos adicionales (e.g. \usecounter{enumi}).
@@ -319,102 +418,6 @@
 % \end{anexos}
 %
 \newenvironment{anexos}{\haceranexos}{}
-
-% Para introducir una cita de la forma Autor (año), donde Autor es el apellido del autor del trabajo de grado
-\def\@citarcomo{\variablefaltante{citarcomo}}
-\newcommand{\citarcomo}[1]{\def\@citarcomo{#1}}
-
-% Comando: yo
-% Descripción: Introduce el apellido del autor y el año de este trabajo (e.g. Bar (2009)).
-% Uso: \yo
-\newcommand{\yo}{\@citarcomo\ (\@anodefensa)}
-
-% Comando: agregartermino
-% Descripción: Agrega un término al glosario.
-% Parámetros: [1] etiqueta, [2] propiedades de la forma: name={nombre}, text={texto}, description={descripción}, plural={nombre plural}
-% Uso:
-% \agregartermino{robot}{
-% name={Robot},
-% text={robot},
-% description={Entidad capaz de ...},
-% plural={Robots}
-% }
-% Luego hacer referencia \gls{robot}
-\newcommand{\agregartermino}[2]{\newglossaryentry{#1}{#2}}
-
-% Comando: refilustracion
-% Descripción: Hace referencia a una ilustración
-% Parametros: [1] Etiqueta
-% Uso: \refilustracion{etiqueta}
-\newcommand{\refilustracion}[1]{\hyperref[#1]{Ilustración \ref{#1}}}
-\newcommand{\refpilustracion}[1]{(\refilustracion{#1})}
-
-% Comando: refcuadro
-% Descripción: Hace referencia a un cuadro
-% Parametros: [1] Etiqueta
-% Uso: \refcuadro{etiqueta}
-\newcommand{\refcuadro}[1]{\hyperref[#1]{Cuadro \ref{#1}}}
-\newcommand{\refpcuadro}[1]{(\refcuadro{#1})}
-
-% Comando: refalgoritmo
-% Descripción: Hace referencia a un algoritmo
-% Parametros: [1] Etiqueta
-% Uso: \refalgoritmo{etiqueta}
-\newcommand{\refalgoritmo}[1]{\hyperref[#1]{Algoritmo \ref{#1}}}
-\newcommand{\refpalgoritmo}[1]{(\refalgoritmo{#1})}
-
-% Comando: refgrafico
-% Descripción: Hace referencia a un grafico
-% Parametros: [1] Etiqueta
-% Uso: \refgrafico{etiqueta}
-\newcommand{\refgrafico}[1]{\hyperref[#1]{Gráfico \ref{#1}}}
-\newcommand{\refpgrafico}[1]{(\refgrafico{#1})}
-
-% Comando: reflistado
-% Descripción: Hace referencia a un listado
-% Parametros: [1] Etiqueta
-% Uso: \reflistado{etiqueta}
-\newcommand{\reflistado}[1]{\hyperref[#1]{Listado \ref{#1}}}
-\newcommand{\refplistado}[1]{(\reflistado{#1})}
-
-% Para citar titulo
-%\renewcommand\defcitealias[2]{\@ifundefined{al@#1\@extra@b@citeb}{}{\PackageWarning{natbib}{Overwriting existing alias for citation #1}}\@namedef{al@#1\@extra@b@citeb}{#2}}
-\renewcommand\defcitealias[2]{\@namedef{al@#1\@extra@b@citeb}{#2}}
-\newcommand{\citetitle}[1]{\defcitealias{#1}{\usebibentry{#1}{title}}``\citetalias{#1}''}
-\newcommand{\citeptitle}[1]{(\citetitle{#1})}
-
-% COmando: citepyear
-\newcommand{\citepyear}[1]{(\citeyear{#1})}
-
-% Comando: refecuacion
-% Descripción: Hace referencia a un ecuacion
-% Parametros: [1] Etiqueta
-% Uso: \refecuacion{etiqueta}
-\newcommand{\refecuacion}[1]{\hyperref[#1]{Ecuación \ref{#1}}}
-\newcommand{\refpecuacion}[1]{(\refecuacion{#1})}
-
-% Variable bibliografia
-\def\@bibliografia{bibliografia}
-\newcommand{\bibliografia}[1]{
-	\def\@bibliografia{#1}
-	\bibinput{#1}
-}
-
-% Comando comillas
-\newcommand{\comillas}[1]{``#1''}
-
-% Agrega página en blanco.
-\newcommand{\pagenblanco}{
-	\newpage
-	\thispagestyle{empty}
-	\mbox{}
-	\newpage
-}
-
-%%%%% FIN NUEVOS COMANDOS %%%%%
-
-
-%%%%% INICIO AMBIENTES %%%%%
 
 % Comandos de listados
 \lstset{numberbychapter=false, tabsize=4}

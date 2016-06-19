@@ -15,7 +15,7 @@ Barquisimeto, Venezuela.
 
 ## Instrucciones:
 * El código fuente de la plantilla de trabajo de grado se encuentra en el directorio **plantilla**.
-* Para compilar correctamente el documento se recomienda usar el archivo **compilar.sh** (en caso de linux). Usar: ```./compilar.sh -h``` para ayuda:
+* Para compilar correctamente el documento se recomienda usar el archivo **cli.sh** ("Command line interface", en caso de linux). Usar: ```./cli.sh -h``` para ayuda:
 
 ```
 Universidad Centoccidental Lisandro Alvarado
@@ -23,15 +23,15 @@ Plantilla LaTeX Trabajo de Grado
 Versión v3.1
 
 USO:
-   ./compilar.sh [arg] - Crea el archivo pdf, Ejemplo: ./compilar.sh proyecto
+   ./cli.sh [arg] - Crea el archivo pdf, Ejemplo: ./cli.sh proyecto
 
 OPCIONES:
    -c, --clean - Limpiar archivos temporales
-                 Ejemplo: ./compilar.sh -c
+                 Ejemplo: ./cli.sh -c
    -b, --build - Generar archivo pdf, no elimina temporales
-                 Ejemplo: ./compilar -b proyecto
+                 Ejemplo: ./cli.sh -b proyecto
    -h, --help  - Muestra la información sobre el uso
-                 Ejemplo: ./compilar.sh -h
+                 Ejemplo: ./cli.sh -h
 ```
 
 ## Manual:
@@ -350,4 +350,5 @@ Para agregar un término al glosario se debe usar el comando ```\agregartermino`
 #### Otros
 * ```\yo```, muestra la referencia al autor del trabajo de grado. Para usar este comando previamente se debe se debe asignar el apellido del autor con el comando ```\citarcomo{}``` en la sección de identificación.
 * ```\comillas{}```, coloca un texto entre comillas dobles, ejemplo: "Ejemplo".
+* ```\eningles{}```, coloca un texto entre comillas dobles, con paréntesis y cursivo, ejemplo: (*"Java Agent Development Framework"*, en inglés).
 * ```\verb| |```, coloca un texto en formato de código fuente. Es una alternativa a los listados.
