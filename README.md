@@ -1,3 +1,4 @@
+[![Stories in Ready](https://badge.waffle.io/sauljabin/plantilla-latex-trabajo-de-grado-ucla.png?label=ready&title=Ready)](https://waffle.io/sauljabin/plantilla-latex-trabajo-de-grado-ucla)
 # Plantilla LaTeX Trabajo de Grado UCLA
 
 ## Descripción:
