@@ -2,7 +2,7 @@
 
 [![Stories in Ready](https://badge.waffle.io/sauljabin/plantilla-latex-trabajo-de-grado-ucla.png?label=ready&title=Ready)](https://waffle.io/sauljabin/plantilla-latex-trabajo-de-grado-ucla)
 
-## Descripción:
+## Descripción
 Plantilla en LaTeX para elaborar trabajos de grado de la
 Universidad Centroccidental Lisandro Alvarado (UCLA).
 Barquisimeto, Venezuela.
@@ -12,10 +12,10 @@ Barquisimeto, Venezuela.
 * v1.1 [Juan Rada y Rubén Parma  (Año 2009)](https://code.google.com/p/latex-uclamsc)
 * Licencia GPL 3.
 
-## Normas:
+## Normas
 * [Manual para la Elaboración del Trabajo Conducente a Grado Académico de Especialización, Maestría y Doctorado](documentos/Manual-Trabajo-Grado-2002.pdf)
 
-## Instrucciones:
+## Instrucciones
 * El código fuente de la plantilla de trabajo de grado se encuentra en el directorio **plantilla**.
 * Para compilar correctamente el documento se recomienda usar el archivo **cli.sh** ("Command line interface", en caso de linux). Usar: ```./cli.sh -h``` para ayuda:
 
@@ -36,8 +36,8 @@ OPCIONES:
                  Ejemplo: ./cli.sh -h
 ```
 
-## Manual:
-### Cuerpo del documento principal:
+## Manual
+### Cuerpo del documento principal
 ```TeX
 \documentclass{uclamsc}
 \includeonly{
@@ -90,7 +90,7 @@ Comandos de indentificación
 * ```\ciautor{}```, cédula del autor.
 * ```\citarcomo{}```, apellido del autor.
 
-#### Sobre el trabajo:
+#### Sobre el trabajo
 * ```\titulo{}```, título de la investigación.
 * ```\title{}```, título del trabajo en inglés.
 * ```\palabrasclave{}```, palabras claves asociadas al trabajo de investigación.
@@ -98,15 +98,15 @@ Comandos de indentificación
 * ```\grado{}```, permite personalizar el grado al que se desea optar.
 * ```\mencion{}```, permite personalizar la mención.
 
-#### Sobre la universidad:
+#### Sobre la universidad
 * ```\decanato{}```, decanato de la UCLA.
 * ```\postgrado{}```, postgrado cursado.
 
-#### Sobre el tutor:
+#### Sobre el tutor
 * ```\tutor{}```, nombre del tutor.
 * ```\citutor{}```, cédula del tutor.
 
-#### Sobre la universidad:
+#### Sobre la universidad
 * ```\ciudad{}```, ciudad de la defensa.
 * ```\diadefensa{}```, dia de la defensa.
 * ```\mesdefensa{}```, mes de la defensa.
@@ -115,7 +115,7 @@ Comandos de indentificación
 * ```\primerjurado{}```, nombre del primer jurado.
 * ```\segundojurado{}```, nombre del segundo jurado.
 
-#### Opcionales:
+#### Opcionales
 * ```\mesencaratula```, incluye el mes en las hojas de portada y presentación.
 * ```\tutorenpresentacion```, incluye el nombre del tutor en la presentación.
 * ```\fechaenresumen```, incluye la fecha en las hojas de resumen y abstract.
@@ -325,7 +325,6 @@ Ejemplos:
 Para citar sólo el título su puede usar el comando ```\citetitle{}``` y ```\citeptitle{}```.
 
 ### Glosario
-
 El comando ```\hacerglosario``` ajusta y titula **Definición de Términos Básicos** la sección de términos del glosario insertada por el comando ```\printglossary```. Véase uso del paquete [glossaries](http://www.ctan.org/tex-archive/macros/latex/contrib/glossaries). Referencia rápida en [LaTeX/Glossary](http://en.wikibooks.org/wiki/LaTeX/Glossary).
 
 El comando ```\hacerglosarioconacronimos```, igual que ```\hacerglosario``` pero titulando la sección **Glosario de Acrónimos y Términos**, más apropiado para cuando se definen acrónimos en el glosario.
@@ -333,7 +332,6 @@ El comando ```\hacerglosarioconacronimos```, igual que ```\hacerglosario``` pero
 Para agregar un término al glosario se debe usar el comando ```\agregartermino```, para referirse al término usar el comando ```\gls{}``` o ```\glspl{}``` para plurales. Los términos deben ser agregados en el archivo **capitulos/glosario**, y debe incluirse en el cuerpo del documento con el comando ```\input{capitulos/glosario}```.
 
 ### Comandos Misceléneos
-
 #### Pendientes
 * ```\pendiente{}```, permite anotar un pendiente.
 * ```\habilitarpendientes```, muestra los pendientes y el índice de pendientes.
