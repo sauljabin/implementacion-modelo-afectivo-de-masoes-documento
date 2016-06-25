@@ -7,7 +7,7 @@ uclamsc 3.1, 2016/05
 - Agregada estructura de proyecto y trabajo
 - Cambiado comando viñeta a vineta
 - Cambiado comando añodefensa a anodefensa
-- Actualizado script compilar.sh
+- Actualizado script compilar.sh a cli.sh
 - Eliminado script compilar.cmd
 - Actualización del manual (README)
 - Agregado \haceraceptaciontutor
