@@ -241,39 +241,104 @@
 % Luego hacer referencia \gls{robot}
 \newcommand{\agregartermino}[2]{\newglossaryentry{#1}{#2}}
 
+% Variables de ilustracion
+\newcommand{\ilustrationname}{Ilustración}
+\newcommand{\ilustrationnamepl}{Ilustraciones}
+
+% Comando: setnombreilustracion
+% Descripción: Personaliza el nombre a mostrar en caso que no se quiera "ilustración"
+% Parametros: [1] Nombre singular [2] Nombre plural
+% Uso: \setnombreilustracion{Figura}{Figuras}
+\newcommand{\setnombreilustracion}[2]{
+  \renewcommand{\ilustrationname}{#1}
+  \renewcommand{\ilustrationnamepl}{#2}
+}
+
 % Comando: refilustracion
 % Descripción: Hace referencia a una ilustración
 % Parametros: [1] Etiqueta
 % Uso: \refilustracion{etiqueta}
-\newcommand{\refilustracion}[1]{\hyperref[#1]{Ilustración \ref{#1}}}
+\newcommand{\refilustracion}[1]{\hyperref[#1]{\ilustrationname~\ref{#1}}}
 \newcommand{\refpilustracion}[1]{(\refilustracion{#1})}
+
+% Variables cuadro
+\newcommand{\tabulationmname}{Cuadro}
+\newcommand{\tabulationmnamepl}{Cuadros}
+
+% Comando: setnombrecuadro
+% Descripción: Personaliza el nombre a mostrar en caso que no se quiera "cuadro"
+% Parametros: [1] Nombre singular [2] Nombre plural
+% Uso: \setnombrecuadro{Tabla}{Tablas}
+\newcommand{\setnombrecuadro}[2]{
+  \renewcommand{\tabulationmname}{#1}
+  \renewcommand{\tabulationmnamepl}{#2}
+}
 
 % Comando: refcuadro
 % Descripción: Hace referencia a un cuadro
 % Parametros: [1] Etiqueta
 % Uso: \refcuadro{etiqueta}
-\newcommand{\refcuadro}[1]{\hyperref[#1]{Cuadro \ref{#1}}}
+\newcommand{\refcuadro}[1]{\hyperref[#1]{\tabulationmname~\ref{#1}}}
 \newcommand{\refpcuadro}[1]{(\refcuadro{#1})}
+
+% Variables algoritmo
+\newcommand{\algorithmname}{Algoritmo}
+\newcommand{\algorithmnamepl}{Algoritmos}
+
+% Comando: setnombrealgoritmo
+% Descripción: Personaliza el nombre a mostrar en caso que no se quiera "algoritmo"
+% Parametros: [1] Nombre singular [2] Nombre plural
+% Uso: \setnombrealgoritmo{Algoritmo}{Algoritmos}
+\newcommand{\setnombrealgoritmo}[2]{
+  \renewcommand{\algorithmname}{#1}
+  \renewcommand{\algorithmnamepl}{#2}
+}
 
 % Comando: refalgoritmo
 % Descripción: Hace referencia a un algoritmo
 % Parametros: [1] Etiqueta
 % Uso: \refalgoritmo{etiqueta}
-\newcommand{\refalgoritmo}[1]{\hyperref[#1]{Algoritmo \ref{#1}}}
+\newcommand{\refalgoritmo}[1]{\hyperref[#1]{\algorithmname~\ref{#1}}}
 \newcommand{\refpalgoritmo}[1]{(\refalgoritmo{#1})}
+
+% Variables grafico
+\newcommand{\chartname}{Gráfico}
+\newcommand{\chartnamepl}{Gráficos}
+
+% Comando: setnombregrafico
+% Descripción: Personaliza el nombre a mostrar en caso que no se quiera "grafico"
+% Parametros: [1] Nombre singular [2] Nombre plural
+% Uso: \setnombrealgoritmo{Gráfico}{Gráficos}
+\newcommand{\setnombregrafico}[2]{
+  \renewcommand{\chartname}{#1}
+  \renewcommand{\chartnamepl}{#2}
+}
 
 % Comando: refgrafico
 % Descripción: Hace referencia a un grafico
 % Parametros: [1] Etiqueta
 % Uso: \refgrafico{etiqueta}
-\newcommand{\refgrafico}[1]{\hyperref[#1]{Gráfico \ref{#1}}}
+\newcommand{\refgrafico}[1]{\hyperref[#1]{\chartname~\ref{#1}}}
 \newcommand{\refpgrafico}[1]{(\refgrafico{#1})}
+
+% Variables listado
+\renewcommand{\lstlistingname}{Listado}
+\newcommand{\lstlistingnamepl}{Listados}
+
+% Comando: setnombrelistado
+% Descripción: Personaliza el nombre a mostrar en caso que no se quiera "listado"
+% Parametros: [1] Nombre singular [2] Nombre plural
+% Uso: \setnombrelistado{Listado}{Listados}
+\newcommand{\setnombrelistado}[2]{
+  \renewcommand{\lstlistingname}{#1}
+  \renewcommand{\lstlistingnamepl}{#2}
+}
 
 % Comando: reflistado
 % Descripción: Hace referencia a un listado
 % Parametros: [1] Etiqueta
 % Uso: \reflistado{etiqueta}
-\newcommand{\reflistado}[1]{\hyperref[#1]{Listado \ref{#1}}}
+\newcommand{\reflistado}[1]{\hyperref[#1]{\lstlistingname~\ref{#1}}}
 \newcommand{\refplistado}[1]{(\reflistado{#1})}
 
 % Para citar titulo
@@ -729,7 +794,7 @@
 	\setcounter{tocdepth}{5} % Para mostrar hasta los párrafos (caso de preliminares).
 
 	% Índice de listados (algoritmos y códigos)
-	\renewcommand{\lstlistlistingname}{{Índice de Listados}}
+	\renewcommand{\lstlistlistingname}{{Índice de \lstlistingnamepl}}
 
 	\renewcommand{\lstlistoflistings}{
 		\IfFileExists{\jobname.lol}{
@@ -744,7 +809,6 @@
 		}
 	}
 
-	\renewcommand{\lstlistingname}{Listado}
 	\renewcommand{\thelstlisting}{\@arabic\c@lstlisting}
 
 	\define@key{titulolistado}{titulo}{\def\titulolistado@titulo{##1}}
@@ -777,7 +841,7 @@
 	}
 
 	% Índice de gráficos
-	\newcommand{\listofchartsname}{{Índice de Gráficos}}
+	\newcommand{\listofchartsname}{{Índice de \chartnamepl}}
 	\newlistof[part]{charts}{loc}{\listofchartsname}
 
 	% Comando: listofcharts
@@ -796,7 +860,6 @@
 		}
 	}
 	\renewcommand{\thecharts}{\@arabic\c@charts}
-	\newcommand{\chartname}{Gráfico}
 
 	\define@key{titulografico}{titulo}{\def\titulografico@titulo{##1}}
 	\define@key{titulografico}{etiqueta}{\def\titulografico@etiqueta{##1}}
@@ -830,7 +893,7 @@
 
 
   % Índice de Ilustraciones
-	\newcommand{\listofilustrationsname}{{Índice de Ilustraciones}}
+	\newcommand{\listofilustrationsname}{{Índice de \ilustrationnamepl}}
 	\newlistof[part]{ilustrations}{loi}{\listofilustrationsname}
 
   %	Comando: listofilustrations
@@ -849,7 +912,6 @@
 		}
 	}
 	\renewcommand{\theilustrations}{\@arabic\c@ilustrations}
-	\newcommand{\ilustrationname}{Ilustración}
 
 	\define@key{tituloilustracion}{titulo}{\def\tituloilustracion@titulo{##1}}
 	\define@key{tituloilustracion}{etiqueta}{\def\tituloilustracion@etiqueta{##1}}
@@ -881,7 +943,7 @@
 	}
 
 	% Índice de cuadros
-	\newcommand{\listoftabulationsname}{{Índice de Cuadros}}
+	\newcommand{\listoftabulationsname}{{Índice de \tabulationmnamepl}}
 	\newlistof[part]{tabulations}{loq}{\listoftabulationsname}
 
 	%Descripción: Crea el índice de cuadros.
@@ -899,7 +961,6 @@
 		}
 	}
 	\renewcommand{\thetabulations}{\@arabic\c@tabulations}
-	\newcommand{\tabulationmname}{Cuadro}
 
 	\define@key{titulocuadro}{titulo}{\def\titulocuadro@titulo{##1}}
 	\define@key{titulocuadro}{etiqueta}{\def\titulocuadro@etiqueta{##1}}
@@ -985,7 +1046,7 @@
 	}
 
 	% Índice de Algoritmos
-	\newcommand{\listofalgorithmsname}{{Índice de Algoritmos}}
+	\newcommand{\listofalgorithmsname}{{Índice de \algorithmnamepl}}
 	\newlistof[part]{algs}{lal}{\listofalgorithmsname}
 
 	% Comando: listofalgorithms
@@ -1002,9 +1063,7 @@
 			}
 		}
 	}
-
 	\renewcommand{\thealgs}{\@arabic\c@algs}
-	\newcommand{\algorithmname}{Algoritmo}
 
 	\define@key{tituloalgoritmo}{titulo}{\def\tituloalgoritmo@titulo{##1}}
 	\define@key{tituloalgoritmo}{etiqueta}{\def\tituloalgoritmo@etiqueta{##1}}
