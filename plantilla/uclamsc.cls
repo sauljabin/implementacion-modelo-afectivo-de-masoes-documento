@@ -833,9 +833,9 @@
 		}{}
 		\ifthenelse{\isundefined{\titulolistado@sinleyenda}}{
 			\ifthenelse{\isundefined{\titulolistado@titulo}}{
-				\par\centering\normalfont\normalsize\noindent{{\bfseries \lstlistingname\ifthenelse{\isundefined{\titulolistado@sinindice}}{~\thelstlisting}{}} \ifthenelse{\isundefined{\titulolistado@fuente}}{}{\\ {\bfseries Fuente:} \titulolistado@fuente}}\\
+				\par\centering\normalfont\footnotesize\noindent{{\bfseries \lstlistingname\ifthenelse{\isundefined{\titulolistado@sinindice}}{~\thelstlisting}{}.} \ifthenelse{\isundefined{\titulolistado@fuente}}{}{\\ {\bfseries Fuente:} \titulolistado@fuente.}}\\
 			}{
-				\par\centering\normalfont\normalsize\noindent{{\bfseries \lstlistingname\ifthenelse{\isundefined{\titulolistado@sinindice}}{~\thelstlisting}{}:} \titulolistado@titulo \ifthenelse{\isundefined{\titulolistado@fuente}}{}{\\ {\bfseries Fuente:} \titulolistado@fuente}}\\
+				\par\centering\normalfont\footnotesize\noindent{{\bfseries \lstlistingname\ifthenelse{\isundefined{\titulolistado@sinindice}}{~\thelstlisting}{}.} \titulolistado@titulo. \ifthenelse{\isundefined{\titulolistado@fuente}}{}{\\ {\bfseries Fuente:} \titulolistado@fuente.}}\\
 			}
 		}{}
 	}
@@ -884,9 +884,9 @@
 		}{}
 		\ifthenelse{\isundefined{\titulografico@sinleyenda}}{
 			\ifthenelse{\isundefined{\titulografico@titulo}}{
-				\par\normalfont\normalsize\noindent{{\bfseries \chartname\ifthenelse{\isundefined{\titulografico@sinindice}}{~\thecharts}{}} \ifthenelse{\isundefined{\titulografico@fuente}}{}{\\ {\bfseries Fuente:} \titulografico@fuente}}\\
+				\par\normalfont\footnotesize\noindent{{\bfseries \chartname\ifthenelse{\isundefined{\titulografico@sinindice}}{~\thecharts}{}.} \ifthenelse{\isundefined{\titulografico@fuente}}{}{\\ {\bfseries Fuente:} \titulografico@fuente.}}\\
 			}{
-				\par\normalfont\normalsize\noindent{{\bfseries \chartname\ifthenelse{\isundefined{\titulografico@sinindice}}{~\thecharts}{}:} \titulografico@titulo \ifthenelse{\isundefined{\titulografico@fuente}}{}{\\ {\bfseries Fuente:} \titulografico@fuente}}\\
+				\par\normalfont\footnotesize\noindent{{\bfseries \chartname\ifthenelse{\isundefined{\titulografico@sinindice}}{~\thecharts}{}.} \titulografico@titulo. \ifthenelse{\isundefined{\titulografico@fuente}}{}{\\ {\bfseries Fuente:} \titulografico@fuente.}}\\
 			}
 		}{}
 	}
@@ -935,9 +935,9 @@
 		}{}
 		\ifthenelse{\isundefined{\tituloilustracion@sinleyenda}}{
 			\ifthenelse{\isundefined{\tituloilustracion@titulo}}{
-				\par\normalfont\normalsize\noindent{{\bfseries \ilustrationname\ifthenelse{\isundefined{\tituloilustracion@sinindice}}{~\theilustrations}{}} \ifthenelse{\isundefined{\tituloilustracion@fuente}}{}{\\ {\bfseries Fuente:} \tituloilustracion@fuente}}\\
+				\par\normalfont\footnotesize\noindent{{\bfseries \ilustrationname\ifthenelse{\isundefined{\tituloilustracion@sinindice}}{~\theilustrations}{}.} \ifthenelse{\isundefined{\tituloilustracion@fuente}}{}{\\ {\bfseries Fuente:} \tituloilustracion@fuente.}}\\
 			}{
-				\par\normalfont\normalsize\noindent{{\bfseries \ilustrationname\ifthenelse{\isundefined{\tituloilustracion@sinindice}}{~\theilustrations}{}:} \tituloilustracion@titulo \ifthenelse{\isundefined{\tituloilustracion@fuente}}{}{\\ {\bfseries Fuente:} \tituloilustracion@fuente}}\\
+				\par\normalfont\footnotesize\noindent{{\bfseries \ilustrationname\ifthenelse{\isundefined{\tituloilustracion@sinindice}}{~\theilustrations}{}.} \tituloilustracion@titulo. \ifthenelse{\isundefined{\tituloilustracion@fuente}}{}{\\ {\bfseries Fuente:} \tituloilustracion@fuente.}}\\
 			}
 		}{}
 	}
@@ -984,9 +984,9 @@
 		}{}
 		\ifthenelse{\isundefined{\titulocuadro@sinleyenda}}{
 			\ifthenelse{\isundefined{\titulocuadro@titulo}}{
-				\espaciodoble\normalfont\normalsize\noindent{\bfseries{\tabulationmname\ifthenelse{\isundefined{\titulocuadro@sinindice}}{~\thetabulations}{}}\\\espaciodoble}
+				\espaciodoble\normalfont\footnotesize\noindent{{\bfseries\tabulationmname\ifthenelse{\isundefined{\titulocuadro@sinindice}}{~\thetabulations}{}.}\\\espaciodoble}
 			}{
-				\espaciodoble\normalfont\normalsize\noindent{\bfseries{\tabulationmname\ifthenelse{\isundefined{\titulocuadro@sinindice}}{~\thetabulations}{}}\\\espaciodoble \titulocuadro@titulo\\\espaciodoble}
+				\espaciodoble\normalfont\footnotesize\noindent{{\bfseries\tabulationmname\ifthenelse{\isundefined{\titulocuadro@sinindice}}{~\thetabulations}{}.} \titulocuadro@titulo.\\\espaciodoble}
 			}
 		}{}
 	}
@@ -1088,9 +1088,9 @@
 		}{}
 		\ifthenelse{\isundefined{\tituloalgoritmo@sinleyenda}}{
 			\ifthenelse{\isundefined{\tituloalgoritmo@titulo}}{
-				\centering\par\normalfont\normalsize\noindent{{\bfseries \algorithmname\ifthenelse{\isundefined{\tituloalgoritmo@sinindice}}{~\thealgs}{}} \ifthenelse{\isundefined{\tituloalgoritmo@fuente}}{}{\\ {\bfseries Fuente:} \tituloalgoritmo@fuente}}\\
+				\centering\par\normalfont\footnotesize\noindent{{\bfseries \algorithmname\ifthenelse{\isundefined{\tituloalgoritmo@sinindice}}{~\thealgs}{}.} \ifthenelse{\isundefined{\tituloalgoritmo@fuente}}{}{\\ {\bfseries Fuente:} \tituloalgoritmo@fuente.}}\\
 			}{
-				\centering\par\normalfont\normalsize\noindent{{\bfseries \algorithmname\ifthenelse{\isundefined{\tituloalgoritmo@sinindice}}{~\thealgs}{}:} \tituloalgoritmo@titulo \ifthenelse{\isundefined{\tituloalgoritmo@fuente}}{}{\\ {\bfseries Fuente:} \tituloalgoritmo@fuente}}\\
+				\centering\par\normalfont\footnotesize\noindent{{\bfseries \algorithmname\ifthenelse{\isundefined{\tituloalgoritmo@sinindice}}{~\thealgs}{}.} \tituloalgoritmo@titulo. \ifthenelse{\isundefined{\tituloalgoritmo@fuente}}{}{\\ {\bfseries Fuente:} \tituloalgoritmo@fuente.}}\\
 			}
 		}{}
 	}
