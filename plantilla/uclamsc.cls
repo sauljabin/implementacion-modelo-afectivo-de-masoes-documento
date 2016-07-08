@@ -258,8 +258,8 @@
 % Descripción: Hace referencia a una ilustración
 % Parametros: [1] Etiqueta
 % Uso: \refilustracion{etiqueta}
-\newcommand{\refilustracion}[1]{\hyperref[#1]{\ilustrationname~\ref{#1}}}
-\newcommand{\refpilustracion}[1]{(\refilustracion{#1})}
+\newcommand{\refilustracion}[1]{\hyperref[#1]{\MakeLowercase{\ilustrationname}~\ref{#1}}}
+\newcommand{\refpilustracion}[1]{(ver \refilustracion{#1})}
 
 % Variables cuadro
 \newcommand{\tabulationmname}{Cuadro}
@@ -278,8 +278,8 @@
 % Descripción: Hace referencia a un cuadro
 % Parametros: [1] Etiqueta
 % Uso: \refcuadro{etiqueta}
-\newcommand{\refcuadro}[1]{\hyperref[#1]{\tabulationmname~\ref{#1}}}
-\newcommand{\refpcuadro}[1]{(\refcuadro{#1})}
+\newcommand{\refcuadro}[1]{\hyperref[#1]{\MakeLowercase{\tabulationmname}~\ref{#1}}}
+\newcommand{\refpcuadro}[1]{(ver \refcuadro{#1})}
 
 % Variables algoritmo
 \newcommand{\algorithmname}{Algoritmo}
@@ -298,8 +298,8 @@
 % Descripción: Hace referencia a un algoritmo
 % Parametros: [1] Etiqueta
 % Uso: \refalgoritmo{etiqueta}
-\newcommand{\refalgoritmo}[1]{\hyperref[#1]{\algorithmname~\ref{#1}}}
-\newcommand{\refpalgoritmo}[1]{(\refalgoritmo{#1})}
+\newcommand{\refalgoritmo}[1]{\hyperref[#1]{\MakeLowercase{\algorithmname}~\ref{#1}}}
+\newcommand{\refpalgoritmo}[1]{(ver \refalgoritmo{#1})}
 
 % Variables grafico
 \newcommand{\chartname}{Gráfico}
@@ -318,8 +318,8 @@
 % Descripción: Hace referencia a un grafico
 % Parametros: [1] Etiqueta
 % Uso: \refgrafico{etiqueta}
-\newcommand{\refgrafico}[1]{\hyperref[#1]{\chartname~\ref{#1}}}
-\newcommand{\refpgrafico}[1]{(\refgrafico{#1})}
+\newcommand{\refgrafico}[1]{\hyperref[#1]{\MakeLowercase{\chartname}~\ref{#1}}}
+\newcommand{\refpgrafico}[1]{(ver \refgrafico{#1})}
 
 % Variables listado
 \renewcommand{\lstlistingname}{Listado}
@@ -338,8 +338,8 @@
 % Descripción: Hace referencia a un listado
 % Parametros: [1] Etiqueta
 % Uso: \reflistado{etiqueta}
-\newcommand{\reflistado}[1]{\hyperref[#1]{\lstlistingname~\ref{#1}}}
-\newcommand{\refplistado}[1]{(\reflistado{#1})}
+\newcommand{\reflistado}[1]{\hyperref[#1]{\MakeLowercase{\lstlistingname}~\ref{#1}}}
+\newcommand{\refplistado}[1]{(ver \reflistado{#1})}
 
 % Para citar titulo
 %\renewcommand\defcitealias[2]{\@ifundefined{al@#1\@extra@b@citeb}{}{\PackageWarning{natbib}{Overwriting existing alias for citation #1}}\@namedef{al@#1\@extra@b@citeb}{#2}}
@@ -354,8 +354,8 @@
 % Descripción: Hace referencia a un ecuacion
 % Parametros: [1] Etiqueta
 % Uso: \refecuacion{etiqueta}
-\newcommand{\refecuacion}[1]{\hyperref[#1]{Ecuación \ref{#1}}}
-\newcommand{\refpecuacion}[1]{(\refecuacion{#1})}
+\newcommand{\refecuacion}[1]{\hyperref[#1]{ecuación \ref{#1}}}
+\newcommand{\refpecuacion}[1]{(ver \refecuacion{#1})}
 
 % Variable bibliografia
 \def\@bibliografia{bibliografia}
