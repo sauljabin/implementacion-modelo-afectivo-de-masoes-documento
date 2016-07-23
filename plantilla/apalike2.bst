@@ -569,8 +569,8 @@ FUNCTION {eho.format.in.ed.booktitle}
 { booktitle empty$
     { "" }
     { editor empty$
-	{ "In " booktitle emphasize * }
-	{ "In " eho.format.editors * ", " * booktitle emphasize * }
+	{ "En " booktitle emphasize * }
+	{ "En " eho.format.editors * ", " * booktitle emphasize * }
       if$
     }
   if$
@@ -587,7 +587,7 @@ FUNCTION {format.thesis.type}
 
 FUNCTION {format.tr.number}
 { type empty$
-    { "Technical Report" }
+    { "Informe T{\'e}cnico" }
     'type
   if$
   number empty$
@@ -832,7 +832,7 @@ FUNCTION {mastersthesis}
   new.block
   format.title "title" output.check
   new.block
-  "Master's thesis" format.thesis.type output.nonnull
+  "Trabajo de Grado" format.thesis.type output.nonnull
   school "school" output.check
   address output
   new.block
@@ -862,7 +862,7 @@ FUNCTION {phdthesis}
   new.block
   format.btitle "title" output.check
   new.block
-  "PhD thesis" format.thesis.type output.nonnull
+  "Tesis Doctoral" format.thesis.type output.nonnull
   school "school" output.check
   address output
   new.block
@@ -1011,12 +1011,12 @@ FUNCTION {format.lab.names}
   s #1 "{vv~}{ll}" format.name$
   s num.names$ duplicate$
   #2 >
-    { pop$ " et~al." * }
+    { pop$ " y otros" * }
     { #2 <
 	'skip$
 	{ s #2 "{ff }{vv }{ll}{ jj}" format.name$ "others" =
-	    { " et~al." * }
-	    { " \& " * s #2 "{vv~}{ll}" format.name$ * } % " and " --  BJR 10/5/89
+	    { " y otros" * }
+	    { " y " * s #2 "{vv~}{ll}" format.name$ * } % " and " --  BJR 10/5/89
 	  if$
 	}
       if$
