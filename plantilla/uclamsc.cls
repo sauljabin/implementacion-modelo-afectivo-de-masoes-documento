@@ -40,27 +40,27 @@
   \LoadClass[12pt,letterpaper,final,oneside]{book}
 \fi
 
-\RequirePackage[english,spanish,es-lcroman]{babel} %english para el abstract, es-lcroman para números romanos en minúsculas en páginas preliminares
+\RequirePackage[english,spanish,es-lcroman]{babel} % english para el abstract, es-lcroman para números romanos en minúsculas en páginas preliminares
 \RequirePackage[top=3cm,bottom=3cm,left=3cm,right=3cm,bindingoffset=1cm]{geometry}
-\RequirePackage[utf8]{inputenc} %El encoding por defecto es utf8, aunque en Windows podría traer problemas (e.g. no mostrar caracteres acentuados)
+\RequirePackage[utf8]{inputenc} % El encoding por defecto es utf8, aunque en Windows podría traer problemas (e.g. no mostrar caracteres acentuados)
 \RequirePackage{lmodern} % Mejora la codificación de {fontenc}, [LY1] arroja warings
-\RequirePackage[T1]{fontenc} %Para evitar advertencia al compilar
-\RequirePackage[onehalfspacing]{setspace} %Para el espaciado del documento
-\RequirePackage[colorlinks=false]{hyperref} %Para hipervínculos en el documento (ver \iniciar)
-\RequirePackage{url} %Para dar formato a direcciones web.
-\RequirePackage{ragged2e} %Para justificar texto (\justifying)
-\RequirePackage{paralist} %Para enumeraciones dentro de párrafos
-\RequirePackage{enumitem} %Para enumeraciones
-\RequirePackage{color} %Para poner color en notas y pendientes
-\RequirePackage{fancyhdr} %Para poner numeración de páginas en la parte baja
-\RequirePackage{tocloft} %Para configurar índice general, de figuras y cuadros
-\RequirePackage{graphicx} %Para insertar imágenes
-\RequirePackage{float} %Para el ambiente de las imágenes
-\RequirePackage{ctable} %Para los cuadros, particularmente las líneas (\toprule, \midrule, \bottomrule)
-\RequirePackage{natbib} %Para la bibliografía
-\RequirePackage{calc} %Para poder realizar operaciones con las variables
-\RequirePackage{ifthen} %Para condiciones, usado en pendientes
-\RequirePackage[toc,section=section]{glossaries} %Para la definición de términos básicos
+\RequirePackage[T1]{fontenc} % Para evitar advertencia al compilar
+\RequirePackage[onehalfspacing]{setspace} % Para el espaciado del documento
+\RequirePackage[colorlinks=false]{hyperref} % Para hipervínculos en el documento (ver \iniciar)
+\RequirePackage{url} % Para dar formato a direcciones web.
+\RequirePackage{ragged2e} % Para justificar texto (\justifying)
+\RequirePackage{paralist} % Para enumeraciones dentro de párrafos
+\RequirePackage{enumitem} % Para enumeraciones
+\RequirePackage{color} % Para poner color en notas y pendientes
+\RequirePackage{fancyhdr} % Para poner numeración de páginas en la parte baja
+\RequirePackage{tocloft} % Para configurar índice general, de figuras y cuadros
+\RequirePackage{graphicx} % Para insertar imágenes
+\RequirePackage{float} % Para el ambiente de las imágenes
+\RequirePackage{ctable} % Para los cuadros, particularmente las líneas (\toprule, \midrule, \bottomrule)
+\RequirePackage{natbib} % Para la bibliografía
+\RequirePackage{calc} % Para poder realizar operaciones con las variables
+\RequirePackage{ifthen} % Para condiciones, usado en pendientes
+\RequirePackage[toc,section=section]{glossaries} % Para la definición de términos básicos
 \RequirePackage{listings} % Para formatear código fuente o algoritmos
 \RequirePackage[spanish,onelanguage]{algorithm2e} % [boxed,spanish,onelanguage] % Para escribir algoritmos en pseudo-codigo
 \RequirePackage{usebib} % Para el comando citetitle
@@ -1518,7 +1518,7 @@
 	\indexarparte{Referencias Bibliográficas} % Movida esta línea a acá para que el bookmark se genere antes del titulo.
 	%Si existen ítems bibtex de tipo @misc, es necesario borrar el comando \url de la propiedad URL. Causa problemas.
 	\renewcommand\bibsection{\capitulosinnumeracion{Referencias Bibliográficas}}
-	\bibliographystyle{uclamsc}
+	\bibliographystyle{apalike2}
 	\bibliography{\@bibliografia}
 	\end{spacing}
 }

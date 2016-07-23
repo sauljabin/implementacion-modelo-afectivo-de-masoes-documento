@@ -18,6 +18,9 @@ uclamsc 3.1, 2016/05
 - Eliminado comando codigofuente
 - Agregados comandos \setnombreilustracion, \setnombrecuadro, \setnombrealgoritmo
   \setnombregrafico, \setnombrelistado
+- Usado formato de referencias apalike2
+- Mejorado ambiente de pruebas
+- Archivos innecesarios eliminados
 
 ---------------------------------------
 Saúl Piña <sauljabin@gmail.com>
