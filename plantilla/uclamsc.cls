@@ -33,7 +33,7 @@
 
 \ProcessOptions\relax
 
-\if@doblecara %Para los márgenes
+\if@doblecara % Para los márgenes
   \LoadClass[12pt,letterpaper,final,openany,twoside]{book}
   \raggedbottom % Elimina warnings de vbox, causados por el requerimiendo de alineación \flushbottom de las páginas a doble cara.
 \else
@@ -62,7 +62,7 @@
 \RequirePackage{ifthen} % Para condiciones, usado en pendientes
 \RequirePackage[toc,section=section]{glossaries} % Para la definición de términos básicos
 \RequirePackage{listings} % Para formatear código fuente o algoritmos
-\RequirePackage[spanish,onelanguage]{algorithm2e} % [boxed,spanish,onelanguage] % Para escribir algoritmos en pseudo-codigo
+\RequirePackage[spanish,onelanguage]{algorithm2e} % Para escribir algoritmos en pseudo-codigo % [boxed,spanish,onelanguage]
 \RequirePackage{usebib} % Para el comando citetitle
 \RequirePackage{keyval} % Para los parametros de los ambientes
 
@@ -71,8 +71,8 @@
 
 %%%%% INICIO NUEVOS COMANDOS %%%%%
 
-%Comando: pendientes
-%Descripción: Llamado en \configurar para listar los pendientes de uclamsc.cls
+% Comando: pendientes
+% Descripción: Llamado en \configurar para listar los pendientes de uclamsc.cls
 \newcommand{\pendientes}{}
 
 % En caso que una variable sea obligatoria
@@ -587,9 +587,9 @@
 	\espaciodoble
 }
 
-%Comando: fuentecuadro
-%Descripción: Agrega la fuente del cuadro
-%Parámetros: [1] Numero de columnas del cuadro, [2] Fuente
+% Comando: fuentecuadro
+% Descripción: Agrega la fuente del cuadro
+% Parámetros: [1] Numero de columnas del cuadro, [2] Fuente
 \newcommand{\fuentecuadro}[2]{\multicolumn{#1}{l}{\bfseries Fuente:} #2. \hfill\espaciodoble}
 
 % Ambiente: cuadro
@@ -755,8 +755,8 @@
 	\renewcommand{\thechapter}{\Roman{chapter}} %Definir capítulos con números romanos
 	\renewcommand{\chaptermark}[1]{\markboth{}{}} %Eliminar encabezados de páginas
 
-	%Formato de secciones, subsecciones y subsubsecciones. (28pt es triple espaciado para fuentes de 12pt)
-	%(23pt es la medida conseguida comparando resultados con documento original de reglas)
+	% Formato de secciones, subsecciones y subsubsecciones. (28pt es triple espaciado para fuentes de 12pt)
+	% (23pt es la medida conseguida comparando resultados con documento original de reglas)
 	% Fomatos según manual de la UPEL.
 	\renewcommand{\section}{\@startsection{section}{1}{\z@}{22pt}{22pt}{\centering\normalfont\normalsize\bfseries}}
 	\renewcommand{\subsection}{\@startsection{subsection}{2}{\z@}{22pt}{22pt}{\normalfont\normalsize\bfseries\itshape}}
@@ -766,9 +766,9 @@
 	\glossarystyle{list}
 
 	\renewcommand*{\glossarysection}[2][\@gls@title]{
-		\def\@gls@title{##2}%
+		\def\@gls@title{##2}
 		\seccion{##1}
-		\@mkboth{}{}%
+		\@mkboth{}{}
 	}
 	\renewenvironment{theglossary}
 	{
@@ -946,7 +946,7 @@
 	\newcommand{\listoftabulationsname}{{Índice de \tabulationmnamepl}}
 	\newlistof[part]{tabulations}{loq}{\listoftabulationsname}
 
-	%Descripción: Crea el índice de cuadros.
+	% Descripción: Crea el índice de cuadros.
 	\renewcommand{\listoftabulations}{
 		% Incluye el indice de cuadros solo si tiene contenido que mostrar. Como el mismo comando \@starttoc es el que genera el .loq y agrega el contenido al documento, esta fue la única forma que encontré.
 		\IfFileExists{\jobname.loq}{
@@ -1518,7 +1518,7 @@
 	\indexarparte{Referencias Bibliográficas} % Movida esta línea a acá para que el bookmark se genere antes del titulo.
 	%Si existen ítems bibtex de tipo @misc, es necesario borrar el comando \url de la propiedad URL. Causa problemas.
 	\renewcommand\bibsection{\capitulosinnumeracion{Referencias Bibliográficas}}
-	\bibliographystyle{apalike2}
+	\bibliographystyle{uclamsc}
 	\bibliography{\@bibliografia}
 	\end{spacing}
 }
