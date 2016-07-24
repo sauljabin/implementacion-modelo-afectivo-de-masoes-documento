@@ -122,6 +122,9 @@ Comandos de indentificación
 * `\fechaenresumen`, incluye la fecha en las hojas de resumen y abstract.
 
 ### Comandos para Listas
+
+Comandos originales: [LaTeX List Structures](https://en.wikibooks.org/wiki/LaTeX/List_Structures).
+
 #### Enumeración
 Ambiente `enumeracion`, permite crear una lista enumerada, uso:
 ```TeX
