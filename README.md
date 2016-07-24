@@ -13,10 +13,11 @@ Barquisimeto, Venezuela.
 * Licencia GPL 3.
 
 ## Normas
-* [Manual para la Elaboración del Trabajo Conducente a Grado Académico de Especialización, Maestría y Doctorado](documentos/Manual-Trabajo-Grado-2002.pdf)
+* [Manual para la Elaboración del Trabajo Conducente a Grado Académico de Especialización, Maestría y Doctorado](doc/Manual-Trabajo-Grado-2002.pdf)
 
 ## Instrucciones
-* El código fuente de la plantilla de trabajo de grado se encuentra en el directorio **plantilla**.
+* El código fuente de la plantilla de trabajo de grado se encuentra en el directorio **src**.
+* El código de pruebas se encuentra en el directorio **test**, ejecutar `./test.sh`.
 * Para compilar correctamente el documento se recomienda usar el archivo **cli.sh** ("Command line interface", en caso de linux). Usar: `./cli.sh -h` para ayuda:
 
 ```

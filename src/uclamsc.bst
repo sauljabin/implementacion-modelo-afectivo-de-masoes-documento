@@ -1,4 +1,7 @@
+%%
 % Estilo uclamsc.bst basado en apalike2.bst
+%%
+
 % BibTeX `apalike' bibliography style (24-Jan-88 version)
 % Adapted from the `alpha' style, version 0.99a; for BibTeX version 0.99a.
 % Copyright (C) 1988, all rights reserved.
