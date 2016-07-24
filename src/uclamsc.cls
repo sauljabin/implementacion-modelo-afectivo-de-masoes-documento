@@ -713,16 +713,15 @@
 	\selectlanguage{spanish}
 	\setstretch{1.5}
 	\pagestyle{fancy} % Para sacar números de página en el pie de página y al centro
-	\renewcommand{\headrulewidth}{0pt} %Para no mostrar una línea en el encabezado
-	\renewcommand{\footrulewidth}{0pt} %Para no mostrar una línea en el pie de página
+	\renewcommand{\headrulewidth}{0pt} % Para no mostrar una línea en el encabezado
+	\renewcommand{\footrulewidth}{0pt} % Para no mostrar una línea en el pie de página
 	\setlength{\headheight}{14.5pt} % Para evitar advertencia al compilar :P
 	\renewcommand{\theequation}{\@arabic\c@equation} % Para la numeración de ecuaciones.
-	\setlength{\JustifyingParindent}{1.7em} %Sacado con regla tomando medidas del manual de trabajo de grado
+	\setlength{\JustifyingParindent}{1.7em} % Sacado con regla tomando medidas del manual de trabajo de grado
 	\hypersetup{
 		pdftitle = {\@titulo},
 		pdfauthor = {\@autor},
-		pdfkeywords = {\@palabrasclave},
-		pdfsubject={\@postgrado},
+		pdfsubject={Trabajo presentado en la Universidad Centroccidental Lisandro Alvarado para optar al grado de \@grado~\@mencion},
 		pdfborder={0 0 0},
 	    linkcolor = red,
 	    anchorcolor = red,
