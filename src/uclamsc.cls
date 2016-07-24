@@ -153,7 +153,7 @@
 
 % Palabras clave separadas por coma. (e.g. IA, PSO, etc.)
 \def\@palabrasclave{\variablefaltante{palabrasclave}}
-\newcommand{\palabrasclave}[1]{\def\@palabrasclave{#1}}
+\newcommand{\palabrasclave}[1]{\def\@palabrasclave{#1.}}
 
 % Título del trabajo en inglés
 \title{\variablefaltante{title}}
@@ -168,7 +168,7 @@
 
 % Palabras clave del trabajo en inglés.
 \def\@keywords{\variablefaltante{keywords}}
-\newcommand{\keywords}[1]{\def\@keywords{#1}}
+\newcommand{\keywords}[1]{\def\@keywords{#1.}}
 
 \def\@pendientes{false} % Determina si se usan o no los pendientes. Por defecto, desactivado. Para activar usar \habilitarpendientes
 \def\@notas{false} % Determina si se usan o no las notas. Por defecto, desactivado. Para activar usar \habilitarnotas
