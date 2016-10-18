@@ -7,7 +7,7 @@ Plantilla en LaTeX para elaborar trabajos de grado de la
 Universidad Centroccidental Lisandro Alvarado (UCLA).
 Barquisimeto, Venezuela.
 
-* v3.1 [Saúl Piña (Año 2014-2016)](https://github.com/sauljabin/plantilla-latex-trabajo-de-grado-ucla)
+* v3.2 [Saúl Piña (Año 2014-2016)](https://github.com/sauljabin/plantilla-latex-trabajo-de-grado-ucla)
 * v2.0 [Miguel León (Año 2013)](https://code.google.com/p/uclamsc)
 * v1.1 [Juan Rada y Rubén Parma  (Año 2009)](https://code.google.com/p/latex-uclamsc)
 * Licencia GPL 3.
@@ -23,7 +23,7 @@ Barquisimeto, Venezuela.
 ```
 Universidad Centoccidental Lisandro Alvarado
 Plantilla LaTeX Trabajo de Grado
-Versión v3.1
+Versión v3.2 (2016-10-18)
 
 USO:
    ./cli.sh [arg] - Crea el archivo pdf, Ejemplo: ./cli.sh proyecto
@@ -46,6 +46,7 @@ OPCIONES:
 }
 \bibliografia{nombre del archivo principal}
 Comandos de indentificación
+Configuraciones especiales
 \begin{document}
 	Incluir glosario si se va a usar
 	\input{capitulos/glosario}
@@ -90,6 +91,7 @@ Comandos de indentificación
 * `\autor{}`, nombre del autor.
 * `\ciautor{}`, cédula del autor.
 * `\citarcomo{}`, apellido del autor.
+* `\esautora`, permite incluir el género femenino: "Autora".
 
 #### Sobre el trabajo
 * `\titulo{}`, título de la investigación.
@@ -106,6 +108,7 @@ Comandos de indentificación
 #### Sobre el tutor
 * `\tutor{}`, nombre del tutor.
 * `\citutor{}`, cédula del tutor.
+* `\estutora`, permite incluir el género femenino: "Tutora".
 
 #### Sobre la universidad
 * `\ciudad{}`, ciudad de la defensa.
@@ -116,10 +119,17 @@ Comandos de indentificación
 * `\primerjurado{}`, nombre del primer jurado.
 * `\segundojurado{}`, nombre del segundo jurado.
 
-#### Opcionales
+### Configuraciones Especiales
 * `\mesencaratula`, incluye el mes en las hojas de portada y presentación.
 * `\tutorenpresentacion`, incluye el nombre del tutor en la presentación.
 * `\fechaenresumen`, incluye la fecha en las hojas de resumen y abstract.
+* `\habilitarpendientes`, muestra los pendientes y el índice de pendientes.
+* `\habilitarnotas`, muestra las anotaciones y el índice de anotaciones.
+* `\setnombreilustracion{}{}`, Personaliza el nombre a mostrar en ilustraciones, primer parametro singular, segundo plural, ejemplo: `\setnombreilustracion{Figura}{Figuras}`.
+* `\setnombrecuadro{}{}`, Personaliza el nombre a mostrar en cuadros, primer parametro singular, segundo plural, ejemplo: `\setnombrecuadro{Tabla}{Tablas}`.
+* `\setnombrealgoritmo{}{}`, Personaliza el nombre a mostrar en algoritmos, primer parametro singular, segundo plural, ejemplo: `\setnombrealgoritmo{Algoritmo}{Algoritmos}`.
+* `\setnombregrafico{}{}`, Personaliza el nombre a mostrar en gráficos, primer parametro singular, segundo plural, ejemplo: `\setnombregrafico{Grafico}{Gráficos}`.
+* `\setnombrelistado{}{}`, Personaliza el nombre a mostrar en listados, primer parametro singular, segundo plural, ejemplo: `\setnombrelistado{Listado}{Listados}`.
 
 ### Comandos para Listas
 
@@ -136,7 +146,7 @@ Ambiente `enumeracion`, permite crear una lista enumerada, uso:
 ```
 
 #### Viñetas
-* Ambiente `vinetas`, permite crear una lista no numerada, uso:
+Ambiente `vinetas`, permite crear una lista no numerada, uso:
 ```TeX
 \begin{vinetas}
 	\item foo
@@ -338,11 +348,9 @@ Para agregar un término al glosario se debe usar el comando `\agregartermino`, 
 ### Comandos Misceléneos
 #### Pendientes
 * `\pendiente{}`, permite anotar un pendiente.
-* `\habilitarpendientes`, muestra los pendientes y el índice de pendientes.
 
 #### Notas
 * `\nota{}`, permite crear una anotación.
-* `\habilitarnotas`, muestra las anotaciones y el índice de anotaciones.
 
 #### Espaciado
 * `\espaciodoble`, deja espacio vertical de 12pt.
@@ -356,8 +364,3 @@ Para agregar un término al glosario se debe usar el comando `\agregartermino`, 
 * `\comillas{}`, coloca un texto entre comillas dobles, ejemplo: "Ejemplo".
 * `\eningles{}`, coloca un texto entre comillas dobles, con paréntesis y cursivo, ejemplo: (*"Java Agent Development Framework"*, en inglés).
 * `\verb| |`, coloca un texto en formato de código fuente. Es una alternativa a los listados.
-* `\setnombreilustracion{}{}`, Personaliza el nombre a mostrar en ilustraciones, primer parametro singular, segundo plural, ejemplo: `\setnombreilustracion{Figura}{Figuras}`. Se coloca antes de `\begin{document}`.
-* `\setnombrecuadro{}{}`, Personaliza el nombre a mostrar en cuadros, primer parametro singular, segundo plural, ejemplo: `\setnombrecuadro{Tabla}{Tablas}`. Se coloca antes de `\begin{document}`.
-* `\setnombrealgoritmo{}{}`, Personaliza el nombre a mostrar en algoritmos, primer parametro singular, segundo plural, ejemplo: `\setnombrealgoritmo{Algoritmo}{Algoritmos}`. Se coloca antes de `\begin{document}`.
-* `\setnombregrafico{}{}`, Personaliza el nombre a mostrar en gráficos, primer parametro singular, segundo plural, ejemplo: `\setnombregrafico{Grafico}{Gráficos}`. Se coloca antes de `\begin{document}`.
-* `\setnombrelistado{}{}`, Personaliza el nombre a mostrar en listados, primer parametro singular, segundo plural, ejemplo: `\setnombrelistado{Listado}{Listados}`. Se coloca antes de `\begin{document}`.

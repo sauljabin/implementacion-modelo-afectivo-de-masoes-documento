@@ -21,8 +21,8 @@
 %%%%% INICIO CONFIGURACION GENERAL %%%%%
 
 \NeedsTeXFormat{LaTeX2e}
-\newcommand{\uclamscversion}{3.1}
-\newcommand{\uclamscdate}{2016/05/01}
+\newcommand{\uclamscversion}{3.2}
+\newcommand{\uclamscdate}{2016/10/18}
 \ProvidesClass{uclamsc}[\uclamscdate, \uclamscversion]
 \typeout{Reportar dudas y errores a <sauljabin@gmail.com>.}
 
@@ -123,6 +123,18 @@
 
 % Incluir tutor en la presentacion
 \newcommand{\tutorenpresentacion}{\def\@tutorenpresentacion{}}
+
+% Género del o la tutora
+\newcommand{\estutora}{\def\@estutora{}}
+
+% Imprime el género del o la tutora
+\newcommand{\tutorname}{\ifthenelse{\isundefined{\@estutora}}{Tutor}{Tutora}}
+
+% Género del o la autora
+\newcommand{\esautora}{\def\@esautora{}}
+
+% Imprime el género del o la tutora
+\newcommand{\autorname}{\ifthenelse{\isundefined{\@esautora}}{Autor}{Autora}}
 
 % Año de la defensa (e.g. 2009)
 \def\@anodefensa{\variablefaltante{anodefensa}}
@@ -1334,7 +1346,7 @@
 		\vfill
 		\begin{flushright}
 			Por: \MakeUppercase{\@autor}
-      \ifthenelse{\isundefined{\@tutorenpresentacion}}{}{\\Tutor: \MakeUppercase{\@tutor}}
+      \ifthenelse{\isundefined{\@tutorenpresentacion}}{}{\\\tutorname: \MakeUppercase{\@tutor}}
 		\end{flushright}
 		\vfill
 		{\@ciudad, \ifthenelse{\isundefined{\@mesencaratula}}{}{\@mesdefensa\ de }\@anodefensa.}
@@ -1360,7 +1372,7 @@
 				\begin{center}
 					\makebox[2in]{\hrulefill}\hspace{.5in}
 					\textbf{\@tutor}\\
-					\textbf{Tutor}
+					\textbf{\tutorname}
 				\end{center}
 			\end{flushleft}
 		\end{minipage}
@@ -1398,8 +1410,8 @@
 		\MakeUppercase{\textbf{\@titulo}}\\
   	\espaciotriple
   	\raggedleft{
-  		\textbf{Autor:} \@autor\\
-  		\textbf{Tutor:} \@tutor\\
+      \textbf{\autorname:} \@autor\\
+      \textbf{\tutorname:} \@tutor\\
   		\ifthenelse{\isundefined{\@fechaenresumen}}{}{
   			\textbf{Fecha:} \@mesdefensa\ \@anodefensa\\
   		}

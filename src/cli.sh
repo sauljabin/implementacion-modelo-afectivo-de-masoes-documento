@@ -23,7 +23,8 @@ if [[ "$BASH_VERSION" =~ ^[0-3] ]]
     exit 1
 fi
 
-VERSION="v3.1"
+VERSION="v3.2"
+FECHA="2016-10-18"
 NAME="Plantilla LaTeX Trabajo de Grado"
 UNI="Universidad Centoccidental Lisandro Alvarado"
 
@@ -90,7 +91,7 @@ usage() {
   echo ""
   echo "$UNI"
   echo "$NAME"
-  echo "${MSG[VERSION]} $VERSION"
+  echo "${MSG[VERSION]} $VERSION ($FECHA)"
   echo ""
   echo "${MSG[USE]}:"
   echo "   ./cli.sh [arg] - ${MSG[MAKE_PDF]}, ${MSG[EXAMPLE]}: ./cli.sh $FILE_NAME_PROJ"
