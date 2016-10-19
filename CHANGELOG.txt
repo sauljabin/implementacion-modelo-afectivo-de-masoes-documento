@@ -4,6 +4,11 @@ uclamsc 3.2, 2016/10
 ---------------------------------------
 
 - Agregado \estutora, \esautora
+- Cambiado \diadefensa a \diapresentacion, \mes a \mespresentacion,
+  \monthdefensa a \monthpresentacion, \anodefensa a \anopresentacion
+- Mejorada carta de aceptación
+- Mejorada presentación
+- Agregado comando \setnombretrabajo{}
 
 ---------------------------------------
 Saúl Piña <sauljabin@gmail.com>

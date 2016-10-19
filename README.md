@@ -110,18 +110,19 @@ Configuraciones especiales
 * `\citutor{}`, cédula del tutor.
 * `\estutora`, permite incluir el género femenino: "Tutora".
 
-#### Sobre la universidad
-* `\ciudad{}`, ciudad de la defensa.
-* `\diadefensa{}`, dia de la defensa.
-* `\mesdefensa{}`, mes de la defensa.
-* `\monthdefensa{}`, mes de la defensa en inglés para el abstract.
-* `\anodefensa{}`, año de la defensa.
+#### Sobre la presentación
+* `\ciudad{}`, ciudad de la presentación.
+* `\diapresentacion{}`, dia de la presentación.
+* `\mespresentacion{}`, mes de la presentación.
+* `\monthpresentacion{}`, mes de la presentación en inglés para el abstract.
+* `\anopresentacion{}`, año de la presentación.
 * `\primerjurado{}`, nombre del primer jurado.
 * `\segundojurado{}`, nombre del segundo jurado.
 
 ### Configuraciones Especiales
 * `\mesencaratula`, incluye el mes en las hojas de portada y presentación.
 * `\tutorenpresentacion`, incluye el nombre del tutor en la presentación.
+* `\setnombretrabajo{}`, define el nombre del trabajo, por defecto Trabajo de Grado.
 * `\fechaenresumen`, incluye la fecha en las hojas de resumen y abstract.
 * `\habilitarpendientes`, muestra los pendientes y el índice de pendientes.
 * `\habilitarnotas`, muestra las anotaciones y el índice de anotaciones.

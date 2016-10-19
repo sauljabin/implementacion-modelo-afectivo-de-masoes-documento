@@ -110,13 +110,21 @@
 \def\@ciudad{\variablefaltante{ciudad}}
 \newcommand{\ciudad}[1]{\def\@ciudad{#1}}
 
-% Día de la defensa. (e.g. 20)
-\def\@diadefensa{\variablefaltante{diadefensa}}
-\newcommand{\diadefensa}[1]{\def\@diadefensa{#1}}
+% Día de la presentación. (e.g. 20)
+\def\@diapresentacion{\variablefaltante{diapresentacion}}
+\newcommand{\diapresentacion}[1]{\def\@diapresentacion{#1}}
 
-% Mes de la defensa (e.g. Marzo)
-\def\@mesdefensa{\variablefaltante{mesdefensa}}
-\newcommand{\mesdefensa}[1]{\def\@mesdefensa{#1}}
+% Mes de la presentación (e.g. Marzo)
+\def\@mespresentacion{\variablefaltante{mespresentacion}}
+\newcommand{\mespresentacion}[1]{\def\@mespresentacion{#1}}
+
+% Año de la presentación (e.g. 2009)
+\def\@anopresentacion{\variablefaltante{anopresentacion}}
+\newcommand{\anopresentacion}[1]{\def\@anopresentacion{#1}}
+
+% Mes en inglés para el abstract
+\def\@monthpresentacion{\variablefaltante{monthpresentacion}}
+\newcommand{\monthpresentacion}[1]{\def\@monthpresentacion{#1}}
 
 % Incluir mes en la carátula
 \newcommand{\mesencaratula}{\def\@mesencaratula{}}
@@ -136,9 +144,9 @@
 % Imprime el género del o la tutora
 \newcommand{\autorname}{\ifthenelse{\isundefined{\@esautora}}{Autor}{Autora}}
 
-% Año de la defensa (e.g. 2009)
-\def\@anodefensa{\variablefaltante{anodefensa}}
-\newcommand{\anodefensa}[1]{\def\@anodefensa{#1}}
+% Define si es proyecto o trabajo final
+\def\@trabajoname{Trabajo de grado}
+\newcommand{\setnombretrabajo}[1]{\def\@trabajoname{#1}}
 
 % Nombre del tutor
 \def\@tutor{\variablefaltante{tutor}}
@@ -169,10 +177,6 @@
 
 % Título del trabajo en inglés
 \title{\variablefaltante{title}}
-
-% Mes en inglés para el abstract
-\def\@monthdefensa{\variablefaltante{monthdefensa}}
-\newcommand{\monthdefensa}[1]{\def\@monthdefensa{#1}}
 
 % Resumen del trabajo en inglés
 \def\@abstract{\variablefaltante{abstract}}
@@ -238,7 +242,7 @@
 % Comando: yo
 % Descripción: Introduce el apellido del autor y el año de este trabajo (e.g. Bar (2009)).
 % Uso: \yo
-\newcommand{\yo}{\@citarcomo\ (\@anodefensa)}
+\newcommand{\yo}{\@citarcomo\ (\@anopresentacion)}
 
 % Comando: agregartermino
 % Descripción: Agrega un término al glosario.
@@ -733,7 +737,7 @@
 	\hypersetup{
 		pdftitle = {\@titulo},
 		pdfauthor = {\@autor},
-		pdfsubject={Trabajo presentado en la Universidad Centroccidental Lisandro Alvarado para optar al grado de \@grado~\@mencion},
+		pdfsubject={\@trabajoname~presentado en la Universidad Centroccidental Lisandro Alvarado para optar al título de \@grado~\@mencion},
 		pdfborder={0 0 0},
 	    linkcolor = red,
 	    anchorcolor = red,
@@ -1321,7 +1325,7 @@
 				{\MakeUppercase{\@autor}}
 			\end{flushright}
 			\vfill
-			{\@ciudad, \ifthenelse{\isundefined{\@mesencaratula}}{}{\@mesdefensa\ de }\@anodefensa.}
+			{\@ciudad, \ifthenelse{\isundefined{\@mesencaratula}}{}{\@mespresentacion\ de }\@anopresentacion.}
 		\end{center}
 
 	\newpage
@@ -1340,7 +1344,7 @@
 		\vfill
 		{\textbf{\MakeUppercase{\@titulo}}}\\
 		\vfill
-		{Trabajo presentado para optar al grado de\\
+		{\@trabajoname~presentado para optar al título de\\
 		\@grado\\
     \@mencion}\\
 		\vfill
@@ -1349,7 +1353,7 @@
       \ifthenelse{\isundefined{\@tutorenpresentacion}}{}{\\\tutorname: \MakeUppercase{\@tutor}}
 		\end{flushright}
 		\vfill
-		{\@ciudad, \ifthenelse{\isundefined{\@mesencaratula}}{}{\@mesdefensa\ de }\@anodefensa.}
+		{\@ciudad, \ifthenelse{\isundefined{\@mesencaratula}}{}{\@mespresentacion~de }\@anopresentacion.}
 	\end{center}
 	\newpage
 }
@@ -1392,7 +1396,7 @@
 			\end{center}
 		\end{minipage}
 		\vfill
-		{\@ciudad, \@diadefensa~ de \@mesdefensa~ de \@anodefensa.}
+		{\@ciudad, \@diapresentacion~ de \@mespresentacion~ de \@anopresentacion.}
 	\end{center}
 	\newpage
 }
@@ -1412,9 +1416,9 @@
   	\raggedleft{
       \textbf{\autorname:} \@autor\\
       \textbf{\tutorname:} \@tutor\\
-  		\ifthenelse{\isundefined{\@fechaenresumen}}{}{
-  			\textbf{Fecha:} \@mesdefensa\ \@anodefensa\\
-  		}
+         \ifthenelse{\isundefined{\@fechaenresumen}}{}{
+              \textbf{Fecha:} \@mespresentacion~de \@anopresentacion\\
+          }
   	}
   	\espaciotriple
   	\centering{{\textbf{\MakeUppercase{Resumen}}}}\\
@@ -1437,28 +1441,34 @@
 		\MakeUppercase{Decanato de \@decanato}\\
 		\MakeUppercase{\@postgrado}\\
   	\espaciotriple
-  	\centering{{\textbf{\MakeUppercase{Aceptación  de Tutoría}}}}\\
-  	\espaciotriple
-  	\begin{singlespace}
-    \justifying{
-    Quien suscribe, \@tutor, C.I. \@citutor, hago constar que he aceptado la tutoría del
-    trabajo de grado titulado \MakeUppercase{\@titulo}, presentado por
-    \@autor, C.I. \@ciautor, para optar al título de \@grado, \@mencion.
-    }
-  	\end{singlespace}
     \espaciotriple
-    \begin{minipage}[t]{0.4\textwidth}
+  	\centering{{\textbf{\MakeUppercase{Aceptación  de Tutoría}}}}\\
+    \espaciotriple
+    \begin{flushright}
+      {\@ciudad, \@mespresentacion~ de \@anopresentacion.}
+    \end{flushright}
+    \espaciodoble
+  \end{center}
+
+  \justifying{
+  Quien suscribe, \@tutor, C.I. \@citutor, hago constar que he aceptado la tutoría del
+  trabajo de grado titulado \MakeUppercase{\@titulo}, presentado por
+  \@autor, C.I. \@ciautor, para optar al título de \@grado, \@mencion.
+  }
+
+  \begin{center}
+    \espaciotriple
+    \begin{minipage}[t]{0.6\textwidth}
 			\begin{flushleft}
 				\begin{center}
-					\makebox[2in]{\hrulefill}\hspace{.5in}
+					\makebox[2in]{\hrulefill}\hspace{.5in}\\
 					\textbf{\@tutor}\\
 					\textbf{C.I. \@citutor}
 				\end{center}
 			\end{flushleft}
 		\end{minipage}
-
-    \end{center}
-  	\newpage
+  \end{center}
+  \newpage
 }
 
 % Comando: hacerabstact
@@ -1477,9 +1487,9 @@
 	\raggedleft{
 		\textbf{Author:} \@autor\\
 		\textbf{Supervisor:} \@tutor\\
-		\ifthenelse{\isundefined{\@fechaenresumen}}{}{
-			\textbf{Date:} \@monthdefensa\ \@anodefensa\\
-		}
+        \ifthenelse{\isundefined{\@fechaenresumen}}{}{
+                \textbf{Date:} \@monthpresentacion, \@anopresentacion\\
+        }
 	}
 	\espaciotriple
 	\centering{\MakeUppercase{\textbf{Abstract}}}
