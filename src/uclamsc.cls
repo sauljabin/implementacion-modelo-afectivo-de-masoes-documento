@@ -547,7 +547,7 @@
 % \end{ilustracion}
 %
 \newenvironment{ilustracion}[1][]{
-	\begin{figure}[htcb]
+	\begin{figure}[htb]
 	\espaciotriple
 	\centering
 	\setkeys{tituloilustracion}{#1}
@@ -570,7 +570,7 @@
 % \end{ilustracion}
 %
 \newenvironment{grafico}[1][]{
-	\begin{figure}[htcb]
+	\begin{figure}[htb]
 	\espaciotriple
 	\centering
 	\setkeys{titulografico}{#1}
@@ -593,7 +593,7 @@
 % \end{algoritmo}
 
 \newenvironment{algoritmo}[1][]{
-	\begin{algorithm}[htcb]
+	\begin{algorithm}[htb]
 	\espaciodoble
 	\setkeys{tituloalgoritmo}{#1}
 	\footnotesize
