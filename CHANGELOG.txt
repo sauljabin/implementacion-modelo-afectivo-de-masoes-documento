@@ -9,6 +9,7 @@ uclamsc 3.2, 2016/10
 - Mejorada carta de aceptación
 - Mejorada presentación
 - Agregado comando \setnombretrabajo{}
+- Agregado comando \esproyecto
 
 ---------------------------------------
 Saúl Piña <sauljabin@gmail.com>

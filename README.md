@@ -122,7 +122,8 @@ Configuraciones especiales
 ### Configuraciones Especiales
 * `\mesencaratula`, incluye el mes en las hojas de portada y presentación.
 * `\tutorenpresentacion`, incluye el nombre del tutor en la presentación.
-* `\setnombretrabajo{}`, define el nombre del trabajo, por defecto Trabajo de Grado.
+* `\setnombretrabajo{}`, define el nombre del trabajo, por defecto es: Trabajo de grado.
+* `\esproyecto`, define el nombre del trabajo como: Proyecto de trabajo de grado.
 * `\fechaenresumen`, incluye la fecha en las hojas de resumen y abstract.
 * `\habilitarpendientes`, muestra los pendientes y el índice de pendientes.
 * `\habilitarnotas`, muestra las anotaciones y el índice de anotaciones.

@@ -66,6 +66,8 @@
 \RequirePackage{usebib} % Para el comando citetitle
 \RequirePackage{keyval} % Para los parametros de los ambientes
 
+\AtBeginDocument{\listfiles\makeglossaries\configurar}
+
 %%%%% FIN CONFIGURACION GENERAL %%%%%
 
 
@@ -144,9 +146,12 @@
 % Imprime el género del o la tutora
 \newcommand{\autorname}{\ifthenelse{\isundefined{\@esautora}}{Autor}{Autora}}
 
-% Define si es proyecto o trabajo final
+% Variable si es proyecto o trabajo final
 \def\@trabajoname{Trabajo de grado}
 \newcommand{\setnombretrabajo}[1]{\def\@trabajoname{#1}}
+
+% Define si es proyecto
+\newcommand{\esproyecto}{\setnombretrabajo{Proyecto de trabajo de grado}}
 
 % Nombre del tutor
 \def\@tutor{\variablefaltante{tutor}}
@@ -205,8 +210,6 @@
 % \configurar
 \newcommand{\habilitarnotas}{\def\@notas{true}}
 
-\AtBeginDocument{\listfiles\makeglossaries\configurar}
-
 % Comando: espaciotriple
 % Descripción: Agrega un espacio triple.
 \newcommand{\espaciotriple}{
@@ -258,103 +261,103 @@
 \newcommand{\agregartermino}[2]{\newglossaryentry{#1}{#2}}
 
 % Variables de ilustracion
-\newcommand{\ilustrationname}{Ilustración}
-\newcommand{\ilustrationnamepl}{Ilustraciones}
+\def\@ilustrationname{Ilustración}
+\def\@ilustrationnamepl{Ilustraciones}
 
 % Comando: setnombreilustracion
 % Descripción: Personaliza el nombre a mostrar en caso que no se quiera "ilustración"
 % Parametros: [1] Nombre singular [2] Nombre plural
 % Uso: \setnombreilustracion{Figura}{Figuras}
 \newcommand{\setnombreilustracion}[2]{
-  \renewcommand{\ilustrationname}{#1}
-  \renewcommand{\ilustrationnamepl}{#2}
+  \def\@ilustrationname{#1}
+  \def\@ilustrationnamepl{#2}
 }
 
 % Comando: refilustracion
 % Descripción: Hace referencia a una ilustración
 % Parametros: [1] Etiqueta
 % Uso: \refilustracion{etiqueta}
-\newcommand{\refilustracion}[1]{\hyperref[#1]{\MakeLowercase{\ilustrationname}~\ref{#1}}}
+\newcommand{\refilustracion}[1]{\hyperref[#1]{\MakeLowercase{\@ilustrationname}~\ref{#1}}}
 \newcommand{\refpilustracion}[1]{(ver \refilustracion{#1})}
 
 % Variables cuadro
-\newcommand{\tabulationmname}{Cuadro}
-\newcommand{\tabulationmnamepl}{Cuadros}
+\def\@tabulationmname{Cuadro}
+\def\@tabulationmnamepl{Cuadros}
 
 % Comando: setnombrecuadro
 % Descripción: Personaliza el nombre a mostrar en caso que no se quiera "cuadro"
 % Parametros: [1] Nombre singular [2] Nombre plural
 % Uso: \setnombrecuadro{Tabla}{Tablas}
 \newcommand{\setnombrecuadro}[2]{
-  \renewcommand{\tabulationmname}{#1}
-  \renewcommand{\tabulationmnamepl}{#2}
+  \def\@tabulationmname{#1}
+  \def\@tabulationmnamepl{#2}
 }
 
 % Comando: refcuadro
 % Descripción: Hace referencia a un cuadro
 % Parametros: [1] Etiqueta
 % Uso: \refcuadro{etiqueta}
-\newcommand{\refcuadro}[1]{\hyperref[#1]{\MakeLowercase{\tabulationmname}~\ref{#1}}}
+\newcommand{\refcuadro}[1]{\hyperref[#1]{\MakeLowercase{\@tabulationmname}~\ref{#1}}}
 \newcommand{\refpcuadro}[1]{(ver \refcuadro{#1})}
 
 % Variables algoritmo
-\newcommand{\algorithmname}{Algoritmo}
-\newcommand{\algorithmnamepl}{Algoritmos}
+\def\@algorithmname{Algoritmo}
+\def\@algorithmnamepl{Algoritmos}
 
 % Comando: setnombrealgoritmo
 % Descripción: Personaliza el nombre a mostrar en caso que no se quiera "algoritmo"
 % Parametros: [1] Nombre singular [2] Nombre plural
 % Uso: \setnombrealgoritmo{Algoritmo}{Algoritmos}
 \newcommand{\setnombrealgoritmo}[2]{
-  \renewcommand{\algorithmname}{#1}
-  \renewcommand{\algorithmnamepl}{#2}
+  \def\@algorithmname{#1}
+  \def\@algorithmnamepl{#2}
 }
 
 % Comando: refalgoritmo
 % Descripción: Hace referencia a un algoritmo
 % Parametros: [1] Etiqueta
 % Uso: \refalgoritmo{etiqueta}
-\newcommand{\refalgoritmo}[1]{\hyperref[#1]{\MakeLowercase{\algorithmname}~\ref{#1}}}
+\newcommand{\refalgoritmo}[1]{\hyperref[#1]{\MakeLowercase{\@algorithmname}~\ref{#1}}}
 \newcommand{\refpalgoritmo}[1]{(ver \refalgoritmo{#1})}
 
 % Variables grafico
-\newcommand{\chartname}{Gráfico}
-\newcommand{\chartnamepl}{Gráficos}
+\def\@chartname{Gráfico}
+\def\@chartnamepl{Gráficos}
 
 % Comando: setnombregrafico
 % Descripción: Personaliza el nombre a mostrar en caso que no se quiera "grafico"
 % Parametros: [1] Nombre singular [2] Nombre plural
 % Uso: \setnombrealgoritmo{Gráfico}{Gráficos}
 \newcommand{\setnombregrafico}[2]{
-  \renewcommand{\chartname}{#1}
-  \renewcommand{\chartnamepl}{#2}
+  \def\@chartname{#1}
+  \def\@chartnamepl{#2}
 }
 
 % Comando: refgrafico
 % Descripción: Hace referencia a un grafico
 % Parametros: [1] Etiqueta
 % Uso: \refgrafico{etiqueta}
-\newcommand{\refgrafico}[1]{\hyperref[#1]{\MakeLowercase{\chartname}~\ref{#1}}}
+\newcommand{\refgrafico}[1]{\hyperref[#1]{\MakeLowercase{\@chartname}~\ref{#1}}}
 \newcommand{\refpgrafico}[1]{(ver \refgrafico{#1})}
 
 % Variables listado
-\renewcommand{\lstlistingname}{Listado}
-\newcommand{\lstlistingnamepl}{Listados}
+\def\@lstlistingname{Listado}
+\def\@lstlistingnamepl{Listados}
 
 % Comando: setnombrelistado
 % Descripción: Personaliza el nombre a mostrar en caso que no se quiera "listado"
 % Parametros: [1] Nombre singular [2] Nombre plural
 % Uso: \setnombrelistado{Listado}{Listados}
 \newcommand{\setnombrelistado}[2]{
-  \renewcommand{\lstlistingname}{#1}
-  \renewcommand{\lstlistingnamepl}{#2}
+  \def\@lstlistingname{#1}
+  \def\@lstlistingnamepl{#2}
 }
 
 % Comando: reflistado
 % Descripción: Hace referencia a un listado
 % Parametros: [1] Etiqueta
 % Uso: \reflistado{etiqueta}
-\newcommand{\reflistado}[1]{\hyperref[#1]{\MakeLowercase{\lstlistingname}~\ref{#1}}}
+\newcommand{\reflistado}[1]{\hyperref[#1]{\MakeLowercase{\@lstlistingname}~\ref{#1}}}
 \newcommand{\refplistado}[1]{(ver \reflistado{#1})}
 
 % Para citar titulo
@@ -809,7 +812,7 @@
 	\setcounter{tocdepth}{5} % Para mostrar hasta los párrafos (caso de preliminares).
 
 	% Índice de listados (algoritmos y códigos)
-	\renewcommand{\lstlistlistingname}{{Índice de \lstlistingnamepl}}
+	\renewcommand{\lstlistlistingname}{{Índice de \@lstlistingnamepl}}
 
 	\renewcommand{\lstlistoflistings}{
 		\IfFileExists{\jobname.lol}{
@@ -839,7 +842,7 @@
 			\ifthenelse{\isundefined{\titulolistado@etiqueta}}{}{\label{\titulolistado@etiqueta}}
 			\ifthenelse{\isundefined{\titulolistado@indice}}{
 				\ifthenelse{\isundefined{\titulolistado@titulo}}{
-					\addcontentsline{lol}{lstlisting}{\hspace{-1.5em}\protect{\thelstlisting.} \lstlistingname~\thelstlisting}
+					\addcontentsline{lol}{lstlisting}{\hspace{-1.5em}\protect{\thelstlisting.} \@lstlistingname~\thelstlisting}
 				}{
 					\addcontentsline{lol}{lstlisting}{\hspace{-1.5em}\protect{\thelstlisting.} \titulolistado@titulo}}
 			}{
@@ -848,15 +851,15 @@
 		}{}
 		\ifthenelse{\isundefined{\titulolistado@sinleyenda}}{
 			\ifthenelse{\isundefined{\titulolistado@titulo}}{
-				\par\centering\normalfont\footnotesize\noindent{{\bfseries \lstlistingname\ifthenelse{\isundefined{\titulolistado@sinindice}}{~\thelstlisting}{}.} \ifthenelse{\isundefined{\titulolistado@fuente}}{}{\\ {\bfseries Fuente:} \titulolistado@fuente.}}\\
+				\par\centering\normalfont\footnotesize\noindent{{\bfseries \@lstlistingname\ifthenelse{\isundefined{\titulolistado@sinindice}}{~\thelstlisting}{}.} \ifthenelse{\isundefined{\titulolistado@fuente}}{}{\\ {\bfseries Fuente:} \titulolistado@fuente.}}\\
 			}{
-				\par\centering\normalfont\footnotesize\noindent{{\bfseries \lstlistingname\ifthenelse{\isundefined{\titulolistado@sinindice}}{~\thelstlisting}{}.} \titulolistado@titulo. \ifthenelse{\isundefined{\titulolistado@fuente}}{}{\\ {\bfseries Fuente:} \titulolistado@fuente.}}\\
+				\par\centering\normalfont\footnotesize\noindent{{\bfseries \@lstlistingname\ifthenelse{\isundefined{\titulolistado@sinindice}}{~\thelstlisting}{}.} \titulolistado@titulo. \ifthenelse{\isundefined{\titulolistado@fuente}}{}{\\ {\bfseries Fuente:} \titulolistado@fuente.}}\\
 			}
 		}{}
 	}
 
 	% Índice de gráficos
-	\newcommand{\listofchartsname}{{Índice de \chartnamepl}}
+	\newcommand{\listofchartsname}{{Índice de \@chartnamepl}}
 	\newlistof[part]{charts}{loc}{\listofchartsname}
 
 	% Comando: listofcharts
@@ -889,7 +892,7 @@
 			\ifthenelse{\isundefined{\titulografico@etiqueta}}{}{\label{\titulografico@etiqueta}}
 			\ifthenelse{\isundefined{\titulografico@indice}}{
 				\ifthenelse{\isundefined{\titulografico@titulo}}{
-					\addcontentsline{loc}{charts}{\protect{\thecharts.} \chartname~\thecharts}\par
+					\addcontentsline{loc}{charts}{\protect{\thecharts.} \@chartname~\thecharts}\par
 				}{
 					\addcontentsline{loc}{charts}{\protect{\thecharts.} \titulografico@titulo}\par
 				}
@@ -899,16 +902,16 @@
 		}{}
 		\ifthenelse{\isundefined{\titulografico@sinleyenda}}{
 			\ifthenelse{\isundefined{\titulografico@titulo}}{
-				\par\normalfont\footnotesize\noindent{{\bfseries \chartname\ifthenelse{\isundefined{\titulografico@sinindice}}{~\thecharts}{}.} \ifthenelse{\isundefined{\titulografico@fuente}}{}{\\ {\bfseries Fuente:} \titulografico@fuente.}}\\
+				\par\normalfont\footnotesize\noindent{{\bfseries \@chartname\ifthenelse{\isundefined{\titulografico@sinindice}}{~\thecharts}{}.} \ifthenelse{\isundefined{\titulografico@fuente}}{}{\\ {\bfseries Fuente:} \titulografico@fuente.}}\\
 			}{
-				\par\normalfont\footnotesize\noindent{{\bfseries \chartname\ifthenelse{\isundefined{\titulografico@sinindice}}{~\thecharts}{}.} \titulografico@titulo. \ifthenelse{\isundefined{\titulografico@fuente}}{}{\\ {\bfseries Fuente:} \titulografico@fuente.}}\\
+				\par\normalfont\footnotesize\noindent{{\bfseries \@chartname\ifthenelse{\isundefined{\titulografico@sinindice}}{~\thecharts}{}.} \titulografico@titulo. \ifthenelse{\isundefined{\titulografico@fuente}}{}{\\ {\bfseries Fuente:} \titulografico@fuente.}}\\
 			}
 		}{}
 	}
 
 
   % Índice de Ilustraciones
-	\newcommand{\listofilustrationsname}{{Índice de \ilustrationnamepl}}
+	\newcommand{\listofilustrationsname}{{Índice de \@ilustrationnamepl}}
 	\newlistof[part]{ilustrations}{loi}{\listofilustrationsname}
 
   %	Comando: listofilustrations
@@ -941,7 +944,7 @@
 			\ifthenelse{\isundefined{\tituloilustracion@etiqueta}}{}{\label{\tituloilustracion@etiqueta}}
 			\ifthenelse{\isundefined{\tituloilustracion@indice}}{
 				\ifthenelse{\isundefined{\tituloilustracion@titulo}}{
-					\addcontentsline{loi}{ilustrations}{\protect{\theilustrations.} \ilustrationname~\theilustrations}\par
+					\addcontentsline{loi}{ilustrations}{\protect{\theilustrations.} \@ilustrationname~\theilustrations}\par
 				}{
 					\addcontentsline{loi}{ilustrations}{\protect{\theilustrations.} \tituloilustracion@titulo}\par}
 			}{
@@ -950,15 +953,15 @@
 		}{}
 		\ifthenelse{\isundefined{\tituloilustracion@sinleyenda}}{
 			\ifthenelse{\isundefined{\tituloilustracion@titulo}}{
-				\par\normalfont\footnotesize\noindent{{\bfseries \ilustrationname\ifthenelse{\isundefined{\tituloilustracion@sinindice}}{~\theilustrations}{}.} \ifthenelse{\isundefined{\tituloilustracion@fuente}}{}{\\ {\bfseries Fuente:} \tituloilustracion@fuente.}}\\
+				\par\normalfont\footnotesize\noindent{{\bfseries \@ilustrationname\ifthenelse{\isundefined{\tituloilustracion@sinindice}}{~\theilustrations}{}.} \ifthenelse{\isundefined{\tituloilustracion@fuente}}{}{\\ {\bfseries Fuente:} \tituloilustracion@fuente.}}\\
 			}{
-				\par\normalfont\footnotesize\noindent{{\bfseries \ilustrationname\ifthenelse{\isundefined{\tituloilustracion@sinindice}}{~\theilustrations}{}.} \tituloilustracion@titulo. \ifthenelse{\isundefined{\tituloilustracion@fuente}}{}{\\ {\bfseries Fuente:} \tituloilustracion@fuente.}}\\
+				\par\normalfont\footnotesize\noindent{{\bfseries \@ilustrationname\ifthenelse{\isundefined{\tituloilustracion@sinindice}}{~\theilustrations}{}.} \tituloilustracion@titulo. \ifthenelse{\isundefined{\tituloilustracion@fuente}}{}{\\ {\bfseries Fuente:} \tituloilustracion@fuente.}}\\
 			}
 		}{}
 	}
 
 	% Índice de cuadros
-	\newcommand{\listoftabulationsname}{{Índice de \tabulationmnamepl}}
+	\newcommand{\listoftabulationsname}{{Índice de \@tabulationmnamepl}}
 	\newlistof[part]{tabulations}{loq}{\listoftabulationsname}
 
 	% Descripción: Crea el índice de cuadros.
@@ -989,7 +992,7 @@
 			\ifthenelse{\isundefined{\titulocuadro@etiqueta}}{}{\label{\titulocuadro@etiqueta}}
 			\ifthenelse{\isundefined{\titulocuadro@indice}}{
 				\ifthenelse{\isundefined{\titulocuadro@titulo}}{
-					\addcontentsline{loq}{tabulations}{\protect{\thetabulations.} \tabulationmname~\thealgs}\par
+					\addcontentsline{loq}{tabulations}{\protect{\thetabulations.} \@tabulationmname~\thealgs}\par
 				}{
 					\addcontentsline{loq}{tabulations}{\protect{\thetabulations.} \titulocuadro@titulo}\par
 				}
@@ -999,9 +1002,9 @@
 		}{}
 		\ifthenelse{\isundefined{\titulocuadro@sinleyenda}}{
 			\ifthenelse{\isundefined{\titulocuadro@titulo}}{
-				\espaciodoble\normalfont\footnotesize\noindent{{\bfseries\tabulationmname\ifthenelse{\isundefined{\titulocuadro@sinindice}}{~\thetabulations}{}.}\\\espaciodoble}
+				\espaciodoble\normalfont\footnotesize\noindent{{\bfseries\@tabulationmname\ifthenelse{\isundefined{\titulocuadro@sinindice}}{~\thetabulations}{}.}\\\espaciodoble}
 			}{
-				\espaciodoble\normalfont\footnotesize\noindent{{\bfseries\tabulationmname\ifthenelse{\isundefined{\titulocuadro@sinindice}}{~\thetabulations}{}.} \titulocuadro@titulo.\\\espaciodoble}
+				\espaciodoble\normalfont\footnotesize\noindent{{\bfseries\@tabulationmname\ifthenelse{\isundefined{\titulocuadro@sinindice}}{~\thetabulations}{}.} \titulocuadro@titulo.\\\espaciodoble}
 			}
 		}{}
 	}
@@ -1061,7 +1064,7 @@
 	}
 
 	% Índice de Algoritmos
-	\newcommand{\listofalgorithmsname}{{Índice de \algorithmnamepl}}
+	\newcommand{\listofalgorithmsname}{{Índice de \@algorithmnamepl}}
 	\newlistof[part]{algs}{lal}{\listofalgorithmsname}
 
 	% Comando: listofalgorithms
@@ -1093,7 +1096,7 @@
 			\ifthenelse{\isundefined{\tituloalgoritmo@etiqueta}}{}{\label{\tituloalgoritmo@etiqueta}}
 			\ifthenelse{\isundefined{\tituloalgoritmo@indice}}{
 				\ifthenelse{\isundefined{\tituloalgoritmo@titulo}}{
-					\addcontentsline{lal}{algs}{\protect{\thealgs.} \algorithmname~\thealgs}\par
+					\addcontentsline{lal}{algs}{\protect{\thealgs.} \@algorithmname~\thealgs}\par
 				}{
 					\addcontentsline{lal}{algs}{\protect{\thealgs.} \tituloalgoritmo@titulo}\par
 				}
@@ -1103,9 +1106,9 @@
 		}{}
 		\ifthenelse{\isundefined{\tituloalgoritmo@sinleyenda}}{
 			\ifthenelse{\isundefined{\tituloalgoritmo@titulo}}{
-				\centering\par\normalfont\footnotesize\noindent{{\bfseries \algorithmname\ifthenelse{\isundefined{\tituloalgoritmo@sinindice}}{~\thealgs}{}.} \ifthenelse{\isundefined{\tituloalgoritmo@fuente}}{}{\\ {\bfseries Fuente:} \tituloalgoritmo@fuente.}}\\
+				\centering\par\normalfont\footnotesize\noindent{{\bfseries \@algorithmname\ifthenelse{\isundefined{\tituloalgoritmo@sinindice}}{~\thealgs}{}.} \ifthenelse{\isundefined{\tituloalgoritmo@fuente}}{}{\\ {\bfseries Fuente:} \tituloalgoritmo@fuente.}}\\
 			}{
-				\centering\par\normalfont\footnotesize\noindent{{\bfseries \algorithmname\ifthenelse{\isundefined{\tituloalgoritmo@sinindice}}{~\thealgs}{}.} \tituloalgoritmo@titulo. \ifthenelse{\isundefined{\tituloalgoritmo@fuente}}{}{\\ {\bfseries Fuente:} \tituloalgoritmo@fuente.}}\\
+				\centering\par\normalfont\footnotesize\noindent{{\bfseries \@algorithmname\ifthenelse{\isundefined{\tituloalgoritmo@sinindice}}{~\thealgs}{}.} \tituloalgoritmo@titulo. \ifthenelse{\isundefined{\tituloalgoritmo@fuente}}{}{\\ {\bfseries Fuente:} \tituloalgoritmo@fuente.}}\\
 			}
 		}{}
 	}
