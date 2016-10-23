@@ -245,7 +245,7 @@
 % Comando: yo
 % Descripción: Introduce el apellido del autor y el año de este trabajo (e.g. Bar (2009)).
 % Uso: \yo
-\newcommand{\yo}{\@citarcomo\ (\@anopresentacion)}
+\newcommand{\yo}{\@citarcomo~(\@anopresentacion)}
 
 % Comando: agregartermino
 % Descripción: Agrega un término al glosario.
@@ -1328,7 +1328,7 @@
 				{\MakeUppercase{\@autor}}
 			\end{flushright}
 			\vfill
-			{\@ciudad, \ifthenelse{\isundefined{\@mesencaratula}}{}{\@mespresentacion\ de }\@anopresentacion.}
+			{\@ciudad, \ifthenelse{\isundefined{\@mesencaratula}}{}{\@mespresentacion~de }\@anopresentacion.}
 		\end{center}
 
 	\newpage
