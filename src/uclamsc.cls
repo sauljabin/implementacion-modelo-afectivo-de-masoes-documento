@@ -65,11 +65,9 @@
 \RequirePackage[spanish,onelanguage]{algorithm2e} % Para escribir algoritmos en pseudo-codigo % [boxed,spanish,onelanguage]
 \RequirePackage{usebib} % Para el comando citetitle
 \RequirePackage{keyval} % Para los parametros de los ambientes
-
-\AtBeginDocument{\listfiles\makeglossaries\configurar}
+\RequirePackage{pgfgantt} % Para gantt
 
 %%%%% FIN CONFIGURACION GENERAL %%%%%
-
 
 %%%%% INICIO NUEVOS COMANDOS %%%%%
 
@@ -399,7 +397,6 @@
 
 %%%%% FIN NUEVOS COMANDOS %%%%%
 
-
 %%%%% INICIO AMBIENTES %%%%%
 
 % Ambiente: lista
@@ -713,7 +710,6 @@
 	{\end{eqnarray*}}
 
 %%%%% FIN AMBIENTES %%%%%
-
 
 %%%%%%%%%%%%%%%%%%%%%%%%% INTERNO %%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -1464,7 +1460,7 @@
     \begin{minipage}[t]{0.6\textwidth}
 			\begin{flushleft}
 				\begin{center}
-					\makebox[2in]{\hrulefill}\hspace{.5in}\\
+					\makebox[2.5in]{\hrulefill}\hspace{.6in}\\
 					\textbf{\@tutor}\\
 					\textbf{C.I. \@citutor}
 				\end{center}
@@ -1682,7 +1678,6 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%% FIN INTERNO %%%%%%%%%%%%%%%%%%%%%%%%%
 
-
 %%%%% INICIO OTROS %%%%%
 
 % Mejorada la traduccion del paquete algorithm2e
@@ -1706,3 +1701,9 @@
 }{}
 
 %%%%% FIN OTROS %%%%%
+
+%%%%% INICIAR CONFIGURACION %%%%%
+
+\AtBeginDocument{\listfiles\makeglossaries\configurar}
+
+%%%%% FIN CONFIGURACION %%%%%
