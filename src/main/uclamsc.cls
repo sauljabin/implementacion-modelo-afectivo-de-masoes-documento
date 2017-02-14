@@ -1,6 +1,6 @@
 %%
 % Copyright (c):
-% 	2014-2016 Saúl Piña <sauljabin@gmail.com> (https://github.com/sauljabin/plantilla-latex-trabajo-de-grado-ucla).
+% 	2014-2017 Saúl Piña <sauljabin@gmail.com> (https://github.com/sauljabin/plantilla-latex-trabajo-de-grado-ucla).
 % 	2013 Miguel León <melf.ever.after@gmail.com> (https://code.google.com/p/uclamsc).
 % 	2009 Juan Rada Vilela <jcrada@gmail.com> y Rubén Parma <parmaia@gmail.com> (https://github.com/jcrada/latex-uclamsc).
 %
@@ -21,8 +21,8 @@
 %%%%% INICIO CONFIGURACION GENERAL %%%%%
 
 \NeedsTeXFormat{LaTeX2e}
-\newcommand{\uclamscversion}{3.2}
-\newcommand{\uclamscdate}{2016/10/18}
+\newcommand{\uclamscversion}{3.3}
+\newcommand{\uclamscdate}{2017/02/13}
 \ProvidesClass{uclamsc}[\uclamscdate, \uclamscversion]
 \typeout{Reportar dudas y errores a <sauljabin@gmail.com>.}
 

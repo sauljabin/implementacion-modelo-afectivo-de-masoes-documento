@@ -1,5 +1,13 @@
 ---------------------------------------
 Saúl Piña <sauljabin@gmail.com>
+uclamsc 3.3, 2017/02
+---------------------------------------
+
+- Cambio de estructura en carpetas
+- Se agrega archivo Makefile, Comandos: make proyecto, make trabajo, make prueba
+
+---------------------------------------
+Saúl Piña <sauljabin@gmail.com>
 uclamsc 3.2, 2016/10
 ---------------------------------------
 
