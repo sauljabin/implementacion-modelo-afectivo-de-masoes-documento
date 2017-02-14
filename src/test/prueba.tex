@@ -1,0 +1,31 @@
+\documentclass{uclamsc}
+
+\includeonly{
+  capitulo-prueba
+}
+
+\bibliografia{prueba}
+\setnombreilustracion{Figura}{Figuras}
+\setnombrecuadro{Tabla}{Tablas}
+\setnombrealgoritmo{Algo}{Algos}
+\setnombregrafico{Grafo}{Grafos}
+\setnombrelistado{Lst}{Lsts}
+\citarcomo{Apellido}
+\anopresentacion{2016}
+
+\begin{document}
+
+  \begin{preliminares}
+  	\hacercaratula
+  	\hacerpresentacion
+  	\haceraprobacion
+  	\hacerindices
+  \end{preliminares}
+
+  \begin{contenido}
+  	\include{capitulo-prueba}
+  \end{contenido}
+
+  \hacerbibliografia
+
+\end{document}

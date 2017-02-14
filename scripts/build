@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+
+pdflatex -synctex=1 -interaction=nonstopmode $1
+makeglossaries $1
+makeindex $1.glo -s $1.ist -t $1.glg -o $1.gls
+pdflatex -synctex=1 -interaction=nonstopmode $1
+makeglossaries $1
+makeindex $1.glo -s $1.ist -t $1.glg -o $1.gls
+pdflatex -synctex=1 -interaction=nonstopmode $1
+bibtex $1
+pdflatex -synctex=1 -interaction=nonstopmode $1
+pdflatex -synctex=1 -interaction=nonstopmode $1
+pdflatex -synctex=1 -interaction=nonstopmode $1
+makeglossaries $1
+makeindex $1.glo -s $1.ist -t $1.glg -o $1.gls
+pdflatex -synctex=1 -interaction=nonstopmode $1

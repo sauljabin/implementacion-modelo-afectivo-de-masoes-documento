@@ -7,7 +7,7 @@ Plantilla en LaTeX para elaborar trabajos de grado de la
 Universidad Centroccidental Lisandro Alvarado (UCLA).
 Barquisimeto, Venezuela.
 
-* v3.2 [Saúl Piña (Año 2014-2016)](https://github.com/sauljabin/plantilla-latex-trabajo-de-grado-ucla)
+* v3.2 [Saúl Piña (Año 2014-2017)](https://github.com/sauljabin/plantilla-latex-trabajo-de-grado-ucla)
 * v2.0 [Miguel León (Año 2013)](https://code.google.com/p/uclamsc)
 * v1.1 [Juan Rada y Rubén Parma  (Año 2009)](https://code.google.com/p/latex-uclamsc)
 * Licencia GPL 3.
@@ -16,26 +16,11 @@ Barquisimeto, Venezuela.
 * [Manual para la Elaboración del Trabajo Conducente a Grado Académico de Especialización, Maestría y Doctorado](doc/Manual-Trabajo-Grado-2002.pdf)
 
 ## Instrucciones
-* El código fuente de la plantilla de trabajo de grado se encuentra en el directorio **src**.
-* El código de pruebas se encuentra en el directorio **test**, ejecutar `./test.sh`.
-* Para compilar correctamente el documento se recomienda usar el archivo **cli.sh** ("Command line interface", en caso de linux). Usar: `./cli.sh -h` para ayuda:
-
-```
-Universidad Centoccidental Lisandro Alvarado
-Plantilla LaTeX Trabajo de Grado
-Versión v3.2 (2016-10-18)
-
-USO:
-   ./cli.sh [arg] - Crea el archivo pdf, Ejemplo: ./cli.sh proyecto
-
-OPCIONES:
-   -c, --clean - Limpiar archivos temporales
-                 Ejemplo: ./cli.sh -c
-   -b, --build - Generar archivo pdf, no elimina temporales
-                 Ejemplo: ./cli.sh -b proyecto
-   -h, --help  - Muestra la información sobre el uso
-                 Ejemplo: ./cli.sh -h
-```
+* El código fuente de la plantilla de trabajo de grado se encuentra en el directorio **src/main**.
+* El código de pruebas se encuentra en el directorio **src/test**.
+* Ejecutar ```make prueba``` para generar documento de prueba.
+* Ejecutar ```make proyecto``` para generar proyecto.
+* Ejecutar ```make trabajo``` para generar trabajo de grado.
 
 ## Manual
 ### Cuerpo del documento principal
