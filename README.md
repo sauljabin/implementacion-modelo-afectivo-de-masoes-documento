@@ -18,9 +18,14 @@ Barquisimeto, Venezuela.
 ## Instrucciones
 * El código fuente de la plantilla de trabajo de grado se encuentra en el directorio **src/main**.
 * El código de pruebas se encuentra en el directorio **src/test**.
+* Los archivos pdf se generarán en el directorio **build**.
 * Ejecutar ```make prueba``` para generar documento de prueba.
 * Ejecutar ```make proyecto``` para generar proyecto.
 * Ejecutar ```make trabajo``` para generar trabajo de grado.
+* Ejecutar ```make docker-build``` para crear imagen de docker.
+* Ejecutar ```make docker-prueba``` para generar documento de prueba con docker.
+* Ejecutar ```make docker-proyecto``` para generar proyecto con docker.
+* Ejecutar ```make docker-trabajo``` para generar trabajo de grado con docker.
 
 ## Manual
 ### Cuerpo del documento principal

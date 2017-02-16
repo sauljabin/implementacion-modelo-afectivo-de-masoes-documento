@@ -56,7 +56,6 @@
 \RequirePackage{tocloft} % Para configurar índice general, de figuras y cuadros
 \RequirePackage{graphicx} % Para insertar imágenes
 \RequirePackage{float} % Para el ambiente de las imágenes
-\RequirePackage{ctable} % Para los cuadros, particularmente las líneas (\toprule, \midrule, \bottomrule)
 \RequirePackage{natbib} % Para la bibliografía
 \RequirePackage{calc} % Para poder realizar operaciones con las variables
 \RequirePackage{ifthen} % Para condiciones, usado en pendientes
@@ -66,6 +65,7 @@
 \RequirePackage{usebib} % Para el comando citetitle
 \RequirePackage{keyval} % Para los parametros de los ambientes
 \RequirePackage{pgfgantt} % Para gantt
+\RequirePackage{ctable} % Para los cuadros, particularmente las líneas (\toprule, \midrule, \bottomrule)
 
 %%%%% FIN CONFIGURACION GENERAL %%%%%
 

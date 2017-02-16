@@ -3,8 +3,11 @@ Saúl Piña <sauljabin@gmail.com>
 uclamsc 3.3, 2017/02
 ---------------------------------------
 
-- Cambio de estructura en carpetas
-- Se agrega archivo Makefile, Comandos: make proyecto, make trabajo, make prueba
+- Actualización de estructura de carpeta
+- Se agrega archivo Makefile, Comandos: make proyecto, make trabajo, make prueba,
+  make docker-build, make docker-proyecto, make docker-trabajo, make docker-prueba
+- Se agrega Dockerfile
+- Se elimina cli.sh
 
 ---------------------------------------
 Saúl Piña <sauljabin@gmail.com>
