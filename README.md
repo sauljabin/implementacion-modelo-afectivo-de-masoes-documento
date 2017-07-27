@@ -2,20 +2,20 @@
 
 [![Stories in Ready](https://badge.waffle.io/sauljabin/plantilla-latex-trabajo-de-grado-ucla.png?label=ready&title=Ready)](https://waffle.io/sauljabin/plantilla-latex-trabajo-de-grado-ucla)
 
-## Descripción
+# Descripción
 Plantilla en LaTeX para elaborar trabajos de grado de la
 Universidad Centroccidental Lisandro Alvarado (UCLA).
 Barquisimeto, Venezuela.
 
-* v3.3 [Saúl Piña (Año 2014-2017)](https://github.com/sauljabin/plantilla-latex-trabajo-de-grado-ucla)
+* v3.4 [Saúl Piña (Año 2014-2017)](https://github.com/sauljabin/plantilla-latex-trabajo-de-grado-ucla)
 * v2.0 [Miguel León (Año 2013)](https://code.google.com/p/uclamsc)
 * v1.1 [Juan Rada y Rubén Parma  (Año 2009)](https://code.google.com/p/latex-uclamsc)
 * Licencia GPL 3.
 
-## Normas
+# Normas
 * [Manual para la Elaboración del Trabajo Conducente a Grado Académico de Especialización, Maestría y Doctorado](doc/Manual-Trabajo-Grado-2002.pdf)
 
-## Instrucciones
+# Instrucciones
 * El código fuente de la plantilla de trabajo de grado se encuentra en el directorio **src/main**.
 * El código de pruebas se encuentra en el directorio **src/test**.
 * Los archivos pdf se generarán en el directorio **build**.
@@ -27,8 +27,7 @@ Barquisimeto, Venezuela.
 * Ejecutar ```make docker-proyecto``` para generar proyecto con docker.
 * Ejecutar ```make docker-trabajo``` para generar trabajo de grado con docker.
 
-## Manual
-### Cuerpo del documento principal
+# Cuerpo del documento principal
 ```TeX
 \documentclass{uclamsc}
 \includeonly{
@@ -55,7 +54,7 @@ Configuraciones especiales
 \end{document}
 ```
 
-### Ambientes Principales
+# Ambientes Principales
 #### Preliminares
 * `\hacercaratula`, crea la carátula exterior de la tesis.
 * `\hacerpresentacion`, crea la hoja de presentación de la tesis.
@@ -76,7 +75,7 @@ Configuraciones especiales
 #### Anexos
 * `\anexo{}`, para tilular e indexar un anexo.
 
-### Comandos de Identificación
+# Comandos de Identificación
 #### Sobre el autor
 * `\autor{}`, nombre del autor.
 * `\ciautor{}`, cédula del autor.
@@ -109,7 +108,7 @@ Configuraciones especiales
 * `\primerjurado{}`, nombre del primer jurado.
 * `\segundojurado{}`, nombre del segundo jurado.
 
-### Configuraciones Especiales
+# Configuraciones Especiales
 * `\mesencaratula`, incluye el mes en las hojas de portada y presentación.
 * `\tutorenpresentacion`, incluye el nombre del tutor en la presentación.
 * `\setnombretrabajo{}`, define el nombre del trabajo, por defecto es: Trabajo de grado.
@@ -123,7 +122,7 @@ Configuraciones especiales
 * `\setnombregrafico{}{}`, Personaliza el nombre a mostrar en gráficos, primer parametro singular, segundo plural, ejemplo: `\setnombregrafico{Grafico}{Gráficos}`.
 * `\setnombrelistado{}{}`, Personaliza el nombre a mostrar en listados, primer parametro singular, segundo plural, ejemplo: `\setnombrelistado{Listado}{Listados}`.
 
-### Comandos para Listas
+# Comandos para Listas
 
 Comandos originales: [LaTeX List Structures](https://en.wikibooks.org/wiki/LaTeX/List_Structures).
 
@@ -156,16 +155,7 @@ Ambiente `enumeracionenparrafo`, para enumerar dentro de un párrafo, uso:
 \end{enumeracionenparrafo}
 ```
 
-### Ambientes indexados y especiales
-* Referencia a los ambientes con etiquetas mediante el uso del comando `\ref{etiqueta}`.
-* Referencia a una ilustración usando el comando `\refilustracion{etiqueta}`.
-* Referencia a un gráfico usando el comando `\refgrafico{etiqueta}`.
-* Referencia a un cuadro usando el comando `\refcuadro{etiqueta}`.
-* Referencia a un grafico usando el comando `\reflistado{etiqueta}`.
-* Referencia a un algoritmo usando el comando `\refalgoritmo{etiqueta}`.
-* Referencia a una ecuación usando el comando `\refecuacion{etiqueta}`.
-
-#### Ilustración
+# Ilustración
 Ambiente `ilustracion` permite mostrar una ilustración, uso:
 ```TeX
 \begin{ilustracion}[parametros]
@@ -184,7 +174,9 @@ indice | Permite personalizar el índice  |indice=Índice personalizado
 sinleyenda | Evita que se muestre el título | sinleyenda
 sinindice | Evita que se muestre en el índice | sinindice
 
-#### Gráfico
+Referencia a una ilustración usando el comando `\refilustracion{etiqueta}`.
+
+# Gráfico
 Ambiente `grafico` para mostrar un gráfico, uso:
 ```TeX
 \begin{grafico}[parametros]
@@ -203,7 +195,9 @@ indice | Permite personalizar el índice | indice=Índice personalizado
 sinleyenda | Evita que se muestre el título | sinleyenda
 sinindice | Evita que se muestre en el índice | sinindice
 
-#### Cuadro
+Referencia a un gráfico usando el comando `\refgrafico{etiqueta}`.
+
+# Cuadro
 Ambiente `cuadro` para mostrar una tabla y agregarla al índice de cuadros, uso:
 ```TeX
 \begin{cuadro}[parametros]{columnas}
@@ -225,15 +219,9 @@ sinleyenda | Evita que se muestre el título | sinleyenda
 sinindice | Evita que se muestre en el índice | sinindice
 columnas | Parametro obligatorio, configura las columnas | lcc
 
-#### Cita textual
-Ambiente `citatextual` Prepara el contexto para una cita textual de más de 40 palabras, uso:
-```TeX
-\begin{citatextual}
-	...Esto es una cita textual... (p. 199)
-\end{citatextual}
-```
+Referencia a un cuadro usando el comando `\refcuadro{etiqueta}`.
 
-#### Ecuación
+# Ecuación
 Ambiente `ecuacion` para insertar una ecuación con etiqueta para hacerle referencia, uso:
 ```TeX
 \begin{ecuacion}{etiqueta}
@@ -248,8 +236,9 @@ Ambiente `ecuaciones` para insertar una lista de ecuaciones numeradas, uso:
 	z = x + 2
 \end{ecuaciones}
 ```
+Referencia a una ecuación usando el comando `\refecuacion{etiqueta}`.
 
-#### Listado
+# Listado
 Ambiente `listado` para insertar un listado, usado principalmente para códigos y algoritmos, en el parámetro puede indicarse un lenguaje ya soportado, uno definido por el usuario o nada, uso:
 ```TeX
 \begin{listado}[parametros]{lenguaje}
@@ -286,7 +275,9 @@ sinleyenda | Evita que se muestre el título | sinleyenda
 sinindice | Evita que se muestre en el índice | sinindice
 lenguaje | Parametro obligatorio, configura lel lenguaje | [LaTeX]TeX
 
-#### Algoritmo
+Referencia a un grafico usando el comando `\reflistado{etiqueta}`.
+
+# Algoritmo
 Ambiente algoritmo para escribir algoritmos en pseudocodigo. Los parámetros opcionales lo agregan al índice de algoritmos, uso:
 ```TeX
 \begin{algoritmo}[parametros]
@@ -307,7 +298,17 @@ indice | Permite personalizar el índice | indice=Índice personalizado
 sinleyenda | Evita que se muestre el título | sinleyenda
 sinindice | Evita que se muestre en el índice | sinindice
 
-### Comandos de Referencia Bibliográfica
+Referencia a un algoritmo usando el comando `\refalgoritmo{etiqueta}`.
+
+# Cita textual
+Ambiente `citatextual` Prepara el contexto para una cita textual de más de 40 palabras, uso:
+```TeX
+\begin{citatextual}
+	...Esto es una cita textual... (p. 199)
+\end{citatextual}
+```
+
+# Comandos de Referencia Bibliográfica
 Para incluir las citas referenciales, agregue al archivo **.bib** las descripciones de las mismas en formato **bibtex**. Normalmente las descripciones de libros y artículos conseguidos en Internet se ofrecen en este formato.
 
 Para insertar referencias en el documento, utilice los comandos del paquete [natbib](http://www.ctan.org/pkg/natbib). Utilice `\citet{}` si el nombre del autor es parte de la narrativa, si no, utilice el comando `\citep{}`.
@@ -330,18 +331,21 @@ Ejemplos:
 ```
 Para citar sólo el título su puede usar el comando `\citetitle{}` y `\citeptitle{}`.
 
-### Glosario
-El comando `\hacerglosario` ajusta y titula **Definición de Términos Básicos** la sección de términos del glosario insertada por el comando `\printglossary`. Véase uso del paquete [glossaries](http://www.ctan.org/tex-archive/macros/latex/contrib/glossaries). Referencia rápida en [LaTeX/Glossary](http://en.wikibooks.org/wiki/LaTeX/Glossary).
+# Glosario
+El comando `\hacerglosario` ajusta y titula (**Definición de Términos Básicos**) la sección de términos del glosario insertada por el comando `\printglossary`. Véase uso del paquete [glossaries](http://www.ctan.org/tex-archive/macros/latex/contrib/glossaries). Referencia rápida en [LaTeX/Glossary](http://en.wikibooks.org/wiki/LaTeX/Glossary).
 
 El comando `\hacerglosarioconacronimos`, igual que `\hacerglosario` pero titulando la sección **Glosario de Acrónimos y Términos**, más apropiado para cuando se definen acrónimos en el glosario.
 
 Para agregar un término al glosario se debe usar el comando `\agregartermino`, para referirse al término usar el comando `\gls{}` o `\glspl{}` para plurales. Los términos deben ser agregados en el archivo **capitulos/glosario**, y debe incluirse en el cuerpo del documento con el comando `\input{capitulos/glosario}`.
 
-### Comandos Misceléneos
+# Comandos Misceléneos
+
 #### Pendientes
+* `\habilitarpendientes`, muestra los pendientes y el índice de pendientes, se coloca en configuraciones especiales.
 * `\pendiente{}`, permite anotar un pendiente.
 
 #### Notas
+* `\habilitarnotas`, muestra las anotaciones y el índice de anotaciones, se coloca en configuraciones especiales.
 * `\nota{}`, permite crear una anotación.
 
 #### Espaciado
@@ -356,3 +360,4 @@ Para agregar un término al glosario se debe usar el comando `\agregartermino`, 
 * `\comillas{}`, coloca un texto entre comillas dobles, ejemplo: "Ejemplo".
 * `\eningles{}`, coloca un texto entre comillas dobles, con paréntesis y cursivo, ejemplo: (*"Java Agent Development Framework"*, en inglés).
 * `\verb| |`, coloca un texto en formato de código fuente. Es una alternativa a los listados.
+* Referencia a los ambientes con etiquetas mediante el uso del comando `\ref{etiqueta}`, también sirve para mencionar secciones.

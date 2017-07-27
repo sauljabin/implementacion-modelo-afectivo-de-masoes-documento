@@ -21,8 +21,8 @@
 %%%%% INICIO CONFIGURACION GENERAL %%%%%
 
 \NeedsTeXFormat{LaTeX2e}
-\newcommand{\uclamscversion}{3.3}
-\newcommand{\uclamscdate}{2017/02/13}
+\newcommand{\uclamscversion}{3.4}
+\newcommand{\uclamscdate}{2017/07/26}
 \ProvidesClass{uclamsc}[\uclamscdate, \uclamscversion]
 \typeout{Reportar dudas y errores a <sauljabin@gmail.com>.}
 
@@ -547,7 +547,7 @@
 % \end{ilustracion}
 %
 \newenvironment{ilustracion}[1][]{
-	\begin{figure}[htb]
+	\begin{figure}[H]
 	\espaciotriple
 	\centering
 	\setkeys{tituloilustracion}{#1}
@@ -570,7 +570,7 @@
 % \end{ilustracion}
 %
 \newenvironment{grafico}[1][]{
-	\begin{figure}[htb]
+	\begin{figure}[H]
 	\espaciotriple
 	\centering
 	\setkeys{titulografico}{#1}
