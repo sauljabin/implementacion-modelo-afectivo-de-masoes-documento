@@ -67,6 +67,7 @@
 \RequirePackage{pgfgantt} % Para gantt
 \RequirePackage{ctable} % Para los cuadros, particularmente las líneas (\toprule, \midrule, \bottomrule)
 \RequirePackage{amssymb} % Para símbolos matemáticos
+\RequirePackage{longtable} % Para cuadros
 
 %%%%% FIN CONFIGURACION GENERAL %%%%%
 

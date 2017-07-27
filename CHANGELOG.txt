@@ -7,6 +7,7 @@ uclamsc 3.4, 2017/07
 - Se agrega comando \codigoenlinea
 - Se agrega palabras clave a metadata del PDF
 - Se agrega comando para símbolo de números reales \R, \Rcuadrado y \Rcubo
+- Actualización de comando cuadro ahora usa longtable
 
 ---------------------------------------
 Saúl Piña <sauljabin@gmail.com>
