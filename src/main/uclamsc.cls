@@ -634,13 +634,14 @@
 % 	\bottomrule
 % 	\fuentecuadro{4}{Juan Rada (2005)}
 % \end{cuadro}
+\define@key{cuadro}{letra}{\def\cuadro@letra{#1}}
 \newenvironment{cuadro}[2][]
 {
 	\centering
 	\espaciodoble
-	\setkeys{titulocuadro}{#1}
+	\setkeys{cuadro}{#1}
 	\titulocuadro
-	\scriptsize
+	\ifthenelse{\isundefined{\cuadro@letra}}{\scriptsize}{\cuadro@letra}
 	\begin{spacing}{1.5}
 	\begin{longtable}{#2}
 }
@@ -986,11 +987,11 @@
 	}
 	\renewcommand{\thetabulations}{\@arabic\c@tabulations}
 
-	\define@key{titulocuadro}{titulo}{\def\titulocuadro@titulo{##1}}
-	\define@key{titulocuadro}{etiqueta}{\def\titulocuadro@etiqueta{##1}}
-	\define@key{titulocuadro}{indice}{\def\titulocuadro@indice{##1}}
-	\define@key{titulocuadro}{sinleyenda}[true]{\def\titulocuadro@sinleyenda{##1}}
-	\define@key{titulocuadro}{sinindice}[true]{\def\titulocuadro@sinindice{##1}}
+	\define@key{cuadro}{titulo}{\def\titulocuadro@titulo{##1}}
+	\define@key{cuadro}{etiqueta}{\def\titulocuadro@etiqueta{##1}}
+	\define@key{cuadro}{indice}{\def\titulocuadro@indice{##1}}
+	\define@key{cuadro}{sinleyenda}[true]{\def\titulocuadro@sinleyenda{##1}}
+	\define@key{cuadro}{sinindice}[true]{\def\titulocuadro@sinindice{##1}}
 
 	\newcommand{\titulocuadro}{
 		\ifthenelse{\isundefined{\titulocuadro@sinindice}}{

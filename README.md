@@ -121,7 +121,7 @@ Configuraciones especiales
 * `\setnombrealgoritmo{}{}`, Personaliza el nombre a mostrar en algoritmos, primer parametro singular, segundo plural, ejemplo: `\setnombrealgoritmo{Algoritmo}{Algoritmos}`.
 * `\setnombregrafico{}{}`, Personaliza el nombre a mostrar en gráficos, primer parametro singular, segundo plural, ejemplo: `\setnombregrafico{Grafico}{Gráficos}`.
 * `\setnombrelistado{}{}`, Personaliza el nombre a mostrar en listados, primer parametro singular, segundo plural, ejemplo: `\setnombrelistado{Listado}{Listados}`.
-* `\numerarsecciones`, Cambia el formato de presentación de las secciones y les agrega numeración. 
+* `\numerarsecciones`, Cambia el formato de presentación de las secciones y les agrega numeración.
 
 # Comandos para Listas
 
@@ -218,6 +218,7 @@ etiqueta | Valor que pemite hacer referencia al cuadro | etiqueta=cuadro1
 indice | Permite personalizar el índice | indice=Índice personalizado
 sinleyenda | Evita que se muestre el título | sinleyenda
 sinindice | Evita que se muestre en el índice | sinindice
+letra | Estilo de letra a usar en el cuadro | letra=\tiny
 columnas | Parametro obligatorio, configura las columnas | lcc
 
 Referencia a un cuadro usando el comando `\refcuadro{etiqueta}`.
