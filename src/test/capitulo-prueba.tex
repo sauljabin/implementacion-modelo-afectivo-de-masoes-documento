@@ -102,6 +102,40 @@ Inicialización\;
 	\fuentecuadro{4}{Esta es la fuente}
 \end{cuadro}
 
+\espaciodoble\textbf{Prueba de multirow:}
+
+\begin{cuadro}[titulo={Team sheet}, indice=Ejemplo de multirow, etiqueta=ejemplomultirow]{lll}
+\toprule
+\multicolumn{3}{ c }{Team sheet} \\
+\midrule
+Goalkeeper & GK & Paul Robinson \\ \hline
+\multirow{4}{*}{Defenders} & LB & Lucas Radebe \\
+ & DC & Michael Duburry \\
+ & DC & Dominic Matteo \\
+ & RB & Didier Domi \\ \hline
+\multirow{3}{*}{Midfielders} & MC & David Batty \\
+ & MC & Eirik Bakke \\
+ & MC & Jody Morris \\ \hline
+Forward & FW & Jamie McMaster \\ \hline
+\multirow{2}{*}{Strikers} & ST & Alan Smith \\
+ & ST & Mark Viduka \\
+ \bottomrule
+\end{cuadro}
+
+\begin{sidewaysfigure}
+\espaciodoble\textbf{Prueba rotación de cuadro o imagenes:}
+	\begin{cuadro}[titulo={Piedra, Papel o Tijeras – Forma Normal}, indice=Ejemplo de ratación, etiqueta=ejemplocuainvertido]{lccc}
+		\toprule
+		Jugares I/II & Piedra & Papel & Tijeras\\
+		\midrule
+		Piedra   & (0,0) & (-1,1) & (1,-1)\\
+		Papel   & (1,-1) & (0,0) & (-1,1)\\
+		Tijeras   & (-1,1) & (1,-1) & (0,0)\\
+		\bottomrule
+		\fuentecuadro{4}{Esta es la fuente}
+	\end{cuadro}
+\end{sidewaysfigure}
+
 \break
 
 \espaciodoble\textbf{Prueba de glosario:}

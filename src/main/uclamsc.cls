@@ -68,6 +68,8 @@
 \RequirePackage{ctable} % Para los cuadros, particularmente las líneas (\toprule, \midrule, \bottomrule)
 \RequirePackage{amssymb} % Para símbolos matemáticos
 \RequirePackage{longtable} % Para cuadros
+\RequirePackage{rotating} % Para rotar images, cuadros, etc, https://en.wikibooks.org/wiki/LaTeX/Rotations
+\RequirePackage{multirow} % Comandos extras para cuadros
 
 %%%%% FIN CONFIGURACION GENERAL %%%%%
 
