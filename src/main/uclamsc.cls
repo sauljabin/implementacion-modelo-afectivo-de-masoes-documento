@@ -40,7 +40,7 @@
   \LoadClass[12pt,letterpaper,final,oneside]{book}
 \fi
 
-\RequirePackage[english,spanish,es-lcroman]{babel} % english para el abstract, es-lcroman para números romanos en minúsculas en páginas preliminares
+\RequirePackage[english,spanish,es-lcroman,es-nodecimaldot]{babel} % english para el abstract, es-lcroman para números romanos en minúsculas en páginas preliminares
 \RequirePackage[top=3cm,bottom=3cm,left=3cm,right=3cm,bindingoffset=1cm]{geometry}
 \RequirePackage[utf8]{inputenc} % El encoding por defecto es utf8, aunque en Windows podría traer problemas (e.g. no mostrar caracteres acentuados)
 \RequirePackage{lmodern} % Mejora la codificación de {fontenc}, [LY1] arroja warings
