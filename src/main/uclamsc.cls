@@ -176,7 +176,7 @@
 
 % Palabras clave separadas por coma. (e.g. IA, PSO, etc.)
 \def\@palabrasclave{\variablefaltante{palabrasclave}}
-\newcommand{\palabrasclave}[1]{\def\@palabrasclave{#1.}}
+\newcommand{\palabrasclave}[1]{\def\@palabrasclave{#1}}
 
 % Título del trabajo en inglés
 \title{\variablefaltante{title}}
@@ -187,7 +187,7 @@
 
 % Palabras clave del trabajo en inglés.
 \def\@keywords{\variablefaltante{keywords}}
-\newcommand{\keywords}[1]{\def\@keywords{#1.}}
+\newcommand{\keywords}[1]{\def\@keywords{#1}}
 
 \def\@pendientes{false} % Determina si se usan o no los pendientes. Por defecto, desactivado. Para activar usar \habilitarpendientes
 \def\@notas{false} % Determina si se usan o no las notas. Por defecto, desactivado. Para activar usar \habilitarnotas
@@ -490,7 +490,6 @@
 % 	\include{chapters/introduccion}
 % 	\include{chapters/el-problema}
 % \end{contenido}
-%
 \newenvironment{contenido}{}{}
 
 % Ambiente: anexos
@@ -500,7 +499,6 @@
 % 	\include{chapters/anexo-1}
 % 	\include{chapters/anexo-2}
 % \end{anexos}
-%
 \newenvironment{anexos}{\haceranexos}{}
 
 % Comandos de listados
@@ -548,7 +546,6 @@
 % \begin{ilustracion}[titulo=Titulo, indice=Indice Personalizado, etiqueta=etiquetapararef, fuente=Fuente personalizada]
 % 	\includegraphics[height=2cm,width=2cm]{figures/cuadrado.png}
 % \end{ilustracion}
-%
 \newenvironment{ilustracion}[1][]{
 	\begin{figure}[H]
 	\espaciotriple
@@ -571,7 +568,6 @@
 % \begin{ilustracion}[titulo=Titulo, indice=Indice Personalizado, etiqueta=etiquetapararef, fuente=Fuente personalizada]
 % 	\includegraphics[height=2cm,width=2cm]{figures/fitness.png}
 % \end{ilustracion}
-%
 \newenvironment{grafico}[1][]{
 	\begin{figure}[H]
 	\espaciotriple
@@ -594,7 +590,6 @@
 % \begin{algoritmo}[titulo=Titulo, indice=Indice Personalizado, etiqueta=etiquetapararef, fuente=Fuente personalizada]
 % 	...
 % \end{algoritmo}
-
 \newenvironment{algoritmo}[1][]{
 	\begin{algorithm}[htb]
 	\espaciodoble
@@ -626,7 +621,6 @@
 % 	\bottomrule
 % 	\fuentecuadro{4}{Juan Rada (2005)}
 % \end{cuadro}
-%
 \newenvironment{cuadro}[2][]
 {
 	\begin{table}[htb]
@@ -651,7 +645,6 @@
 % \begin{citatextual}
 %...Esto es una cita textual... (40 palabras)...
 % \end{citatextual}
-%
 \newenvironment{citatextual}
 	{
 		\espaciodoble
@@ -673,7 +666,6 @@
 % \begin{ecuacion}{etiqueta}
 % \sum{F_{x}} = 0
 % \end{ecuacion}
-%
 \newenvironment{ecuacion}[1]
 	{
 		\espaciosimple
@@ -689,7 +681,6 @@
 % \sum{F_{x}} = 0\\
 % \sum{M_{x} = 0}
 % \end{ecuaciones}
-%
 \newenvironment{ecuaciones}
 	{
 		\espaciosimple
@@ -704,7 +695,6 @@
 % \sum{F_{x}} = 0\\
 % \sum{M_{x} = 0}
 % \end{ecuaciones*}
-%
 \newenvironment{ecuaciones*}
 	{
 		\espaciosimple
@@ -739,6 +729,7 @@
 	\hypersetup{
 		pdftitle = {\@titulo},
 		pdfauthor = {\@autor},
+		pdfkeywords={\@palabrasclave},
 		pdfsubject={\@trabajoname~presentado en la Universidad Centroccidental Lisandro Alvarado para optar al título de \@grado~\@mencion},
 		pdfborder={0 0 0},
 	    linkcolor = red,
@@ -1428,7 +1419,7 @@
   	\begin{singlespace}
   	\justifying{\@resumen}
   	\end{singlespace}
-  	\noindent\justifying{\textbf{Palabras Clave:} \@palabrasclave}
+  	\noindent\justifying{\textbf{Palabras Clave:} \@palabrasclave.}
   	\end{center}
   	\newpage
 }
@@ -1499,7 +1490,7 @@
 	\begin{singlespace}
 	\justifying{\@abstract}
 	\end{singlespace}
-	\noindent\justifying{\textbf{Keywords:} \@keywords}
+	\noindent\justifying{\textbf{Keywords:} \@keywords.}
 	\end{center}
 	\selectlanguage{spanish}
 	\newpage
