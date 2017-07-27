@@ -359,5 +359,5 @@ Para agregar un término al glosario se debe usar el comando `\agregartermino`, 
 * `\yo`, muestra la referencia al autor del trabajo de grado. Para usar este comando previamente se debe se debe asignar el apellido del autor con el comando `\citarcomo{}` en la sección de identificación.
 * `\comillas{}`, coloca un texto entre comillas dobles, ejemplo: "Ejemplo".
 * `\eningles{}`, coloca un texto entre comillas dobles, con paréntesis y cursivo, ejemplo: (*"Java Agent Development Framework"*, en inglés).
-* `\verb| |`, coloca un texto en formato de código fuente. Es una alternativa a los listados.
+* `\verb| |`, coloca un texto en formato de código fuente. Es una alternativa a los listados. También se puede usar `\codigoenlinea{}`.
 * Referencia a los ambientes con etiquetas mediante el uso del comando `\ref{etiqueta}`, también sirve para mencionar secciones.

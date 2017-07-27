@@ -364,7 +364,7 @@
 \newcommand{\citetitle}[1]{\defcitealias{#1}{\usebibentry{#1}{title}}``\citetalias{#1}''}
 \newcommand{\citeptitle}[1]{(\citetitle{#1})}
 
-% COmando: citepyear
+% Comando: citepyear
 \newcommand{\citepyear}[1]{(\citeyear{#1})}
 
 % Comando: refecuacion
@@ -394,6 +394,9 @@
 
 % Comando para colocar significados en ingles
 \newcommand{\eningles}[1]{(\textit{``#1''}, en inglés)}
+
+% Comando para agregar texto en formato código fuente
+\newcommand{\codigoenlinea}[1]{{\ttfamily \selectfont#1}}
 
 %%%%% FIN NUEVOS COMANDOS %%%%%
 
