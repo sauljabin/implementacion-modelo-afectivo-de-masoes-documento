@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-TEMP_EXT=(aux bbl blg glg glo gls glsdefs ist lal lol loc loi lod loq out toc log synctex.gz dvi brf lon bit lof lot glx gxg gxs idx ilg ind url svn)
+TEMP_EXT=(aux bbl blg glg glo gls glsdefs ist lal lol loc loi lod loq out toc log synctex.gz dvi brf lon bit lof lot glx gxg gxs idx ilg ind url svn loa)
 
 function clean {
   for ext in ${TEMP_EXT[@]}

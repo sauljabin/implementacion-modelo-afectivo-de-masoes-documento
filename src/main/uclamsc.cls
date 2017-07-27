@@ -408,6 +408,9 @@
 \newcommand{\Rcuadrado}{$\mathbb{R}^2$}
 \newcommand{\Rcubo}{$\mathbb{R}^3$}
 
+% Configuración para numerar secciones
+\newcommand{\numerarsecciones}{\def\@numerarsecciones{}}
+
 %%%%% FIN NUEVOS COMANDOS %%%%%
 
 %%%%% INICIO AMBIENTES %%%%%
@@ -768,7 +771,10 @@
 		\justifying
 		}
 
-	\renewcommand{\thechapter}{\Roman{chapter}} %Definir capítulos con números romanos
+	\ifthenelse{\isundefined{\@numerarsecciones}}{
+		\renewcommand{\thechapter}{\Roman{chapter}} %Definir capítulos con números romanos
+	}{}
+
 	\renewcommand{\chaptermark}[1]{\markboth{}{}} %Eliminar encabezados de páginas
 	\renewcommand{\sectionmark}[1]{\markboth{}{}} %Eliminar encabezados de páginas
 	\setcounter{secnumdepth}{5}
@@ -776,7 +782,7 @@
 	% Formato de secciones, subsecciones y subsubsecciones. (28pt es triple espaciado para fuentes de 12pt)
 	% (23pt es la medida conseguida comparando resultados con documento original de reglas)
 	% Fomatos según manual de la UPEL.
-	\renewcommand{\section}{\@startsection{section}{1}{\z@}{22pt}{22pt}{\centering\normalfont\normalsize\bfseries}}
+	\renewcommand{\section}{\@startsection{section}{1}{\z@}{22pt}{22pt}{\ifthenelse{\isundefined{\@numerarsecciones}}{\centering}{}\normalfont\normalsize\bfseries}}
 	\renewcommand{\subsection}{\@startsection{subsection}{2}{\z@}{22pt}{22pt}{\normalfont\normalsize\bfseries\itshape}}
 	\renewcommand{\subsubsection}{\@startsection{subsubsection}{3}{\parindent}{22pt}{22pt}{\normalfont\normalsize\bfseries\itshape}}
 
@@ -1609,8 +1615,12 @@
 \newcommand{\seccion}[1]{
 	\setlength{\leftskip}{0cm}
 	\phantomsection % Movida esta línea a acá para que el bookmark se genere antes del titulo sin errar el número de la página cuando la sección está al inicio de una página.
-	\section*{#1}
-	\indexarseccion{#1}
+	\ifthenelse{\isundefined{\@numerarsecciones}}{
+		\section*{#1}
+		\indexarseccion{#1}
+	}{
+		\section{#1}
+	}
 	\continuarseccion
 }
 
@@ -1632,8 +1642,12 @@
 \newcommand{\subseccion}[1]{
 	\setlength{\leftskip}{0cm}
 	\phantomsection % Movida esta línea a acá para que el bookmark se genere antes del titulo sin errar el número de la página cuando la sección está al inicio de una página.
-	\subsection*{#1}
-	\indexarsubseccion{#1}
+	\ifthenelse{\isundefined{\@numerarsecciones}}{
+		\subsection*{#1}
+		\indexarsubseccion{#1}
+	}{
+		\subsection{#1}
+	}
 	\continuarsubseccion
 }
 
@@ -1655,8 +1669,12 @@
 \newcommand{\subsubseccion}[1]{
 	\setlength{\leftskip}{0cm}
 	\phantomsection % Movida esta línea a acá para que el bookmark se genere antes del titulo sin errar el número de la página cuando la sección está al inicio de una página.
-	\subsubsection*{#1}
-	\indexarsubsubseccion{#1}
+	\ifthenelse{\isundefined{\@numerarsecciones}}{
+		\subsubsection*{#1}
+		\indexarsubsubseccion{#1}
+	}{
+		\subsubsection{#1}
+	}
 	\continuarsubsubseccion
 }
 

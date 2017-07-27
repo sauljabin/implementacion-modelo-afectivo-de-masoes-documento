@@ -33,6 +33,7 @@
 *.svn
 *.pdf
 *.kilepr
+*.loa
 .DS_Store
 .directory
 Thumbs.db

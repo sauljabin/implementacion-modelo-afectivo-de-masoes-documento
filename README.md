@@ -121,6 +121,7 @@ Configuraciones especiales
 * `\setnombrealgoritmo{}{}`, Personaliza el nombre a mostrar en algoritmos, primer parametro singular, segundo plural, ejemplo: `\setnombrealgoritmo{Algoritmo}{Algoritmos}`.
 * `\setnombregrafico{}{}`, Personaliza el nombre a mostrar en gráficos, primer parametro singular, segundo plural, ejemplo: `\setnombregrafico{Grafico}{Gráficos}`.
 * `\setnombrelistado{}{}`, Personaliza el nombre a mostrar en listados, primer parametro singular, segundo plural, ejemplo: `\setnombrelistado{Listado}{Listados}`.
+* `\numerarsecciones`, Cambia el formato de presentación de las secciones y les agrega numeración. 
 
 # Comandos para Listas
 
