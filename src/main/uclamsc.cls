@@ -597,7 +597,7 @@
 % 	...
 % \end{algoritmo}
 \newenvironment{algoritmo}[1][]{
-	\begin{algorithm}[htb]
+	\begin{algorithm}[H]
 	\espaciodoble
 	\setkeys{tituloalgoritmo}{#1}
 	\footnotesize
@@ -629,19 +629,17 @@
 % \end{cuadro}
 \newenvironment{cuadro}[2][]
 {
-	\begin{table}[htb]
 	\centering
 	\espaciodoble
 	\setkeys{titulocuadro}{#1}
 	\titulocuadro
-	\footnotesize
-	\begin{spacing}{1.3}
-	\begin{tabular}{#2}
+	\scriptsize
+	\begin{spacing}{1.5}
+	\begin{longtable}{#2}
 }
 {
-	\end{tabular}
+	\end{longtable}
 	\end{spacing}
-	\end{table}
 }
 
 % Ambiente: citatextual
@@ -733,8 +731,8 @@
 	\renewcommand{\theequation}{\@arabic\c@equation} % Para la numeración de ecuaciones.
 	\setlength{\JustifyingParindent}{1.7em} % Sacado con regla tomando medidas del manual de trabajo de grado
 	\hypersetup{
-		pdftitle = {\@titulo},
-		pdfauthor = {\@autor},
+		pdftitle={\@titulo},
+		pdfauthor={\@autor},
 		pdfkeywords={\@palabrasclave},
 		pdfsubject={\@trabajoname~presentado en la Universidad Centroccidental Lisandro Alvarado para optar al título de \@grado~\@mencion},
 		pdfborder={0 0 0},
@@ -768,6 +766,8 @@
 
 	\renewcommand{\thechapter}{\Roman{chapter}} %Definir capítulos con números romanos
 	\renewcommand{\chaptermark}[1]{\markboth{}{}} %Eliminar encabezados de páginas
+	\renewcommand{\sectionmark}[1]{\markboth{}{}} %Eliminar encabezados de páginas
+	\setcounter{secnumdepth}{5}
 
 	% Formato de secciones, subsecciones y subsubsecciones. (28pt es triple espaciado para fuentes de 12pt)
 	% (23pt es la medida conseguida comparando resultados con documento original de reglas)
@@ -998,9 +998,9 @@
 		}{}
 		\ifthenelse{\isundefined{\titulocuadro@sinleyenda}}{
 			\ifthenelse{\isundefined{\titulocuadro@titulo}}{
-				\espaciodoble\normalfont\footnotesize\noindent{{\bfseries\@tabulationmname\ifthenelse{\isundefined{\titulocuadro@sinindice}}{~\thetabulations}{}.}\\\espaciodoble}
+				\espaciodoble\normalfont\footnotesize\noindent{{\bfseries\@tabulationmname\ifthenelse{\isundefined{\titulocuadro@sinindice}}{~\thetabulations}{}.}\\}
 			}{
-				\espaciodoble\normalfont\footnotesize\noindent{{\bfseries\@tabulationmname\ifthenelse{\isundefined{\titulocuadro@sinindice}}{~\thetabulations}{}.} \titulocuadro@titulo.\\\espaciodoble}
+				\espaciodoble\normalfont\footnotesize\noindent{{\bfseries\@tabulationmname\ifthenelse{\isundefined{\titulocuadro@sinindice}}{~\thetabulations}{}.} \titulocuadro@titulo.\\}
 			}
 		}{}
 	}
