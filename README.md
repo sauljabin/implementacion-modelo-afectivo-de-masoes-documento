@@ -361,3 +361,4 @@ Para agregar un término al glosario se debe usar el comando `\agregartermino`, 
 * `\eningles{}`, coloca un texto entre comillas dobles, con paréntesis y cursivo, ejemplo: (*"Java Agent Development Framework"*, en inglés).
 * `\verb| |`, coloca un texto en formato de código fuente. Es una alternativa a los listados. También se puede usar `\codigoenlinea{}`.
 * Referencia a los ambientes con etiquetas mediante el uso del comando `\ref{etiqueta}`, también sirve para mencionar secciones.
+* `\R`, `\Rcuadrado` y `\Rcubo` permiten agregar el símbolo de los reales.

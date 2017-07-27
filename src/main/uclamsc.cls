@@ -66,6 +66,7 @@
 \RequirePackage{keyval} % Para los parametros de los ambientes
 \RequirePackage{pgfgantt} % Para gantt
 \RequirePackage{ctable} % Para los cuadros, particularmente las líneas (\toprule, \midrule, \bottomrule)
+\RequirePackage{amssymb} % Para símbolos matemáticos
 
 %%%%% FIN CONFIGURACION GENERAL %%%%%
 
@@ -397,6 +398,11 @@
 
 % Comando para agregar texto en formato código fuente
 \newcommand{\codigoenlinea}[1]{{\ttfamily \selectfont#1}}
+
+% Comandos para símbolos de números reales
+\newcommand{\R}{$\mathbb{R}$}
+\newcommand{\Rcuadrado}{$\mathbb{R}^2$}
+\newcommand{\Rcubo}{$\mathbb{R}^3$}
 
 %%%%% FIN NUEVOS COMANDOS %%%%%
 
