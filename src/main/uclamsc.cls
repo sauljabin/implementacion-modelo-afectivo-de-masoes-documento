@@ -66,6 +66,7 @@
 \RequirePackage{keyval} % Para los parametros de los ambientes
 \RequirePackage{pgfgantt} % Para gantt
 \RequirePackage{ctable} % Para los cuadros, particularmente las líneas (\toprule, \midrule, \bottomrule)
+\RequirePackage{amsmath} % Para utilitarios de ecuaciones matemáticas
 \RequirePackage{amssymb} % Para símbolos matemáticos
 \RequirePackage{longtable} % Para cuadros
 \RequirePackage{rotating} % Para rotar images, cuadros, etc, https://en.wikibooks.org/wiki/LaTeX/Rotations
