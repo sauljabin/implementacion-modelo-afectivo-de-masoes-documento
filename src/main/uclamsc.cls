@@ -300,8 +300,10 @@
 % Descripción: Hace referencia a un cuadro
 % Parametros: [1] Etiqueta
 % Uso: \refcuadro{etiqueta}
-\newcommand{\refcuadro}[1]{\hyperref[#1]{\MakeLowercase{\@tabulationmname}~\ref{#1}}}
 \newcommand{\refpcuadro}[1]{(ver \refcuadro{#1})}
+\newcommand{\refcuadro}[1]{\@tempcnta\z@\@for\@tempa:=#1\do{\advance\@tempcnta\@ne}\ifthenelse{\the\@tempcnta>1}
+{\MakeLowercase{\@tabulationmnamepl}~\@tempcntb\z@\@for\tempb:=#1\do{\advance\@tempcntb\@ne\ifthenelse{\the\@tempcntb>1}{\ifthenelse{\the\@tempcntb=\the\@tempcnta}{~y~\ref{\tempb}}{,~\ref{\tempb}}}{\ref{\tempb}}}}
+{\hyperref[#1]{\MakeLowercase{\@tabulationmname}~\ref{#1}}}}
 
 % Variables algoritmo
 \def\@algorithmname{Algoritmo}
