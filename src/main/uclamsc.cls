@@ -71,10 +71,14 @@
 \RequirePackage{longtable} % Para cuadros
 \RequirePackage{rotating} % Para rotar images, cuadros, etc, https://en.wikibooks.org/wiki/LaTeX/Rotations
 \RequirePackage{multirow} % Comandos extras para cuadros
+\RequirePackage{xstring} % Para utilitarios de string
 
 %%%%% FIN CONFIGURACION GENERAL %%%%%
 
 %%%%% INICIO NUEVOS COMANDOS %%%%%
+
+% Comando usado para programación
+\newcommand{\trim}[2]{\StrSubstitute{#1}{ }{}[#2]}
 
 % Comando: pendientes
 % Descripción: Llamado en \configurar para listar los pendientes de uclamsc.cls
@@ -280,8 +284,10 @@
 % Descripción: Hace referencia a una ilustración
 % Parametros: [1] Etiqueta
 % Uso: \refilustracion{etiqueta}
-\newcommand{\refilustracion}[1]{\hyperref[#1]{\MakeLowercase{\@ilustrationname}~\ref{#1}}}
 \newcommand{\refpilustracion}[1]{(ver \refilustracion{#1})}
+\newcommand{\refilustracion}[1]{\@tempcnta\z@\@for\@tempa:=#1\do{\advance\@tempcnta\@ne}\ifthenelse{\the\@tempcnta>1}
+{\MakeLowercase{\@ilustrationnamepl}~\@tempcntb\z@\@for\tempb:=#1\do{\advance\@tempcntb\@ne\trim{\tempb}{\valueref}\ifthenelse{\the\@tempcntb>1}{\ifthenelse{\the\@tempcntb=\the\@tempcnta}{~y~\ref{\valueref}}{,~\ref{\valueref}}}{\ref{\valueref}}}}
+{\trim{#1}{\valueref}\hyperref[\valueref]{\MakeLowercase{\@ilustrationname}~\ref{\valueref}}}}
 
 % Variables cuadro
 \def\@tabulationmname{Cuadro}
@@ -302,8 +308,8 @@
 % Uso: \refcuadro{etiqueta}
 \newcommand{\refpcuadro}[1]{(ver \refcuadro{#1})}
 \newcommand{\refcuadro}[1]{\@tempcnta\z@\@for\@tempa:=#1\do{\advance\@tempcnta\@ne}\ifthenelse{\the\@tempcnta>1}
-{\MakeLowercase{\@tabulationmnamepl}~\@tempcntb\z@\@for\tempb:=#1\do{\advance\@tempcntb\@ne\ifthenelse{\the\@tempcntb>1}{\ifthenelse{\the\@tempcntb=\the\@tempcnta}{~y~\ref{\tempb}}{,~\ref{\tempb}}}{\ref{\tempb}}}}
-{\hyperref[#1]{\MakeLowercase{\@tabulationmname}~\ref{#1}}}}
+{\MakeLowercase{\@tabulationmnamepl}~\@tempcntb\z@\@for\tempb:=#1\do{\advance\@tempcntb\@ne\trim{\tempb}{\valueref}\ifthenelse{\the\@tempcntb>1}{\ifthenelse{\the\@tempcntb=\the\@tempcnta}{~y~\ref{\valueref}}{,~\ref{\valueref}}}{\ref{\valueref}}}}
+{\trim{#1}{\valueref}\hyperref[\valueref]{\MakeLowercase{\@tabulationmname}~\ref{\valueref}}}}
 
 % Variables algoritmo
 \def\@algorithmname{Algoritmo}
@@ -322,8 +328,10 @@
 % Descripción: Hace referencia a un algoritmo
 % Parametros: [1] Etiqueta
 % Uso: \refalgoritmo{etiqueta}
-\newcommand{\refalgoritmo}[1]{\hyperref[#1]{\MakeLowercase{\@algorithmname}~\ref{#1}}}
 \newcommand{\refpalgoritmo}[1]{(ver \refalgoritmo{#1})}
+\newcommand{\refalgoritmo}[1]{\@tempcnta\z@\@for\@tempa:=#1\do{\advance\@tempcnta\@ne}\ifthenelse{\the\@tempcnta>1}
+{\MakeLowercase{\@algorithmnamepl}~\@tempcntb\z@\@for\tempb:=#1\do{\advance\@tempcntb\@ne\trim{\tempb}{\valueref}\ifthenelse{\the\@tempcntb>1}{\ifthenelse{\the\@tempcntb=\the\@tempcnta}{~y~\ref{\valueref}}{,~\ref{\valueref}}}{\ref{\valueref}}}}
+{\trim{#1}{\valueref}\hyperref[\valueref]{\MakeLowercase{\@algorithmname}~\ref{\valueref}}}}
 
 % Variables grafico
 \def\@chartname{Gráfico}
@@ -342,8 +350,10 @@
 % Descripción: Hace referencia a un grafico
 % Parametros: [1] Etiqueta
 % Uso: \refgrafico{etiqueta}
-\newcommand{\refgrafico}[1]{\hyperref[#1]{\MakeLowercase{\@chartname}~\ref{#1}}}
 \newcommand{\refpgrafico}[1]{(ver \refgrafico{#1})}
+\newcommand{\refgrafico}[1]{\@tempcnta\z@\@for\@tempa:=#1\do{\advance\@tempcnta\@ne}\ifthenelse{\the\@tempcnta>1}
+{\MakeLowercase{\@chartnamepl}~\@tempcntb\z@\@for\tempb:=#1\do{\advance\@tempcntb\@ne\trim{\tempb}{\valueref}\ifthenelse{\the\@tempcntb>1}{\ifthenelse{\the\@tempcntb=\the\@tempcnta}{~y~\ref{\valueref}}{,~\ref{\valueref}}}{\ref{\valueref}}}}
+{\trim{#1}{\valueref}\hyperref[\valueref]{\MakeLowercase{\@chartname}~\ref{\valueref}}}}
 
 % Variables listado
 \def\@lstlistingname{Listado}
@@ -362,8 +372,10 @@
 % Descripción: Hace referencia a un listado
 % Parametros: [1] Etiqueta
 % Uso: \reflistado{etiqueta}
-\newcommand{\reflistado}[1]{\hyperref[#1]{\MakeLowercase{\@lstlistingname}~\ref{#1}}}
 \newcommand{\refplistado}[1]{(ver \reflistado{#1})}
+\newcommand{\reflistado}[1]{\@tempcnta\z@\@for\@tempa:=#1\do{\advance\@tempcnta\@ne}\ifthenelse{\the\@tempcnta>1}
+{\MakeLowercase{\@lstlistingnamepl}~\@tempcntb\z@\@for\tempb:=#1\do{\advance\@tempcntb\@ne\trim{\tempb}{\valueref}\ifthenelse{\the\@tempcntb>1}{\ifthenelse{\the\@tempcntb=\the\@tempcnta}{~y~\ref{\valueref}}{,~\ref{\valueref}}}{\ref{\valueref}}}}
+{\trim{#1}{\valueref}\hyperref[\valueref]{\MakeLowercase{\@lstlistingname}~\ref{\valueref}}}}
 
 % Para citar titulo
 %\renewcommand\defcitealias[2]{\@ifundefined{al@#1\@extra@b@citeb}{}{\PackageWarning{natbib}{Overwriting existing alias for citation #1}}\@namedef{al@#1\@extra@b@citeb}{#2}}
@@ -378,8 +390,19 @@
 % Descripción: Hace referencia a un ecuacion
 % Parametros: [1] Etiqueta
 % Uso: \refecuacion{etiqueta}
-\newcommand{\refecuacion}[1]{\hyperref[#1]{ecuación \ref{#1}}}
 \newcommand{\refpecuacion}[1]{(ver \refecuacion{#1})}
+\newcommand{\refecuacion}[1]{\@tempcnta\z@\@for\@tempa:=#1\do{\advance\@tempcnta\@ne}\ifthenelse{\the\@tempcnta>1}
+{ecuaciones~\@tempcntb\z@\@for\tempb:=#1\do{\advance\@tempcntb\@ne\trim{\tempb}{\valueref}\ifthenelse{\the\@tempcntb>1}{\ifthenelse{\the\@tempcntb=\the\@tempcnta}{~y~\ref{\valueref}}{,~\ref{\valueref}}}{\ref{\valueref}}}}
+{\trim{#1}{\valueref}\hyperref[\valueref]{ecuación~\ref{\valueref}}}}
+
+% Comando: refseccion
+% Descripción: Hace referencia a una sección
+% Parametros: [1] Etiqueta
+% Uso: \refseccion{etiqueta}
+\newcommand{\refpseccion}[1]{(ver \refseccion{#1})}
+\newcommand{\refseccion}[1]{\@tempcnta\z@\@for\@tempa:=#1\do{\advance\@tempcnta\@ne}\ifthenelse{\the\@tempcnta>1}
+{secciones~\@tempcntb\z@\@for\tempb:=#1\do{\advance\@tempcntb\@ne\trim{\tempb}{\valueref}\ifthenelse{\the\@tempcntb>1}{\ifthenelse{\the\@tempcntb=\the\@tempcnta}{~y~\ref{\valueref}}{,~\ref{\valueref}}}{\ref{\valueref}}}}
+{\trim{#1}{\valueref}\hyperref[\valueref]{sección~\ref{\valueref}}}}
 
 % Variable bibliografia
 \def\@bibliografia{bibliografia}

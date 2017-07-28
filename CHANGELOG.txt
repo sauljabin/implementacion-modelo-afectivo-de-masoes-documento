@@ -13,6 +13,7 @@ uclamsc 3.4, 2017/07
 - Se agrega amsmath para utilidades de ecuaciones
 - Inclusión del comando \numerarsecciones, que permite numerar las secciones
 - Nuevo parámetro (letra) para cuadros
+- Mejora en comandos de referencia
 
 ---------------------------------------
 Saúl Piña <sauljabin@gmail.com>

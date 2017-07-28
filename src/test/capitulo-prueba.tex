@@ -4,9 +4,19 @@ Este documento se generó para probar la clase \comillas{uclamsc} v\uclamscversi
 
 \seccion{Prueba se seccion}
 
+\label{primeraSec}
+
 \subseccion{Prueba se subseccion}
 
+\label{segundaSec}
+
 \subsubseccion{Prueba se subsubseccion}
+
+\label{terceraSec}
+
+\refseccion{primeraSec}, \refseccion{segundaSec}
+
+Prueba de referencia múltiple \refseccion{primeraSec, segundaSec, terceraSec} \refpseccion{primeraSec, terceraSec}.
 
 \break
 
@@ -44,6 +54,8 @@ fin de parrafo.
 
 \refalgoritmo{alg}, \refpalgoritmo{alg}
 
+Prueba de referencia múltiple \refalgoritmo{alg, alg, alg} \refpalgoritmo{alg, alg}.
+
 \begin{algoritmo}[fuente=Prueba de fuente, titulo=Algoritmo, indice=Indice del algoritmo, etiqueta=alg]
 Inicialización\;
 \For{$k \leftarrow 1$ \KwTo $m$}{
@@ -57,6 +69,8 @@ Inicialización\;
 
 \refilustracion{ilustracion}, \refpilustracion{ilustracion}
 
+Prueba de referencia múltiple \refilustracion{ilustracion, ilustracion, ilustracion} \refpilustracion{ilustracion, ilustracion}.
+
 \begin{ilustracion}[fuente=Prueba de fuente, etiqueta=ilustracion, titulo=Prueba de ilustración, indice=Indice de prueba para ilustración]
 	\includegraphics[width=5cm]{escudo-ucla.jpg}
 \end{ilustracion}
@@ -67,6 +81,8 @@ Inicialización\;
 
 \refgrafico{grafico}, \refpgrafico{grafico}
 
+Prueba de referencia múltiple \refgrafico{grafico, grafico, grafico} \refpgrafico{grafico, grafico}.
+
 \begin{grafico}[fuente=Una fuente, etiqueta=grafico, titulo=Prueba de gráfico, indice=Indice de prueba para gráfico]
 	\includegraphics[width=5cm]{escudo-ucla.jpg}
 \end{grafico}
@@ -76,6 +92,8 @@ Inicialización\;
 \espaciodoble\textbf{Prueba de listado y referencia a listado:}
 
 \reflistado{listado}, \refplistado{listado}
+
+Prueba de referencia múltiple \reflistado{listado, listado, listado} \refplistado{listado, listado}.
 
 \letralistados[\ttfamily \fontsize{15pt}{13pt}\selectfont]
 
@@ -99,10 +117,9 @@ Inicialización\;
 
 \espaciodoble\textbf{Prueba de cuadro y referencia a cuadro:}
 
-\refcuadro{ejemplocua}, \refpcuadro{ejemplocua}
+\refcuadro{ ejemplocua}, \refpcuadro{ ejemplocua }
 
-Prueba de referencia múltiple \refcuadro{ejemplocua,ejemplocua2,ejemplomultirow}.
-Prueba de referencia múltiple \refpcuadro{ejemplocua,ejemplocua2}.
+Prueba de referencia múltiple \refcuadro{ejemplocua,ejemplocua2, ejemplomultirow} \refpcuadro{ejemplocua,ejemplocua2}.
 
 \begin{cuadro}[titulo={Piedra, Papel o Tijeras – Forma Normal}, indice=Este es el indice personalizado, etiqueta=ejemplocua]{lccc}
 	\toprule
@@ -268,6 +285,8 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
 
 \refecuacion{testecuacion}, \refpecuacion{testecuacion}
 
+Prueba de referencia múltiple \refecuacion{testecuacion, yx, zx} \refpecuacion{testecuacion, distancia-maxima-especifica}.
+
 \begin{ecuacion}{testecuacion}
 	y = x + 1
 \end{ecuacion}
@@ -275,8 +294,8 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
 \espaciodoble\textbf{Prueba de ecuaciones:}
 
 \begin{ecuaciones}
-	y = x + 1 \\
-	z = x + 2
+	y = x + 1 \label{yx} \\
+	z = x + 2 \label{zx}
 \end{ecuaciones}
 
 \break

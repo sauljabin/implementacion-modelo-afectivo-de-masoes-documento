@@ -175,7 +175,7 @@ indice | Permite personalizar el índice  |indice=Índice personalizado
 sinleyenda | Evita que se muestre el título | sinleyenda
 sinindice | Evita que se muestre en el índice | sinindice
 
-Referencia a una ilustración usando el comando `\refilustracion{etiqueta}`.
+Referencia a una ilustración usando el comando `\refilustracion{etiqueta}` o `\refpilustracion{etiqueta}`.
 
 # Gráfico
 Ambiente `grafico` para mostrar un gráfico, uso:
@@ -196,7 +196,7 @@ indice | Permite personalizar el índice | indice=Índice personalizado
 sinleyenda | Evita que se muestre el título | sinleyenda
 sinindice | Evita que se muestre en el índice | sinindice
 
-Referencia a un gráfico usando el comando `\refgrafico{etiqueta}`.
+Referencia a un gráfico usando el comando `\refgrafico{etiqueta}` o `\refpgrafico{etiqueta}`.
 
 # Cuadro
 Ambiente `cuadro` para mostrar una tabla y agregarla al índice de cuadros, uso:
@@ -221,7 +221,7 @@ sinindice | Evita que se muestre en el índice | sinindice
 letra | Estilo de letra a usar en el cuadro | letra=\tiny
 columnas | Parametro obligatorio, configura las columnas | lcc
 
-Referencia a un cuadro usando el comando `\refcuadro{etiqueta}`.
+Referencia a un cuadro usando el comando `\refcuadro{etiqueta}` o `\refpcuadro{etiqueta}`.
 
 # Ecuación
 Ambiente `ecuacion` para insertar una ecuación con etiqueta para hacerle referencia, uso:
@@ -238,7 +238,7 @@ Ambiente `ecuaciones` para insertar una lista de ecuaciones numeradas, uso:
 	z = x + 2
 \end{ecuaciones}
 ```
-Referencia a una ecuación usando el comando `\refecuacion{etiqueta}`.
+Referencia a una ecuación usando el comando `\refecuacion{etiqueta}` o `\refpecuacion{etiqueta}`.
 
 # Listado
 Ambiente `listado` para insertar un listado, usado principalmente para códigos y algoritmos, en el parámetro puede indicarse un lenguaje ya soportado, uno definido por el usuario o nada, uso:
@@ -277,7 +277,7 @@ sinleyenda | Evita que se muestre el título | sinleyenda
 sinindice | Evita que se muestre en el índice | sinindice
 lenguaje | Parametro obligatorio, configura lel lenguaje | [LaTeX]TeX
 
-Referencia a un grafico usando el comando `\reflistado{etiqueta}`.
+Referencia a un grafico usando el comando `\reflistado{etiqueta}` o `\refplistado{etiqueta}`.
 
 # Algoritmo
 Ambiente algoritmo para escribir algoritmos en pseudocodigo. Los parámetros opcionales lo agregan al índice de algoritmos, uso:
@@ -300,7 +300,7 @@ indice | Permite personalizar el índice | indice=Índice personalizado
 sinleyenda | Evita que se muestre el título | sinleyenda
 sinindice | Evita que se muestre en el índice | sinindice
 
-Referencia a un algoritmo usando el comando `\refalgoritmo{etiqueta}`.
+Referencia a un algoritmo usando el comando `\refalgoritmo{etiqueta}` o `\refpalgoritmo{etiqueta}`.
 
 # Cita textual
 Ambiente `citatextual` Prepara el contexto para una cita textual de más de 40 palabras, uso:
@@ -309,6 +309,11 @@ Ambiente `citatextual` Prepara el contexto para una cita textual de más de 40 p
 	...Esto es una cita textual... (p. 199)
 \end{citatextual}
 ```
+
+# Secciones
+Una sección se puede identificar con el comando `\label{valor}`, para hacer referencia a ella es necesario usar `\refseccion{etiqueta}` o `\refpseccion{etiqueta}`.
+
+Es importante activar la numeración de secciones con `\numerarsecciones`, en la configuración del documento.
 
 # Comandos de Referencia Bibliográfica
 Para incluir las citas referenciales, agregue al archivo **.bib** las descripciones de las mismas en formato **bibtex**. Normalmente las descripciones de libros y artículos conseguidos en Internet se ofrecen en este formato.
