@@ -54,6 +54,9 @@ Configuraciones especiales
 \end{document}
 ```
 
+Es necesario importar la clase `uclamsc` con el comando `\documentclass{uclamsc}` o `\documentclass[doblecara]{uclamsc}`.
+La opción `doblecara` formatea el documento para impresión en ambas caras de la hoja.
+
 # Ambientes Principales
 #### Preliminares
 * `\hacercaratula`, crea la carátula exterior de la tesis.
