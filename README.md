@@ -7,7 +7,7 @@ Barquisimeto, Venezuela.
 
 * v3.4 [Saúl Piña (Año 2014-2017)](https://github.com/sauljabin/plantilla-latex-trabajo-de-grado-ucla)
 * v2.0 [Miguel León (Año 2013)](https://code.google.com/p/uclamsc)
-* v1.1 [Juan Rada y Rubén Parma  (Año 2009)](https://code.google.com/p/latex-uclamsc)
+* v1.1 [Juan Rada y Rubén Parma (Año 2009)](https://code.google.com/p/latex-uclamsc)
 * Licencia GPL 3.
 
 # Normas
@@ -35,8 +35,7 @@ Barquisimeto, Venezuela.
 Comandos de indentificación
 Configuraciones especiales
 \begin{document}
-	Incluir glosario si se va a usar
-	\input{capitulos/glosario}
+	Incluir glosario si se va a usar \input{}
 	Incluir resumen \resumen{}
 	Incluir abstract \abstract{}
 	\begin{preliminares}
@@ -52,29 +51,29 @@ Configuraciones especiales
 \end{document}
 ```
 
-Es necesario importar la clase `uclamsc` con el comando `\documentclass{uclamsc}` o `\documentclass[doblecara]{uclamsc}`.
-La opción `doblecara` formatea el documento para impresión en ambas caras de la hoja.
+* Es necesario importar la clase `uclamsc` con el comando  `\documentclass{uclamsc}`.
+* La opción `doblecara` (`\documentclass[doblecara]{uclamsc}`), formatea el documento para impresión en ambas caras de la hoja.
 
 # Ambientes Principales
 #### Preliminares
 * `\hacercaratula`, crea la carátula exterior de la tesis.
 * `\hacerpresentacion`, crea la hoja de presentación de la tesis.
 * `\haceraprobacion`, crea la hoja de aprobación requerida para el trabajo final.
-* `\preliminar{}`, para tilular e indexar un capitulo de los preliminares.
-* `\hacerindices`, crea todos los indices.
+* `\preliminar{}`, para titular e indexar un capítulo de los preliminares.
+* `\hacerindices`, crea todos los índices.
 * `\hacerresumen`, crea la hoja con el resumen de la tesis.
 * `\hacerabstract`, crea la hoja con el abstract de la tesis (opcional).
 
 #### Contenido
 * `\introduccion`, usado al principio de la introducción para indexar la misma y agregar la palabra “CAPÍTULO” al índice general.
-* `\capitulo{}`, para titular e indexar un capitulo del contenido.
+* `\capitulo{}`, para titular e indexar un capítulo del contenido.
 * Comandos `\seccion{}`, `\subseccion{}` y `\subsubseccion{}`, para agregar e indexar títulos de segundo, tercero y cuarto nivel.
 
 #### Bibliografía
 * `\hacerbibliografia{}`, crea la bibliografía y la agrega al índice general. Usado después del ambiente contenido y antes del ambiente anexos si este se incluye.
 
 #### Anexos
-* `\anexo{}`, para tilular e indexar un anexo.
+* `\anexo{}`, para titular e indexar un anexo.
 
 # Comandos de Identificación
 #### Sobre el autor
@@ -87,7 +86,7 @@ La opción `doblecara` formatea el documento para impresión en ambas caras de l
 * `\titulo{}`, título de la investigación.
 * `\title{}`, título del trabajo en inglés.
 * `\palabrasclave{}`, palabras claves asociadas al trabajo de investigación.
-* `\keywords{}`, palabras claves en ingles.
+* `\keywords{}`, palabras claves en inglés.
 * `\grado{}`, permite personalizar el grado al que se desea optar.
 * `\mencion{}`, permite personalizar la mención.
 
@@ -102,7 +101,7 @@ La opción `doblecara` formatea el documento para impresión en ambas caras de l
 
 #### Sobre la presentación
 * `\ciudad{}`, ciudad de la presentación.
-* `\diapresentacion{}`, dia de la presentación.
+* `\diapresentacion{}`, día de la presentación.
 * `\mespresentacion{}`, mes de la presentación.
 * `\monthpresentacion{}`, mes de la presentación en inglés para el abstract.
 * `\anopresentacion{}`, año de la presentación.
@@ -117,11 +116,11 @@ La opción `doblecara` formatea el documento para impresión en ambas caras de l
 * `\fechaenresumen`, incluye la fecha en las hojas de resumen y abstract.
 * `\habilitarpendientes`, muestra los pendientes y el índice de pendientes.
 * `\habilitarnotas`, muestra las anotaciones y el índice de anotaciones.
-* `\setnombreilustracion{}{}`, Personaliza el nombre a mostrar en ilustraciones, primer parametro singular, segundo plural, ejemplo: `\setnombreilustracion{Figura}{Figuras}`.
-* `\setnombrecuadro{}{}`, Personaliza el nombre a mostrar en cuadros, primer parametro singular, segundo plural, ejemplo: `\setnombrecuadro{Tabla}{Tablas}`.
-* `\setnombrealgoritmo{}{}`, Personaliza el nombre a mostrar en algoritmos, primer parametro singular, segundo plural, ejemplo: `\setnombrealgoritmo{Algoritmo}{Algoritmos}`.
-* `\setnombregrafico{}{}`, Personaliza el nombre a mostrar en gráficos, primer parametro singular, segundo plural, ejemplo: `\setnombregrafico{Grafico}{Gráficos}`.
-* `\setnombrelistado{}{}`, Personaliza el nombre a mostrar en listados, primer parametro singular, segundo plural, ejemplo: `\setnombrelistado{Listado}{Listados}`.
+* `\setnombreilustracion{}{}`, Personaliza el nombre a mostrar en ilustraciones, primer parámetro singular, segundo plural, ejemplo: `\setnombreilustracion{Figura}{Figuras}`.
+* `\setnombrecuadro{}{}`, Personaliza el nombre a mostrar en cuadros, primer parámetro singular, segundo plural, ejemplo: `\setnombrecuadro{Tabla}{Tablas}`.
+* `\setnombrealgoritmo{}{}`, Personaliza el nombre a mostrar en algoritmos, primer parámetro singular, segundo plural, ejemplo: `\setnombrealgoritmo{Algoritmo}{Algoritmos}`.
+* `\setnombregrafico{}{}`, Personaliza el nombre a mostrar en gráficos, primer parámetro singular, segundo plural, ejemplo: `\setnombregrafico{Grafico}{Gráficos}`.
+* `\setnombrelistado{}{}`, Personaliza el nombre a mostrar en listados, primer parámetro singular, segundo plural, ejemplo: `\setnombrelistado{Listado}{Listados}`.
 * `\numerarsecciones`, Cambia el formato de presentación de las secciones y les agrega numeración.
 
 # Comandos para Listas
@@ -165,9 +164,9 @@ Ambiente `ilustracion` permite mostrar una ilustración, uso:
 \end{ilustracion}
 ```
 
-Lista de parametros para el ambiente `ilustracion`:
+Lista de parámetros para el ambiente `ilustracion`:
 
-Parametro | Descripción | Ejemplo
+Parámetro | Descripción | Ejemplo
 --- | --- | ---
 titulo | Asigna un título a la ilustración | titulo=Este es el título
 etiqueta | Valor que pemite hacer referencia a la ilustración | etiqueta=ilustracion1
@@ -186,12 +185,12 @@ Ambiente `grafico` para mostrar un gráfico, uso:
 \end{grafico}
 ```
 
-Lista de parametros para el ambiente `grafico`:
+Lista de parámetros para el ambiente `grafico`:
 
-Parametro | Descripción | Ejemplo
+Parámetro | Descripción | Ejemplo
 --- | --- | ---
 titulo | Asigna un título al gráfico | titulo=Este es el título
-etiqueta | Valor que pemite hacer referencia al gráfico | etiqueta=grafico1
+etiqueta | Valor que permite hacer referencia al gráfico | etiqueta=grafico1
 fuente | Permite agregar la fuente | fuente=\cite{bib}
 indice | Permite personalizar el índice | indice=Índice personalizado
 sinleyenda | Evita que se muestre el título | sinleyenda
@@ -210,9 +209,9 @@ Utilizar el comando `\fuentecuadro{# columnas en el cuadro}{fuente}` dentro del 
 
 Referencia rápida en [LaTeX/Tables](http://en.wikibooks.org/wiki/LaTeX/Tables).
 
-Lista de parametros para el ambiente `cuadro`:
+Lista de parámetros para el ambiente `cuadro`:
 
-Parametro | Descripción | Ejemplo
+Parámetro | Descripción | Ejemplo
 --- | --- | ---
 titulo | Asigna un título al cuadre | titulo=Este es el título
 etiqueta | Valor que pemite hacer referencia al cuadro | etiqueta=cuadro1
@@ -220,7 +219,7 @@ indice | Permite personalizar el índice | indice=Índice personalizado
 sinleyenda | Evita que se muestre el título | sinleyenda
 sinindice | Evita que se muestre en el índice | sinindice
 letra | Estilo de letra a usar en el cuadro | letra=\tiny
-columnas | Parametro obligatorio, configura las columnas | lcc
+columnas | Parámetro obligatorio, configura las columnas | lcc
 
 Referencia a un cuadro usando el comando `\refcuadro{etiqueta}` o `\refpcuadro{etiqueta}`.
 
@@ -255,7 +254,7 @@ Utilizar el comando `\letralistados[]` para restablecer la letra por defecto, ut
 
 Utilizar el comando `\lstdefinelanguage{}{}` ([listings](http://texdoc.net/texmf-dist/doc/latex/listings/listings.pdf)) y la clave `morekeywords` del paquete listings para definir un lenguaje personalizado. Véase la documentación.
 
-Utilizar el comando `\definirliterales{}` para definir literales de reemplazo. Los parámetros tienen la forma `{match}{{reemplazo}}largo` y van separados sólo por espacios. Véase la documentación. Ejemplo:
+Utilizar el comando `\definirliterales{}` para definir literales de reemplazo. Los parámetros tienen la forma `{match}{{reemplazo}}largo` y van separados solo por espacios. Véase la documentación. Ejemplo:
 ```TeX
 \definirliterales{
 	{:=}{{$\leftarrow$}}2
@@ -266,9 +265,9 @@ Utilizar el comando `\definirliterales{}` para definir literales de reemplazo. L
 \end{listado}
 ```
 
-Lista de parametros para el ambiente `listado`:
+Lista de parámetros para el ambiente `listado`:
 
-Parametro | Descripción | Ejemplo
+Parámetro | Descripción | Ejemplo
 --- | --- | ---
 titulo | Asigna un título al listado | titulo=Este es el título
 etiqueta | Valor que pemite hacer referencia al listado | etiqueta=listado1
@@ -276,9 +275,9 @@ fuente | Permite agregar la fuente | fuente=\cite{bib}
 indice | Permite personalizar el índice | indice=Índice personalizado
 sinleyenda | Evita que se muestre el título | sinleyenda
 sinindice | Evita que se muestre en el índice | sinindice
-lenguaje | Parametro obligatorio, configura lel lenguaje | [LaTeX]TeX
+lenguaje | Parámetro obligatorio, configura el lenguaje | [LaTeX]TeX
 
-Referencia a un grafico usando el comando `\reflistado{etiqueta}` o `\refplistado{etiqueta}`.
+Referencia a un gráfico usando el comando `\reflistado{etiqueta}` o `\refplistado{etiqueta}`.
 
 # Algoritmo
 Ambiente algoritmo para escribir algoritmos en pseudocodigo. Los parámetros opcionales lo agregan al índice de algoritmos, uso:
@@ -290,9 +289,9 @@ Ambiente algoritmo para escribir algoritmos en pseudocodigo. Los parámetros opc
 
 Este ambiente usa el paquete [algorithm2e](http://en.wikibooks.org/wiki/LaTeX/Algorithms#Typesetting_using_the_algorithm2e_package).
 
-Lista de parametros para el ambiente `algoritmo`:
+Lista de parámetros para el ambiente `algoritmo`:
 
-Parametro | Descripción | Ejemplo
+Parámetro | Descripción | Ejemplo
 --- | --- | ---
 titulo | Asigna un título al algoritmo | titulo=Este es el título
 etiqueta | Valor que pemite hacer referencia al algoritmo | etiqueta=algoritmo1
@@ -304,7 +303,7 @@ sinindice | Evita que se muestre en el índice | sinindice
 Referencia a un algoritmo usando el comando `\refalgoritmo{etiqueta}` o `\refpalgoritmo{etiqueta}`.
 
 # Cita textual
-Ambiente `citatextual` Prepara el contexto para una cita textual de más de 40 palabras, uso:
+Ambiente `citatextual` prepara el contexto para una cita textual de más de 40 palabras, uso:
 ```TeX
 \begin{citatextual}
 	...Esto es una cita textual... (p. 199)
@@ -321,7 +320,7 @@ Para incluir las citas referenciales, agregue al archivo **.bib** las descripcio
 
 Para insertar referencias en el documento, utilice los comandos del paquete [natbib](http://www.ctan.org/pkg/natbib). Utilice `\citet{}` si el nombre del autor es parte de la narrativa, si no, utilice el comando `\citep{}`.
 
-Para citar sólo el autor en párrafos cercanos a la primera cita, el comando `\citeauthor{}`. Otros comandos son: `\citet*{}`, `\citep*{}`, `\citep[][]`, `\citeauthor*{}`,`\citeyear{}`. Referencia rápida en [LaTeX/Bibliography](https://en.wikibooks.org/wiki/LaTeX/Bibliography_Management), [BibTeX](https://verbosus.com/bibtex-style-examples.html), [Guía BibTeX](ftp://ftp.dante.de/ctan%3A/info/spanish/guia-bibtex/guia-bibtex.pdf).
+Para citar solo el autor en párrafos cercanos a la primera cita, el comando `\citeauthor{}`. Otros comandos son: `\citet*{}`, `\citep*{}`, `\citep[][]`, `\citeauthor*{}`,`\citeyear{}`. Referencia rápida en [LaTeX/Bibliography](https://en.wikibooks.org/wiki/LaTeX/Bibliography_Management), [BibTeX](https://verbosus.com/bibtex-style-examples.html), [Guía BibTeX](ftp://ftp.dante.de/ctan%3A/info/spanish/guia-bibtex/guia-bibtex.pdf).
 
 Ejemplos:
 ```TeX
@@ -337,7 +336,7 @@ Ejemplos:
 \citeyear{key}:             1990
 \citepyear{key}:            (1990)
 ```
-Para citar sólo el título su puede usar el comando `\citetitle{}` y `\citeptitle{}`.
+Para citar solo el título su puede usar el comando `\citetitle{}` y `\citeptitle{}`.
 
 # Glosario
 El comando `\hacerglosario` ajusta y titula (**Definición de Términos Básicos**) la sección de términos del glosario insertada por el comando `\printglossary`. Véase uso del paquete [glossaries](http://www.ctan.org/tex-archive/macros/latex/contrib/glossaries). Referencia rápida en [LaTeX/Glossary](http://en.wikibooks.org/wiki/LaTeX/Glossary).
@@ -364,8 +363,8 @@ Para agregar un término al glosario se debe usar el comando `\agregartermino`, 
 * `\pagenblanco`, para insertar una página completamente en blanco (sin enumeración).
 
 #### Otros
-* `\yo`, muestra la referencia al autor del trabajo de grado. Para usar este comando previamente se debe se debe asignar el apellido del autor con el comando `\citarcomo{}` en la sección de identificación.
-* `\comillas{}`, coloca un texto entre comillas dobles, ejemplo: "Ejemplo".
+* `\yo`, muestra la referencia al autor del trabajo de grado. Para usar este comando previamente se debe asignar el apellido del autor con el comando `\citarcomo{}` en la sección de identificación.
+* `\comillas{}`, coloca un texto entre comillas dobles.
 * `\eningles{}`, coloca un texto entre comillas dobles, con paréntesis y cursivo, ejemplo: (*"Java Agent Development Framework"*, en inglés).
 * `\verb| |`, coloca un texto en formato de código fuente. Es una alternativa a los listados. También se puede usar `\codigoenlinea{}`.
 * Referencia a los ambientes con etiquetas mediante el uso del comando `\ref{etiqueta}`, también sirve para mencionar secciones.
