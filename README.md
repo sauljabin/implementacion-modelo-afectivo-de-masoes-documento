@@ -1,7 +1,6 @@
 # Plantilla LaTeX Trabajo de Grado UCLA
----
 
-# Descripción
+## Descripción
 Plantilla en LaTeX para elaborar trabajos de grado de la
 Universidad Centroccidental Lisandro Alvarado (UCLA).
 Barquisimeto, Venezuela.
@@ -11,10 +10,10 @@ Barquisimeto, Venezuela.
 * v1.1 [Juan Rada y Rubén Parma (Año 2009)](https://code.google.com/p/latex-uclamsc)
 * Licencia GPL 3.
 
-# Normas
+## Normas
 * [Manual para la Elaboración del Trabajo Conducente a Grado Académico de Especialización, Maestría y Doctorado](doc/Manual-Trabajo-Grado-2002.pdf)
 
-# Instrucciones
+## Instrucciones
 * El código fuente de la plantilla de trabajo de grado se encuentra en el directorio **src/main**.
 * El código de pruebas se encuentra en el directorio **src/test**.
 * Los archivos pdf se generarán en el directorio **build**.
@@ -26,7 +25,7 @@ Barquisimeto, Venezuela.
 * Ejecutar ```make docker-proyecto``` para generar proyecto con docker.
 * Ejecutar ```make docker-trabajo``` para generar trabajo de grado con docker.
 
-# Cuerpo del Documento Principal
+## Cuerpo del Documento Principal
 
 ```TeX
 \documentclass{uclamsc}
@@ -56,7 +55,7 @@ Configuraciones especiales
 * Es necesario importar la clase `uclamsc` con el comando  `\documentclass{uclamsc}`.
 * La opción `doblecara` (`\documentclass[doblecara]{uclamsc}`), formatea el documento para impresión en ambas caras de la hoja.
 
-# Ambientes Principales
+## Ambientes Principales
 #### Preliminares
 * `\hacercaratula`, crea la carátula exterior de la tesis.
 * `\hacerpresentacion`, crea la hoja de presentación de la tesis.
@@ -77,7 +76,7 @@ Configuraciones especiales
 #### Anexos
 * `\anexo{}`, para titular e indexar un anexo.
 
-# Comandos de Identificación
+## Comandos de Identificación
 #### Sobre el autor
 * `\autor{}`, nombre del autor.
 * `\ciautor{}`, cédula del autor.
@@ -110,7 +109,7 @@ Configuraciones especiales
 * `\primerjurado{}`, nombre del primer jurado.
 * `\segundojurado{}`, nombre del segundo jurado.
 
-# Configuraciones Especiales
+## Configuraciones Especiales
 * `\mesencaratula`, incluye el mes en las hojas de portada y presentación.
 * `\tutorenpresentacion`, incluye el nombre del tutor en la presentación.
 * `\setnombretrabajo{}`, define el nombre del trabajo, por defecto es: Trabajo de grado.
@@ -125,7 +124,7 @@ Configuraciones especiales
 * `\setnombrelistado{}{}`, Personaliza el nombre a mostrar en listados, primer parámetro singular, segundo plural, ejemplo: `\setnombrelistado{Listado}{Listados}`.
 * `\numerarsecciones`, Cambia el formato de presentación de las secciones y les agrega numeración.
 
-# Comandos Para Listas
+## Comandos Para Listas
 
 Comandos originales: [LaTeX List Structures](https://en.wikibooks.org/wiki/LaTeX/List_Structures).
 
@@ -158,7 +157,7 @@ Ambiente `enumeracionenparrafo`, para enumerar dentro de un párrafo, uso:
 \end{enumeracionenparrafo}
 ```
 
-# Ilustración
+## Ilustración
 Ambiente `ilustracion` permite mostrar una ilustración, uso:
 ```TeX
 \begin{ilustracion}[parametros]
@@ -171,7 +170,7 @@ Lista de parámetros para el ambiente `ilustracion`:
 Parámetro | Descripción | Ejemplo
 --- | --- | ---
 titulo | Asigna un título a la ilustración | titulo=Este es el título
-etiqueta | Valor que pemite hacer referencia a la ilustración | etiqueta=ilustracion1
+etiqueta | Valor que permite hacer referencia a la ilustración | etiqueta=ilustracion1
 fuente | Permite agregar la fuente | fuente=\cite{bib}
 indice | Permite personalizar el índice  |indice=Índice personalizado
 sinleyenda | Evita que se muestre el título | sinleyenda
@@ -179,7 +178,7 @@ sinindice | Evita que se muestre en el índice | sinindice
 
 Referencia a una ilustración usando el comando `\refilustracion{etiqueta}` o `\refpilustracion{etiqueta}`.
 
-# Gráfico
+## Gráfico
 Ambiente `grafico` para mostrar un gráfico, uso:
 ```TeX
 \begin{grafico}[parametros]
@@ -200,7 +199,7 @@ sinindice | Evita que se muestre en el índice | sinindice
 
 Referencia a un gráfico usando el comando `\refgrafico{etiqueta}` o `\refpgrafico{etiqueta}`.
 
-# Cuadro
+## Cuadro
 Ambiente `cuadro` para mostrar una tabla y agregarla al índice de cuadros, uso:
 ```TeX
 \begin{cuadro}[parametros]{columnas}
@@ -216,7 +215,7 @@ Lista de parámetros para el ambiente `cuadro`:
 Parámetro | Descripción | Ejemplo
 --- | --- | ---
 titulo | Asigna un título al cuadre | titulo=Este es el título
-etiqueta | Valor que pemite hacer referencia al cuadro | etiqueta=cuadro1
+etiqueta | Valor que permite hacer referencia al cuadro | etiqueta=cuadro1
 indice | Permite personalizar el índice | indice=Índice personalizado
 sinleyenda | Evita que se muestre el título | sinleyenda
 sinindice | Evita que se muestre en el índice | sinindice
@@ -225,7 +224,7 @@ columnas | Parámetro obligatorio, configura las columnas | lcc
 
 Referencia a un cuadro usando el comando `\refcuadro{etiqueta}` o `\refpcuadro{etiqueta}`.
 
-# Ecuación
+## Ecuación
 Ambiente `ecuacion` para insertar una ecuación con etiqueta para hacerle referencia, uso:
 ```TeX
 \begin{ecuacion}{etiqueta}
@@ -242,7 +241,7 @@ Ambiente `ecuaciones` para insertar una lista de ecuaciones numeradas, uso:
 ```
 Referencia a una ecuación usando el comando `\refecuacion{etiqueta}` o `\refpecuacion{etiqueta}`.
 
-# Listado
+## Listado
 Ambiente `listado` para insertar un listado, usado principalmente para códigos y algoritmos, en el parámetro puede indicarse un lenguaje ya soportado, uno definido por el usuario o nada, uso:
 ```TeX
 \begin{listado}[parametros]{lenguaje}
@@ -272,7 +271,7 @@ Lista de parámetros para el ambiente `listado`:
 Parámetro | Descripción | Ejemplo
 --- | --- | ---
 titulo | Asigna un título al listado | titulo=Este es el título
-etiqueta | Valor que pemite hacer referencia al listado | etiqueta=listado1
+etiqueta | Valor que permite hacer referencia al listado | etiqueta=listado1
 fuente | Permite agregar la fuente | fuente=\cite{bib}
 indice | Permite personalizar el índice | indice=Índice personalizado
 sinleyenda | Evita que se muestre el título | sinleyenda
@@ -281,8 +280,8 @@ lenguaje | Parámetro obligatorio, configura el lenguaje | [LaTeX]TeX
 
 Referencia a un gráfico usando el comando `\reflistado{etiqueta}` o `\refplistado{etiqueta}`.
 
-# Algoritmo
-Ambiente algoritmo para escribir algoritmos en pseudocodigo. Los parámetros opcionales lo agregan al índice de algoritmos, uso:
+## Algoritmo
+Ambiente algoritmo para escribir algoritmos en pseudocódigo. Los parámetros opcionales lo agregan al índice de algoritmos, uso:
 ```TeX
 \begin{algoritmo}[parametros]
 	...
@@ -296,7 +295,7 @@ Lista de parámetros para el ambiente `algoritmo`:
 Parámetro | Descripción | Ejemplo
 --- | --- | ---
 titulo | Asigna un título al algoritmo | titulo=Este es el título
-etiqueta | Valor que pemite hacer referencia al algoritmo | etiqueta=algoritmo1
+etiqueta | Valor que permite hacer referencia al algoritmo | etiqueta=algoritmo1
 fuente | Permite agregar la fuente | fuente=\cite{bib}
 indice | Permite personalizar el índice | indice=Índice personalizado
 sinleyenda | Evita que se muestre el título | sinleyenda
@@ -304,7 +303,7 @@ sinindice | Evita que se muestre en el índice | sinindice
 
 Referencia a un algoritmo usando el comando `\refalgoritmo{etiqueta}` o `\refpalgoritmo{etiqueta}`.
 
-# Cita Textual
+## Cita Textual
 Ambiente `citatextual` prepara el contexto para una cita textual de más de 40 palabras, uso:
 ```TeX
 \begin{citatextual}
@@ -312,13 +311,13 @@ Ambiente `citatextual` prepara el contexto para una cita textual de más de 40 p
 \end{citatextual}
 ```
 
-# Secciones
+## Secciones
 Una sección se puede identificar con el comando `\label{valor}`, para hacer referencia a ella es necesario usar `\refseccion{etiqueta}` o `\refpseccion{etiqueta}`.
 
 Es importante activar la numeración de secciones con `\numerarsecciones`, en la configuración del documento.
 
-# Comandos de Referencia Bibliográfica
-Para incluir las citas referenciales, agregue al archivo **.bib** las descripciones de las mismas en formato **bibtex**. Normalmente las descripciones de libros y artículos conseguidos en Internet se ofrecen en este formato.
+## Comandos de Referencia Bibliográfica
+Para incluir las referencias, agregue al archivo **.bib** las descripciones de las mismas en formato **bibtex**. Normalmente las descripciones de libros y artículos conseguidos en Internet se ofrecen en este formato.
 
 Para insertar referencias en el documento, utilice los comandos del paquete [natbib](http://www.ctan.org/pkg/natbib). Utilice `\citet{}` si el nombre del autor es parte de la narrativa, si no, utilice el comando `\citep{}`.
 
@@ -340,14 +339,14 @@ Ejemplos:
 ```
 Para citar solo el título su puede usar el comando `\citetitle{}` y `\citeptitle{}`.
 
-# Glosario
+## Glosario
 El comando `\hacerglosario` ajusta y titula (**Definición de Términos Básicos**) la sección de términos del glosario insertada por el comando `\printglossary`. Véase uso del paquete [glossaries](http://www.ctan.org/tex-archive/macros/latex/contrib/glossaries). Referencia rápida en [LaTeX/Glossary](http://en.wikibooks.org/wiki/LaTeX/Glossary).
 
 El comando `\hacerglosarioconacronimos`, igual que `\hacerglosario` pero titulando la sección **Glosario de Acrónimos y Términos**, más apropiado para cuando se definen acrónimos en el glosario.
 
 Para agregar un término al glosario se debe usar el comando `\agregartermino`, para referirse al término usar el comando `\gls{}` o `\glspl{}` para plurales. Los términos deben ser agregados en el archivo **capitulos/glosario**, y debe incluirse en el cuerpo del documento con el comando `\input{capitulos/glosario}`.
 
-# Comandos Misceléneos
+## Otros Comandos
 
 #### Pendientes
 * `\habilitarpendientes`, muestra los pendientes y el índice de pendientes, se coloca en configuraciones especiales.
@@ -367,7 +366,7 @@ Para agregar un término al glosario se debe usar el comando `\agregartermino`, 
 #### Otros
 * `\yo`, muestra la referencia al autor del trabajo de grado. Para usar este comando previamente se debe asignar el apellido del autor con el comando `\citarcomo{}` en la sección de identificación.
 * `\comillas{}`, coloca un texto entre comillas dobles.
-* `\eningles{}`, coloca un texto entre comillas dobles, con paréntesis y cursivo, ejemplo: (*"Java Agent Development Framework"*, en inglés).
+* `\eningles{}`, coloca un texto entre comillas dobles, con paréntesis y en cursiva, ejemplo: (*"Java Agent Development Framework"*, en inglés).
 * `\verb| |`, coloca un texto en formato de código fuente. Es una alternativa a los listados. También se puede usar `\codigoenlinea{}`.
 * Referencia a los ambientes con etiquetas mediante el uso del comando `\ref{etiqueta}`, también sirve para mencionar secciones.
 * `\R`, `\Rcuadrado` y `\Rcubo` permiten agregar el símbolo de los reales.
