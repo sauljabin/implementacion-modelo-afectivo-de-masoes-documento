@@ -1,4 +1,5 @@
 # Plantilla LaTeX Trabajo de Grado UCLA
+---
 
 # Descripción
 Plantilla en LaTeX para elaborar trabajos de grado de la
@@ -25,7 +26,8 @@ Barquisimeto, Venezuela.
 * Ejecutar ```make docker-proyecto``` para generar proyecto con docker.
 * Ejecutar ```make docker-trabajo``` para generar trabajo de grado con docker.
 
-# Cuerpo del documento principal
+# Cuerpo del Documento Principal
+
 ```TeX
 \documentclass{uclamsc}
 \includeonly{
@@ -123,7 +125,7 @@ Configuraciones especiales
 * `\setnombrelistado{}{}`, Personaliza el nombre a mostrar en listados, primer parámetro singular, segundo plural, ejemplo: `\setnombrelistado{Listado}{Listados}`.
 * `\numerarsecciones`, Cambia el formato de presentación de las secciones y les agrega numeración.
 
-# Comandos para Listas
+# Comandos Para Listas
 
 Comandos originales: [LaTeX List Structures](https://en.wikibooks.org/wiki/LaTeX/List_Structures).
 
@@ -302,7 +304,7 @@ sinindice | Evita que se muestre en el índice | sinindice
 
 Referencia a un algoritmo usando el comando `\refalgoritmo{etiqueta}` o `\refpalgoritmo{etiqueta}`.
 
-# Cita textual
+# Cita Textual
 Ambiente `citatextual` prepara el contexto para una cita textual de más de 40 palabras, uso:
 ```TeX
 \begin{citatextual}
