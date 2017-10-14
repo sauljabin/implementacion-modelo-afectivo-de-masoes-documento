@@ -8,10 +8,10 @@ Trabajo presentado en la Universidad Centroccidental "Lisandro Alvarado" para
 optar al grado de Magister Scientiarum en Ciencias de la Computación Mención
 Inteligencia Artificial. Barquisimeto, Venezuela.
 
-* Autor: Ing. Saúl Jabín Piña Alvarado (<sauljabin@gmail.com>)
+* Autor: MSc. Saúl Jabín Piña Alvarado (<sauljabin@gmail.com>)
 * Tutora: Dra. Niriaska Perozo Guédez (<nperozo@ucla.edu.ve>)
-* Trabajo de Grado: https://bitbucket.org/sauljabin/trabajo-de-grado-ucla
-* Implemención en JAVA: https://bitbucket.org/sauljabin/trabajo-de-grado-ucla-implementacion
+* Trabajo de Grado: https://github.com/sauljabin/implementacion-modelo-afectivo-de-masoes-documento
+* Implemención en JAVA: https://github.com/sauljabin/implementacion-modelo-afectivo-de-masoes
 * JADE: http://jade.tilab.com
 
 ## Resumen
