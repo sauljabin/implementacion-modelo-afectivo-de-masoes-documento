@@ -1,6 +1,6 @@
 build=../../scripts/build.sh
 move=mkdir -p ../../build/ && mv *.pdf ../../build/
-docker=docker run -v $(shell pwd)/src:/src -v $(shell pwd)/scripts:/scripts 
+docker=docker run -v $(shell pwd)/src:/src -v $(shell pwd)/scripts:/scripts
 
 proyecto:
 	@ cd src/main/ && $(build) proyecto && $(move)
@@ -25,3 +25,6 @@ docker-proyecto:
 docker-prueba:
 	@ $(docker) -e BSTINPUTS="/src/main:" -e TEXINPUTS="/src/main:" latex "cd /src/test && /scripts/build.sh prueba"
 	@ cd src/test/ && $(move)
+
+plantuml:
+	@ for i in $(shell find . -name *.puml); do echo $$i; plantuml $$i; done;

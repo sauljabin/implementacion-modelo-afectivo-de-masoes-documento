@@ -27,10 +27,9 @@
   capitulos/el-problema,
   capitulos/marco-teorico,
   capitulos/marco-metodologico,
+  capitulos/propuesta,
   capitulos/resultados,
-  capitulos/discusion,
   capitulos/conclusiones,
-  capitulos/recomendaciones,
   capitulos/anexos
 }
 
@@ -40,36 +39,44 @@
 %% Comandos de identificación
 
 % Sobre el autor
-% \autor{}
-% \citarcomo{}
+\autor{Ing. Saúl Jabín Piña Alvarado}
+\citarcomo{Piña}
 % \esautora
 
 % Sobre el trabajo
-% \titulo{}
-% \palabrasclave{}
-% \title{}
-% \keywords{}
-% \grado{}
-% \mencion{}
+\titulo{Implementación de un Modelo Afectivo para la Arquitectura Multiagente para Sistemas Auto-Organizados y Emergentes (MASOES)}
+\title{Implementation of an Affective Model for the Multiagent Architecture for Self-Organizing And Emergent Systems (MASOES)}
+\palabrasclave{Sistemas Multiagente, Computación Emocional, Modelo Afectivo, Interacción Emocional, MASOES}
+\keywords{Multiagent System, Affective Computing, Emotional Model, Emotional Interaction, MASOES}
+\grado{Magister Scientiarum en Ciencias de la Computación}
+\mencion{Mención Inteligencia Artificial}
 
 % Sobre la universidad
-% \decanato{}
-% \postgrado{}
+\decanato{Ciencias y Tecnología}
+\postgrado{Maestría en Ciencias de la Computación}
 
 % Sobre el tutor
-% \tutor{}
-% \estutora
+\tutor{Dra. Niriaska Perozo Guédez}
+\estutora
 
 % Sobre la presentación
-% \ciudad{}
-% \diapresentacion{}
-% \mespresentacion{}
-% \monthpresentacion{}
-% \anopresentacion{}
-% \primerjurado{}
-% \segundojurado{}
+\ciudad{Barquisimeto}
+\diapresentacion{DEFINIR}
+\mespresentacion{DEFINIR}
+\monthpresentacion{DEFINIR}
+\anopresentacion{2017}
+\primerjurado{DEFINIR}
+\segundojurado{DEFINIR}
 
 %% Fin Comandos de identificación
+
+%% Configuraciones especiales
+
+\setnombreilustracion{Figura}{Figuras}
+\setnombrecuadro{Tabla}{Tablas}
+\numerarsecciones
+
+%% Fin Configuraciones especiales
 
 \begin{document}
 
@@ -93,16 +100,15 @@
   	\include{capitulos/el-problema}
   	\include{capitulos/marco-teorico}
   	\include{capitulos/marco-metodologico}
+  	\include{capitulos/propuesta}
   	\include{capitulos/resultados}
-  	\include{capitulos/discusion}
   	\include{capitulos/conclusiones}
-  	\include{capitulos/recomendaciones}
   \end{contenido}
 
   \hacerbibliografia
 
-  \begin{anexos}
-  	\include{capitulos/anexos}
-  \end{anexos}
+%  \begin{anexos}
+%  	\include{capitulos/anexos}
+%  \end{anexos}
 
 \end{document}

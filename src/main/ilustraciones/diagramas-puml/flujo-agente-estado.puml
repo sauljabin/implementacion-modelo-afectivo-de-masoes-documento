@@ -1,0 +1,21 @@
+@startuml
+
+skinparam maxmessagesize 280
+hide footbox
+
+participant Emisor
+participant "Agente Emocional" as AgentEmocional
+
+activate Emisor
+
+Emisor -> AgentEmocional: Consultar estado emocional de agente (ConsultarEstadoEmocional)
+
+activate AgentEmocional
+
+AgentEmocional -> Emisor: Responder satisfactoriamente con estado emocional del agente (EstadoDeAgente)
+
+deactivate AgentEmocional
+
+deactivate Emisor
+
+@enduml

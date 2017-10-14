@@ -1,0 +1,4095 @@
+{
+  "iterations" : 20,
+  "agentTypeDefinitions" : [ {
+    "agentTypeClass" : "masoes.agent.GenericEmotionalAgent",
+    "agentTypeName" : "UsuarioRegistrado"
+  } ],
+  "stimulusDefinitions" : [ {
+    "name" : "Artículo Nuevo",
+    "value" : "articuloNuevo",
+    "activation" : 0.05,
+    "satisfaction" : 0.05,
+    "self" : true
+  }, {
+    "name" : "Nueva Edición",
+    "value" : "nuevaEdicion",
+    "activation" : 0.03,
+    "satisfaction" : 0.04,
+    "self" : false
+  }, {
+    "name" : "Artículo Sobresaliente",
+    "value" : "articuloSobresaliente",
+    "activation" : 0.08,
+    "satisfaction" : 0.08,
+    "self" : true
+  }, {
+    "name" : "Guerra de Ediciones",
+    "value" : "guerraDeEdiciones",
+    "activation" : -0.08,
+    "satisfaction" : -0.08,
+    "self" : true
+  }, {
+    "name" : "Artículo Borrado",
+    "value" : "articuloBorrado",
+    "activation" : -0.06,
+    "satisfaction" : -0.06,
+    "self" : true
+  }, {
+    "name" : "Artículo Modificado",
+    "value" : "articuloModificado",
+    "activation" : -0.02,
+    "satisfaction" : -0.03,
+    "self" : true
+  } ],
+  "agentConfigurations" : [ {
+    "agentType" : {
+      "agentTypeClass" : "masoes.agent.GenericEmotionalAgent",
+      "agentTypeName" : "UsuarioRegistrado"
+    },
+    "name" : "UsuarioRegistrado1",
+    "activation" : -0.878099015596332,
+    "satisfaction" : 0.8282259671184735,
+    "stimulusConfigurations" : [ {
+      "selected" : false,
+      "stimulusDefinition" : {
+        "name" : "Artículo Nuevo",
+        "value" : "articuloNuevo",
+        "activation" : 0.05,
+        "satisfaction" : 0.05,
+        "self" : true
+      },
+      "activation" : 0.05,
+      "satisfaction" : 0.05,
+      "self" : true
+    }, {
+      "selected" : false,
+      "stimulusDefinition" : {
+        "name" : "Nueva Edición",
+        "value" : "nuevaEdicion",
+        "activation" : 0.03,
+        "satisfaction" : 0.04,
+        "self" : false
+      },
+      "activation" : 0.03,
+      "satisfaction" : 0.04,
+      "self" : false
+    }, {
+      "selected" : false,
+      "stimulusDefinition" : {
+        "name" : "Artículo Sobresaliente",
+        "value" : "articuloSobresaliente",
+        "activation" : 0.08,
+        "satisfaction" : 0.08,
+        "self" : true
+      },
+      "activation" : 0.08,
+      "satisfaction" : 0.08,
+      "self" : true
+    }, {
+      "selected" : true,
+      "stimulusDefinition" : {
+        "name" : "Guerra de Ediciones",
+        "value" : "guerraDeEdiciones",
+        "activation" : -0.08,
+        "satisfaction" : -0.08,
+        "self" : true
+      },
+      "activation" : -0.08,
+      "satisfaction" : -0.08,
+      "self" : true
+    }, {
+      "selected" : true,
+      "stimulusDefinition" : {
+        "name" : "Artículo Borrado",
+        "value" : "articuloBorrado",
+        "activation" : -0.06,
+        "satisfaction" : -0.06,
+        "self" : true
+      },
+      "activation" : -0.06,
+      "satisfaction" : -0.06,
+      "self" : true
+    }, {
+      "selected" : true,
+      "stimulusDefinition" : {
+        "name" : "Artículo Modificado",
+        "value" : "articuloModificado",
+        "activation" : -0.02,
+        "satisfaction" : -0.03,
+        "self" : true
+      },
+      "activation" : -0.02,
+      "satisfaction" : -0.03,
+      "self" : true
+    } ]
+  }, {
+    "agentType" : {
+      "agentTypeClass" : "masoes.agent.GenericEmotionalAgent",
+      "agentTypeName" : "UsuarioRegistrado"
+    },
+    "name" : "UsuarioRegistrado2",
+    "activation" : 0.475971085533172,
+    "satisfaction" : 0.4062067504499942,
+    "stimulusConfigurations" : [ {
+      "selected" : false,
+      "stimulusDefinition" : {
+        "name" : "Artículo Nuevo",
+        "value" : "articuloNuevo",
+        "activation" : 0.05,
+        "satisfaction" : 0.05,
+        "self" : true
+      },
+      "activation" : 0.05,
+      "satisfaction" : 0.05,
+      "self" : true
+    }, {
+      "selected" : false,
+      "stimulusDefinition" : {
+        "name" : "Nueva Edición",
+        "value" : "nuevaEdicion",
+        "activation" : 0.03,
+        "satisfaction" : 0.04,
+        "self" : false
+      },
+      "activation" : 0.03,
+      "satisfaction" : 0.04,
+      "self" : false
+    }, {
+      "selected" : false,
+      "stimulusDefinition" : {
+        "name" : "Artículo Sobresaliente",
+        "value" : "articuloSobresaliente",
+        "activation" : 0.08,
+        "satisfaction" : 0.08,
+        "self" : true
+      },
+      "activation" : 0.08,
+      "satisfaction" : 0.08,
+      "self" : true
+    }, {
+      "selected" : true,
+      "stimulusDefinition" : {
+        "name" : "Guerra de Ediciones",
+        "value" : "guerraDeEdiciones",
+        "activation" : -0.08,
+        "satisfaction" : -0.08,
+        "self" : true
+      },
+      "activation" : -0.08,
+      "satisfaction" : -0.08,
+      "self" : true
+    }, {
+      "selected" : true,
+      "stimulusDefinition" : {
+        "name" : "Artículo Borrado",
+        "value" : "articuloBorrado",
+        "activation" : -0.06,
+        "satisfaction" : -0.06,
+        "self" : true
+      },
+      "activation" : -0.06,
+      "satisfaction" : -0.06,
+      "self" : true
+    }, {
+      "selected" : true,
+      "stimulusDefinition" : {
+        "name" : "Artículo Modificado",
+        "value" : "articuloModificado",
+        "activation" : -0.02,
+        "satisfaction" : -0.03,
+        "self" : true
+      },
+      "activation" : -0.02,
+      "satisfaction" : -0.03,
+      "self" : true
+    } ]
+  }, {
+    "agentType" : {
+      "agentTypeClass" : "masoes.agent.GenericEmotionalAgent",
+      "agentTypeName" : "UsuarioRegistrado"
+    },
+    "name" : "UsuarioRegistrado3",
+    "activation" : -0.34381775819302796,
+    "satisfaction" : 0.4232126207019413,
+    "stimulusConfigurations" : [ {
+      "selected" : false,
+      "stimulusDefinition" : {
+        "name" : "Artículo Nuevo",
+        "value" : "articuloNuevo",
+        "activation" : 0.05,
+        "satisfaction" : 0.05,
+        "self" : true
+      },
+      "activation" : 0.05,
+      "satisfaction" : 0.05,
+      "self" : true
+    }, {
+      "selected" : false,
+      "stimulusDefinition" : {
+        "name" : "Nueva Edición",
+        "value" : "nuevaEdicion",
+        "activation" : 0.03,
+        "satisfaction" : 0.04,
+        "self" : false
+      },
+      "activation" : 0.03,
+      "satisfaction" : 0.04,
+      "self" : false
+    }, {
+      "selected" : false,
+      "stimulusDefinition" : {
+        "name" : "Artículo Sobresaliente",
+        "value" : "articuloSobresaliente",
+        "activation" : 0.08,
+        "satisfaction" : 0.08,
+        "self" : true
+      },
+      "activation" : 0.08,
+      "satisfaction" : 0.08,
+      "self" : true
+    }, {
+      "selected" : true,
+      "stimulusDefinition" : {
+        "name" : "Guerra de Ediciones",
+        "value" : "guerraDeEdiciones",
+        "activation" : -0.08,
+        "satisfaction" : -0.08,
+        "self" : true
+      },
+      "activation" : -0.08,
+      "satisfaction" : -0.08,
+      "self" : true
+    }, {
+      "selected" : true,
+      "stimulusDefinition" : {
+        "name" : "Artículo Borrado",
+        "value" : "articuloBorrado",
+        "activation" : -0.06,
+        "satisfaction" : -0.06,
+        "self" : true
+      },
+      "activation" : -0.06,
+      "satisfaction" : -0.06,
+      "self" : true
+    }, {
+      "selected" : true,
+      "stimulusDefinition" : {
+        "name" : "Artículo Modificado",
+        "value" : "articuloModificado",
+        "activation" : -0.02,
+        "satisfaction" : -0.03,
+        "self" : true
+      },
+      "activation" : -0.02,
+      "satisfaction" : -0.03,
+      "self" : true
+    } ]
+  }, {
+    "agentType" : {
+      "agentTypeClass" : "masoes.agent.GenericEmotionalAgent",
+      "agentTypeName" : "UsuarioRegistrado"
+    },
+    "name" : "UsuarioRegistrado4",
+    "activation" : 0.24353637761103797,
+    "satisfaction" : -0.48278322274825336,
+    "stimulusConfigurations" : [ {
+      "selected" : false,
+      "stimulusDefinition" : {
+        "name" : "Artículo Nuevo",
+        "value" : "articuloNuevo",
+        "activation" : 0.05,
+        "satisfaction" : 0.05,
+        "self" : true
+      },
+      "activation" : 0.05,
+      "satisfaction" : 0.05,
+      "self" : true
+    }, {
+      "selected" : false,
+      "stimulusDefinition" : {
+        "name" : "Nueva Edición",
+        "value" : "nuevaEdicion",
+        "activation" : 0.03,
+        "satisfaction" : 0.04,
+        "self" : false
+      },
+      "activation" : 0.03,
+      "satisfaction" : 0.04,
+      "self" : false
+    }, {
+      "selected" : false,
+      "stimulusDefinition" : {
+        "name" : "Artículo Sobresaliente",
+        "value" : "articuloSobresaliente",
+        "activation" : 0.08,
+        "satisfaction" : 0.08,
+        "self" : true
+      },
+      "activation" : 0.08,
+      "satisfaction" : 0.08,
+      "self" : true
+    }, {
+      "selected" : true,
+      "stimulusDefinition" : {
+        "name" : "Guerra de Ediciones",
+        "value" : "guerraDeEdiciones",
+        "activation" : -0.08,
+        "satisfaction" : -0.08,
+        "self" : true
+      },
+      "activation" : -0.08,
+      "satisfaction" : -0.08,
+      "self" : true
+    }, {
+      "selected" : true,
+      "stimulusDefinition" : {
+        "name" : "Artículo Borrado",
+        "value" : "articuloBorrado",
+        "activation" : -0.06,
+        "satisfaction" : -0.06,
+        "self" : true
+      },
+      "activation" : -0.06,
+      "satisfaction" : -0.06,
+      "self" : true
+    }, {
+      "selected" : true,
+      "stimulusDefinition" : {
+        "name" : "Artículo Modificado",
+        "value" : "articuloModificado",
+        "activation" : -0.02,
+        "satisfaction" : -0.03,
+        "self" : true
+      },
+      "activation" : -0.02,
+      "satisfaction" : -0.03,
+      "self" : true
+    } ]
+  }, {
+    "agentType" : {
+      "agentTypeClass" : "masoes.agent.GenericEmotionalAgent",
+      "agentTypeName" : "UsuarioRegistrado"
+    },
+    "name" : "UsuarioRegistrado5",
+    "activation" : -0.6950888635429924,
+    "satisfaction" : -0.978228941611029,
+    "stimulusConfigurations" : [ {
+      "selected" : false,
+      "stimulusDefinition" : {
+        "name" : "Artículo Nuevo",
+        "value" : "articuloNuevo",
+        "activation" : 0.05,
+        "satisfaction" : 0.05,
+        "self" : true
+      },
+      "activation" : 0.05,
+      "satisfaction" : 0.05,
+      "self" : true
+    }, {
+      "selected" : false,
+      "stimulusDefinition" : {
+        "name" : "Nueva Edición",
+        "value" : "nuevaEdicion",
+        "activation" : 0.03,
+        "satisfaction" : 0.04,
+        "self" : false
+      },
+      "activation" : 0.03,
+      "satisfaction" : 0.04,
+      "self" : false
+    }, {
+      "selected" : false,
+      "stimulusDefinition" : {
+        "name" : "Artículo Sobresaliente",
+        "value" : "articuloSobresaliente",
+        "activation" : 0.08,
+        "satisfaction" : 0.08,
+        "self" : true
+      },
+      "activation" : 0.08,
+      "satisfaction" : 0.08,
+      "self" : true
+    }, {
+      "selected" : true,
+      "stimulusDefinition" : {
+        "name" : "Guerra de Ediciones",
+        "value" : "guerraDeEdiciones",
+        "activation" : -0.08,
+        "satisfaction" : -0.08,
+        "self" : true
+      },
+      "activation" : -0.08,
+      "satisfaction" : -0.08,
+      "self" : true
+    }, {
+      "selected" : true,
+      "stimulusDefinition" : {
+        "name" : "Artículo Borrado",
+        "value" : "articuloBorrado",
+        "activation" : -0.06,
+        "satisfaction" : -0.06,
+        "self" : true
+      },
+      "activation" : -0.06,
+      "satisfaction" : -0.06,
+      "self" : true
+    }, {
+      "selected" : true,
+      "stimulusDefinition" : {
+        "name" : "Artículo Modificado",
+        "value" : "articuloModificado",
+        "activation" : -0.02,
+        "satisfaction" : -0.03,
+        "self" : true
+      },
+      "activation" : -0.02,
+      "satisfaction" : -0.03,
+      "self" : true
+    } ]
+  }, {
+    "agentType" : {
+      "agentTypeClass" : "masoes.agent.GenericEmotionalAgent",
+      "agentTypeName" : "UsuarioRegistrado"
+    },
+    "name" : "UsuarioRegistrado6",
+    "activation" : -0.6504393952194878,
+    "satisfaction" : 0.23938093325916965,
+    "stimulusConfigurations" : [ {
+      "selected" : false,
+      "stimulusDefinition" : {
+        "name" : "Artículo Nuevo",
+        "value" : "articuloNuevo",
+        "activation" : 0.05,
+        "satisfaction" : 0.05,
+        "self" : true
+      },
+      "activation" : 0.05,
+      "satisfaction" : 0.05,
+      "self" : true
+    }, {
+      "selected" : false,
+      "stimulusDefinition" : {
+        "name" : "Nueva Edición",
+        "value" : "nuevaEdicion",
+        "activation" : 0.03,
+        "satisfaction" : 0.04,
+        "self" : false
+      },
+      "activation" : 0.03,
+      "satisfaction" : 0.04,
+      "self" : false
+    }, {
+      "selected" : false,
+      "stimulusDefinition" : {
+        "name" : "Artículo Sobresaliente",
+        "value" : "articuloSobresaliente",
+        "activation" : 0.08,
+        "satisfaction" : 0.08,
+        "self" : true
+      },
+      "activation" : 0.08,
+      "satisfaction" : 0.08,
+      "self" : true
+    }, {
+      "selected" : true,
+      "stimulusDefinition" : {
+        "name" : "Guerra de Ediciones",
+        "value" : "guerraDeEdiciones",
+        "activation" : -0.08,
+        "satisfaction" : -0.08,
+        "self" : true
+      },
+      "activation" : -0.08,
+      "satisfaction" : -0.08,
+      "self" : true
+    }, {
+      "selected" : true,
+      "stimulusDefinition" : {
+        "name" : "Artículo Borrado",
+        "value" : "articuloBorrado",
+        "activation" : -0.06,
+        "satisfaction" : -0.06,
+        "self" : true
+      },
+      "activation" : -0.06,
+      "satisfaction" : -0.06,
+      "self" : true
+    }, {
+      "selected" : true,
+      "stimulusDefinition" : {
+        "name" : "Artículo Modificado",
+        "value" : "articuloModificado",
+        "activation" : -0.02,
+        "satisfaction" : -0.03,
+        "self" : true
+      },
+      "activation" : -0.02,
+      "satisfaction" : -0.03,
+      "self" : true
+    } ]
+  }, {
+    "agentType" : {
+      "agentTypeClass" : "masoes.agent.GenericEmotionalAgent",
+      "agentTypeName" : "UsuarioRegistrado"
+    },
+    "name" : "UsuarioRegistrado7",
+    "activation" : -0.20832546342023606,
+    "satisfaction" : -0.4511231842811456,
+    "stimulusConfigurations" : [ {
+      "selected" : false,
+      "stimulusDefinition" : {
+        "name" : "Artículo Nuevo",
+        "value" : "articuloNuevo",
+        "activation" : 0.05,
+        "satisfaction" : 0.05,
+        "self" : true
+      },
+      "activation" : 0.05,
+      "satisfaction" : 0.05,
+      "self" : true
+    }, {
+      "selected" : false,
+      "stimulusDefinition" : {
+        "name" : "Nueva Edición",
+        "value" : "nuevaEdicion",
+        "activation" : 0.03,
+        "satisfaction" : 0.04,
+        "self" : false
+      },
+      "activation" : 0.03,
+      "satisfaction" : 0.04,
+      "self" : false
+    }, {
+      "selected" : false,
+      "stimulusDefinition" : {
+        "name" : "Artículo Sobresaliente",
+        "value" : "articuloSobresaliente",
+        "activation" : 0.08,
+        "satisfaction" : 0.08,
+        "self" : true
+      },
+      "activation" : 0.08,
+      "satisfaction" : 0.08,
+      "self" : true
+    }, {
+      "selected" : true,
+      "stimulusDefinition" : {
+        "name" : "Guerra de Ediciones",
+        "value" : "guerraDeEdiciones",
+        "activation" : -0.08,
+        "satisfaction" : -0.08,
+        "self" : true
+      },
+      "activation" : -0.08,
+      "satisfaction" : -0.08,
+      "self" : true
+    }, {
+      "selected" : true,
+      "stimulusDefinition" : {
+        "name" : "Artículo Borrado",
+        "value" : "articuloBorrado",
+        "activation" : -0.06,
+        "satisfaction" : -0.06,
+        "self" : true
+      },
+      "activation" : -0.06,
+      "satisfaction" : -0.06,
+      "self" : true
+    }, {
+      "selected" : true,
+      "stimulusDefinition" : {
+        "name" : "Artículo Modificado",
+        "value" : "articuloModificado",
+        "activation" : -0.02,
+        "satisfaction" : -0.03,
+        "self" : true
+      },
+      "activation" : -0.02,
+      "satisfaction" : -0.03,
+      "self" : true
+    } ]
+  }, {
+    "agentType" : {
+      "agentTypeClass" : "masoes.agent.GenericEmotionalAgent",
+      "agentTypeName" : "UsuarioRegistrado"
+    },
+    "name" : "UsuarioRegistrado8",
+    "activation" : -0.2999894547034063,
+    "satisfaction" : 0.7489995625998067,
+    "stimulusConfigurations" : [ {
+      "selected" : false,
+      "stimulusDefinition" : {
+        "name" : "Artículo Nuevo",
+        "value" : "articuloNuevo",
+        "activation" : 0.05,
+        "satisfaction" : 0.05,
+        "self" : true
+      },
+      "activation" : 0.05,
+      "satisfaction" : 0.05,
+      "self" : true
+    }, {
+      "selected" : false,
+      "stimulusDefinition" : {
+        "name" : "Nueva Edición",
+        "value" : "nuevaEdicion",
+        "activation" : 0.03,
+        "satisfaction" : 0.04,
+        "self" : false
+      },
+      "activation" : 0.03,
+      "satisfaction" : 0.04,
+      "self" : false
+    }, {
+      "selected" : false,
+      "stimulusDefinition" : {
+        "name" : "Artículo Sobresaliente",
+        "value" : "articuloSobresaliente",
+        "activation" : 0.08,
+        "satisfaction" : 0.08,
+        "self" : true
+      },
+      "activation" : 0.08,
+      "satisfaction" : 0.08,
+      "self" : true
+    }, {
+      "selected" : true,
+      "stimulusDefinition" : {
+        "name" : "Guerra de Ediciones",
+        "value" : "guerraDeEdiciones",
+        "activation" : -0.08,
+        "satisfaction" : -0.08,
+        "self" : true
+      },
+      "activation" : -0.08,
+      "satisfaction" : -0.08,
+      "self" : true
+    }, {
+      "selected" : true,
+      "stimulusDefinition" : {
+        "name" : "Artículo Borrado",
+        "value" : "articuloBorrado",
+        "activation" : -0.06,
+        "satisfaction" : -0.06,
+        "self" : true
+      },
+      "activation" : -0.06,
+      "satisfaction" : -0.06,
+      "self" : true
+    }, {
+      "selected" : true,
+      "stimulusDefinition" : {
+        "name" : "Artículo Modificado",
+        "value" : "articuloModificado",
+        "activation" : -0.02,
+        "satisfaction" : -0.03,
+        "self" : true
+      },
+      "activation" : -0.02,
+      "satisfaction" : -0.03,
+      "self" : true
+    } ]
+  }, {
+    "agentType" : {
+      "agentTypeClass" : "masoes.agent.GenericEmotionalAgent",
+      "agentTypeName" : "UsuarioRegistrado"
+    },
+    "name" : "UsuarioRegistrado9",
+    "activation" : -0.25352034341281793,
+    "satisfaction" : 0.8009855807121746,
+    "stimulusConfigurations" : [ {
+      "selected" : false,
+      "stimulusDefinition" : {
+        "name" : "Artículo Nuevo",
+        "value" : "articuloNuevo",
+        "activation" : 0.05,
+        "satisfaction" : 0.05,
+        "self" : true
+      },
+      "activation" : 0.05,
+      "satisfaction" : 0.05,
+      "self" : true
+    }, {
+      "selected" : false,
+      "stimulusDefinition" : {
+        "name" : "Nueva Edición",
+        "value" : "nuevaEdicion",
+        "activation" : 0.03,
+        "satisfaction" : 0.04,
+        "self" : false
+      },
+      "activation" : 0.03,
+      "satisfaction" : 0.04,
+      "self" : false
+    }, {
+      "selected" : false,
+      "stimulusDefinition" : {
+        "name" : "Artículo Sobresaliente",
+        "value" : "articuloSobresaliente",
+        "activation" : 0.08,
+        "satisfaction" : 0.08,
+        "self" : true
+      },
+      "activation" : 0.08,
+      "satisfaction" : 0.08,
+      "self" : true
+    }, {
+      "selected" : true,
+      "stimulusDefinition" : {
+        "name" : "Guerra de Ediciones",
+        "value" : "guerraDeEdiciones",
+        "activation" : -0.08,
+        "satisfaction" : -0.08,
+        "self" : true
+      },
+      "activation" : -0.08,
+      "satisfaction" : -0.08,
+      "self" : true
+    }, {
+      "selected" : true,
+      "stimulusDefinition" : {
+        "name" : "Artículo Borrado",
+        "value" : "articuloBorrado",
+        "activation" : -0.06,
+        "satisfaction" : -0.06,
+        "self" : true
+      },
+      "activation" : -0.06,
+      "satisfaction" : -0.06,
+      "self" : true
+    }, {
+      "selected" : true,
+      "stimulusDefinition" : {
+        "name" : "Artículo Modificado",
+        "value" : "articuloModificado",
+        "activation" : -0.02,
+        "satisfaction" : -0.03,
+        "self" : true
+      },
+      "activation" : -0.02,
+      "satisfaction" : -0.03,
+      "self" : true
+    } ]
+  }, {
+    "agentType" : {
+      "agentTypeClass" : "masoes.agent.GenericEmotionalAgent",
+      "agentTypeName" : "UsuarioRegistrado"
+    },
+    "name" : "UsuarioRegistrado10",
+    "activation" : 0.1758525019922743,
+    "satisfaction" : -0.9550075664685076,
+    "stimulusConfigurations" : [ {
+      "selected" : false,
+      "stimulusDefinition" : {
+        "name" : "Artículo Nuevo",
+        "value" : "articuloNuevo",
+        "activation" : 0.05,
+        "satisfaction" : 0.05,
+        "self" : true
+      },
+      "activation" : 0.05,
+      "satisfaction" : 0.05,
+      "self" : true
+    }, {
+      "selected" : false,
+      "stimulusDefinition" : {
+        "name" : "Nueva Edición",
+        "value" : "nuevaEdicion",
+        "activation" : 0.03,
+        "satisfaction" : 0.04,
+        "self" : false
+      },
+      "activation" : 0.03,
+      "satisfaction" : 0.04,
+      "self" : false
+    }, {
+      "selected" : false,
+      "stimulusDefinition" : {
+        "name" : "Artículo Sobresaliente",
+        "value" : "articuloSobresaliente",
+        "activation" : 0.08,
+        "satisfaction" : 0.08,
+        "self" : true
+      },
+      "activation" : 0.08,
+      "satisfaction" : 0.08,
+      "self" : true
+    }, {
+      "selected" : true,
+      "stimulusDefinition" : {
+        "name" : "Guerra de Ediciones",
+        "value" : "guerraDeEdiciones",
+        "activation" : -0.08,
+        "satisfaction" : -0.08,
+        "self" : true
+      },
+      "activation" : -0.08,
+      "satisfaction" : -0.08,
+      "self" : true
+    }, {
+      "selected" : true,
+      "stimulusDefinition" : {
+        "name" : "Artículo Borrado",
+        "value" : "articuloBorrado",
+        "activation" : -0.06,
+        "satisfaction" : -0.06,
+        "self" : true
+      },
+      "activation" : -0.06,
+      "satisfaction" : -0.06,
+      "self" : true
+    }, {
+      "selected" : true,
+      "stimulusDefinition" : {
+        "name" : "Artículo Modificado",
+        "value" : "articuloModificado",
+        "activation" : -0.02,
+        "satisfaction" : -0.03,
+        "self" : true
+      },
+      "activation" : -0.02,
+      "satisfaction" : -0.03,
+      "self" : true
+    } ]
+  }, {
+    "agentType" : {
+      "agentTypeClass" : "masoes.agent.GenericEmotionalAgent",
+      "agentTypeName" : "UsuarioRegistrado"
+    },
+    "name" : "UsuarioRegistrado11",
+    "activation" : -0.7520886596762308,
+    "satisfaction" : -0.3286707124217416,
+    "stimulusConfigurations" : [ {
+      "selected" : false,
+      "stimulusDefinition" : {
+        "name" : "Artículo Nuevo",
+        "value" : "articuloNuevo",
+        "activation" : 0.05,
+        "satisfaction" : 0.05,
+        "self" : true
+      },
+      "activation" : 0.05,
+      "satisfaction" : 0.05,
+      "self" : true
+    }, {
+      "selected" : false,
+      "stimulusDefinition" : {
+        "name" : "Nueva Edición",
+        "value" : "nuevaEdicion",
+        "activation" : 0.03,
+        "satisfaction" : 0.04,
+        "self" : false
+      },
+      "activation" : 0.03,
+      "satisfaction" : 0.04,
+      "self" : false
+    }, {
+      "selected" : false,
+      "stimulusDefinition" : {
+        "name" : "Artículo Sobresaliente",
+        "value" : "articuloSobresaliente",
+        "activation" : 0.08,
+        "satisfaction" : 0.08,
+        "self" : true
+      },
+      "activation" : 0.08,
+      "satisfaction" : 0.08,
+      "self" : true
+    }, {
+      "selected" : true,
+      "stimulusDefinition" : {
+        "name" : "Guerra de Ediciones",
+        "value" : "guerraDeEdiciones",
+        "activation" : -0.08,
+        "satisfaction" : -0.08,
+        "self" : true
+      },
+      "activation" : -0.08,
+      "satisfaction" : -0.08,
+      "self" : true
+    }, {
+      "selected" : true,
+      "stimulusDefinition" : {
+        "name" : "Artículo Borrado",
+        "value" : "articuloBorrado",
+        "activation" : -0.06,
+        "satisfaction" : -0.06,
+        "self" : true
+      },
+      "activation" : -0.06,
+      "satisfaction" : -0.06,
+      "self" : true
+    }, {
+      "selected" : true,
+      "stimulusDefinition" : {
+        "name" : "Artículo Modificado",
+        "value" : "articuloModificado",
+        "activation" : -0.02,
+        "satisfaction" : -0.03,
+        "self" : true
+      },
+      "activation" : -0.02,
+      "satisfaction" : -0.03,
+      "self" : true
+    } ]
+  }, {
+    "agentType" : {
+      "agentTypeClass" : "masoes.agent.GenericEmotionalAgent",
+      "agentTypeName" : "UsuarioRegistrado"
+    },
+    "name" : "UsuarioRegistrado12",
+    "activation" : -0.5778945515712186,
+    "satisfaction" : -0.8485246024050388,
+    "stimulusConfigurations" : [ {
+      "selected" : false,
+      "stimulusDefinition" : {
+        "name" : "Artículo Nuevo",
+        "value" : "articuloNuevo",
+        "activation" : 0.05,
+        "satisfaction" : 0.05,
+        "self" : true
+      },
+      "activation" : 0.05,
+      "satisfaction" : 0.05,
+      "self" : true
+    }, {
+      "selected" : false,
+      "stimulusDefinition" : {
+        "name" : "Nueva Edición",
+        "value" : "nuevaEdicion",
+        "activation" : 0.03,
+        "satisfaction" : 0.04,
+        "self" : false
+      },
+      "activation" : 0.03,
+      "satisfaction" : 0.04,
+      "self" : false
+    }, {
+      "selected" : false,
+      "stimulusDefinition" : {
+        "name" : "Artículo Sobresaliente",
+        "value" : "articuloSobresaliente",
+        "activation" : 0.08,
+        "satisfaction" : 0.08,
+        "self" : true
+      },
+      "activation" : 0.08,
+      "satisfaction" : 0.08,
+      "self" : true
+    }, {
+      "selected" : true,
+      "stimulusDefinition" : {
+        "name" : "Guerra de Ediciones",
+        "value" : "guerraDeEdiciones",
+        "activation" : -0.08,
+        "satisfaction" : -0.08,
+        "self" : true
+      },
+      "activation" : -0.08,
+      "satisfaction" : -0.08,
+      "self" : true
+    }, {
+      "selected" : true,
+      "stimulusDefinition" : {
+        "name" : "Artículo Borrado",
+        "value" : "articuloBorrado",
+        "activation" : -0.06,
+        "satisfaction" : -0.06,
+        "self" : true
+      },
+      "activation" : -0.06,
+      "satisfaction" : -0.06,
+      "self" : true
+    }, {
+      "selected" : true,
+      "stimulusDefinition" : {
+        "name" : "Artículo Modificado",
+        "value" : "articuloModificado",
+        "activation" : -0.02,
+        "satisfaction" : -0.03,
+        "self" : true
+      },
+      "activation" : -0.02,
+      "satisfaction" : -0.03,
+      "self" : true
+    } ]
+  }, {
+    "agentType" : {
+      "agentTypeClass" : "masoes.agent.GenericEmotionalAgent",
+      "agentTypeName" : "UsuarioRegistrado"
+    },
+    "name" : "UsuarioRegistrado13",
+    "activation" : 0.06502974568225439,
+    "satisfaction" : -0.8191372419865977,
+    "stimulusConfigurations" : [ {
+      "selected" : false,
+      "stimulusDefinition" : {
+        "name" : "Artículo Nuevo",
+        "value" : "articuloNuevo",
+        "activation" : 0.05,
+        "satisfaction" : 0.05,
+        "self" : true
+      },
+      "activation" : 0.05,
+      "satisfaction" : 0.05,
+      "self" : true
+    }, {
+      "selected" : false,
+      "stimulusDefinition" : {
+        "name" : "Nueva Edición",
+        "value" : "nuevaEdicion",
+        "activation" : 0.03,
+        "satisfaction" : 0.04,
+        "self" : false
+      },
+      "activation" : 0.03,
+      "satisfaction" : 0.04,
+      "self" : false
+    }, {
+      "selected" : false,
+      "stimulusDefinition" : {
+        "name" : "Artículo Sobresaliente",
+        "value" : "articuloSobresaliente",
+        "activation" : 0.08,
+        "satisfaction" : 0.08,
+        "self" : true
+      },
+      "activation" : 0.08,
+      "satisfaction" : 0.08,
+      "self" : true
+    }, {
+      "selected" : true,
+      "stimulusDefinition" : {
+        "name" : "Guerra de Ediciones",
+        "value" : "guerraDeEdiciones",
+        "activation" : -0.08,
+        "satisfaction" : -0.08,
+        "self" : true
+      },
+      "activation" : -0.08,
+      "satisfaction" : -0.08,
+      "self" : true
+    }, {
+      "selected" : true,
+      "stimulusDefinition" : {
+        "name" : "Artículo Borrado",
+        "value" : "articuloBorrado",
+        "activation" : -0.06,
+        "satisfaction" : -0.06,
+        "self" : true
+      },
+      "activation" : -0.06,
+      "satisfaction" : -0.06,
+      "self" : true
+    }, {
+      "selected" : true,
+      "stimulusDefinition" : {
+        "name" : "Artículo Modificado",
+        "value" : "articuloModificado",
+        "activation" : -0.02,
+        "satisfaction" : -0.03,
+        "self" : true
+      },
+      "activation" : -0.02,
+      "satisfaction" : -0.03,
+      "self" : true
+    } ]
+  }, {
+    "agentType" : {
+      "agentTypeClass" : "masoes.agent.GenericEmotionalAgent",
+      "agentTypeName" : "UsuarioRegistrado"
+    },
+    "name" : "UsuarioRegistrado14",
+    "activation" : 0.6960399296641187,
+    "satisfaction" : 0.9416920997690099,
+    "stimulusConfigurations" : [ {
+      "selected" : false,
+      "stimulusDefinition" : {
+        "name" : "Artículo Nuevo",
+        "value" : "articuloNuevo",
+        "activation" : 0.05,
+        "satisfaction" : 0.05,
+        "self" : true
+      },
+      "activation" : 0.05,
+      "satisfaction" : 0.05,
+      "self" : true
+    }, {
+      "selected" : false,
+      "stimulusDefinition" : {
+        "name" : "Nueva Edición",
+        "value" : "nuevaEdicion",
+        "activation" : 0.03,
+        "satisfaction" : 0.04,
+        "self" : false
+      },
+      "activation" : 0.03,
+      "satisfaction" : 0.04,
+      "self" : false
+    }, {
+      "selected" : false,
+      "stimulusDefinition" : {
+        "name" : "Artículo Sobresaliente",
+        "value" : "articuloSobresaliente",
+        "activation" : 0.08,
+        "satisfaction" : 0.08,
+        "self" : true
+      },
+      "activation" : 0.08,
+      "satisfaction" : 0.08,
+      "self" : true
+    }, {
+      "selected" : true,
+      "stimulusDefinition" : {
+        "name" : "Guerra de Ediciones",
+        "value" : "guerraDeEdiciones",
+        "activation" : -0.08,
+        "satisfaction" : -0.08,
+        "self" : true
+      },
+      "activation" : -0.08,
+      "satisfaction" : -0.08,
+      "self" : true
+    }, {
+      "selected" : true,
+      "stimulusDefinition" : {
+        "name" : "Artículo Borrado",
+        "value" : "articuloBorrado",
+        "activation" : -0.06,
+        "satisfaction" : -0.06,
+        "self" : true
+      },
+      "activation" : -0.06,
+      "satisfaction" : -0.06,
+      "self" : true
+    }, {
+      "selected" : true,
+      "stimulusDefinition" : {
+        "name" : "Artículo Modificado",
+        "value" : "articuloModificado",
+        "activation" : -0.02,
+        "satisfaction" : -0.03,
+        "self" : true
+      },
+      "activation" : -0.02,
+      "satisfaction" : -0.03,
+      "self" : true
+    } ]
+  }, {
+    "agentType" : {
+      "agentTypeClass" : "masoes.agent.GenericEmotionalAgent",
+      "agentTypeName" : "UsuarioRegistrado"
+    },
+    "name" : "UsuarioRegistrado15",
+    "activation" : 0.8104934051486206,
+    "satisfaction" : 0.9272271915312706,
+    "stimulusConfigurations" : [ {
+      "selected" : false,
+      "stimulusDefinition" : {
+        "name" : "Artículo Nuevo",
+        "value" : "articuloNuevo",
+        "activation" : 0.05,
+        "satisfaction" : 0.05,
+        "self" : true
+      },
+      "activation" : 0.05,
+      "satisfaction" : 0.05,
+      "self" : true
+    }, {
+      "selected" : false,
+      "stimulusDefinition" : {
+        "name" : "Nueva Edición",
+        "value" : "nuevaEdicion",
+        "activation" : 0.03,
+        "satisfaction" : 0.04,
+        "self" : false
+      },
+      "activation" : 0.03,
+      "satisfaction" : 0.04,
+      "self" : false
+    }, {
+      "selected" : false,
+      "stimulusDefinition" : {
+        "name" : "Artículo Sobresaliente",
+        "value" : "articuloSobresaliente",
+        "activation" : 0.08,
+        "satisfaction" : 0.08,
+        "self" : true
+      },
+      "activation" : 0.08,
+      "satisfaction" : 0.08,
+      "self" : true
+    }, {
+      "selected" : true,
+      "stimulusDefinition" : {
+        "name" : "Guerra de Ediciones",
+        "value" : "guerraDeEdiciones",
+        "activation" : -0.08,
+        "satisfaction" : -0.08,
+        "self" : true
+      },
+      "activation" : -0.08,
+      "satisfaction" : -0.08,
+      "self" : true
+    }, {
+      "selected" : true,
+      "stimulusDefinition" : {
+        "name" : "Artículo Borrado",
+        "value" : "articuloBorrado",
+        "activation" : -0.06,
+        "satisfaction" : -0.06,
+        "self" : true
+      },
+      "activation" : -0.06,
+      "satisfaction" : -0.06,
+      "self" : true
+    }, {
+      "selected" : true,
+      "stimulusDefinition" : {
+        "name" : "Artículo Modificado",
+        "value" : "articuloModificado",
+        "activation" : -0.02,
+        "satisfaction" : -0.03,
+        "self" : true
+      },
+      "activation" : -0.02,
+      "satisfaction" : -0.03,
+      "self" : true
+    } ]
+  }, {
+    "agentType" : {
+      "agentTypeClass" : "masoes.agent.GenericEmotionalAgent",
+      "agentTypeName" : "UsuarioRegistrado"
+    },
+    "name" : "UsuarioRegistrado16",
+    "activation" : 0.7291721198514509,
+    "satisfaction" : 0.7278930896687239,
+    "stimulusConfigurations" : [ {
+      "selected" : false,
+      "stimulusDefinition" : {
+        "name" : "Artículo Nuevo",
+        "value" : "articuloNuevo",
+        "activation" : 0.05,
+        "satisfaction" : 0.05,
+        "self" : true
+      },
+      "activation" : 0.05,
+      "satisfaction" : 0.05,
+      "self" : true
+    }, {
+      "selected" : false,
+      "stimulusDefinition" : {
+        "name" : "Nueva Edición",
+        "value" : "nuevaEdicion",
+        "activation" : 0.03,
+        "satisfaction" : 0.04,
+        "self" : false
+      },
+      "activation" : 0.03,
+      "satisfaction" : 0.04,
+      "self" : false
+    }, {
+      "selected" : false,
+      "stimulusDefinition" : {
+        "name" : "Artículo Sobresaliente",
+        "value" : "articuloSobresaliente",
+        "activation" : 0.08,
+        "satisfaction" : 0.08,
+        "self" : true
+      },
+      "activation" : 0.08,
+      "satisfaction" : 0.08,
+      "self" : true
+    }, {
+      "selected" : true,
+      "stimulusDefinition" : {
+        "name" : "Guerra de Ediciones",
+        "value" : "guerraDeEdiciones",
+        "activation" : -0.08,
+        "satisfaction" : -0.08,
+        "self" : true
+      },
+      "activation" : -0.08,
+      "satisfaction" : -0.08,
+      "self" : true
+    }, {
+      "selected" : true,
+      "stimulusDefinition" : {
+        "name" : "Artículo Borrado",
+        "value" : "articuloBorrado",
+        "activation" : -0.06,
+        "satisfaction" : -0.06,
+        "self" : true
+      },
+      "activation" : -0.06,
+      "satisfaction" : -0.06,
+      "self" : true
+    }, {
+      "selected" : true,
+      "stimulusDefinition" : {
+        "name" : "Artículo Modificado",
+        "value" : "articuloModificado",
+        "activation" : -0.02,
+        "satisfaction" : -0.03,
+        "self" : true
+      },
+      "activation" : -0.02,
+      "satisfaction" : -0.03,
+      "self" : true
+    } ]
+  }, {
+    "agentType" : {
+      "agentTypeClass" : "masoes.agent.GenericEmotionalAgent",
+      "agentTypeName" : "UsuarioRegistrado"
+    },
+    "name" : "UsuarioRegistrado17",
+    "activation" : -0.6566511113349196,
+    "satisfaction" : -0.10582661877404753,
+    "stimulusConfigurations" : [ {
+      "selected" : false,
+      "stimulusDefinition" : {
+        "name" : "Artículo Nuevo",
+        "value" : "articuloNuevo",
+        "activation" : 0.05,
+        "satisfaction" : 0.05,
+        "self" : true
+      },
+      "activation" : 0.05,
+      "satisfaction" : 0.05,
+      "self" : true
+    }, {
+      "selected" : false,
+      "stimulusDefinition" : {
+        "name" : "Nueva Edición",
+        "value" : "nuevaEdicion",
+        "activation" : 0.03,
+        "satisfaction" : 0.04,
+        "self" : false
+      },
+      "activation" : 0.03,
+      "satisfaction" : 0.04,
+      "self" : false
+    }, {
+      "selected" : false,
+      "stimulusDefinition" : {
+        "name" : "Artículo Sobresaliente",
+        "value" : "articuloSobresaliente",
+        "activation" : 0.08,
+        "satisfaction" : 0.08,
+        "self" : true
+      },
+      "activation" : 0.08,
+      "satisfaction" : 0.08,
+      "self" : true
+    }, {
+      "selected" : true,
+      "stimulusDefinition" : {
+        "name" : "Guerra de Ediciones",
+        "value" : "guerraDeEdiciones",
+        "activation" : -0.08,
+        "satisfaction" : -0.08,
+        "self" : true
+      },
+      "activation" : -0.08,
+      "satisfaction" : -0.08,
+      "self" : true
+    }, {
+      "selected" : true,
+      "stimulusDefinition" : {
+        "name" : "Artículo Borrado",
+        "value" : "articuloBorrado",
+        "activation" : -0.06,
+        "satisfaction" : -0.06,
+        "self" : true
+      },
+      "activation" : -0.06,
+      "satisfaction" : -0.06,
+      "self" : true
+    }, {
+      "selected" : true,
+      "stimulusDefinition" : {
+        "name" : "Artículo Modificado",
+        "value" : "articuloModificado",
+        "activation" : -0.02,
+        "satisfaction" : -0.03,
+        "self" : true
+      },
+      "activation" : -0.02,
+      "satisfaction" : -0.03,
+      "self" : true
+    } ]
+  }, {
+    "agentType" : {
+      "agentTypeClass" : "masoes.agent.GenericEmotionalAgent",
+      "agentTypeName" : "UsuarioRegistrado"
+    },
+    "name" : "UsuarioRegistrado18",
+    "activation" : -0.7840919514398055,
+    "satisfaction" : -0.12691729347268454,
+    "stimulusConfigurations" : [ {
+      "selected" : false,
+      "stimulusDefinition" : {
+        "name" : "Artículo Nuevo",
+        "value" : "articuloNuevo",
+        "activation" : 0.05,
+        "satisfaction" : 0.05,
+        "self" : true
+      },
+      "activation" : 0.05,
+      "satisfaction" : 0.05,
+      "self" : true
+    }, {
+      "selected" : false,
+      "stimulusDefinition" : {
+        "name" : "Nueva Edición",
+        "value" : "nuevaEdicion",
+        "activation" : 0.03,
+        "satisfaction" : 0.04,
+        "self" : false
+      },
+      "activation" : 0.03,
+      "satisfaction" : 0.04,
+      "self" : false
+    }, {
+      "selected" : false,
+      "stimulusDefinition" : {
+        "name" : "Artículo Sobresaliente",
+        "value" : "articuloSobresaliente",
+        "activation" : 0.08,
+        "satisfaction" : 0.08,
+        "self" : true
+      },
+      "activation" : 0.08,
+      "satisfaction" : 0.08,
+      "self" : true
+    }, {
+      "selected" : true,
+      "stimulusDefinition" : {
+        "name" : "Guerra de Ediciones",
+        "value" : "guerraDeEdiciones",
+        "activation" : -0.08,
+        "satisfaction" : -0.08,
+        "self" : true
+      },
+      "activation" : -0.08,
+      "satisfaction" : -0.08,
+      "self" : true
+    }, {
+      "selected" : true,
+      "stimulusDefinition" : {
+        "name" : "Artículo Borrado",
+        "value" : "articuloBorrado",
+        "activation" : -0.06,
+        "satisfaction" : -0.06,
+        "self" : true
+      },
+      "activation" : -0.06,
+      "satisfaction" : -0.06,
+      "self" : true
+    }, {
+      "selected" : true,
+      "stimulusDefinition" : {
+        "name" : "Artículo Modificado",
+        "value" : "articuloModificado",
+        "activation" : -0.02,
+        "satisfaction" : -0.03,
+        "self" : true
+      },
+      "activation" : -0.02,
+      "satisfaction" : -0.03,
+      "self" : true
+    } ]
+  }, {
+    "agentType" : {
+      "agentTypeClass" : "masoes.agent.GenericEmotionalAgent",
+      "agentTypeName" : "UsuarioRegistrado"
+    },
+    "name" : "UsuarioRegistrado19",
+    "activation" : -0.5506200378732364,
+    "satisfaction" : 0.9564676351085042,
+    "stimulusConfigurations" : [ {
+      "selected" : false,
+      "stimulusDefinition" : {
+        "name" : "Artículo Nuevo",
+        "value" : "articuloNuevo",
+        "activation" : 0.05,
+        "satisfaction" : 0.05,
+        "self" : true
+      },
+      "activation" : 0.05,
+      "satisfaction" : 0.05,
+      "self" : true
+    }, {
+      "selected" : false,
+      "stimulusDefinition" : {
+        "name" : "Nueva Edición",
+        "value" : "nuevaEdicion",
+        "activation" : 0.03,
+        "satisfaction" : 0.04,
+        "self" : false
+      },
+      "activation" : 0.03,
+      "satisfaction" : 0.04,
+      "self" : false
+    }, {
+      "selected" : false,
+      "stimulusDefinition" : {
+        "name" : "Artículo Sobresaliente",
+        "value" : "articuloSobresaliente",
+        "activation" : 0.08,
+        "satisfaction" : 0.08,
+        "self" : true
+      },
+      "activation" : 0.08,
+      "satisfaction" : 0.08,
+      "self" : true
+    }, {
+      "selected" : true,
+      "stimulusDefinition" : {
+        "name" : "Guerra de Ediciones",
+        "value" : "guerraDeEdiciones",
+        "activation" : -0.08,
+        "satisfaction" : -0.08,
+        "self" : true
+      },
+      "activation" : -0.08,
+      "satisfaction" : -0.08,
+      "self" : true
+    }, {
+      "selected" : true,
+      "stimulusDefinition" : {
+        "name" : "Artículo Borrado",
+        "value" : "articuloBorrado",
+        "activation" : -0.06,
+        "satisfaction" : -0.06,
+        "self" : true
+      },
+      "activation" : -0.06,
+      "satisfaction" : -0.06,
+      "self" : true
+    }, {
+      "selected" : true,
+      "stimulusDefinition" : {
+        "name" : "Artículo Modificado",
+        "value" : "articuloModificado",
+        "activation" : -0.02,
+        "satisfaction" : -0.03,
+        "self" : true
+      },
+      "activation" : -0.02,
+      "satisfaction" : -0.03,
+      "self" : true
+    } ]
+  }, {
+    "agentType" : {
+      "agentTypeClass" : "masoes.agent.GenericEmotionalAgent",
+      "agentTypeName" : "UsuarioRegistrado"
+    },
+    "name" : "UsuarioRegistrado20",
+    "activation" : 0.762394792452177,
+    "satisfaction" : -0.14561783958948826,
+    "stimulusConfigurations" : [ {
+      "selected" : false,
+      "stimulusDefinition" : {
+        "name" : "Artículo Nuevo",
+        "value" : "articuloNuevo",
+        "activation" : 0.05,
+        "satisfaction" : 0.05,
+        "self" : true
+      },
+      "activation" : 0.05,
+      "satisfaction" : 0.05,
+      "self" : true
+    }, {
+      "selected" : false,
+      "stimulusDefinition" : {
+        "name" : "Nueva Edición",
+        "value" : "nuevaEdicion",
+        "activation" : 0.03,
+        "satisfaction" : 0.04,
+        "self" : false
+      },
+      "activation" : 0.03,
+      "satisfaction" : 0.04,
+      "self" : false
+    }, {
+      "selected" : false,
+      "stimulusDefinition" : {
+        "name" : "Artículo Sobresaliente",
+        "value" : "articuloSobresaliente",
+        "activation" : 0.08,
+        "satisfaction" : 0.08,
+        "self" : true
+      },
+      "activation" : 0.08,
+      "satisfaction" : 0.08,
+      "self" : true
+    }, {
+      "selected" : true,
+      "stimulusDefinition" : {
+        "name" : "Guerra de Ediciones",
+        "value" : "guerraDeEdiciones",
+        "activation" : -0.08,
+        "satisfaction" : -0.08,
+        "self" : true
+      },
+      "activation" : -0.08,
+      "satisfaction" : -0.08,
+      "self" : true
+    }, {
+      "selected" : true,
+      "stimulusDefinition" : {
+        "name" : "Artículo Borrado",
+        "value" : "articuloBorrado",
+        "activation" : -0.06,
+        "satisfaction" : -0.06,
+        "self" : true
+      },
+      "activation" : -0.06,
+      "satisfaction" : -0.06,
+      "self" : true
+    }, {
+      "selected" : true,
+      "stimulusDefinition" : {
+        "name" : "Artículo Modificado",
+        "value" : "articuloModificado",
+        "activation" : -0.02,
+        "satisfaction" : -0.03,
+        "self" : true
+      },
+      "activation" : -0.02,
+      "satisfaction" : -0.03,
+      "self" : true
+    } ]
+  }, {
+    "agentType" : {
+      "agentTypeClass" : "masoes.agent.GenericEmotionalAgent",
+      "agentTypeName" : "UsuarioRegistrado"
+    },
+    "name" : "UsuarioRegistrado21",
+    "activation" : -0.9211380909023823,
+    "satisfaction" : -0.12962001766872633,
+    "stimulusConfigurations" : [ {
+      "selected" : false,
+      "stimulusDefinition" : {
+        "name" : "Artículo Nuevo",
+        "value" : "articuloNuevo",
+        "activation" : 0.05,
+        "satisfaction" : 0.05,
+        "self" : true
+      },
+      "activation" : 0.05,
+      "satisfaction" : 0.05,
+      "self" : true
+    }, {
+      "selected" : false,
+      "stimulusDefinition" : {
+        "name" : "Nueva Edición",
+        "value" : "nuevaEdicion",
+        "activation" : 0.03,
+        "satisfaction" : 0.04,
+        "self" : false
+      },
+      "activation" : 0.03,
+      "satisfaction" : 0.04,
+      "self" : false
+    }, {
+      "selected" : false,
+      "stimulusDefinition" : {
+        "name" : "Artículo Sobresaliente",
+        "value" : "articuloSobresaliente",
+        "activation" : 0.08,
+        "satisfaction" : 0.08,
+        "self" : true
+      },
+      "activation" : 0.08,
+      "satisfaction" : 0.08,
+      "self" : true
+    }, {
+      "selected" : true,
+      "stimulusDefinition" : {
+        "name" : "Guerra de Ediciones",
+        "value" : "guerraDeEdiciones",
+        "activation" : -0.08,
+        "satisfaction" : -0.08,
+        "self" : true
+      },
+      "activation" : -0.08,
+      "satisfaction" : -0.08,
+      "self" : true
+    }, {
+      "selected" : true,
+      "stimulusDefinition" : {
+        "name" : "Artículo Borrado",
+        "value" : "articuloBorrado",
+        "activation" : -0.06,
+        "satisfaction" : -0.06,
+        "self" : true
+      },
+      "activation" : -0.06,
+      "satisfaction" : -0.06,
+      "self" : true
+    }, {
+      "selected" : true,
+      "stimulusDefinition" : {
+        "name" : "Artículo Modificado",
+        "value" : "articuloModificado",
+        "activation" : -0.02,
+        "satisfaction" : -0.03,
+        "self" : true
+      },
+      "activation" : -0.02,
+      "satisfaction" : -0.03,
+      "self" : true
+    } ]
+  }, {
+    "agentType" : {
+      "agentTypeClass" : "masoes.agent.GenericEmotionalAgent",
+      "agentTypeName" : "UsuarioRegistrado"
+    },
+    "name" : "UsuarioRegistrado22",
+    "activation" : 0.9123389617772071,
+    "satisfaction" : 0.44408563665472167,
+    "stimulusConfigurations" : [ {
+      "selected" : false,
+      "stimulusDefinition" : {
+        "name" : "Artículo Nuevo",
+        "value" : "articuloNuevo",
+        "activation" : 0.05,
+        "satisfaction" : 0.05,
+        "self" : true
+      },
+      "activation" : 0.05,
+      "satisfaction" : 0.05,
+      "self" : true
+    }, {
+      "selected" : false,
+      "stimulusDefinition" : {
+        "name" : "Nueva Edición",
+        "value" : "nuevaEdicion",
+        "activation" : 0.03,
+        "satisfaction" : 0.04,
+        "self" : false
+      },
+      "activation" : 0.03,
+      "satisfaction" : 0.04,
+      "self" : false
+    }, {
+      "selected" : false,
+      "stimulusDefinition" : {
+        "name" : "Artículo Sobresaliente",
+        "value" : "articuloSobresaliente",
+        "activation" : 0.08,
+        "satisfaction" : 0.08,
+        "self" : true
+      },
+      "activation" : 0.08,
+      "satisfaction" : 0.08,
+      "self" : true
+    }, {
+      "selected" : true,
+      "stimulusDefinition" : {
+        "name" : "Guerra de Ediciones",
+        "value" : "guerraDeEdiciones",
+        "activation" : -0.08,
+        "satisfaction" : -0.08,
+        "self" : true
+      },
+      "activation" : -0.08,
+      "satisfaction" : -0.08,
+      "self" : true
+    }, {
+      "selected" : true,
+      "stimulusDefinition" : {
+        "name" : "Artículo Borrado",
+        "value" : "articuloBorrado",
+        "activation" : -0.06,
+        "satisfaction" : -0.06,
+        "self" : true
+      },
+      "activation" : -0.06,
+      "satisfaction" : -0.06,
+      "self" : true
+    }, {
+      "selected" : true,
+      "stimulusDefinition" : {
+        "name" : "Artículo Modificado",
+        "value" : "articuloModificado",
+        "activation" : -0.02,
+        "satisfaction" : -0.03,
+        "self" : true
+      },
+      "activation" : -0.02,
+      "satisfaction" : -0.03,
+      "self" : true
+    } ]
+  }, {
+    "agentType" : {
+      "agentTypeClass" : "masoes.agent.GenericEmotionalAgent",
+      "agentTypeName" : "UsuarioRegistrado"
+    },
+    "name" : "UsuarioRegistrado23",
+    "activation" : -0.763979464859011,
+    "satisfaction" : -0.9425674761749623,
+    "stimulusConfigurations" : [ {
+      "selected" : false,
+      "stimulusDefinition" : {
+        "name" : "Artículo Nuevo",
+        "value" : "articuloNuevo",
+        "activation" : 0.05,
+        "satisfaction" : 0.05,
+        "self" : true
+      },
+      "activation" : 0.05,
+      "satisfaction" : 0.05,
+      "self" : true
+    }, {
+      "selected" : false,
+      "stimulusDefinition" : {
+        "name" : "Nueva Edición",
+        "value" : "nuevaEdicion",
+        "activation" : 0.03,
+        "satisfaction" : 0.04,
+        "self" : false
+      },
+      "activation" : 0.03,
+      "satisfaction" : 0.04,
+      "self" : false
+    }, {
+      "selected" : false,
+      "stimulusDefinition" : {
+        "name" : "Artículo Sobresaliente",
+        "value" : "articuloSobresaliente",
+        "activation" : 0.08,
+        "satisfaction" : 0.08,
+        "self" : true
+      },
+      "activation" : 0.08,
+      "satisfaction" : 0.08,
+      "self" : true
+    }, {
+      "selected" : true,
+      "stimulusDefinition" : {
+        "name" : "Guerra de Ediciones",
+        "value" : "guerraDeEdiciones",
+        "activation" : -0.08,
+        "satisfaction" : -0.08,
+        "self" : true
+      },
+      "activation" : -0.08,
+      "satisfaction" : -0.08,
+      "self" : true
+    }, {
+      "selected" : true,
+      "stimulusDefinition" : {
+        "name" : "Artículo Borrado",
+        "value" : "articuloBorrado",
+        "activation" : -0.06,
+        "satisfaction" : -0.06,
+        "self" : true
+      },
+      "activation" : -0.06,
+      "satisfaction" : -0.06,
+      "self" : true
+    }, {
+      "selected" : true,
+      "stimulusDefinition" : {
+        "name" : "Artículo Modificado",
+        "value" : "articuloModificado",
+        "activation" : -0.02,
+        "satisfaction" : -0.03,
+        "self" : true
+      },
+      "activation" : -0.02,
+      "satisfaction" : -0.03,
+      "self" : true
+    } ]
+  }, {
+    "agentType" : {
+      "agentTypeClass" : "masoes.agent.GenericEmotionalAgent",
+      "agentTypeName" : "UsuarioRegistrado"
+    },
+    "name" : "UsuarioRegistrado24",
+    "activation" : 0.2122555886817683,
+    "satisfaction" : 0.9733140860244116,
+    "stimulusConfigurations" : [ {
+      "selected" : false,
+      "stimulusDefinition" : {
+        "name" : "Artículo Nuevo",
+        "value" : "articuloNuevo",
+        "activation" : 0.05,
+        "satisfaction" : 0.05,
+        "self" : true
+      },
+      "activation" : 0.05,
+      "satisfaction" : 0.05,
+      "self" : true
+    }, {
+      "selected" : false,
+      "stimulusDefinition" : {
+        "name" : "Nueva Edición",
+        "value" : "nuevaEdicion",
+        "activation" : 0.03,
+        "satisfaction" : 0.04,
+        "self" : false
+      },
+      "activation" : 0.03,
+      "satisfaction" : 0.04,
+      "self" : false
+    }, {
+      "selected" : false,
+      "stimulusDefinition" : {
+        "name" : "Artículo Sobresaliente",
+        "value" : "articuloSobresaliente",
+        "activation" : 0.08,
+        "satisfaction" : 0.08,
+        "self" : true
+      },
+      "activation" : 0.08,
+      "satisfaction" : 0.08,
+      "self" : true
+    }, {
+      "selected" : true,
+      "stimulusDefinition" : {
+        "name" : "Guerra de Ediciones",
+        "value" : "guerraDeEdiciones",
+        "activation" : -0.08,
+        "satisfaction" : -0.08,
+        "self" : true
+      },
+      "activation" : -0.08,
+      "satisfaction" : -0.08,
+      "self" : true
+    }, {
+      "selected" : true,
+      "stimulusDefinition" : {
+        "name" : "Artículo Borrado",
+        "value" : "articuloBorrado",
+        "activation" : -0.06,
+        "satisfaction" : -0.06,
+        "self" : true
+      },
+      "activation" : -0.06,
+      "satisfaction" : -0.06,
+      "self" : true
+    }, {
+      "selected" : true,
+      "stimulusDefinition" : {
+        "name" : "Artículo Modificado",
+        "value" : "articuloModificado",
+        "activation" : -0.02,
+        "satisfaction" : -0.03,
+        "self" : true
+      },
+      "activation" : -0.02,
+      "satisfaction" : -0.03,
+      "self" : true
+    } ]
+  }, {
+    "agentType" : {
+      "agentTypeClass" : "masoes.agent.GenericEmotionalAgent",
+      "agentTypeName" : "UsuarioRegistrado"
+    },
+    "name" : "UsuarioRegistrado25",
+    "activation" : -0.00855115680327767,
+    "satisfaction" : 0.06916539049408721,
+    "stimulusConfigurations" : [ {
+      "selected" : false,
+      "stimulusDefinition" : {
+        "name" : "Artículo Nuevo",
+        "value" : "articuloNuevo",
+        "activation" : 0.05,
+        "satisfaction" : 0.05,
+        "self" : true
+      },
+      "activation" : 0.05,
+      "satisfaction" : 0.05,
+      "self" : true
+    }, {
+      "selected" : false,
+      "stimulusDefinition" : {
+        "name" : "Nueva Edición",
+        "value" : "nuevaEdicion",
+        "activation" : 0.03,
+        "satisfaction" : 0.04,
+        "self" : false
+      },
+      "activation" : 0.03,
+      "satisfaction" : 0.04,
+      "self" : false
+    }, {
+      "selected" : false,
+      "stimulusDefinition" : {
+        "name" : "Artículo Sobresaliente",
+        "value" : "articuloSobresaliente",
+        "activation" : 0.08,
+        "satisfaction" : 0.08,
+        "self" : true
+      },
+      "activation" : 0.08,
+      "satisfaction" : 0.08,
+      "self" : true
+    }, {
+      "selected" : true,
+      "stimulusDefinition" : {
+        "name" : "Guerra de Ediciones",
+        "value" : "guerraDeEdiciones",
+        "activation" : -0.08,
+        "satisfaction" : -0.08,
+        "self" : true
+      },
+      "activation" : -0.08,
+      "satisfaction" : -0.08,
+      "self" : true
+    }, {
+      "selected" : true,
+      "stimulusDefinition" : {
+        "name" : "Artículo Borrado",
+        "value" : "articuloBorrado",
+        "activation" : -0.06,
+        "satisfaction" : -0.06,
+        "self" : true
+      },
+      "activation" : -0.06,
+      "satisfaction" : -0.06,
+      "self" : true
+    }, {
+      "selected" : true,
+      "stimulusDefinition" : {
+        "name" : "Artículo Modificado",
+        "value" : "articuloModificado",
+        "activation" : -0.02,
+        "satisfaction" : -0.03,
+        "self" : true
+      },
+      "activation" : -0.02,
+      "satisfaction" : -0.03,
+      "self" : true
+    } ]
+  }, {
+    "agentType" : {
+      "agentTypeClass" : "masoes.agent.GenericEmotionalAgent",
+      "agentTypeName" : "UsuarioRegistrado"
+    },
+    "name" : "UsuarioRegistrado26",
+    "activation" : -0.8131856653093572,
+    "satisfaction" : -0.9955001783568844,
+    "stimulusConfigurations" : [ {
+      "selected" : true,
+      "stimulusDefinition" : {
+        "name" : "Artículo Nuevo",
+        "value" : "articuloNuevo",
+        "activation" : 0.05,
+        "satisfaction" : 0.05,
+        "self" : true
+      },
+      "activation" : 0.05,
+      "satisfaction" : 0.05,
+      "self" : true
+    }, {
+      "selected" : true,
+      "stimulusDefinition" : {
+        "name" : "Nueva Edición",
+        "value" : "nuevaEdicion",
+        "activation" : 0.03,
+        "satisfaction" : 0.04,
+        "self" : false
+      },
+      "activation" : 0.03,
+      "satisfaction" : 0.04,
+      "self" : false
+    }, {
+      "selected" : true,
+      "stimulusDefinition" : {
+        "name" : "Artículo Sobresaliente",
+        "value" : "articuloSobresaliente",
+        "activation" : 0.08,
+        "satisfaction" : 0.08,
+        "self" : true
+      },
+      "activation" : 0.08,
+      "satisfaction" : 0.08,
+      "self" : true
+    }, {
+      "selected" : false,
+      "stimulusDefinition" : {
+        "name" : "Guerra de Ediciones",
+        "value" : "guerraDeEdiciones",
+        "activation" : -0.08,
+        "satisfaction" : -0.08,
+        "self" : true
+      },
+      "activation" : -0.08,
+      "satisfaction" : -0.08,
+      "self" : true
+    }, {
+      "selected" : false,
+      "stimulusDefinition" : {
+        "name" : "Artículo Borrado",
+        "value" : "articuloBorrado",
+        "activation" : -0.06,
+        "satisfaction" : -0.06,
+        "self" : true
+      },
+      "activation" : -0.06,
+      "satisfaction" : -0.06,
+      "self" : true
+    }, {
+      "selected" : false,
+      "stimulusDefinition" : {
+        "name" : "Artículo Modificado",
+        "value" : "articuloModificado",
+        "activation" : -0.02,
+        "satisfaction" : -0.03,
+        "self" : true
+      },
+      "activation" : -0.02,
+      "satisfaction" : -0.03,
+      "self" : true
+    } ]
+  }, {
+    "agentType" : {
+      "agentTypeClass" : "masoes.agent.GenericEmotionalAgent",
+      "agentTypeName" : "UsuarioRegistrado"
+    },
+    "name" : "UsuarioRegistrado27",
+    "activation" : -0.9718139162074009,
+    "satisfaction" : 0.2632536327490729,
+    "stimulusConfigurations" : [ {
+      "selected" : true,
+      "stimulusDefinition" : {
+        "name" : "Artículo Nuevo",
+        "value" : "articuloNuevo",
+        "activation" : 0.05,
+        "satisfaction" : 0.05,
+        "self" : true
+      },
+      "activation" : 0.05,
+      "satisfaction" : 0.05,
+      "self" : true
+    }, {
+      "selected" : true,
+      "stimulusDefinition" : {
+        "name" : "Nueva Edición",
+        "value" : "nuevaEdicion",
+        "activation" : 0.03,
+        "satisfaction" : 0.04,
+        "self" : false
+      },
+      "activation" : 0.03,
+      "satisfaction" : 0.04,
+      "self" : false
+    }, {
+      "selected" : true,
+      "stimulusDefinition" : {
+        "name" : "Artículo Sobresaliente",
+        "value" : "articuloSobresaliente",
+        "activation" : 0.08,
+        "satisfaction" : 0.08,
+        "self" : true
+      },
+      "activation" : 0.08,
+      "satisfaction" : 0.08,
+      "self" : true
+    }, {
+      "selected" : false,
+      "stimulusDefinition" : {
+        "name" : "Guerra de Ediciones",
+        "value" : "guerraDeEdiciones",
+        "activation" : -0.08,
+        "satisfaction" : -0.08,
+        "self" : true
+      },
+      "activation" : -0.08,
+      "satisfaction" : -0.08,
+      "self" : true
+    }, {
+      "selected" : false,
+      "stimulusDefinition" : {
+        "name" : "Artículo Borrado",
+        "value" : "articuloBorrado",
+        "activation" : -0.06,
+        "satisfaction" : -0.06,
+        "self" : true
+      },
+      "activation" : -0.06,
+      "satisfaction" : -0.06,
+      "self" : true
+    }, {
+      "selected" : false,
+      "stimulusDefinition" : {
+        "name" : "Artículo Modificado",
+        "value" : "articuloModificado",
+        "activation" : -0.02,
+        "satisfaction" : -0.03,
+        "self" : true
+      },
+      "activation" : -0.02,
+      "satisfaction" : -0.03,
+      "self" : true
+    } ]
+  }, {
+    "agentType" : {
+      "agentTypeClass" : "masoes.agent.GenericEmotionalAgent",
+      "agentTypeName" : "UsuarioRegistrado"
+    },
+    "name" : "UsuarioRegistrado28",
+    "activation" : 0.5656523937383335,
+    "satisfaction" : 0.16276236702929459,
+    "stimulusConfigurations" : [ {
+      "selected" : true,
+      "stimulusDefinition" : {
+        "name" : "Artículo Nuevo",
+        "value" : "articuloNuevo",
+        "activation" : 0.05,
+        "satisfaction" : 0.05,
+        "self" : true
+      },
+      "activation" : 0.05,
+      "satisfaction" : 0.05,
+      "self" : true
+    }, {
+      "selected" : true,
+      "stimulusDefinition" : {
+        "name" : "Nueva Edición",
+        "value" : "nuevaEdicion",
+        "activation" : 0.03,
+        "satisfaction" : 0.04,
+        "self" : false
+      },
+      "activation" : 0.03,
+      "satisfaction" : 0.04,
+      "self" : false
+    }, {
+      "selected" : true,
+      "stimulusDefinition" : {
+        "name" : "Artículo Sobresaliente",
+        "value" : "articuloSobresaliente",
+        "activation" : 0.08,
+        "satisfaction" : 0.08,
+        "self" : true
+      },
+      "activation" : 0.08,
+      "satisfaction" : 0.08,
+      "self" : true
+    }, {
+      "selected" : false,
+      "stimulusDefinition" : {
+        "name" : "Guerra de Ediciones",
+        "value" : "guerraDeEdiciones",
+        "activation" : -0.08,
+        "satisfaction" : -0.08,
+        "self" : true
+      },
+      "activation" : -0.08,
+      "satisfaction" : -0.08,
+      "self" : true
+    }, {
+      "selected" : false,
+      "stimulusDefinition" : {
+        "name" : "Artículo Borrado",
+        "value" : "articuloBorrado",
+        "activation" : -0.06,
+        "satisfaction" : -0.06,
+        "self" : true
+      },
+      "activation" : -0.06,
+      "satisfaction" : -0.06,
+      "self" : true
+    }, {
+      "selected" : false,
+      "stimulusDefinition" : {
+        "name" : "Artículo Modificado",
+        "value" : "articuloModificado",
+        "activation" : -0.02,
+        "satisfaction" : -0.03,
+        "self" : true
+      },
+      "activation" : -0.02,
+      "satisfaction" : -0.03,
+      "self" : true
+    } ]
+  }, {
+    "agentType" : {
+      "agentTypeClass" : "masoes.agent.GenericEmotionalAgent",
+      "agentTypeName" : "UsuarioRegistrado"
+    },
+    "name" : "UsuarioRegistrado29",
+    "activation" : 0.6341186437273905,
+    "satisfaction" : 0.926388112201213,
+    "stimulusConfigurations" : [ {
+      "selected" : true,
+      "stimulusDefinition" : {
+        "name" : "Artículo Nuevo",
+        "value" : "articuloNuevo",
+        "activation" : 0.05,
+        "satisfaction" : 0.05,
+        "self" : true
+      },
+      "activation" : 0.05,
+      "satisfaction" : 0.05,
+      "self" : true
+    }, {
+      "selected" : true,
+      "stimulusDefinition" : {
+        "name" : "Nueva Edición",
+        "value" : "nuevaEdicion",
+        "activation" : 0.03,
+        "satisfaction" : 0.04,
+        "self" : false
+      },
+      "activation" : 0.03,
+      "satisfaction" : 0.04,
+      "self" : false
+    }, {
+      "selected" : true,
+      "stimulusDefinition" : {
+        "name" : "Artículo Sobresaliente",
+        "value" : "articuloSobresaliente",
+        "activation" : 0.08,
+        "satisfaction" : 0.08,
+        "self" : true
+      },
+      "activation" : 0.08,
+      "satisfaction" : 0.08,
+      "self" : true
+    }, {
+      "selected" : false,
+      "stimulusDefinition" : {
+        "name" : "Guerra de Ediciones",
+        "value" : "guerraDeEdiciones",
+        "activation" : -0.08,
+        "satisfaction" : -0.08,
+        "self" : true
+      },
+      "activation" : -0.08,
+      "satisfaction" : -0.08,
+      "self" : true
+    }, {
+      "selected" : false,
+      "stimulusDefinition" : {
+        "name" : "Artículo Borrado",
+        "value" : "articuloBorrado",
+        "activation" : -0.06,
+        "satisfaction" : -0.06,
+        "self" : true
+      },
+      "activation" : -0.06,
+      "satisfaction" : -0.06,
+      "self" : true
+    }, {
+      "selected" : false,
+      "stimulusDefinition" : {
+        "name" : "Artículo Modificado",
+        "value" : "articuloModificado",
+        "activation" : -0.02,
+        "satisfaction" : -0.03,
+        "self" : true
+      },
+      "activation" : -0.02,
+      "satisfaction" : -0.03,
+      "self" : true
+    } ]
+  }, {
+    "agentType" : {
+      "agentTypeClass" : "masoes.agent.GenericEmotionalAgent",
+      "agentTypeName" : "UsuarioRegistrado"
+    },
+    "name" : "UsuarioRegistrado30",
+    "activation" : -0.8637731006237248,
+    "satisfaction" : -0.6374342957631398,
+    "stimulusConfigurations" : [ {
+      "selected" : true,
+      "stimulusDefinition" : {
+        "name" : "Artículo Nuevo",
+        "value" : "articuloNuevo",
+        "activation" : 0.05,
+        "satisfaction" : 0.05,
+        "self" : true
+      },
+      "activation" : 0.05,
+      "satisfaction" : 0.05,
+      "self" : true
+    }, {
+      "selected" : true,
+      "stimulusDefinition" : {
+        "name" : "Nueva Edición",
+        "value" : "nuevaEdicion",
+        "activation" : 0.03,
+        "satisfaction" : 0.04,
+        "self" : false
+      },
+      "activation" : 0.03,
+      "satisfaction" : 0.04,
+      "self" : false
+    }, {
+      "selected" : true,
+      "stimulusDefinition" : {
+        "name" : "Artículo Sobresaliente",
+        "value" : "articuloSobresaliente",
+        "activation" : 0.08,
+        "satisfaction" : 0.08,
+        "self" : true
+      },
+      "activation" : 0.08,
+      "satisfaction" : 0.08,
+      "self" : true
+    }, {
+      "selected" : false,
+      "stimulusDefinition" : {
+        "name" : "Guerra de Ediciones",
+        "value" : "guerraDeEdiciones",
+        "activation" : -0.08,
+        "satisfaction" : -0.08,
+        "self" : true
+      },
+      "activation" : -0.08,
+      "satisfaction" : -0.08,
+      "self" : true
+    }, {
+      "selected" : false,
+      "stimulusDefinition" : {
+        "name" : "Artículo Borrado",
+        "value" : "articuloBorrado",
+        "activation" : -0.06,
+        "satisfaction" : -0.06,
+        "self" : true
+      },
+      "activation" : -0.06,
+      "satisfaction" : -0.06,
+      "self" : true
+    }, {
+      "selected" : false,
+      "stimulusDefinition" : {
+        "name" : "Artículo Modificado",
+        "value" : "articuloModificado",
+        "activation" : -0.02,
+        "satisfaction" : -0.03,
+        "self" : true
+      },
+      "activation" : -0.02,
+      "satisfaction" : -0.03,
+      "self" : true
+    } ]
+  }, {
+    "agentType" : {
+      "agentTypeClass" : "masoes.agent.GenericEmotionalAgent",
+      "agentTypeName" : "UsuarioRegistrado"
+    },
+    "name" : "UsuarioRegistrado31",
+    "activation" : -0.8821862470842436,
+    "satisfaction" : -0.15308871165852533,
+    "stimulusConfigurations" : [ {
+      "selected" : true,
+      "stimulusDefinition" : {
+        "name" : "Artículo Nuevo",
+        "value" : "articuloNuevo",
+        "activation" : 0.05,
+        "satisfaction" : 0.05,
+        "self" : true
+      },
+      "activation" : 0.05,
+      "satisfaction" : 0.05,
+      "self" : true
+    }, {
+      "selected" : true,
+      "stimulusDefinition" : {
+        "name" : "Nueva Edición",
+        "value" : "nuevaEdicion",
+        "activation" : 0.03,
+        "satisfaction" : 0.04,
+        "self" : false
+      },
+      "activation" : 0.03,
+      "satisfaction" : 0.04,
+      "self" : false
+    }, {
+      "selected" : true,
+      "stimulusDefinition" : {
+        "name" : "Artículo Sobresaliente",
+        "value" : "articuloSobresaliente",
+        "activation" : 0.08,
+        "satisfaction" : 0.08,
+        "self" : true
+      },
+      "activation" : 0.08,
+      "satisfaction" : 0.08,
+      "self" : true
+    }, {
+      "selected" : false,
+      "stimulusDefinition" : {
+        "name" : "Guerra de Ediciones",
+        "value" : "guerraDeEdiciones",
+        "activation" : -0.08,
+        "satisfaction" : -0.08,
+        "self" : true
+      },
+      "activation" : -0.08,
+      "satisfaction" : -0.08,
+      "self" : true
+    }, {
+      "selected" : false,
+      "stimulusDefinition" : {
+        "name" : "Artículo Borrado",
+        "value" : "articuloBorrado",
+        "activation" : -0.06,
+        "satisfaction" : -0.06,
+        "self" : true
+      },
+      "activation" : -0.06,
+      "satisfaction" : -0.06,
+      "self" : true
+    }, {
+      "selected" : false,
+      "stimulusDefinition" : {
+        "name" : "Artículo Modificado",
+        "value" : "articuloModificado",
+        "activation" : -0.02,
+        "satisfaction" : -0.03,
+        "self" : true
+      },
+      "activation" : -0.02,
+      "satisfaction" : -0.03,
+      "self" : true
+    } ]
+  }, {
+    "agentType" : {
+      "agentTypeClass" : "masoes.agent.GenericEmotionalAgent",
+      "agentTypeName" : "UsuarioRegistrado"
+    },
+    "name" : "UsuarioRegistrado32",
+    "activation" : 0.19298276876320708,
+    "satisfaction" : -0.7851267138969018,
+    "stimulusConfigurations" : [ {
+      "selected" : true,
+      "stimulusDefinition" : {
+        "name" : "Artículo Nuevo",
+        "value" : "articuloNuevo",
+        "activation" : 0.05,
+        "satisfaction" : 0.05,
+        "self" : true
+      },
+      "activation" : 0.05,
+      "satisfaction" : 0.05,
+      "self" : true
+    }, {
+      "selected" : true,
+      "stimulusDefinition" : {
+        "name" : "Nueva Edición",
+        "value" : "nuevaEdicion",
+        "activation" : 0.03,
+        "satisfaction" : 0.04,
+        "self" : false
+      },
+      "activation" : 0.03,
+      "satisfaction" : 0.04,
+      "self" : false
+    }, {
+      "selected" : true,
+      "stimulusDefinition" : {
+        "name" : "Artículo Sobresaliente",
+        "value" : "articuloSobresaliente",
+        "activation" : 0.08,
+        "satisfaction" : 0.08,
+        "self" : true
+      },
+      "activation" : 0.08,
+      "satisfaction" : 0.08,
+      "self" : true
+    }, {
+      "selected" : false,
+      "stimulusDefinition" : {
+        "name" : "Guerra de Ediciones",
+        "value" : "guerraDeEdiciones",
+        "activation" : -0.08,
+        "satisfaction" : -0.08,
+        "self" : true
+      },
+      "activation" : -0.08,
+      "satisfaction" : -0.08,
+      "self" : true
+    }, {
+      "selected" : false,
+      "stimulusDefinition" : {
+        "name" : "Artículo Borrado",
+        "value" : "articuloBorrado",
+        "activation" : -0.06,
+        "satisfaction" : -0.06,
+        "self" : true
+      },
+      "activation" : -0.06,
+      "satisfaction" : -0.06,
+      "self" : true
+    }, {
+      "selected" : false,
+      "stimulusDefinition" : {
+        "name" : "Artículo Modificado",
+        "value" : "articuloModificado",
+        "activation" : -0.02,
+        "satisfaction" : -0.03,
+        "self" : true
+      },
+      "activation" : -0.02,
+      "satisfaction" : -0.03,
+      "self" : true
+    } ]
+  }, {
+    "agentType" : {
+      "agentTypeClass" : "masoes.agent.GenericEmotionalAgent",
+      "agentTypeName" : "UsuarioRegistrado"
+    },
+    "name" : "UsuarioRegistrado33",
+    "activation" : 0.25185208607344856,
+    "satisfaction" : -0.8297233728644315,
+    "stimulusConfigurations" : [ {
+      "selected" : true,
+      "stimulusDefinition" : {
+        "name" : "Artículo Nuevo",
+        "value" : "articuloNuevo",
+        "activation" : 0.05,
+        "satisfaction" : 0.05,
+        "self" : true
+      },
+      "activation" : 0.05,
+      "satisfaction" : 0.05,
+      "self" : true
+    }, {
+      "selected" : true,
+      "stimulusDefinition" : {
+        "name" : "Nueva Edición",
+        "value" : "nuevaEdicion",
+        "activation" : 0.03,
+        "satisfaction" : 0.04,
+        "self" : false
+      },
+      "activation" : 0.03,
+      "satisfaction" : 0.04,
+      "self" : false
+    }, {
+      "selected" : true,
+      "stimulusDefinition" : {
+        "name" : "Artículo Sobresaliente",
+        "value" : "articuloSobresaliente",
+        "activation" : 0.08,
+        "satisfaction" : 0.08,
+        "self" : true
+      },
+      "activation" : 0.08,
+      "satisfaction" : 0.08,
+      "self" : true
+    }, {
+      "selected" : false,
+      "stimulusDefinition" : {
+        "name" : "Guerra de Ediciones",
+        "value" : "guerraDeEdiciones",
+        "activation" : -0.08,
+        "satisfaction" : -0.08,
+        "self" : true
+      },
+      "activation" : -0.08,
+      "satisfaction" : -0.08,
+      "self" : true
+    }, {
+      "selected" : false,
+      "stimulusDefinition" : {
+        "name" : "Artículo Borrado",
+        "value" : "articuloBorrado",
+        "activation" : -0.06,
+        "satisfaction" : -0.06,
+        "self" : true
+      },
+      "activation" : -0.06,
+      "satisfaction" : -0.06,
+      "self" : true
+    }, {
+      "selected" : false,
+      "stimulusDefinition" : {
+        "name" : "Artículo Modificado",
+        "value" : "articuloModificado",
+        "activation" : -0.02,
+        "satisfaction" : -0.03,
+        "self" : true
+      },
+      "activation" : -0.02,
+      "satisfaction" : -0.03,
+      "self" : true
+    } ]
+  }, {
+    "agentType" : {
+      "agentTypeClass" : "masoes.agent.GenericEmotionalAgent",
+      "agentTypeName" : "UsuarioRegistrado"
+    },
+    "name" : "UsuarioRegistrado34",
+    "activation" : 0.7113147317596595,
+    "satisfaction" : 0.01134666707114218,
+    "stimulusConfigurations" : [ {
+      "selected" : true,
+      "stimulusDefinition" : {
+        "name" : "Artículo Nuevo",
+        "value" : "articuloNuevo",
+        "activation" : 0.05,
+        "satisfaction" : 0.05,
+        "self" : true
+      },
+      "activation" : 0.05,
+      "satisfaction" : 0.05,
+      "self" : true
+    }, {
+      "selected" : true,
+      "stimulusDefinition" : {
+        "name" : "Nueva Edición",
+        "value" : "nuevaEdicion",
+        "activation" : 0.03,
+        "satisfaction" : 0.04,
+        "self" : false
+      },
+      "activation" : 0.03,
+      "satisfaction" : 0.04,
+      "self" : false
+    }, {
+      "selected" : true,
+      "stimulusDefinition" : {
+        "name" : "Artículo Sobresaliente",
+        "value" : "articuloSobresaliente",
+        "activation" : 0.08,
+        "satisfaction" : 0.08,
+        "self" : true
+      },
+      "activation" : 0.08,
+      "satisfaction" : 0.08,
+      "self" : true
+    }, {
+      "selected" : false,
+      "stimulusDefinition" : {
+        "name" : "Guerra de Ediciones",
+        "value" : "guerraDeEdiciones",
+        "activation" : -0.08,
+        "satisfaction" : -0.08,
+        "self" : true
+      },
+      "activation" : -0.08,
+      "satisfaction" : -0.08,
+      "self" : true
+    }, {
+      "selected" : false,
+      "stimulusDefinition" : {
+        "name" : "Artículo Borrado",
+        "value" : "articuloBorrado",
+        "activation" : -0.06,
+        "satisfaction" : -0.06,
+        "self" : true
+      },
+      "activation" : -0.06,
+      "satisfaction" : -0.06,
+      "self" : true
+    }, {
+      "selected" : false,
+      "stimulusDefinition" : {
+        "name" : "Artículo Modificado",
+        "value" : "articuloModificado",
+        "activation" : -0.02,
+        "satisfaction" : -0.03,
+        "self" : true
+      },
+      "activation" : -0.02,
+      "satisfaction" : -0.03,
+      "self" : true
+    } ]
+  }, {
+    "agentType" : {
+      "agentTypeClass" : "masoes.agent.GenericEmotionalAgent",
+      "agentTypeName" : "UsuarioRegistrado"
+    },
+    "name" : "UsuarioRegistrado35",
+    "activation" : -0.46282397317757584,
+    "satisfaction" : -0.7370219145292982,
+    "stimulusConfigurations" : [ {
+      "selected" : true,
+      "stimulusDefinition" : {
+        "name" : "Artículo Nuevo",
+        "value" : "articuloNuevo",
+        "activation" : 0.05,
+        "satisfaction" : 0.05,
+        "self" : true
+      },
+      "activation" : 0.05,
+      "satisfaction" : 0.05,
+      "self" : true
+    }, {
+      "selected" : true,
+      "stimulusDefinition" : {
+        "name" : "Nueva Edición",
+        "value" : "nuevaEdicion",
+        "activation" : 0.03,
+        "satisfaction" : 0.04,
+        "self" : false
+      },
+      "activation" : 0.03,
+      "satisfaction" : 0.04,
+      "self" : false
+    }, {
+      "selected" : true,
+      "stimulusDefinition" : {
+        "name" : "Artículo Sobresaliente",
+        "value" : "articuloSobresaliente",
+        "activation" : 0.08,
+        "satisfaction" : 0.08,
+        "self" : true
+      },
+      "activation" : 0.08,
+      "satisfaction" : 0.08,
+      "self" : true
+    }, {
+      "selected" : false,
+      "stimulusDefinition" : {
+        "name" : "Guerra de Ediciones",
+        "value" : "guerraDeEdiciones",
+        "activation" : -0.08,
+        "satisfaction" : -0.08,
+        "self" : true
+      },
+      "activation" : -0.08,
+      "satisfaction" : -0.08,
+      "self" : true
+    }, {
+      "selected" : false,
+      "stimulusDefinition" : {
+        "name" : "Artículo Borrado",
+        "value" : "articuloBorrado",
+        "activation" : -0.06,
+        "satisfaction" : -0.06,
+        "self" : true
+      },
+      "activation" : -0.06,
+      "satisfaction" : -0.06,
+      "self" : true
+    }, {
+      "selected" : false,
+      "stimulusDefinition" : {
+        "name" : "Artículo Modificado",
+        "value" : "articuloModificado",
+        "activation" : -0.02,
+        "satisfaction" : -0.03,
+        "self" : true
+      },
+      "activation" : -0.02,
+      "satisfaction" : -0.03,
+      "self" : true
+    } ]
+  }, {
+    "agentType" : {
+      "agentTypeClass" : "masoes.agent.GenericEmotionalAgent",
+      "agentTypeName" : "UsuarioRegistrado"
+    },
+    "name" : "UsuarioRegistrado36",
+    "activation" : -0.9044938580021551,
+    "satisfaction" : -0.6440389616356523,
+    "stimulusConfigurations" : [ {
+      "selected" : true,
+      "stimulusDefinition" : {
+        "name" : "Artículo Nuevo",
+        "value" : "articuloNuevo",
+        "activation" : 0.05,
+        "satisfaction" : 0.05,
+        "self" : true
+      },
+      "activation" : 0.05,
+      "satisfaction" : 0.05,
+      "self" : true
+    }, {
+      "selected" : true,
+      "stimulusDefinition" : {
+        "name" : "Nueva Edición",
+        "value" : "nuevaEdicion",
+        "activation" : 0.03,
+        "satisfaction" : 0.04,
+        "self" : false
+      },
+      "activation" : 0.03,
+      "satisfaction" : 0.04,
+      "self" : false
+    }, {
+      "selected" : true,
+      "stimulusDefinition" : {
+        "name" : "Artículo Sobresaliente",
+        "value" : "articuloSobresaliente",
+        "activation" : 0.08,
+        "satisfaction" : 0.08,
+        "self" : true
+      },
+      "activation" : 0.08,
+      "satisfaction" : 0.08,
+      "self" : true
+    }, {
+      "selected" : false,
+      "stimulusDefinition" : {
+        "name" : "Guerra de Ediciones",
+        "value" : "guerraDeEdiciones",
+        "activation" : -0.08,
+        "satisfaction" : -0.08,
+        "self" : true
+      },
+      "activation" : -0.08,
+      "satisfaction" : -0.08,
+      "self" : true
+    }, {
+      "selected" : false,
+      "stimulusDefinition" : {
+        "name" : "Artículo Borrado",
+        "value" : "articuloBorrado",
+        "activation" : -0.06,
+        "satisfaction" : -0.06,
+        "self" : true
+      },
+      "activation" : -0.06,
+      "satisfaction" : -0.06,
+      "self" : true
+    }, {
+      "selected" : false,
+      "stimulusDefinition" : {
+        "name" : "Artículo Modificado",
+        "value" : "articuloModificado",
+        "activation" : -0.02,
+        "satisfaction" : -0.03,
+        "self" : true
+      },
+      "activation" : -0.02,
+      "satisfaction" : -0.03,
+      "self" : true
+    } ]
+  }, {
+    "agentType" : {
+      "agentTypeClass" : "masoes.agent.GenericEmotionalAgent",
+      "agentTypeName" : "UsuarioRegistrado"
+    },
+    "name" : "UsuarioRegistrado37",
+    "activation" : 0.8339260045387431,
+    "satisfaction" : -0.734324108939719,
+    "stimulusConfigurations" : [ {
+      "selected" : true,
+      "stimulusDefinition" : {
+        "name" : "Artículo Nuevo",
+        "value" : "articuloNuevo",
+        "activation" : 0.05,
+        "satisfaction" : 0.05,
+        "self" : true
+      },
+      "activation" : 0.05,
+      "satisfaction" : 0.05,
+      "self" : true
+    }, {
+      "selected" : true,
+      "stimulusDefinition" : {
+        "name" : "Nueva Edición",
+        "value" : "nuevaEdicion",
+        "activation" : 0.03,
+        "satisfaction" : 0.04,
+        "self" : false
+      },
+      "activation" : 0.03,
+      "satisfaction" : 0.04,
+      "self" : false
+    }, {
+      "selected" : true,
+      "stimulusDefinition" : {
+        "name" : "Artículo Sobresaliente",
+        "value" : "articuloSobresaliente",
+        "activation" : 0.08,
+        "satisfaction" : 0.08,
+        "self" : true
+      },
+      "activation" : 0.08,
+      "satisfaction" : 0.08,
+      "self" : true
+    }, {
+      "selected" : false,
+      "stimulusDefinition" : {
+        "name" : "Guerra de Ediciones",
+        "value" : "guerraDeEdiciones",
+        "activation" : -0.08,
+        "satisfaction" : -0.08,
+        "self" : true
+      },
+      "activation" : -0.08,
+      "satisfaction" : -0.08,
+      "self" : true
+    }, {
+      "selected" : false,
+      "stimulusDefinition" : {
+        "name" : "Artículo Borrado",
+        "value" : "articuloBorrado",
+        "activation" : -0.06,
+        "satisfaction" : -0.06,
+        "self" : true
+      },
+      "activation" : -0.06,
+      "satisfaction" : -0.06,
+      "self" : true
+    }, {
+      "selected" : false,
+      "stimulusDefinition" : {
+        "name" : "Artículo Modificado",
+        "value" : "articuloModificado",
+        "activation" : -0.02,
+        "satisfaction" : -0.03,
+        "self" : true
+      },
+      "activation" : -0.02,
+      "satisfaction" : -0.03,
+      "self" : true
+    } ]
+  }, {
+    "agentType" : {
+      "agentTypeClass" : "masoes.agent.GenericEmotionalAgent",
+      "agentTypeName" : "UsuarioRegistrado"
+    },
+    "name" : "UsuarioRegistrado38",
+    "activation" : -0.36697060422138916,
+    "satisfaction" : 0.250739991131556,
+    "stimulusConfigurations" : [ {
+      "selected" : true,
+      "stimulusDefinition" : {
+        "name" : "Artículo Nuevo",
+        "value" : "articuloNuevo",
+        "activation" : 0.05,
+        "satisfaction" : 0.05,
+        "self" : true
+      },
+      "activation" : 0.05,
+      "satisfaction" : 0.05,
+      "self" : true
+    }, {
+      "selected" : true,
+      "stimulusDefinition" : {
+        "name" : "Nueva Edición",
+        "value" : "nuevaEdicion",
+        "activation" : 0.03,
+        "satisfaction" : 0.04,
+        "self" : false
+      },
+      "activation" : 0.03,
+      "satisfaction" : 0.04,
+      "self" : false
+    }, {
+      "selected" : true,
+      "stimulusDefinition" : {
+        "name" : "Artículo Sobresaliente",
+        "value" : "articuloSobresaliente",
+        "activation" : 0.08,
+        "satisfaction" : 0.08,
+        "self" : true
+      },
+      "activation" : 0.08,
+      "satisfaction" : 0.08,
+      "self" : true
+    }, {
+      "selected" : false,
+      "stimulusDefinition" : {
+        "name" : "Guerra de Ediciones",
+        "value" : "guerraDeEdiciones",
+        "activation" : -0.08,
+        "satisfaction" : -0.08,
+        "self" : true
+      },
+      "activation" : -0.08,
+      "satisfaction" : -0.08,
+      "self" : true
+    }, {
+      "selected" : false,
+      "stimulusDefinition" : {
+        "name" : "Artículo Borrado",
+        "value" : "articuloBorrado",
+        "activation" : -0.06,
+        "satisfaction" : -0.06,
+        "self" : true
+      },
+      "activation" : -0.06,
+      "satisfaction" : -0.06,
+      "self" : true
+    }, {
+      "selected" : false,
+      "stimulusDefinition" : {
+        "name" : "Artículo Modificado",
+        "value" : "articuloModificado",
+        "activation" : -0.02,
+        "satisfaction" : -0.03,
+        "self" : true
+      },
+      "activation" : -0.02,
+      "satisfaction" : -0.03,
+      "self" : true
+    } ]
+  }, {
+    "agentType" : {
+      "agentTypeClass" : "masoes.agent.GenericEmotionalAgent",
+      "agentTypeName" : "UsuarioRegistrado"
+    },
+    "name" : "UsuarioRegistrado39",
+    "activation" : -0.7813118365079033,
+    "satisfaction" : -0.9661793783210273,
+    "stimulusConfigurations" : [ {
+      "selected" : true,
+      "stimulusDefinition" : {
+        "name" : "Artículo Nuevo",
+        "value" : "articuloNuevo",
+        "activation" : 0.05,
+        "satisfaction" : 0.05,
+        "self" : true
+      },
+      "activation" : 0.05,
+      "satisfaction" : 0.05,
+      "self" : true
+    }, {
+      "selected" : true,
+      "stimulusDefinition" : {
+        "name" : "Nueva Edición",
+        "value" : "nuevaEdicion",
+        "activation" : 0.03,
+        "satisfaction" : 0.04,
+        "self" : false
+      },
+      "activation" : 0.03,
+      "satisfaction" : 0.04,
+      "self" : false
+    }, {
+      "selected" : true,
+      "stimulusDefinition" : {
+        "name" : "Artículo Sobresaliente",
+        "value" : "articuloSobresaliente",
+        "activation" : 0.08,
+        "satisfaction" : 0.08,
+        "self" : true
+      },
+      "activation" : 0.08,
+      "satisfaction" : 0.08,
+      "self" : true
+    }, {
+      "selected" : false,
+      "stimulusDefinition" : {
+        "name" : "Guerra de Ediciones",
+        "value" : "guerraDeEdiciones",
+        "activation" : -0.08,
+        "satisfaction" : -0.08,
+        "self" : true
+      },
+      "activation" : -0.08,
+      "satisfaction" : -0.08,
+      "self" : true
+    }, {
+      "selected" : false,
+      "stimulusDefinition" : {
+        "name" : "Artículo Borrado",
+        "value" : "articuloBorrado",
+        "activation" : -0.06,
+        "satisfaction" : -0.06,
+        "self" : true
+      },
+      "activation" : -0.06,
+      "satisfaction" : -0.06,
+      "self" : true
+    }, {
+      "selected" : false,
+      "stimulusDefinition" : {
+        "name" : "Artículo Modificado",
+        "value" : "articuloModificado",
+        "activation" : -0.02,
+        "satisfaction" : -0.03,
+        "self" : true
+      },
+      "activation" : -0.02,
+      "satisfaction" : -0.03,
+      "self" : true
+    } ]
+  }, {
+    "agentType" : {
+      "agentTypeClass" : "masoes.agent.GenericEmotionalAgent",
+      "agentTypeName" : "UsuarioRegistrado"
+    },
+    "name" : "UsuarioRegistrado40",
+    "activation" : 0.6332965233013808,
+    "satisfaction" : 0.24113809461393876,
+    "stimulusConfigurations" : [ {
+      "selected" : true,
+      "stimulusDefinition" : {
+        "name" : "Artículo Nuevo",
+        "value" : "articuloNuevo",
+        "activation" : 0.05,
+        "satisfaction" : 0.05,
+        "self" : true
+      },
+      "activation" : 0.05,
+      "satisfaction" : 0.05,
+      "self" : true
+    }, {
+      "selected" : true,
+      "stimulusDefinition" : {
+        "name" : "Nueva Edición",
+        "value" : "nuevaEdicion",
+        "activation" : 0.03,
+        "satisfaction" : 0.04,
+        "self" : false
+      },
+      "activation" : 0.03,
+      "satisfaction" : 0.04,
+      "self" : false
+    }, {
+      "selected" : true,
+      "stimulusDefinition" : {
+        "name" : "Artículo Sobresaliente",
+        "value" : "articuloSobresaliente",
+        "activation" : 0.08,
+        "satisfaction" : 0.08,
+        "self" : true
+      },
+      "activation" : 0.08,
+      "satisfaction" : 0.08,
+      "self" : true
+    }, {
+      "selected" : false,
+      "stimulusDefinition" : {
+        "name" : "Guerra de Ediciones",
+        "value" : "guerraDeEdiciones",
+        "activation" : -0.08,
+        "satisfaction" : -0.08,
+        "self" : true
+      },
+      "activation" : -0.08,
+      "satisfaction" : -0.08,
+      "self" : true
+    }, {
+      "selected" : false,
+      "stimulusDefinition" : {
+        "name" : "Artículo Borrado",
+        "value" : "articuloBorrado",
+        "activation" : -0.06,
+        "satisfaction" : -0.06,
+        "self" : true
+      },
+      "activation" : -0.06,
+      "satisfaction" : -0.06,
+      "self" : true
+    }, {
+      "selected" : false,
+      "stimulusDefinition" : {
+        "name" : "Artículo Modificado",
+        "value" : "articuloModificado",
+        "activation" : -0.02,
+        "satisfaction" : -0.03,
+        "self" : true
+      },
+      "activation" : -0.02,
+      "satisfaction" : -0.03,
+      "self" : true
+    } ]
+  }, {
+    "agentType" : {
+      "agentTypeClass" : "masoes.agent.GenericEmotionalAgent",
+      "agentTypeName" : "UsuarioRegistrado"
+    },
+    "name" : "UsuarioRegistrado41",
+    "activation" : -0.1949683499664534,
+    "satisfaction" : -0.7558422350846483,
+    "stimulusConfigurations" : [ {
+      "selected" : true,
+      "stimulusDefinition" : {
+        "name" : "Artículo Nuevo",
+        "value" : "articuloNuevo",
+        "activation" : 0.05,
+        "satisfaction" : 0.05,
+        "self" : true
+      },
+      "activation" : 0.05,
+      "satisfaction" : 0.05,
+      "self" : true
+    }, {
+      "selected" : true,
+      "stimulusDefinition" : {
+        "name" : "Nueva Edición",
+        "value" : "nuevaEdicion",
+        "activation" : 0.03,
+        "satisfaction" : 0.04,
+        "self" : false
+      },
+      "activation" : 0.03,
+      "satisfaction" : 0.04,
+      "self" : false
+    }, {
+      "selected" : true,
+      "stimulusDefinition" : {
+        "name" : "Artículo Sobresaliente",
+        "value" : "articuloSobresaliente",
+        "activation" : 0.08,
+        "satisfaction" : 0.08,
+        "self" : true
+      },
+      "activation" : 0.08,
+      "satisfaction" : 0.08,
+      "self" : true
+    }, {
+      "selected" : false,
+      "stimulusDefinition" : {
+        "name" : "Guerra de Ediciones",
+        "value" : "guerraDeEdiciones",
+        "activation" : -0.08,
+        "satisfaction" : -0.08,
+        "self" : true
+      },
+      "activation" : -0.08,
+      "satisfaction" : -0.08,
+      "self" : true
+    }, {
+      "selected" : false,
+      "stimulusDefinition" : {
+        "name" : "Artículo Borrado",
+        "value" : "articuloBorrado",
+        "activation" : -0.06,
+        "satisfaction" : -0.06,
+        "self" : true
+      },
+      "activation" : -0.06,
+      "satisfaction" : -0.06,
+      "self" : true
+    }, {
+      "selected" : false,
+      "stimulusDefinition" : {
+        "name" : "Artículo Modificado",
+        "value" : "articuloModificado",
+        "activation" : -0.02,
+        "satisfaction" : -0.03,
+        "self" : true
+      },
+      "activation" : -0.02,
+      "satisfaction" : -0.03,
+      "self" : true
+    } ]
+  }, {
+    "agentType" : {
+      "agentTypeClass" : "masoes.agent.GenericEmotionalAgent",
+      "agentTypeName" : "UsuarioRegistrado"
+    },
+    "name" : "UsuarioRegistrado42",
+    "activation" : 0.6371516490962754,
+    "satisfaction" : -0.912069452234459,
+    "stimulusConfigurations" : [ {
+      "selected" : true,
+      "stimulusDefinition" : {
+        "name" : "Artículo Nuevo",
+        "value" : "articuloNuevo",
+        "activation" : 0.05,
+        "satisfaction" : 0.05,
+        "self" : true
+      },
+      "activation" : 0.05,
+      "satisfaction" : 0.05,
+      "self" : true
+    }, {
+      "selected" : true,
+      "stimulusDefinition" : {
+        "name" : "Nueva Edición",
+        "value" : "nuevaEdicion",
+        "activation" : 0.03,
+        "satisfaction" : 0.04,
+        "self" : false
+      },
+      "activation" : 0.03,
+      "satisfaction" : 0.04,
+      "self" : false
+    }, {
+      "selected" : true,
+      "stimulusDefinition" : {
+        "name" : "Artículo Sobresaliente",
+        "value" : "articuloSobresaliente",
+        "activation" : 0.08,
+        "satisfaction" : 0.08,
+        "self" : true
+      },
+      "activation" : 0.08,
+      "satisfaction" : 0.08,
+      "self" : true
+    }, {
+      "selected" : false,
+      "stimulusDefinition" : {
+        "name" : "Guerra de Ediciones",
+        "value" : "guerraDeEdiciones",
+        "activation" : -0.08,
+        "satisfaction" : -0.08,
+        "self" : true
+      },
+      "activation" : -0.08,
+      "satisfaction" : -0.08,
+      "self" : true
+    }, {
+      "selected" : false,
+      "stimulusDefinition" : {
+        "name" : "Artículo Borrado",
+        "value" : "articuloBorrado",
+        "activation" : -0.06,
+        "satisfaction" : -0.06,
+        "self" : true
+      },
+      "activation" : -0.06,
+      "satisfaction" : -0.06,
+      "self" : true
+    }, {
+      "selected" : false,
+      "stimulusDefinition" : {
+        "name" : "Artículo Modificado",
+        "value" : "articuloModificado",
+        "activation" : -0.02,
+        "satisfaction" : -0.03,
+        "self" : true
+      },
+      "activation" : -0.02,
+      "satisfaction" : -0.03,
+      "self" : true
+    } ]
+  }, {
+    "agentType" : {
+      "agentTypeClass" : "masoes.agent.GenericEmotionalAgent",
+      "agentTypeName" : "UsuarioRegistrado"
+    },
+    "name" : "UsuarioRegistrado43",
+    "activation" : -0.29633450340772693,
+    "satisfaction" : 0.5880720296098385,
+    "stimulusConfigurations" : [ {
+      "selected" : true,
+      "stimulusDefinition" : {
+        "name" : "Artículo Nuevo",
+        "value" : "articuloNuevo",
+        "activation" : 0.05,
+        "satisfaction" : 0.05,
+        "self" : true
+      },
+      "activation" : 0.05,
+      "satisfaction" : 0.05,
+      "self" : true
+    }, {
+      "selected" : true,
+      "stimulusDefinition" : {
+        "name" : "Nueva Edición",
+        "value" : "nuevaEdicion",
+        "activation" : 0.03,
+        "satisfaction" : 0.04,
+        "self" : false
+      },
+      "activation" : 0.03,
+      "satisfaction" : 0.04,
+      "self" : false
+    }, {
+      "selected" : true,
+      "stimulusDefinition" : {
+        "name" : "Artículo Sobresaliente",
+        "value" : "articuloSobresaliente",
+        "activation" : 0.08,
+        "satisfaction" : 0.08,
+        "self" : true
+      },
+      "activation" : 0.08,
+      "satisfaction" : 0.08,
+      "self" : true
+    }, {
+      "selected" : false,
+      "stimulusDefinition" : {
+        "name" : "Guerra de Ediciones",
+        "value" : "guerraDeEdiciones",
+        "activation" : -0.08,
+        "satisfaction" : -0.08,
+        "self" : true
+      },
+      "activation" : -0.08,
+      "satisfaction" : -0.08,
+      "self" : true
+    }, {
+      "selected" : false,
+      "stimulusDefinition" : {
+        "name" : "Artículo Borrado",
+        "value" : "articuloBorrado",
+        "activation" : -0.06,
+        "satisfaction" : -0.06,
+        "self" : true
+      },
+      "activation" : -0.06,
+      "satisfaction" : -0.06,
+      "self" : true
+    }, {
+      "selected" : false,
+      "stimulusDefinition" : {
+        "name" : "Artículo Modificado",
+        "value" : "articuloModificado",
+        "activation" : -0.02,
+        "satisfaction" : -0.03,
+        "self" : true
+      },
+      "activation" : -0.02,
+      "satisfaction" : -0.03,
+      "self" : true
+    } ]
+  }, {
+    "agentType" : {
+      "agentTypeClass" : "masoes.agent.GenericEmotionalAgent",
+      "agentTypeName" : "UsuarioRegistrado"
+    },
+    "name" : "UsuarioRegistrado44",
+    "activation" : -0.9459008428303117,
+    "satisfaction" : 0.35629488416160227,
+    "stimulusConfigurations" : [ {
+      "selected" : true,
+      "stimulusDefinition" : {
+        "name" : "Artículo Nuevo",
+        "value" : "articuloNuevo",
+        "activation" : 0.05,
+        "satisfaction" : 0.05,
+        "self" : true
+      },
+      "activation" : 0.05,
+      "satisfaction" : 0.05,
+      "self" : true
+    }, {
+      "selected" : true,
+      "stimulusDefinition" : {
+        "name" : "Nueva Edición",
+        "value" : "nuevaEdicion",
+        "activation" : 0.03,
+        "satisfaction" : 0.04,
+        "self" : false
+      },
+      "activation" : 0.03,
+      "satisfaction" : 0.04,
+      "self" : false
+    }, {
+      "selected" : true,
+      "stimulusDefinition" : {
+        "name" : "Artículo Sobresaliente",
+        "value" : "articuloSobresaliente",
+        "activation" : 0.08,
+        "satisfaction" : 0.08,
+        "self" : true
+      },
+      "activation" : 0.08,
+      "satisfaction" : 0.08,
+      "self" : true
+    }, {
+      "selected" : false,
+      "stimulusDefinition" : {
+        "name" : "Guerra de Ediciones",
+        "value" : "guerraDeEdiciones",
+        "activation" : -0.08,
+        "satisfaction" : -0.08,
+        "self" : true
+      },
+      "activation" : -0.08,
+      "satisfaction" : -0.08,
+      "self" : true
+    }, {
+      "selected" : false,
+      "stimulusDefinition" : {
+        "name" : "Artículo Borrado",
+        "value" : "articuloBorrado",
+        "activation" : -0.06,
+        "satisfaction" : -0.06,
+        "self" : true
+      },
+      "activation" : -0.06,
+      "satisfaction" : -0.06,
+      "self" : true
+    }, {
+      "selected" : false,
+      "stimulusDefinition" : {
+        "name" : "Artículo Modificado",
+        "value" : "articuloModificado",
+        "activation" : -0.02,
+        "satisfaction" : -0.03,
+        "self" : true
+      },
+      "activation" : -0.02,
+      "satisfaction" : -0.03,
+      "self" : true
+    } ]
+  }, {
+    "agentType" : {
+      "agentTypeClass" : "masoes.agent.GenericEmotionalAgent",
+      "agentTypeName" : "UsuarioRegistrado"
+    },
+    "name" : "UsuarioRegistrado45",
+    "activation" : -0.6995007475042556,
+    "satisfaction" : -0.822191532313284,
+    "stimulusConfigurations" : [ {
+      "selected" : true,
+      "stimulusDefinition" : {
+        "name" : "Artículo Nuevo",
+        "value" : "articuloNuevo",
+        "activation" : 0.05,
+        "satisfaction" : 0.05,
+        "self" : true
+      },
+      "activation" : 0.05,
+      "satisfaction" : 0.05,
+      "self" : true
+    }, {
+      "selected" : true,
+      "stimulusDefinition" : {
+        "name" : "Nueva Edición",
+        "value" : "nuevaEdicion",
+        "activation" : 0.03,
+        "satisfaction" : 0.04,
+        "self" : false
+      },
+      "activation" : 0.03,
+      "satisfaction" : 0.04,
+      "self" : false
+    }, {
+      "selected" : true,
+      "stimulusDefinition" : {
+        "name" : "Artículo Sobresaliente",
+        "value" : "articuloSobresaliente",
+        "activation" : 0.08,
+        "satisfaction" : 0.08,
+        "self" : true
+      },
+      "activation" : 0.08,
+      "satisfaction" : 0.08,
+      "self" : true
+    }, {
+      "selected" : false,
+      "stimulusDefinition" : {
+        "name" : "Guerra de Ediciones",
+        "value" : "guerraDeEdiciones",
+        "activation" : -0.08,
+        "satisfaction" : -0.08,
+        "self" : true
+      },
+      "activation" : -0.08,
+      "satisfaction" : -0.08,
+      "self" : true
+    }, {
+      "selected" : false,
+      "stimulusDefinition" : {
+        "name" : "Artículo Borrado",
+        "value" : "articuloBorrado",
+        "activation" : -0.06,
+        "satisfaction" : -0.06,
+        "self" : true
+      },
+      "activation" : -0.06,
+      "satisfaction" : -0.06,
+      "self" : true
+    }, {
+      "selected" : false,
+      "stimulusDefinition" : {
+        "name" : "Artículo Modificado",
+        "value" : "articuloModificado",
+        "activation" : -0.02,
+        "satisfaction" : -0.03,
+        "self" : true
+      },
+      "activation" : -0.02,
+      "satisfaction" : -0.03,
+      "self" : true
+    } ]
+  }, {
+    "agentType" : {
+      "agentTypeClass" : "masoes.agent.GenericEmotionalAgent",
+      "agentTypeName" : "UsuarioRegistrado"
+    },
+    "name" : "UsuarioRegistrado46",
+    "activation" : 0.11746665401597922,
+    "satisfaction" : -0.7009006672590488,
+    "stimulusConfigurations" : [ {
+      "selected" : true,
+      "stimulusDefinition" : {
+        "name" : "Artículo Nuevo",
+        "value" : "articuloNuevo",
+        "activation" : 0.05,
+        "satisfaction" : 0.05,
+        "self" : true
+      },
+      "activation" : 0.05,
+      "satisfaction" : 0.05,
+      "self" : true
+    }, {
+      "selected" : true,
+      "stimulusDefinition" : {
+        "name" : "Nueva Edición",
+        "value" : "nuevaEdicion",
+        "activation" : 0.03,
+        "satisfaction" : 0.04,
+        "self" : false
+      },
+      "activation" : 0.03,
+      "satisfaction" : 0.04,
+      "self" : false
+    }, {
+      "selected" : true,
+      "stimulusDefinition" : {
+        "name" : "Artículo Sobresaliente",
+        "value" : "articuloSobresaliente",
+        "activation" : 0.08,
+        "satisfaction" : 0.08,
+        "self" : true
+      },
+      "activation" : 0.08,
+      "satisfaction" : 0.08,
+      "self" : true
+    }, {
+      "selected" : false,
+      "stimulusDefinition" : {
+        "name" : "Guerra de Ediciones",
+        "value" : "guerraDeEdiciones",
+        "activation" : -0.08,
+        "satisfaction" : -0.08,
+        "self" : true
+      },
+      "activation" : -0.08,
+      "satisfaction" : -0.08,
+      "self" : true
+    }, {
+      "selected" : false,
+      "stimulusDefinition" : {
+        "name" : "Artículo Borrado",
+        "value" : "articuloBorrado",
+        "activation" : -0.06,
+        "satisfaction" : -0.06,
+        "self" : true
+      },
+      "activation" : -0.06,
+      "satisfaction" : -0.06,
+      "self" : true
+    }, {
+      "selected" : false,
+      "stimulusDefinition" : {
+        "name" : "Artículo Modificado",
+        "value" : "articuloModificado",
+        "activation" : -0.02,
+        "satisfaction" : -0.03,
+        "self" : true
+      },
+      "activation" : -0.02,
+      "satisfaction" : -0.03,
+      "self" : true
+    } ]
+  }, {
+    "agentType" : {
+      "agentTypeClass" : "masoes.agent.GenericEmotionalAgent",
+      "agentTypeName" : "UsuarioRegistrado"
+    },
+    "name" : "UsuarioRegistrado47",
+    "activation" : -0.40465639862464275,
+    "satisfaction" : -0.44081267890246467,
+    "stimulusConfigurations" : [ {
+      "selected" : true,
+      "stimulusDefinition" : {
+        "name" : "Artículo Nuevo",
+        "value" : "articuloNuevo",
+        "activation" : 0.05,
+        "satisfaction" : 0.05,
+        "self" : true
+      },
+      "activation" : 0.05,
+      "satisfaction" : 0.05,
+      "self" : true
+    }, {
+      "selected" : true,
+      "stimulusDefinition" : {
+        "name" : "Nueva Edición",
+        "value" : "nuevaEdicion",
+        "activation" : 0.03,
+        "satisfaction" : 0.04,
+        "self" : false
+      },
+      "activation" : 0.03,
+      "satisfaction" : 0.04,
+      "self" : false
+    }, {
+      "selected" : true,
+      "stimulusDefinition" : {
+        "name" : "Artículo Sobresaliente",
+        "value" : "articuloSobresaliente",
+        "activation" : 0.08,
+        "satisfaction" : 0.08,
+        "self" : true
+      },
+      "activation" : 0.08,
+      "satisfaction" : 0.08,
+      "self" : true
+    }, {
+      "selected" : false,
+      "stimulusDefinition" : {
+        "name" : "Guerra de Ediciones",
+        "value" : "guerraDeEdiciones",
+        "activation" : -0.08,
+        "satisfaction" : -0.08,
+        "self" : true
+      },
+      "activation" : -0.08,
+      "satisfaction" : -0.08,
+      "self" : true
+    }, {
+      "selected" : false,
+      "stimulusDefinition" : {
+        "name" : "Artículo Borrado",
+        "value" : "articuloBorrado",
+        "activation" : -0.06,
+        "satisfaction" : -0.06,
+        "self" : true
+      },
+      "activation" : -0.06,
+      "satisfaction" : -0.06,
+      "self" : true
+    }, {
+      "selected" : false,
+      "stimulusDefinition" : {
+        "name" : "Artículo Modificado",
+        "value" : "articuloModificado",
+        "activation" : -0.02,
+        "satisfaction" : -0.03,
+        "self" : true
+      },
+      "activation" : -0.02,
+      "satisfaction" : -0.03,
+      "self" : true
+    } ]
+  }, {
+    "agentType" : {
+      "agentTypeClass" : "masoes.agent.GenericEmotionalAgent",
+      "agentTypeName" : "UsuarioRegistrado"
+    },
+    "name" : "UsuarioRegistrado48",
+    "activation" : 0.14340221226622796,
+    "satisfaction" : -0.5397596418853512,
+    "stimulusConfigurations" : [ {
+      "selected" : true,
+      "stimulusDefinition" : {
+        "name" : "Artículo Nuevo",
+        "value" : "articuloNuevo",
+        "activation" : 0.05,
+        "satisfaction" : 0.05,
+        "self" : true
+      },
+      "activation" : 0.05,
+      "satisfaction" : 0.05,
+      "self" : true
+    }, {
+      "selected" : true,
+      "stimulusDefinition" : {
+        "name" : "Nueva Edición",
+        "value" : "nuevaEdicion",
+        "activation" : 0.03,
+        "satisfaction" : 0.04,
+        "self" : false
+      },
+      "activation" : 0.03,
+      "satisfaction" : 0.04,
+      "self" : false
+    }, {
+      "selected" : true,
+      "stimulusDefinition" : {
+        "name" : "Artículo Sobresaliente",
+        "value" : "articuloSobresaliente",
+        "activation" : 0.08,
+        "satisfaction" : 0.08,
+        "self" : true
+      },
+      "activation" : 0.08,
+      "satisfaction" : 0.08,
+      "self" : true
+    }, {
+      "selected" : false,
+      "stimulusDefinition" : {
+        "name" : "Guerra de Ediciones",
+        "value" : "guerraDeEdiciones",
+        "activation" : -0.08,
+        "satisfaction" : -0.08,
+        "self" : true
+      },
+      "activation" : -0.08,
+      "satisfaction" : -0.08,
+      "self" : true
+    }, {
+      "selected" : false,
+      "stimulusDefinition" : {
+        "name" : "Artículo Borrado",
+        "value" : "articuloBorrado",
+        "activation" : -0.06,
+        "satisfaction" : -0.06,
+        "self" : true
+      },
+      "activation" : -0.06,
+      "satisfaction" : -0.06,
+      "self" : true
+    }, {
+      "selected" : false,
+      "stimulusDefinition" : {
+        "name" : "Artículo Modificado",
+        "value" : "articuloModificado",
+        "activation" : -0.02,
+        "satisfaction" : -0.03,
+        "self" : true
+      },
+      "activation" : -0.02,
+      "satisfaction" : -0.03,
+      "self" : true
+    } ]
+  }, {
+    "agentType" : {
+      "agentTypeClass" : "masoes.agent.GenericEmotionalAgent",
+      "agentTypeName" : "UsuarioRegistrado"
+    },
+    "name" : "UsuarioRegistrado49",
+    "activation" : 0.470941713311972,
+    "satisfaction" : -0.9454950340347652,
+    "stimulusConfigurations" : [ {
+      "selected" : true,
+      "stimulusDefinition" : {
+        "name" : "Artículo Nuevo",
+        "value" : "articuloNuevo",
+        "activation" : 0.05,
+        "satisfaction" : 0.05,
+        "self" : true
+      },
+      "activation" : 0.05,
+      "satisfaction" : 0.05,
+      "self" : true
+    }, {
+      "selected" : true,
+      "stimulusDefinition" : {
+        "name" : "Nueva Edición",
+        "value" : "nuevaEdicion",
+        "activation" : 0.03,
+        "satisfaction" : 0.04,
+        "self" : false
+      },
+      "activation" : 0.03,
+      "satisfaction" : 0.04,
+      "self" : false
+    }, {
+      "selected" : true,
+      "stimulusDefinition" : {
+        "name" : "Artículo Sobresaliente",
+        "value" : "articuloSobresaliente",
+        "activation" : 0.08,
+        "satisfaction" : 0.08,
+        "self" : true
+      },
+      "activation" : 0.08,
+      "satisfaction" : 0.08,
+      "self" : true
+    }, {
+      "selected" : false,
+      "stimulusDefinition" : {
+        "name" : "Guerra de Ediciones",
+        "value" : "guerraDeEdiciones",
+        "activation" : -0.08,
+        "satisfaction" : -0.08,
+        "self" : true
+      },
+      "activation" : -0.08,
+      "satisfaction" : -0.08,
+      "self" : true
+    }, {
+      "selected" : false,
+      "stimulusDefinition" : {
+        "name" : "Artículo Borrado",
+        "value" : "articuloBorrado",
+        "activation" : -0.06,
+        "satisfaction" : -0.06,
+        "self" : true
+      },
+      "activation" : -0.06,
+      "satisfaction" : -0.06,
+      "self" : true
+    }, {
+      "selected" : false,
+      "stimulusDefinition" : {
+        "name" : "Artículo Modificado",
+        "value" : "articuloModificado",
+        "activation" : -0.02,
+        "satisfaction" : -0.03,
+        "self" : true
+      },
+      "activation" : -0.02,
+      "satisfaction" : -0.03,
+      "self" : true
+    } ]
+  }, {
+    "agentType" : {
+      "agentTypeClass" : "masoes.agent.GenericEmotionalAgent",
+      "agentTypeName" : "UsuarioRegistrado"
+    },
+    "name" : "UsuarioRegistrado50",
+    "activation" : -0.26218905727716857,
+    "satisfaction" : -0.46480092249310734,
+    "stimulusConfigurations" : [ {
+      "selected" : true,
+      "stimulusDefinition" : {
+        "name" : "Artículo Nuevo",
+        "value" : "articuloNuevo",
+        "activation" : 0.05,
+        "satisfaction" : 0.05,
+        "self" : true
+      },
+      "activation" : 0.05,
+      "satisfaction" : 0.05,
+      "self" : true
+    }, {
+      "selected" : true,
+      "stimulusDefinition" : {
+        "name" : "Nueva Edición",
+        "value" : "nuevaEdicion",
+        "activation" : 0.03,
+        "satisfaction" : 0.04,
+        "self" : false
+      },
+      "activation" : 0.03,
+      "satisfaction" : 0.04,
+      "self" : false
+    }, {
+      "selected" : true,
+      "stimulusDefinition" : {
+        "name" : "Artículo Sobresaliente",
+        "value" : "articuloSobresaliente",
+        "activation" : 0.08,
+        "satisfaction" : 0.08,
+        "self" : true
+      },
+      "activation" : 0.08,
+      "satisfaction" : 0.08,
+      "self" : true
+    }, {
+      "selected" : false,
+      "stimulusDefinition" : {
+        "name" : "Guerra de Ediciones",
+        "value" : "guerraDeEdiciones",
+        "activation" : -0.08,
+        "satisfaction" : -0.08,
+        "self" : true
+      },
+      "activation" : -0.08,
+      "satisfaction" : -0.08,
+      "self" : true
+    }, {
+      "selected" : false,
+      "stimulusDefinition" : {
+        "name" : "Artículo Borrado",
+        "value" : "articuloBorrado",
+        "activation" : -0.06,
+        "satisfaction" : -0.06,
+        "self" : true
+      },
+      "activation" : -0.06,
+      "satisfaction" : -0.06,
+      "self" : true
+    }, {
+      "selected" : false,
+      "stimulusDefinition" : {
+        "name" : "Artículo Modificado",
+        "value" : "articuloModificado",
+        "activation" : -0.02,
+        "satisfaction" : -0.03,
+        "self" : true
+      },
+      "activation" : -0.02,
+      "satisfaction" : -0.03,
+      "self" : true
+    } ]
+  } ]
+}

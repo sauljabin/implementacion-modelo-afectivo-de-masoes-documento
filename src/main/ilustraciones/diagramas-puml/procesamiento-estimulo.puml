@@ -1,0 +1,55 @@
+@startuml
+
+skinparam defaultFontSize 20
+
+(*) --> if "El estímulo es externo" as IFEXTERNO then
+-->[Si] "Entorno u otro agente
+envía estímulo" as PA1
+endif
+
+partition Agente {
+
+  PA1 --> "Agente recibe
+  el estímulo" as PA2
+
+  IFEXTERNO -->[No] "Agente genera estímulo
+  internamente" as PB1
+
+  partition "Componente Conductual" {
+    PA2 ---> "Agente entrega el estímulo al
+    Componente Conductual" as P3
+
+    PB1 ---> P3
+
+    P3 -> "Configurador Emocional consulta
+    la Base de Conocimiento
+    Conductual" as P4
+
+    P4 ---> if "El estímulo es conocido" then
+    --->[Si] "Configurador Emocional
+    obtiene los parámetros de
+    activación y satisfacción" as P5
+    else
+    -r->[No] (*)
+    endif
+
+
+    P5 -R-> "Configurador Emocional
+    actualiza emoción" as P6
+
+    P6 -r-> "Manejador de Comportamiento
+    recibe emoción" as P7
+    P7 -d-> "Manejador de Comportamiento
+    consulta comportamiento asociado
+    en la Base de Conocimiento Conductual" as P8
+    P8 -r-> "Manejador de Comportamiento
+    actualiza priorización
+    de comportamiento" as P9
+  }
+
+  P9 -> "Agente modifica
+  comportamiento" as P10
+
+  P10-> (*top)
+}
+@enduml

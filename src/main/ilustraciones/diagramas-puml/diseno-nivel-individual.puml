@@ -1,0 +1,37 @@
+@startuml
+
+class Agent #d1e8f7 ##517ad4 {
+
+}
+
+class Behaviour #d1e8f7 ##517ad4 {
+
+}
+
+class ComportamientoEvaluarEstimulo {
++ EstadoDeAgente evaluarEstimulo(Estimulo)
+}
+
+class ComportamientoResponderEstado {
++ EstadoDeAgente responderEstado()
+}
+
+class EstadoDeAgente {
+
+}
+
+class Estimulo {
+
+}
+
+Agent <|-- AgenteEmocional
+AgenteEmocional *-- ComponenteConductual
+Behaviour <|-- ComportamientoEvaluarEstimulo
+Behaviour <|-- ComportamientoResponderEstado
+AgenteEmocional *-- ComportamientoResponderEstado
+AgenteEmocional *-- ComportamientoEvaluarEstimulo
+ComportamientoEvaluarEstimulo o-- Estimulo
+ComportamientoEvaluarEstimulo o-- EstadoDeAgente
+ComportamientoResponderEstado o-- EstadoDeAgente
+
+@enduml

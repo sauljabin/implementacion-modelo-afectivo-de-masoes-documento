@@ -1,5 +1,5 @@
 %%
-% Copyright (c) {año} {nombre} <{email}>.
+% Copyright (c) 2017 Saúl Piña <sauljabin@gmail.com>.
 %
 % This program is free software: you can redistribute it and/or modify
 % it under the terms of the GNU General Public License as published by
@@ -15,4 +15,104 @@
 % along with this program.  If not, see <http://www.gnu.org/licenses/>.
 %%
 
-\capitulo{Conclusiones}
+\capitulo{Conclusiones y Recomendaciones}
+
+La arquitectura multiagente MASOES permite modelar un sistema emergente
+y auto-organizado. Esta arquitectura
+describe los elementos y relaciones, a nivel individual y colectivo, que
+determinan los fenómenos de emergencia y auto-organización en un sistema.
+En este trabajo se abordó la implementación del modelo afectivo
+propuesto en MASOES, y por ende su componente conductual,
+el cual permite generar cambios dinámicos de comportamientos en los
+agentes emocionales, guiados por su estado emocional.
+Adicionalmente, se propone el cálculo de
+la Emoción Social de un grupo de agentes,
+que se compone por un conjunto de tres valores: la Emoción Central,
+que determina la emoción que tienden a exhibir los agentes;
+la Distancia Máxima, determina los estados emocionales más alejados del grupo;
+y la Dispersión Emocional, que define la variación de estados emocionales del grupo,
+es decir, dicta si los estados emocionales son homegéneos o heterogéneos.
+
+A fin de verificar que la implementación del modelo afectivo genere correctamente emociones a nivel individual y colectivo
+y que la priorización de los tipos de comportamiento sea acorde a las reglas de MASOES,
+se desarrollaron casos de estudio
+basados en lo modelado por \cite{perozo2012} sobre el sistema colaborativo Wikipedia.
+Los resultados obtenidos demuestran que la implementación cumple
+con lo especificado en MASOES, tanto a nivel individual como colectivo.
+Uno de los hallazgos interesantes es la importancia que tiene la dispersión emocional
+sobre la interpretación de la emoción central, esto se debe, a que
+expresa cuan representativa es la emoción central frente a un grupo de agentes.
+Se pudo comprobar que la emoción central es más válida a medida que la dispersión
+emocional es más cercana a cero, ya que se trata de un conjunto de agentes que tienen emociones muy parecidas (homogéneas).
+También, se observó que el número de agentes no influye directamente en el resultado
+e interpretación de la emoción central, en otras palabras, si un grupo de agentes
+es pequeño los resultados de la emoción central se comportarán de la misma forma que en
+un grupo de agentes grande.
+A nivel individual,
+se pudo observar que los agentes generan emociones y priorizan los comportamientos
+correctamente, esto se hizo a través de la comparación de los resultados
+con los obtenidos a nivel de diseño \citep{perozo2012}, los cuales concuerdan inequívocamente.
+
+Con respecto a los aportes, este trabajo de investigación no solo
+provee una implementación del modelo afectivo de MASOES, sino que también,
+proporciona un marco de trabajo el cual se puede seguir extendiendo,
+para simular cualquier tipo de sistema emergente y auto-organizado modelado con MASOES.
+Por otro lado, se construyeron diferentes utilitarios de código que permiten,
+entre otras cosas, controlar la plataforma JADE, comunicar agentes, realizar pruebas funcionales y
+trabajar con el lenguaje \textit{Prolog}, también, se incluyeron interfaces gráficas
+que sirven para el monitoreo de agentes, o para la configuración de simulaciones.
+Es importante destacar que dichas interfaces pueden ser modificadas, para
+adaptarse a diferentes dominios y sistemas.
+La interfaz de configuración de simulación permite observar gráficos en tiempo real
+acerca de la emoción social y los estados emocionales individuales de cada agente,
+además, incluye la generación de resultados a través de archivos de texto.
+Se desarrolló un agente que calcula la emoción social.
+Este cálculo se basa en el promedio de los estados emocionales de un grupo de agentes y
+la desviación estándar de dicho promedio. La emoción social es de gran importancia,
+ya que describe la tendencia de los estados emocionales de un grupo de agentes,
+y los agentes emocionales podrían utilizarla como herramienta para cumplir
+sus objetivos colectivos.
+
+Otro de los aportes más relevantes de este trabajo, es el diseño de una ontología de
+comunicación para MASOES, específicamente para agentes estandarizados FIPA, con ella
+es posible comunicar los agentes emocionales entre sí o con otros tipos de agentes,
+además, es posible una comunicación entre diferentes plataformas,
+es decir, los agentes escritos en lenguaje \textit{Java} pueden comunicarse
+con agentes programados en lenguajes diferentes.
+
+Otro aporte interesante, es la implementación y diseño de la Base de Conocimiento
+Conductual, esta fue desarrollada con el lenguaje de programación \textit{Prolog},
+ampliamente utilizado por su versatilidad y facilidad de uso, para esto
+se propuso una manera estándar de definir el conocimiento asociado
+al agente, a los tipos de emociones, a la priorización de comportamiento y a los estímulos,
+este último de gran importancia para los agentes emocionales, ya que estos
+pueden y deben registrar como afectan los estímulos a su estado emocional.
+En cada estímulo se deben establecer los parámetros
+que definen el incremento de la activación y satisfacción del estado emocional del agente.
+A su vez, se propone un algoritmo para la
+actualización del estado emocional del agente de manera incremental.
+
+Es importante destacar, que la implementación se llevó a cabo tomando en cuenta los estándares FIPA,
+lo que permite la interoperabilidad de los agentes emocionales con cualquier otro agente FIPA,
+esto hace que sea estándar y fácil de extender por otros.
+
+Como trabajo futuro, se podría implementar otros componentes individuales de la arquitectura de MASOES,
+como son, los componentes Cognitivo, Reactivo y Social, y componentes colectivos como
+la Base de Conocimiento Colectivo, todo esto con la finalidad de completar la implementación
+de esta arquitectura y ser usada para modelar e instanciar un sistema colectivo
+emergente y auto-organizado de software. Asimismo, se puede destacar que el componente conductual
+presentado en este trabjao, es susceptible a modificaciones y mejoras, como por ejemplo:
+se podría mejorar el diseño de clases, o utilizar un lenguaje lógico diferente de \textit{Prolog}
+para construir la Base de Conocimiento Conductual, o también, incluir más conocimiento
+en dicha base.
+Otra oportunidad de investigación, es proponer un cálculo de emoción social,
+que pueda dar como resultado más de una emoción central, esto, basado en las agrupaciones de estados emocionales
+que puedan emerger en el grupo de agentes, ya que como se vio, la interpretación de la emoción central propuesta
+en este trabajo está sujeta al resultado de la dispersión emocional y en menor manera a la distancia máxima.
+
+Por otra parte, sería interesante probar la implementación propuesta en este trabajo
+en diferentes host, en otras palabras, que los agentes no se instancien localmente, sino
+que se instancien y comuniquen en una red, lo cual sería útil en áreas como la robótica,
+donde cada agente emocional sea un robot, y este modifique su comportamiento
+según su estado emocional, para esta propuesta se recomienda implementar previamente
+al menos los componentes Cognitivo y Reactivo de MASOES.

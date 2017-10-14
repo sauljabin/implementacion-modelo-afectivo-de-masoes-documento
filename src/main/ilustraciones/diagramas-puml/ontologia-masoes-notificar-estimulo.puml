@@ -1,0 +1,29 @@
+@startuml
+
+interface Predicate #d1e8f7 ##517ad4
+interface Concept #d1e8f7 ##517ad4
+interface AgentAction #d1e8f7 ##517ad4
+class Done #d1e8f7 ##517ad4
+class AID #d1e8f7 ##517ad4
+
+Concept <|-- Estimulo
+AgentAction <|-- NotificarAccion
+AgentAction <|-- NotificarObjeto
+AgentAction <|-- NotificarEvento
+Predicate <|-- Done
+
+NotificarAccion *--- Accion
+NotificarEvento *--- Evento
+NotificarObjeto *--- Objeto
+
+Estimulo <|-- Accion
+Estimulo <|-- Evento
+Estimulo <|-- Objeto
+
+Estimulo *-- AID
+
+abstract class Estimulo {
+String nombre
+}
+
+@enduml

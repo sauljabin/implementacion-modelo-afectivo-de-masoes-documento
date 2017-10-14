@@ -1,5 +1,5 @@
 %%
-% Copyright (c) {año} {nombre} <{email}>.
+% Copyright (c) 2017 Saúl Piña <sauljabin@gmail.com>.
 %
 % This program is free software: you can redistribute it and/or modify
 % it under the terms of the GNU General Public License as published by
@@ -19,12 +19,126 @@
 
 \seccion{Planteamiento del Problema}
 
+La detección o simulación de emociones por parte de sistemas artificiales es un
+tema de alto interés científico, especialmente por el abanico de posibles
+aplicaciones prácticas, un ejemplo de esto es que los sistemas con inteligencia
+artificial tengan la capacidad de percibir y tomar acciones según la emociones
+que las personas presenten, predecir comportamientos colectivos basados en
+emociones, o que sistemas altamente complejos y con numerosas interacciones con
+otros puedan simplificar su diseño, aplicando modelos emocionales que ayuden a
+generar auto-organización y emergencia \citep{perozo2011}.
+
+El interés de incorporar emociones a agentes inteligentes, se debe a que las
+emociones pueden hacer a los agentes más atractivos y creíbles para que puedan
+desempeñar un mejor papel en diversos sistemas interactivos que involucren
+simulación \citep{jiang2007}. Según \cite{perozo2012}, es importante considerar
+emociones en sistemas multiagente (SMA), ya que se argumenta que las emociones
+permiten a los organismos adaptarse a muchas situaciones, influencian el
+comportamiento a nivel individual y colectivo, intervienen en la toma de
+decisiones y procesamiento de la información, y tienen un efecto en la
+interacción social. Basado en esto, surge la arquitectura genérica
+MASOES y se recomienda su uso en simulación social multiagente, sobre todo para
+casos de comparación de modelos o estudios enfocados a entender tendencias
+emergentes en relación a: normas, colaboración, cooperación, tráfico peatonal o
+vehicular, puesto que MASOES integra un modelo afectivo que ayuda a los
+agentes a tomar decisiones según su estado de ánimo artificial.
+
+Trabajos como el de \cite{rodriguez2015}, expresan que es necesario mucha
+más investigación en el área de sistemas multiagente con modelos afectivos, y
+que los principales retos para estos son: la integración de la cognición y las
+emociones en arquitecturas de agentes, la unificación de los diversos aspectos
+de las emociones, arquitecturas escalables para los modelos computacionales de
+emociones y explotación de evidencia biológica. La integración de la cognición y
+las emociones en arquitecturas de agentes, se refiere a que la construcción
+interna de los agentes debe asegurar un correcto acoplamiento entre los
+diferentes componentes y el componente afectivo. Con respecto a la unificación
+de los diversos aspectos de las emociones, se debe proporcionar marcos adecuados
+para la aplicación coherente de diferentes aspectos de las emociones humanas.
+Las arquitecturas afectivas escalables deben ser diseñadas de una manera
+flexible para que puedan incorporar nuevos componentes y comportamientos. Por
+último, el problema de la explotación de evidencia biológica, se refiere a que
+las arquitecturas deben ser diseñadas de manera que puedan aprovechar al máximo
+el conocimiento generado en otras áreas científicas.
+
+Por el escenario expuesto anteriormente, se propone aplicar el modelo afectivo
+de MASOES en un sistema multiagente, en el cual se pueda observar el
+comportamiento exhibido a nivel individual o colectivo de los agentes, como
+consecuencia de sus estados emocionales. Aunque el modelo afectivo de MASOES ha
+sido verificado formalmente a nivel de diseño \citep{perozo2011}, no ha sido
+verificado a nivel de implementación, lo que ofrece la oportunidad de continuar
+esta investigación. Además, dicho modelo puede ser usado en cualquier caso de
+estudio y arquitectura, no solamente en MASOES, ya que fue diseñado de manera
+modular. Asimismo, es interesante abordar el problema propuesto por
+\cite{rodriguez2015} sobre la integración de la cognición y las emociones en
+arquitecturas de agentes, donde la construcción interna de los agentes debe
+asegurar un correcto acoplamiento entre los diferentes componentes y el
+componente afectivo, dado que este último le proporcionará al agente la
+capacidad de seleccionar un comportamiento adecuado según el estado emocional
+presentado. Todo esto con la finalidad de brindar un entorno para la
+interacción entre los procesos emocionales y las diferentes funciones de un
+agente, e inclusive en interacciones colectivas, a su vez aportar a la
+comunidad científica una implementación del reciente modelo afectivo propuesto
+en MASOES.
+
 \seccion{Objetivos}
-	\subseccion{Objetivos Generales}
-	\subseccion{Objetivos Específicos}
+\subseccion{Objetivo General}
+Implementar el modelo afectivo de MASOES en un sistema multiagente.
+
+\subseccion{Objetivos Específicos}
+
+\begin{enumerate}
+\item Investigar los aspectos teóricos relacionados a los sistemas multiagente y computación emocional.
+\item Estudiar algunas arquitecturas multiagente con modelos afectivos incluyendo a MASOES \citep{perozo2011}.
+\item Diseñar un sistema multiagente a nivel individual y colectivo basado en el modelo afectivo de MASOES y en el marco de trabajo JADE.
+\item Implementar el sistema multiagente y el modelo afectivo de MASOES.
+\item Aplicar la implementación en un caso de estudio seleccionado.
+\item Evaluar los resultados obtenidos a nivel de implementación del modelo afectivo de MASOES con los resultados obtenidos por \cite{perozo2011} a nivel de diseño.
+\end{enumerate}
 
 \seccion{Justificación e Importancia}
 
+La arquitectura MASOES, es una propuesta muy reciente que se ha mantenido en
+continua investigación y ha sido aplicada en diferentes casos de estudio, para
+el estudio del comportamiento emergente y auto-organizado de Wikipedia, el
+desarrollo de software libre, y el modelo de fuerza social (tráfico peatonal).
+Por otra parte, el aspecto de más interés en MASOES para esta propuesta de
+investigación, es la posibilidad de considerar el estado emocional del agente
+para gestionar el cambio dinámico de su comportamiento, lo que representa una
+diferencia importante en el modelado de sistemas multiagente.
+
+La propuesta de investigación es justificable debido a que se identifica a
+MASOES como una interesante herramienta para el modelado de sistemas con o sin
+propiedades emergentes y auto-organizadas conocidas, que permite estudiar el
+comportamiento emergente y auto-organizado del sistema modelado. Así, el
+implementar el modelo afectivo para MASOES permite evaluarlo a nivel de
+simulación y contribuir con una propuesta genérica que puede ser usada en
+cualquier sistema multiagente, no sólo para MASOES.
+
+Lo dicho anteriormente se sustenta en que las emociones juegan un papel
+funcional en el comportamiento de los seres humanos y de las sociedades de
+humanos, lo que hace imperativo el desarrollo de estudios en líneas de
+investigación como  computación emocional y sistemas multiagente, con el
+objetivo de aportar innovadoras aplicaciones de modelos emocionales para la
+simulación, predicción y optimización de comportamientos basados en emociones.
+Cabe señalar, que para el momento de diseñar el modelo afectivo para MASOES, era
+una propuesta innovadora en la generación y gestión de emociones a nivel
+colectivo, lo que resulta muy atractivo para el estudio e influencia de las
+emociones en al ámbito social.
+
 \seccion{Alcances y Limitaciones}
-	\subseccion{Alcances}
-	\subseccion{Limitaciones}
+
+La propuesta de investigación se limitará a la implementación multiagente del
+modelo emocional propuesto en MASOES sobre un caso de estudio, no se incorporará
+un componente cognitivo complejo, debido a que se enfocará el estudio en el
+componente emocional. Asimismo, este trabajo no abarca la implementación de
+otros componentes de MASOES.
+Además, se desarrolló una herramienta computacional donde se pueda configurar el caso de estudio y modificar
+las características del entorno o configuraciones individuales y colectivas de
+los agentes de manera interactiva.
+
+Por otra parte, se usa el marco de trabajo JADE \eningles{Java Agent
+DEvelopment}, para la implementación del sistema multiagente, ya que permite el
+desarrollo de los agentes de acuerdo a la especificación estándar FIPA
+\eningles{Foundation for Intelligent Physical Agents}, provee
+un conjunto de utilitarios para el desarrollo de agentes con comportamientos complejos y
+se ajusta a las necesidades del presente trabajo.

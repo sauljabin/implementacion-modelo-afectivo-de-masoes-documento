@@ -1,0 +1,45 @@
+@startuml
+
+interface Predicate #d1e8f7 ##517ad4
+interface Concept #d1e8f7 ##517ad4
+interface AgentAction #d1e8f7 ##517ad4
+class AID #d1e8f7 ##517ad4
+
+Predicate <|-- EstadoDeAgente
+Concept <|-- EstadoDeComportamiento
+Concept <|-- EstadoDeEmocion
+Concept <|-- Estimulo
+AgentAction <|-- EvaluarEstimulo
+
+EvaluarEstimulo *-- Estimulo
+
+Estimulo <|-- Accion
+Estimulo <|-- Evento
+Estimulo <|-- Objeto
+
+Estimulo *-- AID
+
+class EvaluarEstimulo {
+}
+
+class Estimulo {
+String valor
+}
+
+EstadoDeAgente *-- EstadoDeComportamiento
+EstadoDeAgente *-- EstadoDeEmocion
+EstadoDeAgente *-- AID
+
+class EstadoDeComportamiento {
+String tipo
+}
+
+class EstadoDeEmocion {
+String nombre
+String tipo
+double activacion
+double satisfaccion
+}
+
+
+@enduml

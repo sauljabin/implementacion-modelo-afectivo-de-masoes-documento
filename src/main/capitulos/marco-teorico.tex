@@ -1,5 +1,5 @@
 %%
-% Copyright (c) {año} {nombre} <{email}>.
+% Copyright (c) 2017 Saúl Piña <sauljabin@gmail.com>.
 %
 % This program is free software: you can redistribute it and/or modify
 % it under the terms of the GNU General Public License as published by
@@ -19,15 +19,668 @@
 
 \seccion{Antecedentes de la Investigación}
 
+La investigación de \cite{rodriguez2015}, es importante para el presente
+trabajo ya que plantea cuatro problemas clave que tienen lugar en el desarrollo
+de sistemas multiagente con computación emocional, los cuales son: \textit{la
+integración de la cognición y las emociones en arquitecturas de agentes, la
+unificación de los diversos aspectos de las emociones, arquitecturas escalables
+para los modelos computacionales de emociones, y la explotación de la evidencia
+biológica}. La integración de la cognición y las emociones en arquitecturas de
+agentes, se refiere a que las arquitecturas deben proporcionar entornos
+adecuados para la interacción de las funciones cognitivas y afectivas que
+intervienen en los procesos emocionales, en otras palabras, la construcción
+interna de los agentes debe asegurar un correcto acoplamiento entre los
+diferentes componentes y el componente afectivo. La unificación de los diversos
+aspectos de las emociones, teniendo en cuenta que no existe una teoría universal
+que explique todo el proceso de las emociones humanas y que todos los sistemas
+afectivos artificiales son desarrollados basándose en los supuestos de dichas
+teorías, las arquitecturas afectivas deben proporcionar marcos adecuados para la
+aplicación coherente de diferentes aspectos de las emociones humanas. El
+problema de las arquitecturas escalables, viene dado a que las investigaciones y
+el conocimiento de las emociones humanas se encuentran en constante cambio, las
+arquitecturas afectivas deben ser diseñadas de una manera flexible para que
+puedan incorporar nuevos componentes y comportamientos, y de esa manera incluir
+los nuevos hallazgos. Por último, el problema de la explotación de evidencia
+biológica, se refiere a que las arquitecturas deben ser diseñadas de manera que
+puedan aprovechar al máximo el conocimiento generado en otras áreas científicas,
+además, deben incluir una serie de componentes que imitan el funcionamiento de
+las estructuras del cerebro implicadas en el procesamiento de las emociones
+humanas. El presente trabajo de investigación
+se enfoca en dar solución al primer problema (\textit{la
+integración de la cognición y las emociones en arquitecturas de agentes}),
+ya que la arquitectura individual de MASOES
+describe los componentes y relaciones internas de los agentes emocionales,
+para producir y priorizar un comportamiento imitativo, cognitivo o reactivo
+guiado por el componente afectivo.
+
+Sobre la arquitectura MASOES se pueden mencionar las siguientes investigaciones:
+
+La arquitectura multiagente para sistemas emergentes y auto-organizados llamada
+MASOES \eningles{Multiagent Architecture for Self-Organizing and Emergent Systems},
+fue introducida por \citeauthor{perozo2011} en \citeyear{perozo2011}, como una arquitectura
+multiagente para el diseño, modelado y estudio de sistemas emergentes y
+auto-organizados, más recientemente ha sido utilizada entre otras cosas para
+modelar el fenómeno de la auto-organización y emergencia en Wikipedia \citep{perozo2013},
+desarrollo de software libre \citep{perozo2013} y sistemas
+multirobot \citep{gil2015}. Esta arquitectura describe los elementos,
+relaciones y mecanismos, a nivel individual y colectivo, que determinan los
+fenómenos de emergencia y auto-organización en un sistema, sin modelar
+matemáticamente el mismo. Uno de los aspectos más interesantes de la
+arquitectura MASOES, es el hecho de considerar un conjunto de emociones
+positivas y negativas generadas desde un nivel individual y colectivo, para de
+esta manera promover un cambio de comportamiento dinámico en los agentes en lo
+individual (Reactivo, Cognitivo) como colectivo (Imitativo). Dicha
+investigación, es muy importante debido a que plantea el modelo afectivo para
+MASOES, el cual será utilizado en la presente investigación como base
+fundamental para la construcción de una arquitectura multiagente con agentes
+emocionales.
+
+En este sentido el trabajo realizado por \cite{gil2015}, también es clave en
+el área y para este trabajo, porque demuestra la aplicabilidad de los sistemas
+multiagente con modelos emocionales en un problema específico, en este caso
+sistemas multirobot (a nivel de hardware). La investigación usa como base el
+modelo MASOES propuesto por \cite{perozo2011}. En su investigación proponen una
+arquitectura con tres niveles, el primer nivel individual proporciona las
+capacidades perceptivas a cada agente y los aspectos relacionados a la conducta
+y emociones del robot. El segundo nivel es colectivo, soporta los procesos de
+interacción de los robots con otros individuos dentro del sistema y con el medio
+ambiente. El último nivel, de los procesos de aprendizaje y gestión del
+conocimiento, gestiona el conocimiento tanto individual como colectivo, así como
+los procesos de aprendizaje que se producen en el sistema.
+
+Por otra parte, también es necesario mencionar otras arquitecturas y modelos
+afectivos recientes enfocados en el aspecto cognición-emoción que pueden
+contribuir a la implementación y evaluación de este trabajo de investigación:
+
+La arquitectura afectiva FATIMA \eningles{Fearnot AffecTIve Mind Architecture},
+propuesta por \cite{dias2014}, es una arquitectura para la
+generación de emociones en agentes de software, de manera que dichas emociones
+afecten el comportamiento del mismo. En este trabajo se utiliza como primera
+aproximación para la generación y evaluación de emociones el modelo afectivo OCC
+\eningles{Ortony, Clore and Collins} \citep{ortony1990},
+en este modelo se presentan las emociones de manera categorizada y no a través
+de dimensiones como otros estudios. El proceso de evaluación de las emociones se
+realiza en dos pasos, en primer lugar se determina la importancia de un evento
+para el agente y se definen las variables de valoración del evento,
+posteriormente, se toman las variables y se genera como resultado el estado
+afectivo, el cual permite cambiar el comportamiento del agente. Cada emoción
+poseerá un valor, tipo y una intensidad, el estado de ánimo del agente se puede
+definir como el estado afectivo general, que está influenciado por las emociones
+experimentadas por el agente, las emociones positivas aumentan el estado de
+ánimo, mientras que las emociones negativas lo disminuyen. En esta investigación
+no se establece una relación entre las emociones y el comportamiento, como lo
+realiza el modelo afectivo para MASOES, en cambio, se muestra la relación entre
+las variables de valoración  y las emociones, dicha relación es extraída de la
+categorización OCC: \textit{la variable deseabilidad se relaciona con alegría y
+angustia, la plausabilidad con rechazo, admiración, orgullo y vergüenza, la
+capacidad de atracción con amor y odio, entre otros}. En esta arquitectura se
+toma en cuenta el estado emocional que puede ser producido por agentes externos
+y por el ambiente, y además se habla de un componente cultural, que está
+directamente relacionado con la variable plausabilidad, puede darse el caso que
+entre más positiva sean las emociones colectivas del agente, es más posible que
+priorice acciones positivas para otros agentes y no  para él. Una importante
+diferencia con el modelo afectivo para MASOES, es que éste promueve un
+compromiso entre el comportamiento individual y colectivo en la sociedad de
+agentes,  además, permite explicar aspectos de la interacción social, tales como
+el grado de satisfacción, cooperación, y competencia, entre otros, mientras que
+FATIMA, posee un enfoque cognitivo emocional.
+
+\cite{dastani2014programming}, proponen extender el lenguaje de programación de agentes inteligentes llamado \comillas{2APL},
+con el objetivo de integrar emociones en este.
+2APL es un lenguaje de programación lógico que fue desarrollado para apoyar la programación de sistemas multiagente.
+Entre otras cosas, este lenguaje le permite a los agentes recibir eventos y representar información
+propia, de otros agentes o del entorno.
+Posee un conjunto de tres tipos de reglas de razonamiento:
+el primer tipo de reglas está diseñado para generar planes para alcanzar metas,
+llamadas reglas de planificación de objetivos o reglas PG \eningles{Planning Goal};
+el segundo permite procesar eventos externos, mensajes y acciones abstractas,
+llevan el nombre de reglas de llamada de procedimiento o reglas de PC \eningles{Procedure Call};
+el último tipo permite rehacer los planes fallidos,
+llamadas reglas de reparación del plan o RP \eningles{Plan Repair}.
+Con respecto a la integración de emociones, se utilizó
+el modelo dimensional de emociones PAD \eningles{Pleasure, Arousal and Dominance},
+específicamente la implementación llamada ALMA, para definir
+el conjunto de emociones que pueden exhibir los agentes, además,
+crearon una base de emociones a través de un nuevo tipo de regla para el lenguaje 2APL,
+llamadas reglas de emoción o ER \eningles{Emotion Rule}, en las que se definen eventos, acciones u objetos
+y la intensidad con que afectarán el estado emocional del agente.
+La intensidad puede ser variada por evento,
+la idea es que cada evento pueda tener su propio valor
+y afecte de diferente manera a la emoción.
+Esta investigación sirve de inspiración para el presente trabajo,
+ya que guarda similitudes con la arquitectura individual propuesta
+en MASOES, en la que se tiene una Base de Conocimiento Conductual,
+un Modelo Afectivo Dimensional y se procesan eventos, acciones u objetos para generar emociones.
+Además, sirve como base para justificar el uso del
+lenguaje de programación lógico \textit{Prolog} en la implementación
+propuesta y así definir
+el conocimiento asociado a los agentes, emociones,
+comportamientos, eventos, acciones u objetos que afectarán las emociones.
+
+\cite{rincon2015}, plantea un modelo afectivo en tres dimensiones llamado SEM
+\eningles{Social Emotional Model} basado en el modelo
+psicológico de estados emocionales PAD \eningles{Pleasure, Arousal and Dominance},
+el cual está definido por las dimensiones placer,
+excitación y dominio respectivamente. En el modelo el placer representa la
+medida de cuan agradable se puede sentir una emoción, la excitación mide la
+intensidad de lo que se está sintiendo, y el dominio se refiere al control que
+ejerce sobre el comportamiento un estado emocional. Al igual que el modelo
+propuesto por \cite{perozo2012}, este modelo afectivo SEM utiliza valores
+normalizados en un intervalo de [-1,1] para cada dimensión, con la diferencia
+que el modelo afectivo de MASOES está fundamentado en un espacio en dos
+dimensiones. Ambos modelos consideran emociones individuales y grupales, difiere
+en que MASOES tiene como objetivo modelar la auto-organización y emergencia en
+un sistema, utilizando el modelo afectivo para que cada agente pueda cambiar su
+comportamiento dinámicamente, guiado por su estado emocional para satisfacer
+dinámicamente los objetivos del sistema a través de la auto-organización de sus
+actividades, mientras que SEM se centra en estudiar los estados emocionales
+individuales y grupales a través del tiempo. SEM como modelo afectivo es medible
+a nivel colectivo a través de una ecuación que se propone en el trabajo, en
+cambio, el modelo afectivo para MASOES se centra en promover un cambio de
+comportamiento dinámico e incentivar la interacción social para medir el grado
+de auto-organización y emergencia alcanzado por el sistema. Esta capacidad para
+caracterizar las interacciones sociales, diferencia a MASOES de otros modelos
+emocionales que se centran normalmente en el estudio de la relación
+cognición-emoción. De esta manera, ambos modelos son perfectamente aplicables en
+simulaciones de sistemas sociales emocionales y además sobre sistemas
+multiagente compuestos netamente por agentes de software.
+El trabajo de \citeauthor{rincon2015}
+resulta útil ya que sirve como base para la propuesta de Emoción Social descrita en esta investigación.
+
+Otro enfoque interesante es presentado por \cite{yu2015}, que propone una
+arquitectura denominada EMARL \eningles{Emotional Multiagent Reinforcement Learning},
+con el objetivo de dotar a agentes inteligentes de
+capacidades cognitivas y emocionales internas que pueden conducir a aprender
+comportamientos cooperativos. Un aspecto relevante de este estudio es el
+utilizar las emociones como un mecanismo de aprendizaje de comportamientos que
+permita a los agentes la maximización de recompensas y la minimización de los
+castigos. Ambas arquitecturas, MASOES y EMARL, consideran el comportamiento
+colectivo como el resultado de interacciones locales de los agentes de software,
+con la diferencia que MASOES utiliza las emociones para ayudar a la generación
+de conocimiento colectivo de manera cooperativa, en cambio, EMARL posee un
+enfoque llamado dilemas sociales, donde los agentes como entidad individual
+deben decidir entre tomar acciones para obtener un beneficio propio a corto
+plazo de manera egoísta o cooperar con otros agentes para obtener algún
+beneficio a largo plazo. Se puede resaltar de esta arquitectura el modelo
+emocional a doble capa, en la capa interna, dos funciones de derivación
+emocional compiten entre sí con el fin de dominar el proceso emocional del
+agente, mientras que en la capa externa una estrategia explícita de
+comportamientos puede ser aprendida en base a la función de derivación emocional
+ganadora. En comparación, MASOES divide su modelo afectivo en cuatro fases:
+clasificación de emociones, asociación de emociones a tipos de comportamiento,
+determinación de la emoción actual y determinación del tipo de comportamiento.
+Un importante punto de comparación es el tipo de comportamiento que promueven
+estas arquitecturas, en EMARL, se habla de comportamientos altruistas, donde los
+agentes cooperan con otros, y el comportamiento egoísta donde el agente busca
+satisfacer sus metas individuales, ambos comportamientos son llevados a cabo
+según las metas del agente y según el beneficio que pueda obtener (dilemas
+sociales), en MASOES, si se trata de una emoción positiva el agente asumirá un
+comportamiento imitativo, para llevar a cabo una acción colectiva, en caso de
+una emoción negativa, el agente asumirá un comportamiento reactivo o cognitivo,
+para llevar a cabo una acción individual.
+
 \seccion{Bases Teóricas}
 
-\seccion{Bases Legales}
+\subseccion{Sistemas Multiagente}
 
-\seccion{Definición de Términos Básicos}
+La Inteligencia Artificial Distribuida (IAD) es una subárea de la Inteligencia
+Artificial que ha ganado una considerable importancia debido a su capacidad de
+resolver problemas complejos \citep{balaji2010}, está dividida en dos
+disciplinas \citep{bond1989}, la Resolución de Problemas Distribuidos (RPD)
+y los Sistemas Multiagente (SMA). La RPD considera que un problema puede ser
+dividido en varios módulos, o nodos, que cooperan y comparten el conocimiento de
+que disponen, quedando toda la interacción entre los nodos prefijada en tiempo
+de diseño como parte integrante del sistema. Por otra parte, un SMA se puede
+definir como una red de solucionadores de problemas (agentes) con un nivel muy
+bajo de acoplamiento, que trabajan conjuntamente, lo que posibilita que se
+enfrenten a problemas más complejos que los abordables de forma individual
+\citep{perozo2011}. Los agentes autónomos y los sistemas multiagente representan una
+nueva forma de analizar, diseñar e implementar sistemas de software complejos.
+El enfoque basado en agentes ofrece herramientas y técnicas que tienen el
+potencial de mejorar considerablemente la forma en que se conceptualizan e
+implementan muchos tipos de software \citep{jennings1998}.
 
-% Usar el glosario
+Según \cite{balaji2010}, el concepto más aceptado de Agente es el dado
+por \cite{russell2004}, ellos definen un agente como cualquier cosa capaz
+de percibir su medioambiente con la ayuda de sensores y actuar sobre él
+utilizando actuadores. Por otra parte, para \cite{weiss1999}, un agente es un
+sistema computacional que está situado en un ambiente, y que es capaz de tomar
+acciones autónomas en ese ambiente con el fin de cumplir sus objetivos de
+diseño. Para hablar de agentes inteligentes es necesario que estos estén dotados
+de mecanismos de razonamiento que les permiten abordar situaciones de manera
+inteligente y evolucionar por medio de la experiencia \citep{perozo2011}.
+
+Entre las propiedades más resaltantes de los agentes inteligentes se encuentran \citep{perozo2011}:
+
+\begin{enumerate}
+\item \textbf{Autonomía:} Los agentes son autónomos en la medida en que actúan sin la
+intervención humana ni de otros sistemas externos. Sin embargo, un agente
+inteligente puede crear redes colaborativas con otros agentes según sus
+necesidades. Esta propiedad está muy relacionada a la proactividad.
+\item \textbf{Comunicación:} Los agentes tienen la capacidad de comunicarse con otros agentes
+utilizando un lenguaje basado en ontologías o realizar intervenciones asíncronas
+a través de comunicación indirecta.
+\item \textbf{Movilidad:} Es la habilidad del agente de
+moverse en el ambiente. Esta capacidad posibilita una computación menos
+centralizada y más distribuida. Un agente puede alojarse en cualquier nodo de la
+red y realizar sus tareas utilizando los recursos locales, para después volver a
+su nodo origen llevando la información procesada.
+\item \textbf{Racionalidad:} Se refiere a
+que los agentes prefieren ejecutar la acción más prometedora o eficiente para
+conseguir sus metas.
+\item \textbf{Inteligencia:} El agente está provisto de diferentes
+técnicas de inteligencia artificial, que le permiten analizar situaciones
+dinámicas
+\item \textbf{Razonamiento:} Es la capacidad que tiene un agente para seleccionar
+comportamientos acordes a la situación actual, con la finalidad de perseguir,
+detener o en su defecto abandonar un objetivo, esta propiedad está muy
+relacionada con la inteligencia.
+\item \textbf{Sociabilidad:} Los agentes interactúan con
+otros agentes mediante algún tipo de comunicación y convenios colectivos. Esta
+propiedad está muy relacionada a la cooperación, colaboración y competencia.
+\end{enumerate}
+
+Entre las características más representativas de los SMA se pueden mencionar
+\citep{schweitzer2007}:
+
+\begin{enumerate}
+\item \textbf{Modularidad:} En los SMA, una distinción lógica es hecha entre los módulos y
+sus interacciones. Módulos particulares (entidades, subsistemas) de un sistema
+son representados por los agentes respectivos. Dependiendo de la granularidad
+del modelo, cada uno de esos módulos puede estar compuesto de módulos más
+pequeños. Es diferente desde un punto de vista monolítico, que trata al sistema
+como un todo. Un punto de vista modular permite la reconfiguración y
+extensibilidad del SMA de una manera más fácil.
+\item \textbf{Redundancia:} Un SMA consiste
+generalmente de un gran número de agentes, muchos de ellos similares en función
+y diseño. Esto significa, por un lado, que las instancias críticas no son
+representadas por un solo agente, y por otro lado, que el sistema no se cae si
+un agente falla de alguna manera, brindándole robustez al sistema.
+\item \textbf{Descentralización:} Un SMA no es regido por un control centralizado. En lugar de
+eso, las competencias y capacidades, entre otras cosas, son distribuidas entre
+los diversos agentes. Esto les permite crear un control \textit{bottom-up}, de una
+manera auto-organizada, como resultado de la interacción entre los diferentes
+agentes.
+\item \textbf{Comportamiento Emergente:} En un SMA, la interacción entre los
+agentes puede producir un comportamiento nuevo (y estable) en el nivel global de
+todo el sistema. Esto representa una nueva cualidad que resulta del
+comportamiento agregado de los agentes, y por lo tanto, no puede ser reducido a
+los agentes individuales. Además, debido a los efectos no lineales, es
+frecuentemente difícil predecir las propiedades emergentes del sistema a partir
+de las propiedades individuales.
+\item \textbf{Funcionalidad:} Aunque cada agente puede
+tener sus propias funciones (o \textit{comportamientos}), la funcionalidad del sistema
+como un todo, por ejemplo, la resolución de un problema, no es asignado a
+agentes específicos sino que resulta de la interacción de los diferentes
+agentes.
+\item \textbf{Adaptación:} La modularidad, la descentralización y la funcionalidad
+emergente son las bases para que el SMA se adapte a situaciones cambiantes. Aquí
+el exceso de capacidad provista por los agentes redundantes pueden jugar un rol
+importante también. Como en la evolución natural, esta asegura una reserva que
+puede ser utilizada en situaciones imprevistas, es decir, para la exploración de
+nuevas posibilidades u oportunidades, sin perder la funcionalidad del sistema.
+La adaptación (algunas veces llamada aprendizaje colectivo) también necesita que
+el sistema pueda olvidar/desaprender sus viejos estados, e interacciones, entre
+otras cosas, para adaptarse a nuevas situaciones.
+\end{enumerate}
+
+Dependiendo de la manera de abordar la construcción del agente, existen algunas
+arquitecturas clásicas o comunes \citep{perozo2011}:
+
+\begin{enumerate}
+\item \textbf{Arquitecturas Reactivas:} Proponen un enfoque conductista, siguiendo un modelo
+estímulo-respuesta, y están formadas generalmente por agentes puramente
+reactivos.
+\item \textbf{Arquitecturas Deliberativas:} Contiene un modelo del mundo
+simbólico y explícitamente representado. La toma de decisiones se realiza por
+medio de razonamiento simbólico. Está formada por agentes basados en metas o en
+la utilidad.
+\item \textbf{Arquitecturas Híbridas:} Surgen a partir de numerosas
+alternativas que intentan combinar lo mejor de las arquitecturas deliberativas y
+reactivas.
+\end{enumerate}
+
+\subseccion{Computación Emocional}
+
+El concepto fue introducido por \cite{picard1995}, y el objetivo de la
+línea de investigación es lograr una interacción humano/computadora más
+eficiente. La afectividad es una dimensión significativa del comportamiento y la
+comunicación humana. Lograr que las computadoras puedan comprender nuestras
+emociones y a la vez que puedan \textit{expresar} (o simular) emociones propias, sería
+un paso importante para establecer un cambio cualitativo en la interactividad.
+La Computación Afectiva \eningles{Affective Computing} o Computación
+Emocional es una disciplina de la Inteligencia Artificial que intenta
+desarrollar métodos computacionales orientados a reconocer emociones humanas y
+generar emociones sintéticas \citep{causa2008}.
+
+Según \cite{causa2008}, la computación afectiva se ocupa en resolver las
+siguientes problemáticas:
+
+\begin{enumerate}
+\item El reconocimiento de emociones (y de expresiones emotivas)
+humanas por parte de una computadora. El objetivo es captar aquellos signos
+relacionados con la expresión de emociones y lograr interpretar estados
+emocionales en función de dichos signos. Este es un tema muy complejo en el que
+es difícil obtener precisión. De hecho, no existe una terminología
+universalmente consensuada a la hora de referirse a estos fenómenos.
+\item La simulación (o generación) de estados y expresiones emocionales con computadoras.
+Se intenta que las computadoras puedan simular procesos emocionales en base a
+ciertos modelos. Aquí se puede reflexionar respecto a si una computadora puede
+realmente tener emociones, pero, esta disciplina sólo intenta simular dichos
+procesos de forma tal que resulten verosímiles, dejando de lado estas
+controversias.
+\end{enumerate}
+
+Con respecto a los agentes inteligentes, hay muchas razones para incorporar las
+emociones \citep{jiang2007}. Las emociones pueden hacer a los agentes más
+atractivos y creíbles para que puedan desempeñar un mejor papel en diversos
+sistemas interactivos que involucren simulación. Las emociones pueden jugar un
+papel funcional en el comportamiento de los seres humanos y los animales,
+particularmente en sistemas sociales complejos, las emociones pueden modificar
+el comportamiento físico de los agentes: un agente feliz se mueve más rápido,
+mientras que un agente triste es más lento. Por otra parte, los estados
+emocionales pueden afectarse según el éxito o el fracaso de metas, o de manera
+inversa el estado emocional puede afectar el cumplimiento de los objetivos.
+Además, las emociones pueden influir en los procesos de supervivencia del
+agente, evitando situaciones riesgosas o que no cumplan con sus objetivos.
+
+Específicamente, podemos mencionar algunos roles potenciales para las emociones
+en los agentes artificiales \citep{maria2007}:
+
+\begin{enumerate}
+\item \textbf{Selección de Acciones:} Que hacer próximamente en base al estado emocional
+actual.
+\item \textbf{Adaptación:} Cambios en el comportamiento a corto y largo plazo debido
+a los estados emocionales.
+\item \textbf{Regulación Social:} Comunicación o intercambio de
+información con otros vía expresiones emocionales.
+\item \textbf{Integración Sensorial:} Filtrado de datos en función del estado de las
+emociones y el entorno.
+\item \textbf{Mecanismos de Alarma:} Reacciones, como reflejos rápidos, en situaciones críticas
+que interrumpen otros procesos.
+\item \textbf{Motivación:} Creando motivos como parte de un
+mecanismo de imitación-emoción.
+\item \textbf{Manejo de Metas:} Creación de nuevas metas o
+repriorización de las existentes.
+\item \textbf{Aprendizaje:} Evaluaciones emocionales en el
+aprendizaje por refuerzo.
+\item \textbf{Centrar la atención:} Selección de datos a procesar
+basados en la evaluación emocional.
+\item \textbf{Control de Memoria:} Acceso, recuperación
+y disminución de elementos en memoria según estados emocionales.
+\item \textbf{Procesamiento estratégico:} Selección de diferentes métodos de búsqueda basada en
+el estado emocional general.
+\item \textbf{Auto-modelo:} Emociones como representaciones de
+cómo experimenta una situación un agente.
+\end{enumerate}
+
+\subseccion{MASOES}
+
+La arquitectura multiagente para sistemas emergentes y auto-organizados llamada
+MASOES \eningles{Multiagent Architecture for Self-Organizing and Emergent Systems},
+propuesta por \cite{perozo2011}, es una herramienta para el diseño no
+formal de sistemas, que produzcan un estado auto-organizado el cual emerja de
+las interacciones locales entre los agentes y de los cambios que se dan en el
+entorno. En esta arquitectura, cada agente puede cambiar su comportamiento
+dinámicamente, guiado por su estado emocional, para satisfacer dinámicamente los
+objetivos del sistema a través de la auto-organización de sus actividades.
+
+\subsubseccion{Niveles de Interacción de MASOES}
+
+La emergencia cognitiva colectiva es obtenida a través de tres diferentes
+tipos de interacción \refpilustracion{arquitectura-multiagente-masoes}:
+
+\begin{enumerate}
+\item \textbf{Interacción Local:} Es el dinamismo e influencia (interdependencia)
+estrictamente entre agentes (directa, a través de alguna forma de comunicación),
+o entre agentes y el entorno (indirecta, usando un campo de acción que permite
+la delimitación de un área común siguiendo un mismo conjunto de reglas).
+\item \textbf{Interacción Grupal:} Es originada por el dinamismo de las interacciones locales
+para favorecer la creación de redes sociales o grupos estructurados de acuerdo a
+un objetivo colectivo, apoyando la gestión del conocimiento de una manera
+comunitaria y colaborativa.
+\item \textbf{Interacción General:} Es el resultado de la interacción de la comunidad de
+agentes involucrados en el sistema conforme a los objetivos comunes.
+\end{enumerate}
+
+\begin{ilustracion}[fuente=\cite{perozo2011}, etiqueta=arquitectura-multiagente-masoes, titulo={Arquitectura de MASOES}]
+\includegraphics[width=10cm]{ilustraciones/marco-teorico/arquitectura-multiagente-masoes.jpg}
+\end{ilustracion}
+
+\subsubseccion{Comportamientos de los Agentes}
+
+\begin{enumerate}
+\item Comportamiento Inconsciente o reactivo, según estímulos.
+\item Comportamiento Emocional, orientado por las emociones.
+\item Comportamiento Consciente, que se activan o inhiben en función de sus objetivos.
+\end{enumerate}
+
+Las emociones son usadas como un mecanismo de toma de decisiones para evaluar si
+el comportamiento reactivo, cognitivo o imitativo es más conveniente o no para
+una situación dada de acuerdo a los intereses individuales y colectivos.
+
+\subsubseccion{Componentes de MASOES a Nivel Colectivo}
+
+Los componentes a nivel colectivo son los siguientes \refpilustracion{componente-masoes}:
+
+\begin{enumerate}
+\item \textbf{Conjunto de reglas:} especifican las interacciones
+entre los agentes usando solamente información local.
+\item \textbf{Entorno:} es un elemento importante para las interacciones indirectas entre los agentes y
+para la recolección de la información generada por la sociedad de agentes.
+\item \textbf{Campo de Acción:} es delimitada por los agentes, a través de marcas
+dejadas en el entorno, generalmente para coordinar sus comportamientos. En
+general, existen dos tipos de coordinación entre agentes: coordinación por
+comunicación directa y coordinación dentro de campos de acción (comunicación
+indirecta).
+\item \textbf{Base de Conocimiento Colectivo:} es la memoria social
+o colectiva a la que todos los agentes tienen acceso.
+\item \textbf{Retroalimentación positiva:} para promover la creación de estructuras y
+cambios en el sistema.
+\item \textbf{Retroalimentación negativa:} para compensar
+la retroalimentación positiva y ayudar a estabilizar el patrón de comportamiento
+colectivo.
+\end{enumerate}
+
+\begin{ilustracion}[fuente=\cite{perozo2011}, etiqueta=componente-masoes, titulo={Componentes de MASOES a Nivel Colectivo}]
+\includegraphics[width=10cm]{ilustraciones/marco-teorico/componente-masoes.jpg}
+\end{ilustracion}
+
+\subsubseccion{Componentes de MASOES a Nivel Individual}
+
+La arquitectura a nivel individual tiene 4 componentes: Conductual (procesos
+emocionales y de cambio de comportamiento o comportamientos orientados por
+emociones), Reactivo (procesos reactivos o comportamientos inconscientes),
+Cognitivo (procesos deliberativos o comportamientos conscientes), y Social
+(procesos sociales o comportamiento social) \refpilustracion{componentes-masoes-individual}.
+
+\begin{enumerate}
+\item \textbf{Componente Conductual:} Favorece la adaptación de cada agente con su
+entorno ya que crea un modelo interno del mundo exterior que regula su
+comportamiento de una manera consciente y emocional. Cada proceso de toma de
+decisiones en el agente estará basado en sus objetivos individuales y
+colectivos, su estado emocional, y el conocimiento adquirido de manera
+individual y colectiva. Los tipos de comportamiento a considerar son imitar,
+reaccionar y razonar, los cuales están enlazados a los componentes social,
+reactivo y cognitivo, respectivamente. Entre los elementos que lo conforman está
+el Configurador Emocional encargado de manipular las emociones del agente. En
+este caso, las emociones son consideradas como señales y evaluaciones que
+informan, modifican y reciben retroalimentación de los procesos reactivos,
+cognitivos y sociales (de otros agentes), es en este sub-componente donde estará
+el modelo afectivo. También está el Manejador de Comportamiento o Conductual,
+que se encarga de activar, inhibir y priorizar algunos comportamientos en el
+agente basado en el estado emocional actual, las metas del agente, su situación
+social (situación de sus vecinos más cercanos), y el entorno en general. Además,
+maneja todos los mecanismos responsables del cambio dinámico de comportamiento,
+ya que su objetivo principal es determinar y sugerir un único tipo de
+comportamiento cada vez para evitar conflictos en tiempo de ejecución. El
+conocimiento asociado con la gestión de las emociones, comportamientos y
+experiencias emocionales pasadas, es almacenado en la Base de Conocimiento (BC)
+Conductual. El rol de las emociones es determinar el comportamiento del agente
+según su estado emocional, para ello se asocian las clases de emociones a
+considerar con los tipos de comportamiento que puede presentar el agente.
+\item \textbf{Componente Reactivo:} Encargado de producir el comportamiento reactivo del
+agente. Las reacciones son reglas asociadas a los estados emocionales ya que, se
+quiere tener algunas reglas activas y otras no, de acuerdo al estado emocional
+del agente y a la actividad que desarrolla en un momento determinado. Para ello
+tiene un Selector de Reacciones que selecciona entre las diferentes rutinas de
+comportamiento existentes, es decir, las que serán ejecutadas por el componente
+reactivo de acuerdo con el estado emocional del agente. Además, posee una BC
+Reactivo que es la base de conocimiento reactivo para almacenar el conjunto de
+reglas gestionadas por el componente reactivo.
+\item \textbf{Componente Cognitivo:} Es el responsable de producir el comportamiento
+cognitivo a través de diversos mecanismos cognitivos (aprendizaje y
+razonamiento), y procesos de toma de decisión (intencional o deliberativa, entre
+otras). Posee un Configurador de Metas Individuales para la configuración de los
+objetivos individuales y de las prioridades del agente; un Deliberador como
+responsable de los mecanismos cognitivos (aprendizaje, razonamiento) y de la
+toma de decisión intencional o deliberativa, entre otras; y una BC Cognitiva.
+\item \textbf{Componente Social:} Debe promover conciencia en los agentes sobre el
+trabajo y la experiencia de los otros agentes. Específicamente, aprovecha la
+experiencia de los otros (aprendizaje social), es decir, evita el aprendizaje de
+cosas que ya han aprendido sus vecinos. Este componente conecta el aprendizaje
+colectivo colaborativo con el aprendizaje individual. Para ello tiene un
+Configurador de Metas Colectivas para la configuración de los objetivos
+colectivos y de las prioridades de los agentes. También tiene una BC Social para
+almacenar, entre otras cosas, el conocimiento sobre las decisiones tomadas por
+sus vecinos, es decir los agentes más cercanos. Finalmente posee un Razonador
+Social para seleccionar que acción debe ser imitada y de cual agente, basado en
+las metas colectivas y la utilidad obtenida en casos anteriores. La idea
+principal es que cada agente pueda aprender del colectivo.
+\item \textbf{Otros Elementos Generales:} Tiene un Sistema de Entrada que provee a los
+agentes de información sobre el mundo donde viven. Este sistema pasa las
+percepciones recibidas de manera paralela al componente reactivo, conductual,
+cognitivo y social. Todos los componentes interactúan recíprocamente con esa
+entrada, pero es el componente conductual el que debe establecer cual componente
+tiene la prioridad más alta para responder. Posee también un conjunto de
+Acciones, que son las reglas de condición-acción (si... entonces) usadas en un
+proceso deliberativo (ellas reflejan el comportamiento reactivo y/o cognitivo).
+Finalmente, tiene un Sistema de Salida para elegir la acción del componente
+indicado por el manejador conductual, en el caso que existan varias respuestas.
+\end{enumerate}
+
+\begin{ilustracion}[fuente=\cite{perozo2011}, etiqueta=componentes-masoes-individual, titulo={Componentes de MASOES a Nivel Individual}]
+\includegraphics[width=10cm]{ilustraciones/marco-teorico/componentes-masoes-individual.jpg}
+\end{ilustracion}
+
+\subsubseccion{Modelo Emocional de MASOES}
+
+El modelo afectivo (o emocional) propuesto por \citeauthor{perozo2011} considera un conjunto de
+emociones positivas y negativas generadas desde un nivel individual o colectivo,
+para de esta manera promover un comportamiento individual (Reactivo, Cognitivo)
+o colectivo (Imitativo) en los agentes y así, aumentar su grado de satisfacción
+y por consecuencia, el nivel de auto-organización y emergencia general en el
+sistema. Este modelo afectivo está representado por un espacio bidimensional,
+donde el eje x representa el nivel de Activación, Excitación o Relajación del
+agente (mide el grado de activación fisiológica y psicológica del agente en el
+intervalo [-1, 1]), y el eje y representa el nivel de satisfacción, agrado o
+desagrado, también en el intervalo [-1, 1] \refpilustracion{modelo-afectivo}.
+
+\begin{ilustracion}[fuente=\cite{perozo2011}, etiqueta=modelo-afectivo, titulo={Modelo Afectivo para MASOES}]
+\includegraphics[width=12cm]{ilustraciones/marco-teorico/modelo-afectivo.jpg}
+\end{ilustracion}
+
+El modelo afectivo está dividido en cuatro fases:
+
+\textbf{Fase I (Configurador Emocional):} Clasificación de las emociones. En el modelo
+afectivo propuesto se consideran emociones positivas y negativas generadas desde
+un nivel individual o colectivo, a fin de contribuir a la generación de un
+comportamiento emergente y auto-organizado en el sistema a partir de la
+interacción local de los agentes. Los tipos de emociones consideradas, y el
+espacio afectivo definido para MASOES, son mostrados en la \refilustracion{modelo-afectivo}. El espacio
+afectivo ha sido dividido en 4 cuadrantes, donde el cuadrante I (alegría,
+felicidad) y III (tristeza, depresión) representan las emociones positivas y
+negativas dirigidas por la obtención de metas o logros personales (nivel
+individual); y los cuadrantes II (admiración, compasión) y IV (rechazo-aversión,
+ira-odio) representan las emociones positivas y negativas de tono claramente
+social o interpersonal, dirigidas por las acciones de los otros agentes o
+cambios en el entorno (nivel colectivo).
+
+\textbf{Fase II (Manejador de Comportamiento):} Asociación de las emociones al tipo de
+comportamiento. Para esta asociación, se le asigna a cada estado emocional del
+modelo afectivo propuesto uno de los tres comportamientos considerados:
+Imitativo, Cognitivo y Reactivo, de acuerdo a las reglas que se establecen \refpcuadro{comportamientos-masoes}.
+Para establecer estas reglas, se considera: las emociones negativas
+pueden predisponer las estrategias de resolución de problemas en los seres
+humanos hacia un procesamiento local que va de lo individual a lo colectivo
+(procesamiento más sistemático), mientras que las emociones positivas pueden
+conducir a enfoques globales que van de lo colectivo a lo individual
+(procesamiento más aproximativo).
+
+\begin{cuadro}[etiqueta=comportamientos-masoes, titulo={Comportamientos Según el Estado Emocional del Agente}]{l|ll}
+\toprule
+Emoción & Tipo de Emoción & Comportamiento \\
+\midrule
+Felicidad & Positivo & Imitación \\
+Alegría & Positivo & Imitación \\
+Compasión & Positivo & Imitación \\
+Admiración & Positivo & Imitación \\
+Tristeza & Ligeramente Negativo & Cognitivo \\
+Rechazo & Ligeramente Negativo & Cognitivo \\
+Depresión & Altamente Negativo & Reactivo \\
+Ira & Altamente Negativo & Reactivo \\
+\bottomrule
+\fuentecuadro{3}{\cite{perozo2011}}
+\end{cuadro}
+
+Por otra parte, según MASOES cada agente puede interactuar local o grupalmente.
+De esta manera, si se trata de una emoción positiva el agente asumirá un
+comportamiento imitativo, para llevar a cabo una acción colectiva (que va del
+conocimiento colectivo al conocimiento individual) que le permita interactuar
+grupalmente según los objetivos colectivos establecidos. En caso de una emoción
+negativa, el agente asumirá un comportamiento reactivo o cognitivo, para llevar
+a cabo una acción individual (que va del conocimiento individual al conocimiento
+colectivo) que le permita interactuar localmente según los objetivos del agente
+\refpilustracion{estados-comportamiento}.
+
+\begin{ilustracion}[fuente=\cite{perozo2011}, etiqueta=estados-comportamiento, titulo={Estados Emocionales con el Tipo de Comportamiento Asociado}]
+\includegraphics[width=10cm]{ilustraciones/marco-teorico/estados-comportamiento.jpg}
+\end{ilustracion}
+
+Las emociones positivas (tales como: la alegría, la felicidad, la compasión y la
+admiración) conducen a un comportamiento imitativo con la idea de reproducirlo
+que nos hace sentir bien a nosotros y al colectivo, mientras que las emociones
+negativas (tales como: la tristeza y rechazo) nos motivan a un comportamiento
+cognitivo que nos lleva a reflexionar sobre la situación actual considerando los
+objetivos individuales y/o colectivos, o nos induce a un comportamiento reactivo
+hacia otros en estados altamente negativo como la ira y depresión, para solo
+responder de forma inmediata a la situación actual \refpcuadro{comportamientos-masoes}.
+Así, para asociar los estados emocionales a un
+comportamiento determinado, se tienen las siguientes reglas \refpcuadro{reglas-comportamientos-masoes}:
+
+\newpage
+
+\begin{cuadro}[etiqueta=reglas-comportamientos-masoes, titulo={Reglas de Priorización de Comportamientos}]{lp{7cm}}
+\toprule
+\textbf{Regla 1:} & Si el \textit{Estado Emocional} es \textit{Positivo} entonces priorizar \textit{Comportamiento Imitativo} \\ \hline
+\textbf{Regla 2:} & Sino Si el \textit{Estado Emocional} es \textit{Ligeramente Negativo} entonces priorizar \textit{Comportamiento Cognitivo} \\  \hline
+\textbf{Regla 3:} & Sino Si el \textit{Estado Emocional} es \textit{Altamente Negativo} entonces priorizar \textit{Comportamiento Reactivo} \\
+\bottomrule
+\fuentecuadro{2}{\cite{perozo2011}}
+\end{cuadro}
+
+\textbf{Fase III (Configurador Emocional):} Determinación de la emoción actual.
+
+\begin{enumerate}
+\item Evaluación de un evento, acción u objeto para determinar el grado de
+satisfacción y activación, y luego, el estado emocional afectado. Para esta
+evaluación se requiere información del mundo, tal como implicaciones de los
+eventos para los agentes, los gustos o preferencias de los agentes con respecto
+a objetos u otros agentes, entre otras cosas. La intensidad de la emoción
+afectada viene dada por el grado de satisfacción y activación del agente, luego
+de la evaluación realizada. Es necesario utilizar variables para cuantificar el
+grado de satisfacción y activación del agente.
+\item Modificación del actual estado emocional, si es necesario. Esta transición de
+un estado a otro debe ser coherente y coordinada.
+\end{enumerate}
+
+\textbf{Fase IV (Manejador de Comportamiento):} Determinación del tipo de comportamiento.
+Se modifica el comportamiento actual si es necesario, de acuerdo al estado
+emocional actual y la \refcuadro{comportamientos-masoes}, como una acción resultante de la emoción
+detectada en la fase anterior. De esta manera, las emociones son la expresión
+dinámica y fluctuante del estado afectivo del individuo, y así, permiten cambiar
+dinámicamente el tipo de comportamiento del agente de acuerdo a su situación
+actual.
+
+% \seccion{Definición de Términos Básicos}
 % \hacerglosario
-
-\seccion{Sistema de Hipótesis}
-
-\seccion{Operacionalización de las Variables}

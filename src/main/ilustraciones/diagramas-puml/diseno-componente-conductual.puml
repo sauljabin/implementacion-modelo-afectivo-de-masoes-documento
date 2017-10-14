@@ -1,0 +1,79 @@
+@startuml
+
+abstract class Emocion {
++ String obtenerNombre()
+}
+
+class Geometria {
+List<Punto> puntos
++ boolean intersectaCon(Punto)
+}
+
+enum TipoDeEmocion {
+POSITIVA
+LIGERAMENTE_NEGATIVA
+ALTAMENTE_NEGATIVA
+}
+
+class ModeloAfectivo {
++ Emocion obtenerEmocion(EstadoEmocional)
+}
+
+class EstadoEmocional {
+double activacion
+double satisfaccion
++ Punto convertirEnPunto()
+}
+
+class ManejadorDeComportamiento {
++ actualizarComportamiento(Emocion)
++ TipoDeComportamiento obtenerTipoDeComportamiento()
+}
+
+class ConfiguradorEmocional {
++ actualizarEmocion(Estimulo)
++ obtenerEmocion()
+}
+
+class BaseDeConocimientoConductual {
++ agregarConocimiento(String)
++ resolverCuestionamiento(String)
+}
+
+class Punto {
+double x
+double y
+}
+
+enum TipoDeComportamiento {
+    REACTIVO
+    COGNITIVO
+    IMITATIVO
+}
+
+ComponenteConductual *-- ManejadorDeComportamiento
+ComponenteConductual *-- ConfiguradorEmocional
+ComponenteConductual *-- BaseDeConocimientoConductual
+ConfiguradorEmocional *-- ModeloAfectivo
+ManejadorDeComportamiento *-- TipoDeComportamiento
+ConfiguradorEmocional *-- EstadoEmocional
+ModeloAfectivo *--  Emocion
+Geometria o-- Punto
+EstadoEmocional *-- Punto
+
+Emocion <|--- Felicidad
+Emocion <|--- Tristeza
+Emocion <|--- Depresion
+Emocion <|--- Alegria
+Emocion <|--- Compasion
+Emocion <|--- Admiracion
+Emocion <|--- Ira
+Emocion <|--- Rechazo
+
+Emocion *- TipoDeEmocion
+Emocion *--  Geometria
+
+ConfiguradorEmocional  o-- Estimulo
+ModeloAfectivo o--  EstadoEmocional
+
+@enduml

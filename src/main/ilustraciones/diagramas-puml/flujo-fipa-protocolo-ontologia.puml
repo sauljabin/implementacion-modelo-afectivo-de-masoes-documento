@@ -1,0 +1,16 @@
+@startuml
+
+scale 2.5
+hide footbox
+
+activate Emisor
+Emisor -> Receptor: Performativa: request, Objeto: AgentAction, Lenguaje: fipa-sl
+deactivate Emisor
+activate Receptor
+
+Receptor -> Emisor:  Performativa: inform, Objeto: Predicate, Lenguaje: fipa-sl
+deactivate Receptor
+activate Emisor
+deactivate Emisor
+
+@enduml

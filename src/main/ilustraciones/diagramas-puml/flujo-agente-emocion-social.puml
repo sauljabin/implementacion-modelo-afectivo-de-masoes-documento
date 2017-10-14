@@ -1,0 +1,42 @@
+@startuml
+
+skinparam maxmessagesize 200
+hide footbox
+scale 2.5
+
+participant Emisor
+participant "Agente Emoción Social" as EmocionSocial
+participant DF
+participant "Agentes Emocionales" as AgentesEmocionales
+
+activate Emisor
+
+Emisor -> EmocionSocial: Solicitar acción (ConsultarEmocionSocial)
+
+activate EmocionSocial
+
+EmocionSocial -> DF: Consultar agentes emocionales
+
+activate DF
+DF -> EmocionSocial: Responder listado de agentes emocionales
+deactivate DF
+
+EmocionSocial -> AgentesEmocionales: Consultar el estado emocional de los agentes (ConsultarEstadoEmocional)
+
+activate AgentesEmocionales
+
+AgentesEmocionales -> EmocionSocial: Responder con estado emocional (EstadoDeAgente)
+
+deactivate AgentesEmocionales
+
+activate EmocionSocial
+
+EmocionSocial -> EmocionSocial: Calcular la emoción social
+
+EmocionSocial -> Emisor: Responder satisfactoriamente (EmocionSocial)
+
+deactivate EmocionSocial
+
+deactivate Emisor
+
+@enduml

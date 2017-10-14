@@ -1,5 +1,5 @@
 %%
-% Copyright (c) {año} {nombre} <{email}>.
+% Copyright (c) 2017 Saúl Piña <sauljabin@gmail.com>.
 %
 % This program is free software: you can redistribute it and/or modify
 % it under the terms of the GNU General Public License as published by
@@ -18,8 +18,41 @@
 \capitulo{ASPECTOS ADMINISTRATIVOS}
 
 \seccion{Recursos}
-	\subseccion{Humanos}
-	\subseccion{Materiales}
-	\subseccion{Financieros}
 
-\seccion{Cronograma de Actividades: Diagrama de Gantt}
+\begin{vinetas}
+\item Lenguaje de programación Java.
+\item Librería GPL JADE (“JAVA Agent DEvelopment Framework”, en inglés).
+\item IDE Eclipse Mars.
+\item Sistema Operativo GNU/Linux.
+\item Computadora con los siguientes requerimientos mínimos: procesador Intel i5,
+4GB de memoria RAM y 80GB de disco duro, monitor, ratón, teclado y tarjeta de red.
+\end{vinetas}
+
+\break
+
+\seccion{Cronograma de Actividades}
+
+\begin{ilustracion}[etiqueta=gantt, titulo={Cronograma de Actividades}]
+	\begin{ganttchart}[
+		vgrid,
+		hgrid,
+		bar/.style={fill=gray!70},
+		newline shortcut=true,
+        bar label node/.append style={align=right},
+		title label font=\footnotesize,
+		bar label font=\tiny]{1}{20}
+		\gantttitle{Año 2016}{20} \\
+		\gantttitle{Julio}{4} \gantttitle{Agosto}{4} \gantttitle{Septiembre}{4} \gantttitle{Octubre}{4} \gantttitle{Noviembre}{4}\\
+		\ganttbar{Estudio de aspectos teóricos \ganttalignnewline y revisión exhaustiva \ganttalignnewline del estado del arte}{1}{2}\\
+		\ganttbar{Diseño del sistema multiagente \ganttalignnewline basado en el modelo \ganttalignnewline afectivo de MASOES}{3}{4}\\
+		\ganttbar{Identificación de las herramientas \ganttalignnewline computacionales a utilizar}{5}{5}\\
+		\ganttbar{Implementación de la propuesta}{6}{10}\\
+		\ganttbar{Identificación, descripción y \ganttalignnewline desarrollo del caso de estudio}{11}{14}\\
+		\ganttbar{Evaluación de los resultados \ganttalignnewline obtenidos en caso de estudio \ganttalignnewline a nivel de implementación}{15}{18}
+		\ganttlink{elem0}{elem1}
+		\ganttlink{elem1}{elem2}
+		\ganttlink{elem2}{elem3}
+		\ganttlink{elem3}{elem4}
+		\ganttlink{elem4}{elem5}
+	\end{ganttchart}
+\end{ilustracion}

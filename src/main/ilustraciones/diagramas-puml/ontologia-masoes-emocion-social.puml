@@ -1,0 +1,31 @@
+@startuml
+
+interface Predicate #d1e8f7 ##517ad4
+interface Concept #d1e8f7 ##517ad4
+interface AgentAction #d1e8f7 ##517ad4
+
+AgentAction <|-- ConsultarEmocionSocial
+Concept <|-- EmocionCentral
+Concept <|-- DispersionEmocional
+Concept <|-- DistanciaMaxima
+Predicate <|-- EmocionSocial
+EmocionSocial *-- EmocionCentral
+EmocionSocial *-- DispersionEmocional
+EmocionSocial *-- DistanciaMaxima
+
+class EmocionCentral {
+double activacion
+double satisfaccion
+}
+
+class DispersionEmocional {
+double activacion
+double satisfaccion
+}
+
+class DistanciaMaxima {
+double activacion
+double satisfaccion
+}
+
+@enduml

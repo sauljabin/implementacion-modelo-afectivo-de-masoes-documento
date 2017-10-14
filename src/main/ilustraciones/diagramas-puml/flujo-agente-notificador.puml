@@ -1,0 +1,32 @@
+@startuml
+
+skinparam maxmessagesize 200
+hide footbox
+scale 2.5
+
+participant Emisor
+participant Notificador
+participant DF
+participant "Agentes Emocionales" as AgentesEmocionales
+
+activate Emisor
+
+Emisor -> Notificador: Notificar (NotificarEvento, NotificarAccion o NofificarObjeto)
+
+activate Notificador
+
+Notificador -> DF: Consultar agentes emocionales
+
+activate DF
+DF -> Notificador: Responder listado de agentes emocionales
+deactivate DF
+
+Notificador -> AgentesEmocionales: Enviar estímulos a todos los agentes emocionales
+
+Notificador -> Emisor: Responder satisfactoriamente (Done)
+
+deactivate Notificador
+
+deactivate Emisor
+
+@enduml

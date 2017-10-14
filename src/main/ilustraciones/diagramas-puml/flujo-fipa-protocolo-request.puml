@@ -1,0 +1,40 @@
+@startuml
+
+scale 2.5
+hide footbox
+
+activate Emisor
+Emisor -> Receptor: Petición (request)
+deactivate Emisor
+activate Receptor
+
+alt Se acepta la petición
+
+  Receptor -> Emisor: Acepta (agree)
+  activate Emisor
+  deactivate Emisor
+
+  alt Se envía el resultado
+
+      Receptor -> Emisor: Respuesta (inform)
+      activate Emisor
+      deactivate Emisor
+
+  else Falla al ejecutar acción
+
+      Receptor -> Emisor: Fallo (failure)
+      activate Emisor
+      deactivate Emisor
+
+  end
+
+else Se rechaza la petición
+
+    Receptor -> Emisor: Rechazo (refuse)
+    deactivate Receptor
+    activate Emisor
+    deactivate Emisor
+
+end
+
+@enduml

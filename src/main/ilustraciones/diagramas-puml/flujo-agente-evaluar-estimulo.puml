@@ -1,0 +1,25 @@
+@startuml
+
+skinparam maxmessagesize 280
+hide footbox
+
+participant Emisor
+participant "Agente Emocional" as AgentEmocional
+
+activate Emisor
+
+Emisor -> AgentEmocional: Solicitar evaluar estímulo (EvaluarEstimulo)
+
+activate AgentEmocional
+
+AgentEmocional -> AgentEmocional: Procesar estímulo, actualizar emoción y comportamiento
+
+activate AgentEmocional
+
+AgentEmocional -> Emisor: Responder satisfactoriamente con nuevo estado emocional del agente (EstadoDeAgente)
+
+deactivate AgentEmocional
+
+deactivate Emisor
+
+@enduml
