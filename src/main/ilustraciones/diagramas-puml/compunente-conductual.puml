@@ -1,0 +1,20 @@
+@startuml
+
+skinparam defaultFontSize 20
+
+(*) --> "Fase I (Configurador Emocional):
+Clasificación de las emociones" as fase1
+
+fase1 --> "Fase II (Manejador de Comportamiento):
+Asociación de las emociones al tipo de
+comportamiento" as fase2
+
+fase2 --> "Fase III (Configurador Emocional):
+Determinación de la emoción actual" as fase3
+
+fase3 --> "Fase IV (Manejador de Comportamiento):
+Determina ción del tipo de comportamiento" as fase4
+
+fase4 --> (*)
+
+@enduml
