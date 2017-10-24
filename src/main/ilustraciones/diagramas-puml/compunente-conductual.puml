@@ -13,7 +13,7 @@ fase2 --> "Fase III (Configurador Emocional):
 Determinación de la emoción actual" as fase3
 
 fase3 --> "Fase IV (Manejador de Comportamiento):
-Determina ción del tipo de comportamiento" as fase4
+Determinación del tipo de comportamiento" as fase4
 
 fase4 --> (*)
 
