@@ -69,7 +69,7 @@ a través de mensajes estandarizados por FIPA \refpilustracion{comunicacion-entr
 \textbf{Contenedor JADE}. Proporciona
 todos los servicios necesarios para alojar y ejecutar agentes.
 
-\textbf{Agentes JADE}. Son entidades de software que poseen proceso propio, comportameinto,
+\textbf{Agentes JADE}. Son entidades de software que poseen proceso propio, comportamiento,
 ciclo de vida y son capaces de recibir y enviar mensajes.
 
 La capa superior corresponde a la implementación de los agentes emocionales
@@ -297,7 +297,7 @@ Se debe heredar de este agente en el caso de que se desee contruir un agente emo
 \textbf{ComportamientoResponderEstado}. Esta es
 una de la acciones básicas para el agente emocional, se encarga
 de responder con la información del estado actual del agente a otro que
-la haya solicitado. Este comportameinto se lleva a cabo cuando el
+la haya solicitado. Este comportamiento se lleva a cabo cuando el
 agente emocional recibe una solicitud de acción de tipo \textit{ConsultarEstadoEmocional}.
 
 \textbf{ComportamientoEvaluarEstimulo}. Es la acción más
@@ -509,9 +509,9 @@ Cláusula & Descripción \\
 \toprule
 Cláusula & Descripción \\
 \midrule
-\codigoenlinea{1. prioridad\_comportamiento(E, imitativo) :- tipo\_emocion(E, positiva).} & El comportameinto es imitativo si la emoción \codigoenlinea{E} es positiva \\ \hline
-\codigoenlinea{2. prioridad\_comportamiento(E, cognitivo) :- tipo\_emocion(E, ligeramente\_negativa).} & El comportameinto es cognitivo si la emoción \codigoenlinea{E} es ligeramente negativa \\ \hline
-\codigoenlinea{3. prioridad\_comportamiento(E, reactivo) :- tipo\_emocion(E, altamente\_negativa).} & El comportameinto es reactivo si la emoción \codigoenlinea{E} es altamente negativa \\
+\codigoenlinea{1. prioridad\_comportamiento(E, imitativo) :- tipo\_emocion(E, positiva).} & El comportamiento es imitativo si la emoción \codigoenlinea{E} es positiva \\ \hline
+\codigoenlinea{2. prioridad\_comportamiento(E, cognitivo) :- tipo\_emocion(E, ligeramente\_negativa).} & El comportamiento es cognitivo si la emoción \codigoenlinea{E} es ligeramente negativa \\ \hline
+\codigoenlinea{3. prioridad\_comportamiento(E, reactivo) :- tipo\_emocion(E, altamente\_negativa).} & El comportamiento es reactivo si la emoción \codigoenlinea{E} es altamente negativa \\
 \bottomrule
 \fuentecuadro{2}{\yo}
 \end{cuadro}
@@ -635,7 +635,7 @@ admiración.
 Cláusula & Descripción \\
 \midrule
 \codigoenlinea{1. tipo\_emocion(admiracion, positiva).} & Define que la Admiración es una emoción positiva \\ \hline
-\codigoenlinea{2. prioridad\_comportamiento(E, imitativo) :- tipo\_emocion(E, positiva).} & Regla que define el comportameinto imitativo para una emoción \codigoenlinea{E} \\ \hline
+\codigoenlinea{2. prioridad\_comportamiento(E, imitativo) :- tipo\_emocion(E, positiva).} & Regla que define el comportamiento imitativo para una emoción \codigoenlinea{E} \\ \hline
 \codigoenlinea{3. ?- prioridad\_comportamiento(admiracion, TIPO).} & Se consulta a la BCC cual es el comportamiento asociado a la admiración \\ \hline
 \codigoenlinea{4. TIPO = imitativo} & Respuesta obtenida \\
 \bottomrule
@@ -645,7 +645,7 @@ Cláusula & Descripción \\
 Para la actualización de la prioridad del comportamiento se implementó el algoritmo
 de la \refcuadro{algoritmo-manejador-comportamiento}.
 
-\begin{cuadro}[etiqueta=algoritmo-manejador-comportamiento, titulo={Algoritmo del Manejador de Comportamiento Para la Actualización de la Prioridad de Comportameinto}]{l}
+\begin{cuadro}[etiqueta=algoritmo-manejador-comportamiento, titulo={Algoritmo del Manejador de Comportamiento Para la Actualización de la Prioridad de Comportamiento}]{l}
 \toprule
 \textbf{Entrada:} emoción provista por el configurador emocional \\
 \midrule
