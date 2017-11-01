@@ -547,7 +547,7 @@ para la activación y la satisfacción:
 
 Donde $A'(ag_i)$ representa el nuevo valor de activación del agente $ag_i$,
 $A_i$ es la activación actual y $P_A$ se define como el parámetro de activación
-obtenido de la BCC, y esta comprendido en el intevalo: $-1 \leq P_A \leq 1$.
+obtenido de la BCC y está comprendido en el intevalo: $-1 \leq P_A \leq 1$.
 
 \begin{ecuacion}{actualizacion-satisfaccion}
   S'(ag_i) = S_i + P_S
@@ -555,7 +555,7 @@ obtenido de la BCC, y esta comprendido en el intevalo: $-1 \leq P_A \leq 1$.
 
 Donde $S'(ag_i)$ representa el nuevo valor de satisfacción del agente $ag_i$,
 $S_i$ es la satisfacción actual y $P_S$ es el parámetro de
-satisfacción obtenido de la BCC, y se encuentra en el intervalo: $-1 \leq P_S \leq 1$.
+satisfacción obtenido de la BCC y se encuentra en el intervalo: $-1 \leq P_S \leq 1$.
 
 Para obtener el estímulo, el configurador emocional hará un
 cuestionamiento a la BCC, para ello se consulta
@@ -569,7 +569,7 @@ un hecho utilizando los símbolos \comillas{?-} con el siguiente formato en leng
 Las variables \comillas{\codigoenlinea{PA}} y \comillas{\codigoenlinea{PS}},
 son las incógnitas a conocer.
 En el siguiente ejemplo \refpcuadro{ejemplo-consulta-activacion}, se puede observar
-como se consulta el evento saludar en la BCC y el formato de la respuesta de ésta.
+como se consulta el evento saludar en la BCC y el formato de la respuesta de esta.
 El algoritmo de actualización del estado emocional del agente se muestra en la
 \refcuadro{algoritmo-configurador-emocional}.
 
@@ -676,7 +676,7 @@ los parámetros de activación y satisfacción y actualizará la emoción.
 Luego, el manejador de comportamiento
 consulta la BCC para obtener
 la prioridad asociada a la nueva emoción
-que exhibe el agente, y actualiza la prioridad del comportamiento (reactivo, cognitivo o imitativo).
+que exhibe el agente y actualiza la prioridad del comportamiento (reactivo, cognitivo o imitativo).
 Finalmente, el agente modifica su comportamiento.
 
 \seccion{Aspectos Propuestos a Nivel Colectivo}
@@ -686,7 +686,7 @@ Finalmente, el agente modifica su comportamiento.
 \cite{rincon2015} proponen un modelo de emoción social basado en el modelo
 psicológico de estados emocionales PAD \eningles{Pleasure, Arousal and
 Dominance}. PAD es un modelo que representa el estado emocional de un agente en
-tres dimensiones, placer, excitación y dominio.
+tres dimensiones: placer, excitación y dominio.
 Este modelo utiliza las
 emociones individuales de cada entidad de un grupo de agentes, para calcular la
 \textit{emoción social}, la cual se compone de tres valores: \textit{emoción central,
@@ -695,7 +695,7 @@ Basado en lo definido por \cite{rincon2015},
 a continuación se expone la propuesta para el cálculo de la \textit{emoción social}:
 
 Como está definido en MASOES \citep{perozo2011}, la emoción individual es un
-vector en \Rcuadrado~y esta representada por la
+vector en \Rcuadrado~y está representada por la
 \refecuacion{emocion-individual}.
 
 \begin{ecuacion}{emocion-individual}
@@ -850,7 +850,7 @@ dichos valores se mustran en la \refcuadro{configuracion-jade}:
 Configuración & Valor por Omisión & Descripción \\
 \midrule
 \codigoenlinea{gui} & \codigoenlinea{true} & Le indica a JADE si la ejecución será en modo interfaz de usuario (\codigoenlinea{true}) o en modo servidor (\codigoenlinea{false}). \\
-\codigoenlinea{port} & \codigoenlinea{1099} & Se refiere al puerto que utilizara JADE para conectar diferentes contenedores de agentes localmente o a través de una red. El protocolo usado es JICP \eningles{JADE Inter Container Protocol}  \\
+\codigoenlinea{port} & \codigoenlinea{1099} & Se refiere al puerto que utilizará JADE para conectar diferentes contenedores de agentes localmente o a través de una red. El protocolo usado es JICP \eningles{JADE Inter Container Protocol}  \\
 \codigoenlinea{jade\_mtp\_http\_port} & \codigoenlinea{7778} & Puerto utilizado por JADE para la transmisión de mensajes de agentes localmente o a través de una red. El protocolo usado es IMTP \eningles{Instant Message Transfer Protocol}  \\
 \codigoenlinea{jade\_domain\_df\_autocleanup} & \codigoenlinea{true} & Le indica al agente DF de JADE que debe limpiar los servicios de un agente en caso de que sea eliminado (\codigoenlinea{true}), de esta manera se asegura que no haya información inconsistente en el DF. \\
 \codigoenlinea{platform-id} & \codigoenlinea{masoes} & Debido a que se puede instanciar diferentes plataformas localmente o en una red, es necesario asignar un identificador único a cada una. \\
@@ -866,7 +866,7 @@ la implementación, por esta razón se proponen los siguientes agentes.
 
 \subsubseccion{Agente Emocional}
 
-En la \refseccion{propuesta-nivel-individual} se vió el diseño del agente emocional a nivel individual.
+En la \refseccion{propuesta-nivel-individual} se vio el diseño del agente emocional a nivel individual.
 A continuación se listan los argumentos (opcionales) que pueden ser enviados al agente al momento de ser
 instanciado en la plataforma:
 
@@ -942,7 +942,7 @@ Es posible observar el estado emocional de un agente en tiempo de ejecución a t
 \comillas{Estado del Agente} \refpilustracion{interfaz-estado-agente}.
 Esta incluye el gráfico del modelo afectivo de MASOES y la información correspondiente al estado emocional.
 Se debe crear en la plataforma un agente de tipo: \codigoenlinea{gui.agentstate.AgentStateGuiAgent},
-dandole como argumento el
+dándole como argumento el
 nombre del agente el cual se desea observar su estado emocional.
 
 \begin{ilustracion}[fuente=\yo, etiqueta=interfaz-estado-agente, titulo={Interfaz Para Observar el Estado Emocional Dado un Agente}]
@@ -952,7 +952,7 @@ nombre del agente el cual se desea observar su estado emocional.
 \subsubseccion{Agente Interfaz: Emoción Social}
 
 Se proporciona la interfaz \comillas{Emoción Social} para poder observar la emoción social actual
-en tiempo de ejecución \refpilustracion{interfaz-emocion-social}, dicha interfaz se conectara automáticamente con el agente descrito en la \refseccion{agente-calculador-emocion-social}.
+en tiempo de ejecución \refpilustracion{interfaz-emocion-social}, dicha interfaz se conectará automáticamente con el agente descrito en la \refseccion{agente-calculador-emocion-social}.
 Esta incluye el gráfico del modelo afectivo de MASOES y la información correspondiente a
 la emoción social. Se debe instanciar en la plataforma un agente de tipo: \codigoenlinea{gui.socialemotion.SocialEmotionGuiAgent}.
 
@@ -996,7 +996,7 @@ Las secciones que la componen son:
 \begin{enumeracion}
 	\item \textbf{Barra de Menú:} En el menú \textit{Archivo} se proveen las opciones exportar e importar configuración.
   A través del menú \textit{Edición} se pueden definir los tipos de agentes y estímulos necesarios para la simulación.
-  \item \textbf{Configuración Inicial de Agentes:} permite establecer los parámetres de cada agente en la simulación.
+  \item \textbf{Configuración Inicial de Agentes:} permite establecer los parámetros de cada agente en la simulación.
   \item \textbf{Estados Emocionales Actuales:} esta tabla muestra los estados emocionales del grupo de agentes en tiempo de ejecución de la simulación.
   \item \textbf{Información General de la Simulación:} en esta sección se puede controlar la simulación,
   activar o desactivar gráficos en tiempo real, asignar el número de iteraciones deseados y ver la iteración y
