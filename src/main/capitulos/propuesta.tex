@@ -46,7 +46,7 @@ la herencia y la sobrescritura de comportamientos. Incluye
 un conjunto de herramientas gráficas para la monitorización y administración de los agentes.
 Además de ser un marco de trabajo, JADE se considera una plataforma,
 debido a que contiene un entorno en el que los agentes se ejecutan
-y se controla su ciclo de vida. Una de las caracteristica más importante de JADE
+y se controla su ciclo de vida. Una de las característica más importante de JADE
 es que cumple con las especificaciones estándar FIPA \eningles{Foundation for Intelligent Physical Agents},
 las cuales representan una colección de normas que tienen como objetivo promover la interoperabilidad
 de agentes heterogéneos y los servicios que pueden representar. La \refilustracion{arquitectura-propuesta}
@@ -83,7 +83,7 @@ del componente conductual y el modelo afectivo de MASOES.
 
 Cuando se inicia el contenedor principal, dos agentes especiales son automáticamente
 instanciados por JADE, cuyos roles están definidos por FIPA y utilizan
-la especificación \comillas{FIPA Agent Management} para la cuminicación a través de mensajes
+la especificación \comillas{FIPA Agent Management} para la comunicación a través de mensajes
 \citep{fipaAgentManagement}:
 
 \textbf{Agente AMS} \eningles{Agent Management System}. El AMS  controla la plataforma.
@@ -104,7 +104,7 @@ sus servicios (acciones), dándose a conocer a otros.
 
 En esta sección se describe una propuesta de ontología para MASOES
 y la implementación interna de los agentes emocionales.
-Además, se explica cómo ocurre el proceso de comunicación entre los agentes.
+Además, se explica como ocurre el proceso de comunicación entre los agentes.
 
 \subseccion{Propuesta de Una Ontología Para MASOES}
 
@@ -147,7 +147,7 @@ comunicación entre agentes emocionles. Dicha ontología se centra en
 poder expresar dos acciones clave: evaluar un estímulo
 y consultar el estado emocional.
 
-En la \refilustracion{ontologia-masoes-estimulo} se observa las entidades que conformán la
+En la \refilustracion{ontologia-masoes-estimulo} se observa las entidades que conforman la
 acción evaluar estímulos.
 Para solicitarle a un agente que evalúe un estímulo se le debe enviar
  una acción \textit{EvaluarEstimulo},
@@ -213,8 +213,8 @@ fallida (performativa \comillas{\codigoenlinea{failure}}) si ocurrió un error.
 
 \textbf{Ontología}. Es la definición de los conceptos y relaciones entre ellos, que forman parte
 del conocimiento de un agente o una sociedad de agentes. Una ontología
-es escencial para lograr una comunicación efectiva en un grupo de agentes.
-Los elementos que componen una ontologia de JADE (Conceptos, Acciones y Predicados) juegan
+es esencial para lograr una comunicación efectiva en un grupo de agentes.
+Los elementos que componen una ontología de JADE (Conceptos, Acciones y Predicados) juegan
 diferentes papeles en la comunicación. Como se muestra en la \refilustracion{flujo-fipa-protocolo-ontologia},
 el contenido que envía un agente emisor es de tipo \textit{AgentAction} y recibirá
 como respuesta un contenido de tipo \textit{Predicate}. Los elementos de tipo \textit{Concept}
@@ -251,15 +251,15 @@ protocol & Protocolo que rige la comunicación (\codigoenlinea{fipa-request}) \\
 
 El diseño a nivel individual de la propuesta abarca las entidades
 vinculadas al agente emocional, y que permiten responder
-a las solicitudes de otros agentes a traves de acciones.
+a las solicitudes de otros agentes a través de acciones.
 La implementación se llevó a cabo de manera que pueda ser extendida o mejorada,
-y para ser utilizada en sistemas multiagentes con diferentes dominios.
+y para ser utilizada en sistemas multiagente con diferentes dominios.
 Uno de los aspectos relevantes de la implementación es que es no limitativa,
 en otras palabras, los agentes emocionales pueden comunicarse con cualquier otro agente no emocional
 o heterogéneo localmente o a través de una red de computadores e interactuar con ellos.
 Por otra parte, la implementación permite que el procesamiento de un estímulo por un agente
 pueda hacerse de manera individual, invocando su propio componente conductual, o
-recibiendo un estimulo desde otros agentes o el entorno.
+recibiendo un estímulo desde otros agentes o el entorno.
 En la \refilustracion{diseno-nivel-individual}
 se muestra el diseño a nivel individual de la implementación.
 
@@ -272,13 +272,13 @@ nivel individual:
 
 \textbf{Agent}. Es la clase principal de JADE, todos los tipos de agentes deben
 heredar de ella, e incluye otros aspectos relevantes, tales como, el envío y
-recepción de mensajes, y manejo de comportamientos. Además, posee un hilo de
-ejecución propio, y está bajo las especificaciones FIPA. Es la unidad básica en
+recepción de mensajes y manejo de comportamientos. Además, posee un hilo de
+ejecución propio y está bajo las especificaciones FIPA. Es la unidad básica en
 la POA.
 
 \textbf{Behaviour}. Pertenece a JADE, esta clase representa los
 comportamientos, acciones, actividades o tareas que puede realizar un agente, debe
-ser heredada, y sobrescrito su método \textit{action}. Un agente puede
+ser heredada y sobrescrito su método \textit{action}. Un agente puede
 contener uno o muchos comportamientos, y estos, pueden ser detenidos o
 reanudados según la necesidad del mismo. Además, pueden ser agregados desde
 otros comportamientos, o programados para ser ejecutados en momentos
@@ -292,7 +292,7 @@ máquinas de estado finito).
 \textbf{AgenteEmocional}. Es la especialización de
 la clase original \textit{Agent} de JADE, desarrollado de manera que contenga
 el modelo afectivo de MASOES.
-Se debe heredar de este agente en el caso de que se desee contruir un agente emocional.
+Se debe heredar de este agente en el caso de que se desee construir un agente emocional.
 
 \textbf{ComportamientoResponderEstado}. Esta es
 una de la acciones básicas para el agente emocional, se encarga
@@ -329,7 +329,7 @@ imitativo) tiene la prioridad más alta para responder frente a una situación.
 Para esto utiliza el modelo afectivo de MASOES
 \refpilustracion{modelo-afectivo}, el cual relaciona un estado emocional a un
 tipo de comportamiento \refpcuadro{comportamientos-masoes}.
-En escencia encapsula la implementación del Modelo Afectivo de MASOES.
+En esencia encapsula la implementación del Modelo Afectivo de MASOES.
 
 \begin{ilustracion}[fuente=\yo, etiqueta=diseno-componente-conductual, titulo={Diseño de la Implementación del Componente Conductual}]
 \includegraphics[width=15cm]{ilustraciones/diagramas-puml/diseno-componente-conductual.png}
@@ -414,16 +414,16 @@ los polígonos de las emociones son los siguiente:
 \end{ilustracion}
 
 Con respecto a la selección de la emoción por parte del modelo afectivo al recibir un estado emocional,
-se tiene el algoritmo de la \refcuadro{algoritmo-modelo-afectivo}, basícamente se
+se tiene el algoritmo de la \refcuadro{algoritmo-modelo-afectivo}, básicamente se
 verifica por cada emoción si el punto en el plano proporcionado por el estado emocional
-esta contenido dentro del póligono de la emoción.
+está contenido dentro del polígono de la emoción.
 
 \begin{cuadro}[etiqueta=algoritmo-modelo-afectivo, titulo={Algoritmo del Modelo Afectivo Para la Selección de Una Emoción}]{l}
 \toprule
 \textbf{Entrada:} estado emocional del agente \\
 \midrule
 \textbf{Para cada} emoción \textbf{$\in$} conjunto de emociones \textbf{hacer:} \\
-~~~~~~\textbf{Si} el punto en \Rcuadrado~del estado emocional esta contenido \\
+~~~~~~\textbf{Si} el punto en \Rcuadrado~del estado emocional está contenido \\
 ~~~~~~~~~~en el polígono de la emoción \textbf{entonces:} \\
 ~~~~~~~~~~~~~~\textbf{devolver} emoción \\
 ~~~~~~\textbf{Fin si} \\
@@ -517,7 +517,7 @@ Cláusula & Descripción \\
 \end{cuadro}
 
 Para agregar estímulos a la BCC, es necesario que
-el agente asigne a cada uno de ellos un \textit{Parámetro de Activacion ($P_a$)}
+el agente asigne a cada uno de ellos un \textit{Parámetro de Activación ($P_a$)}
 y un \textit{Parámetro de Satisfacción ($P_s$)}, estos valores
 incrementarán o decrementaran la activación y satisfacción del agente.
 La estructura para definir un estímulo se compone del predicado
@@ -995,7 +995,7 @@ Las secciones que la componen son:
 
 \begin{enumeracion}
 	\item \textbf{Barra de Menú:} En el menú \textit{Archivo} se proveen las opciones exportar e importar configuración.
-  A traves del menú \textit{Edición} se pueden definir los tipos de agentes y estímulos necesarios para la simulación.
+  A través del menú \textit{Edición} se pueden definir los tipos de agentes y estímulos necesarios para la simulación.
   \item \textbf{Configuración Inicial de Agentes:} permite establecer los parámetres de cada agente en la simulación.
   \item \textbf{Estados Emocionales Actuales:} esta tabla muestra los estados emocionales del grupo de agentes en tiempo de ejecución de la simulación.
   \item \textbf{Información General de la Simulación:} en esta sección se puede controlar la simulación,

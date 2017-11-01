@@ -24,7 +24,7 @@ trabajo ya que plantea cuatro problemas clave que tienen lugar en el desarrollo
 de sistemas multiagente con computación emocional, los cuales son: \textit{la
 integración de la cognición y las emociones en arquitecturas de agentes, la
 unificación de los diversos aspectos de las emociones, arquitecturas escalables
-para los modelos computacionales de emociones, y la explotación de la evidencia
+para los modelos computacionales de emociones y la explotación de la evidencia
 biológica}. La integración de la cognición y las emociones en arquitecturas de
 agentes, se refiere a que las arquitecturas deben proporcionar entornos
 adecuados para la interacción de las funciones cognitivas y afectivas que
@@ -112,17 +112,17 @@ no se establece una relación entre las emociones y el comportamiento, como lo
 realiza el modelo afectivo para MASOES, en cambio, se muestra la relación entre
 las variables de valoración  y las emociones, dicha relación es extraída de la
 categorización OCC: \textit{la variable deseabilidad se relaciona con alegría y
-angustia, la plausabilidad con rechazo, admiración, orgullo y vergüenza, la
+angustia, la plausibilidad con rechazo, admiración, orgullo y vergüenza, la
 capacidad de atracción con amor y odio, entre otros}. En esta arquitectura se
 toma en cuenta el estado emocional que puede ser producido por agentes externos
 y por el ambiente, y además se habla de un componente cultural, que está
-directamente relacionado con la variable plausabilidad, puede darse el caso que
+directamente relacionado con la variable plausibilidad, puede darse el caso que
 entre más positiva sean las emociones colectivas del agente, es más posible que
 priorice acciones positivas para otros agentes y no  para él. Una importante
-diferencia con el modelo afectivo para MASOES, es que éste promueve un
+diferencia con el modelo afectivo para MASOES, es que este promueve un
 compromiso entre el comportamiento individual y colectivo en la sociedad de
 agentes,  además, permite explicar aspectos de la interacción social, tales como
-el grado de satisfacción, cooperación, y competencia, entre otros, mientras que
+el grado de satisfacción, cooperación y competencia, entre otros, mientras que
 FATIMA, posee un enfoque cognitivo emocional.
 
 \cite{dastani2014programming}, proponen extender el lenguaje de programación de agentes inteligentes llamado \comillas{2APL},
@@ -139,7 +139,7 @@ el último tipo permite rehacer los planes fallidos,
 llamadas reglas de reparación del plan o RP \eningles{Plan Repair}.
 Con respecto a la integración de emociones, se utilizó
 el modelo dimensional de emociones PAD \eningles{Pleasure, Arousal and Dominance},
-específicamente la implementación llamada ALMA, para definir
+específicamente la implementación llamada ALMA \eningles{A Layered Model of Affect} \citep{gebhard2005alma}, para definir
 el conjunto de emociones que pueden exhibir los agentes, además,
 crearon una base de emociones a través de un nuevo tipo de regla para el lenguaje 2APL,
 llamadas reglas de emoción o ER \eningles{Emotion Rule}, en las que se definen eventos, acciones u objetos
@@ -161,7 +161,7 @@ comportamientos, eventos, acciones u objetos que afectarán las emociones.
 \eningles{Social Emotional Model} basado en el modelo
 psicológico de estados emocionales PAD \eningles{Pleasure, Arousal and Dominance},
 el cual está definido por las dimensiones placer,
-excitación y dominio respectivamente. En el modelo el placer representa la
+excitación y dominio respectivamente. En el modelo, el placer representa la
 medida de cuan agradable se puede sentir una emoción, la excitación mide la
 intensidad de lo que se está sintiendo, y el dominio se refiere al control que
 ejerce sobre el comportamiento un estado emocional. Al igual que el modelo
@@ -172,7 +172,7 @@ dimensiones. Ambos modelos consideran emociones individuales y grupales, difiere
 en que MASOES tiene como objetivo modelar la auto-organización y emergencia en
 un sistema, utilizando el modelo afectivo para que cada agente pueda cambiar su
 comportamiento dinámicamente, guiado por su estado emocional para satisfacer
-dinámicamente los objetivos del sistema a través de la auto-organización de sus
+los objetivos del sistema a través de la auto-organización de sus
 actividades, mientras que SEM se centra en estudiar los estados emocionales
 individuales y grupales a través del tiempo. SEM como modelo afectivo es medible
 a nivel colectivo a través de una ecuación que se propone en el trabajo, en
@@ -320,7 +320,7 @@ importante también. Como en la evolución natural, esta asegura una reserva que
 puede ser utilizada en situaciones imprevistas, es decir, para la exploración de
 nuevas posibilidades u oportunidades, sin perder la funcionalidad del sistema.
 La adaptación (algunas veces llamada aprendizaje colectivo) también necesita que
-el sistema pueda olvidar/desaprender sus viejos estados, e interacciones, entre
+el sistema pueda olvidar/desaprender sus viejos estados e interacciones, entre
 otras cosas, para adaptarse a nuevas situaciones.
 \end{enumerate}
 
@@ -366,7 +366,7 @@ universalmente consensuada a la hora de referirse a estos fenómenos.
 \item La simulación (o generación) de estados y expresiones emocionales con computadoras.
 Se intenta que las computadoras puedan simular procesos emocionales en base a
 ciertos modelos. Aquí se puede reflexionar respecto a si una computadora puede
-realmente tener emociones, pero, esta disciplina sólo intenta simular dichos
+realmente tener emociones, pero esta disciplina solo intenta simular dichos
 procesos de forma tal que resulten verosímiles, dejando de lado estas
 controversias.
 \end{enumerate}
@@ -410,8 +410,7 @@ basados en la evaluación emocional.
 y disminución de elementos en memoria según estados emocionales.
 \item \textbf{Procesamiento estratégico:} Selección de diferentes métodos de búsqueda basada en
 el estado emocional general.
-\item \textbf{Auto-modelo:} Emociones como representaciones de
-cómo experimenta una situación un agente.
+\item \textbf{Auto-modelo:} Emociones que representan como experimenta una situación un agente.
 \end{enumerate}
 
 \subseccion{MASOES}
@@ -422,7 +421,7 @@ propuesta por \cite{perozo2011}, es una herramienta para el diseño no
 formal de sistemas, que produzcan un estado auto-organizado el cual emerja de
 las interacciones locales entre los agentes y de los cambios que se dan en el
 entorno. En esta arquitectura, cada agente puede cambiar su comportamiento
-dinámicamente, guiado por su estado emocional, para satisfacer dinámicamente los
+dinámicamente, guiado por su estado emocional, para satisfacer los
 objetivos del sistema a través de la auto-organización de sus actividades.
 
 \subsubseccion{Niveles de Interacción de MASOES}
@@ -491,7 +490,7 @@ colectivo.
 La arquitectura a nivel individual tiene 4 componentes: Conductual (procesos
 emocionales y de cambio de comportamiento o comportamientos orientados por
 emociones), Reactivo (procesos reactivos o comportamientos inconscientes),
-Cognitivo (procesos deliberativos o comportamientos conscientes), y Social
+Cognitivo (procesos deliberativos o comportamientos conscientes) y Social
 (procesos sociales o comportamiento social) \refpilustracion{componentes-masoes-individual}.
 
 \begin{enumerate}
@@ -510,7 +509,7 @@ cognitivos y sociales (de otros agentes), es en este sub-componente donde estar�
 el modelo afectivo. También está el Manejador de Comportamiento o Conductual,
 que se encarga de activar, inhibir y priorizar algunos comportamientos en el
 agente basado en el estado emocional actual, las metas del agente, su situación
-social (situación de sus vecinos más cercanos), y el entorno en general. Además,
+social (situación de sus vecinos más cercanos) y el entorno en general. Además,
 maneja todos los mecanismos responsables del cambio dinámico de comportamiento,
 ya que su objetivo principal es determinar y sugerir un único tipo de
 comportamiento cada vez para evitar conflictos en tiempo de ejecución. El
@@ -586,7 +585,7 @@ El modelo afectivo está dividido en cuatro fases:
 afectivo propuesto se consideran emociones positivas y negativas generadas desde
 un nivel individual o colectivo, a fin de contribuir a la generación de un
 comportamiento emergente y auto-organizado en el sistema a partir de la
-interacción local de los agentes. Los tipos de emociones consideradas, y el
+interacción local de los agentes. Los tipos de emociones consideradas y el
 espacio afectivo definido para MASOES, son mostrados en la \refilustracion{modelo-afectivo}. El espacio
 afectivo ha sido dividido en 4 cuadrantes, donde el cuadrante I (alegría,
 felicidad) y III (tristeza, depresión) representan las emociones positivas y
